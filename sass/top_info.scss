@@ -1,9 +1,12 @@
 .top_info {
-  @extend %clearfix;
-  margin: 0 -16px;
-  padding: 12px 6px 8px;
-  background: #f7f8f8;
-  margin-bottom: 12px;
+  padding: 14px 6px 4px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+
+  @include respond-to-min($resp_step_2) {
+    padding: 18px 6px 4px;
+  }
 }
 
 .currency_switcher {
@@ -13,14 +16,30 @@
 }
 
 .currency_info {
-  margin-left: 40px;
+  margin-left: 5px;
+  margin-right: -45px;
+  float: left;
   font-family: $FrutigerNeueLTW1GBook;
+
+  @include respond-to-min($resp_step_3) {
+    margin-left: 10px;
+    margin-right: -55px;
+  }
 }
 
 .currency_info_table {
   display: table;
   width: 100%;
   font-size: 12px;
+}
+
+.currency_info_chart {
+  padding-right: 40px;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
 }
 
 .currency_info_cell {
@@ -33,29 +52,100 @@
   }
 
   p {
-
     + p {
-      margin-top: 5px;
+      margin-top: 3px;
+
+      @include respond-to-min($resp_step_2) {
+        margin-top: 7px;
+      }
     }
   }
 }
 
 .currency_select {
-  @include transition_all(background .3s, color .3s);
+  @include transition_all(border .3s, color .3s);
   display: block;
   width: 48px;
   height: 48px;
   padding-left: 6px;
   margin: -8px 0 -8px -6px;
-  font: 24px $FrutigerNeueLTW1GBold;
-  color: $violette !important;
-  border: none;
+  font: 20px $FrutigerNeueLTW1GBold;
+  color: #c0c0c0;
   position: relative;
-  background: #f7f8f8 !important;
+  background: #fff !important;
+  border: 2px solid #fff;
+
+  + .select_arrow {
+    @include respond-to-max($resp_step_2) {
+      right: 13px;
+      font-size: 8px;
+    }
+  }
+
+  &:hover {
+    border-color: $violette;
+    color: $violette;
+
+    + .select_arrow {
+      color: $violette;
+    }
+  }
 
   &:focus {
-    background: #000;
+    border-color: $violette;
+    color: $violette;
+
+    + .select_arrow {
+      color: $violette;
+      -webkit-transform: rotate(180deg) translate(0, 4px);
+      -ms-transform: rotate(180deg) translate(0, 4px);
+      transform: rotate(180deg) translate(0, 4px);
+    }
+
+    ~ .select_overlay {
+      height: 10000px;
+    }
+  }
+}
+
+.lang_block {
+  position: relative;
+  float: right;
+
+  @include respond-to-min($resp_step_4) {
+    float: left;
+  }
+}
+
+.lang_select {
+  @include transition_all(border .3s, color .3s);
+  display: block;
+  width: 66px;
+  height: 30px;
+  padding-top: 2px;
+  padding-left: 26px;
+  font: 12px $FrutigerNeueLTW1GBlack;
+  color: #fff;
+  position: relative;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 0;
+  text-transform: uppercase;
+
+  + .select_arrow {
+    right: auto;
+    left: 12px;
     color: #fff;
+  }
+
+  &:hover {
+    border-color: $violette_dark;
+    background: $violette_dark;
+  }
+
+  &:focus {
+    border-color: $violette_dark;
+    background: $violette_dark;
 
     + .select_arrow {
       -webkit-transform: rotate(180deg) translate(0, 4px);
@@ -76,7 +166,8 @@
   top: 10px;
   right: 7px;
   font-size: 10px;
-  color: $violette;
+  line-height: 1.2;
+  color: #c0c0c0;
   pointer-events: none;
   transform-origin: 50% 50%;
 

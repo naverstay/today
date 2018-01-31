@@ -7,322 +7,409 @@ html(lang='ru')
         .wrapper
             .main_content
                 .section_inner
-                    +top_info()
+                    +tag_holder()
 
-                    .attention_block._warn
-                        p Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+                    a.attention_block._warn(href='#')
+                        .attention_caption Breaking news
+                        p
+                            span Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+                            span.attention_link
 
-                    .article_block.story_block._main._stories
-                        .article_img
-                            ul.article_tags
-                                li
-                                    span.icon-crypto.article_tag._top
-                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                a.article_action_btn.actionBtn(href='#' )
-                            img(src='i/sberbank.jpg')
+                    .content_holder
+                        .content_block
+                            .news_row
+                                .news_col
+                                    .article_block.story_block._main._stories
+                                        .article_img
+                                            //-ul.article_tags
+                                                li
+                                                    span.icon-crypto.article_tag._top
+                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                a.article_action_btn.actionBtn(href='#' )
+                                            a.article_img_link(href='#'): img(src='i/ice_expl.jpg')
 
-                        .article_title
-                            a.article_link.clr_violette(href='#') Blockchain and the Rise of Transaction Technol…
-                            ul.article_stat
-                                li
-                                    span.article_stat_val._stat_views 212
-                                li
-                                    span.article_stat_val 2 minutes ago
+                                        .article_title
+                                            a.article_link.clr_violette(href='#') ICE Exploiting Blockchain to Expose Crypto Use in Drug Trafficking
+                                            //a.article_link.clr_violette(href='#') Vermont City Pilots Land Registry Record With Blockchain
+                                            ul.article_stat
+                                                li
+                                                    span.article_stat_val._stat_views 212
+                                                li
+                                                    span.article_stat_val 2 minutes ago
 
-                        ul.news_list
-                            li
-                                .news_item
-                                    .news_date 2 min<br>ago
-                                    .news_name Russia's Sberbank Has Launched a Blockchain Lab
+                                        ul.news_list
+                                            li
+                                                .news_item
+                                                    .news_date 2 min<br>ago
+                                                    a.news_name(href='#') New Bill in Colorado Encourages State to Adopt Blockchain
 
-                            li
-                                .news_item
-                                    .news_date 1 hr<br>ago
-                                    .news_name KFC Canada Is Accepting Bitcoin for Fried Chicken
+                                            li
+                                                .news_item
+                                                    .news_date 1 hr<br>ago
+                                                    a.news_name(href='#') Ledger-to-Ledger? Hardware Wallet Integrates with Decentralized Exchange
 
-                            li
-                                .news_item
-                                    .news_date 2 hr<br>ago
-                                    .news_name Ukraine Forms Cryptocurrency Oversigh…
+                                            li
+                                                .news_item
+                                                    .news_date 2 hr<br>ago
+                                                    a.news_name(href='#') TSMC Expects 'Strong' Crypto Mining Demand to Continue
 
-                            li
-                                .news_item
-                                    .news_date 1 day<br>ago
-                                    .news_name Arizona Lawmakers Want to Let People Pay Taxes i…
+                                            li
+                                                .news_item
+                                                    .news_date 1 day<br>ago
+                                                    a.news_name(href='#') Ripple and Stellar Lead the Way as Crypto Market
 
-                            li
-                                .news_item
-                                    .news_date 29 hr<br>ago
-                                    .news_name US State Regulators Hit BitConnect With Second …
+                                            li
+                                                .news_item
+                                                    .news_date 29 hr<br>ago
+                                                    a.news_name(href='#') Korean Regulator Investigating Staff Insider Trading of Cryptocurrencies
 
-                    .article_controls
-                        a.btn_v1.more_btn.gray_btn(href='#') More news
+                                            li
+                                                .news_item
+                                                    .news_date 1 day<br>ago
+                                                    a.news_name(href='#') San Francisco Blockchain Startups Partner on Decentralized Insurance
 
-                    .article_block.story_block._top
-                        .top_story_caption Top story
-                        .article_img
-                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                a.article_action_btn.actionBtn(href='#' )
-                            img(src='i/tennessee.jpg')
+                                            li
+                                                .news_item
+                                                    .news_date 29 hr<br>ago
+                                                    a.news_name(href='#') Tether Confirms Its Relationship With Auditor Has 'Dissolved'
 
-                        .article_title
-                            a.article_link(href='#') Tennessee Might Also Recognize Blockchain Data Through Propose…
-                            ul.article_stat
-                                li
-                                    a.article_theme(href='#') Explorer the theme
+                                    .article_controls
+                                        a.btn_v1.more_btn.gray_btn(href='#') More news
 
-                    #subscribeTrigger
-                    .article_group_title._stories
-                        span Stories
+                                .news_col
+                                    .article_block.story_block._top
+                                        .article_img
+                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                a.article_action_btn.actionBtn(href='#' )
+                                            a.article_img_link(href='#'): img(src='i/bitflyer.jpg')
 
-                    .article_block
-                        .article_img
-                            ul.article_tags
-                                li
-                                    span.icon-shark.article_tag._pool
-                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                a.article_action_btn.actionBtn(href='#' )
-                            img(src='i/sachs.jpg')
+                                            .article_title
+                                                .top_story_caption Top Story
 
-                        .article_title
-                            a.article_link(href='#') Goldman Sachs: Bitcoin Could Be Viable Mon…
-                            ul.article_stat
-                                li
-                                    span.article_stat_val._stat_views 212
-                                li
-                                    span.article_stat_val 2 minutes ago
-                                li
-                                    span.article_stat_val Ariel Deschapell
+                                                a.article_link(href='#') Cryptocurrency Exchange BitFlyer Launches New EU Branch
+                                                ul.article_stat
+                                                    li
+                                                        a.article_theme(href='#') Explorer the theme
 
-                    .article_block
-                        .article_img
-                            ul.article_tags
-                                li
-                                    span.icon-say.article_tag._pricewise
-                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                a.article_action_btn.actionBtn(href='#' )
-                            img(src='i/sachs.jpg')
+                                    //#subscribeTrigger
 
-                        .article_title
-                            a.article_link(href='#') China's Internet Finance Association Warns on …
-                            ul.article_stat
-                                li
-                                    span.article_stat_val._stat_views 212
-                                li
-                                    span.article_stat_val 2 minutes ago
-                                li
-                                    span.article_stat_val Ariel Deschapell
+                                    .article_reviews_holder._stories
+                                        .top_story_caption Stories
 
-                    .article_block
-                        .article_img
-                            a.video_link._stories(href='#')
-                            img(src='i/biosensor.jpg')
+                                        ul.article_reviews._article
+                                            li
+                                                .article_block._review
+                                                    .article_img
+                                                        a.article_img_link(href='#'): img(src='i/remote.jpg')
 
-                        .article_title._video
-                            a.article_link(href='#') Biosensor Analysis Tool - Human Behaviour Research Synchroniz…
-                            ul.article_stat
-                                li
-                                    span.article_stat_val._stat_views 212
-                                li._fr
-                                    span.article_stat_val 13:45
+                                                    .article_title
+                                                        a.article_link._fz_18(href='#') Opera Browser Adds Cryptocurrency Miner Protection for Smartphones
+                                                    ul.article_stat
+                                                        li
+                                                            span.article_stat_val Jan 10, 2018 at 10:00
+                                                        li
+                                                            span.article_stat_val._stat_views 212
+                                                        li._first
+                                                            a.article_stat_val(href='#') Ariel Deschapell
 
-                    .article_controls
-                        a.btn_v1.more_btn.gray_btn(href='#') More stories
+                                            li
+                                                .article_block._review
+                                                    .article_img
+                                                        a.article_img_link(href='#'): img(src='i/remote.jpg')
 
-                    .article_group_title._features
-                        span Features
+                                                    .article_title
+                                                        a.article_link(href='#') Lightning Network May Not Solve Bitcoin's Scaling 'Trilemma'
+                                                    ul.article_stat
+                                                        li
+                                                            span.article_stat_val Jan 10, 2018 at 10:00
+                                                        li
+                                                            span.article_stat_val._stat_views 212
+                                                        li._first
+                                                            a.article_stat_val(href='#') Ariel Deschapell
 
-                    .article_block._main._features
-                        .article_img
-                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                a.article_action_btn.actionBtn(href='#' )
-                            img(src='i/sachs.jpg')
+                                            li
+                                                .article_block._review
+                                                    .article_img
+                                                        a.article_img_link(href='#'): img(src='i/remote.jpg')
 
-                        .article_title
-                            a.article_link(href='#') 2018: The Year Blockchain, AI and IoT…
-                            ul.article_stat
-                                li
-                                    span.article_stat_val._stat_views 212
-                                li
-                                    span.article_stat_val 2 minutes ago
-                                li
-                                    span.article_stat_val Ariel Deschapell
+                                                    .article_title
+                                                        a.article_link(href='#') 2018's Challenge: Promote Responsible Blockchain
+                                                    ul.article_stat
+                                                        li
+                                                            span.article_stat_val Jan 10, 2018 at 10:00
+                                                        li
+                                                            span.article_stat_val._stat_views 212
+                                                        li._first
+                                                            a.article_stat_val(href='#') Ariel Deschapell
 
-                    ul.article_reviews._features
-                        li
-                            .article_block._features._review
-                                .article_img
-                                    img(src='i/regulators.jpg')
+                                            li
+                                                .article_block._review
+                                                    .article_img
+                                                        a.article_img_link(href='#'): img(src='i/remote.jpg')
 
-                                .article_title
-                                    a.article_link(href='#') US State Regulators Hit BitConnect With Second Cease-And-Desist
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
+                                                    .article_title
+                                                        a.article_link(href='#') Bulgaria Joins 'International Operation' Against OneCoin
+                                                    ul.article_stat
+                                                        li
+                                                            span.article_stat_val Jan 10, 2018 at 10:00
+                                                        li
+                                                            span.article_stat_val._stat_views 212
+                                                        li._first
+                                                            a.article_stat_val(href='#') Ariel Deschapell
 
-                        li
-                            .article_block._features._review
-                                .article_title
-                                    a.article_link(href='#') 2018: The Year Blockchain, AI and IoT Converge
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
+                                            li
+                                                .article_block._review
+                                                    .article_img
+                                                        a.article_img_link(href='#'): img(src='i/remote.jpg')
 
-                        li
-                            .article_block._features._review
-                                .article_img
-                                    img(src='i/arizona.jpg')
+                                                    .article_title
+                                                        a.article_link(href='#') TSMC Expects 'Strong' Crypto Mining Demand to Continue
+                                                    ul.article_stat
+                                                        li
+                                                            span.article_stat_val Jan 10, 2018 at 10:00
+                                                        li
+                                                            span.article_stat_val._stat_views 212
+                                                        li._first
+                                                            a.article_stat_val(href='#') Ariel Deschapell
 
-                                .article_title
-                                    a.article_link(href='#') Arizona Lawmakers Want to Let People Pay Taxes in Bitcoin
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
+                                        .article_controls
+                                            a.btn_v1.more_btn.gray_btn(href='#') More stories
+                            .news_row
+                                .news_col._wide
+                                    .article_group_title._features._bg
+                                        span Features
+                                        a.article_title_link(href='#') All featured
 
-                    .article_controls
-                        a.btn_v1.more_btn.gray_btn.clr_red(href='#') More features
+                                    ul.news_aggregator._features._bordered
+                                        li
+                                            .article_block
+                                                .article_img
+                                                    .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                        a.article_action_btn.actionBtn(href='#' )
+                                                    a.article_img_link(href='#'): img(src='i/chinese.jpg')
 
-                    .article_group_title._pool
-                        span Sharks pool
+                                                .article_title
+                                                    a.article_link(href='#') Bitcoin Price Seeks Direction as Trading Range Narrows Trading Range Narrows
+                                                    ul.article_stat
+                                                        li
+                                                            span.article_stat_val Jan 10, 2018 at 10:00
+                                                        li
+                                                            span.article_stat_val._stat_views 212
+                                                        li._first
+                                                            a.article_stat_val(href='#') Ariel Deschapell
 
-                    .article_block._main._pool
-                        .article_img
-                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                a.article_action_btn.actionBtn(href='#' )
-                            img(src='i/sachs.jpg')
+                                        li
+                                            .article_block
+                                                .article_img
+                                                    .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                        a.article_action_btn.actionBtn(href='#' )
+                                                    a.article_img_link(href='#'): img(src='i/chinese.jpg')
 
-                        .article_title
-                            a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
-                            ul.article_stat
-                                li
-                                    span.article_stat_val._stat_views 212
-                                li
-                                    span.article_stat_val 2 minutes ago
-                                li
-                                    span.article_stat_val Ariel Deschapell
+                                                .article_title
+                                                    a.article_link(href='#') Battle-Testing Lightning: Schools Start Contest to Secure Bitcoin’s Layer 2
+                                                    ul.article_stat
+                                                        li
+                                                            span.article_stat_val Jan 10, 2018 at 10:00
+                                                        li
+                                                            span.article_stat_val._stat_views 212
+                                                        li._first
+                                                            a.article_stat_val(href='#') Ariel Deschapell
 
-                    ul.article_reviews._pool
-                        li
-                            .article_block._pool._review
-                                .article_img
-                                    img(src='i/regulators.jpg')
+                                        li
+                                            .article_block
+                                                .article_img
+                                                    .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                        a.article_action_btn.actionBtn(href='#' )
+                                                    a.article_img_link(href='#'): img(src='i/chinese.jpg')
 
-                                .article_title
-                                    a.article_link(href='#') US State Regulators Hit BitConnect With Second Cease-And-Desist
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
+                                                .article_title
+                                                    a.article_link(href='#') Battle-Testing Lightning: Schools Start Contest to Secure Bitcoin’s Layer 2
+                                                    ul.article_stat
+                                                        li
+                                                            span.article_stat_val Jan 10, 2018 at 10:00
+                                                        li
+                                                            span.article_stat_val._stat_views 212
+                                                        li._first
+                                                            a.article_stat_val(href='#') Ariel Deschapell
 
-                        li
-                            .article_block._pool._review
-                                .article_title
-                                    a.article_link(href='#') 2018: The Year Blockchain, AI and IoT Converge
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
+                                    .article_controls._features
+                                        a.btn_v1.more_btn.gray_btn(href='#') More features
 
-                        li
-                            .article_block._pool._review
-                                .article_img
-                                    img(src='i/arizona.jpg')
+                            .news_row._pool._bordered._show_2
+                                .news_col._wide
+                                    .article_group_title._pool
+                                        span Sharks pool
+                                        a.article_title_link(href='#') All #Sharks pool
 
-                                .article_title
-                                    a.article_link(href='#') Arizona Lawmakers Want to Let People Pay Taxes in Bitcoin
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
+                                .news_col._third
+                                    .article_block._pool
+                                        .article_img
+                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                a.article_action_btn.actionBtn(href='#' )
+                                            a.article_img_link(href='#'): img(src='i/range.jpg')
 
-                    .article_controls
-                        a.btn_v1.more_btn.gray_btn.clr_blue(href='#') More  «Sharks pool»
+                                        .article_title
+                                            a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
+                                            ul.article_stat
+                                                li
+                                                    span.article_stat_val._stat_views 212
+                                                li
+                                                    span.article_stat_val 2 minutes ago
+                                                li._first
+                                                    a.article_stat_val(href='#') Ariel Deschapell
 
-                    .article_group_title._analysis
-                        span Price analysis
+                                .news_col._third
+                                    .article_block._pool
+                                        .article_img
+                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                a.article_action_btn.actionBtn(href='#' )
+                                            a.article_img_link(href='#'): img(src='i/range.jpg')
 
-                    .article_block._main._analysis
-                        .article_img
-                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                a.article_action_btn.actionBtn(href='#' )
-                            img(src='i/sachs.jpg')
+                                        .article_title
+                                            a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
+                                            ul.article_stat
+                                                li
+                                                    span.article_stat_val._stat_views 212
+                                                li
+                                                    span.article_stat_val 2 minutes ago
+                                                li._first
+                                                    a.article_stat_val(href='#') Ariel Deschapell
 
-                        .article_title
-                            a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
-                            ul.article_stat
-                                li
-                                    span.article_stat_val._stat_views 212
-                                li
-                                    span.article_stat_val 2 minutes ago
-                                li
-                                    span.article_stat_val Ariel Deschapell
+                                .news_col._third
+                                    .article_block._pool
+                                        .article_img
+                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                a.article_action_btn.actionBtn(href='#' )
+                                            a.article_img_link(href='#'): img(src='i/range.jpg')
 
-                    ul.article_reviews._analysis
-                        li
-                            .article_block._analysis._review
-                                .article_img
-                                    img(src='i/regulators.jpg')
+                                        .article_title
+                                            a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
+                                            ul.article_stat
+                                                li
+                                                    span.article_stat_val._stat_views 212
+                                                li
+                                                    span.article_stat_val 2 minutes ago
+                                                li._first
+                                                    a.article_stat_val(href='#') Ariel Deschapell
 
-                                .article_title
-                                    a.article_link(href='#') US State Regulators Hit BitConnect With Second Cease-And-Desist
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
+                            .article_controls._pool
+                                a.btn_v1.more_btn.gray_btn(href='#') More #Sharks pool
 
-                        li
-                            .article_block._analysis._review
-                                .article_title
-                                    a.article_link(href='#') 2018: The Year Blockchain, AI and IoT Converge
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
+                            .news_row._bordered._pricewise._show_2
+                                .news_col._wide
+                                    .article_group_title._pricewise
+                                        span Pricewise
+                                        a.article_title_link(href='#') All #Pricewise
 
-                        li
-                            .article_block._analysis._review
-                                .article_img
-                                    img(src='i/arizona.jpg')
+                                .news_col._third
+                                    .article_block
+                                        .article_img
+                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                a.article_action_btn.actionBtn(href='#' )
+                                            a.article_img_link(href='#'): img(src='i/range.jpg')
 
-                                .article_title
-                                    a.article_link(href='#') Arizona Lawmakers Want to Let People Pay Taxes in Bitcoin
-                                ul.article_stat
-                                    li
-                                        span.article_stat_val._stat_views 212
-                                    li
-                                        span.article_stat_val 2 minutes ago
-                                    li
-                                        span.article_stat_val Sujha Sund…
+                                        .article_title
+                                            a.article_link(href='#') Goldman Sachs: Bitcoin Could Be Viable Mon…
+                                            ul.article_stat
+                                                li
+                                                    span.article_stat_val._stat_views 212
+                                                li
+                                                    span.article_stat_val 2 minutes ago
+                                                li._first
+                                                    a.article_stat_val(href='#') Ariel Deschapell
+                                .news_col._third
+                                    .article_block
+                                        .article_img
+                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                a.article_action_btn.actionBtn(href='#' )
+                                            a.article_img_link(href='#'): img(src='i/range.jpg')
 
-                    .article_controls
-                        a.btn_v1.more_btn.gray_btn.clr_red(href='#') More «Price analysis»
+                                        .article_title
+                                            a.article_link(href='#') China's Internet Finance Association Warns on …
+                                            ul.article_stat
+                                                li
+                                                    span.article_stat_val._stat_views 212
+                                                li
+                                                    span.article_stat_val 2 minutes ago
+                                                li._first
+                                                    a.article_stat_val(href='#') Ariel Deschapell
+                                .news_col._third
+                                    .article_block
+                                        .article_img
+                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                a.article_action_btn.actionBtn(href='#' )
+                                            a.article_img_link(href='#'): img(src='i/range.jpg')
+
+                                        .article_title._video
+                                            a.article_link(href='#') Biosensor Analysis Tool - Human Behaviour Research Synchroniz…
+                                            ul.article_stat
+                                                li
+                                                    span.article_stat_val._stat_views 212
+                                                li
+                                                    span.article_stat_val 2 minutes ago
+                                                li._first
+                                                    a.article_stat_val(href='#') Ariel Deschapell
+
+                            .article_controls._pricewise
+                                a.btn_v1.more_btn.gray_btn(href='#') More #Pricewise
+
+                            .news_row._bordered._analysis._show_2
+                                .news_col._wide
+                                    .article_group_title._analysis
+                                        span Analysis
+                                        a.article_title_link(href='#') All  #Analysis
+
+                                .news_col._third
+                                    .article_block
+                                        .article_img
+                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                a.article_action_btn.actionBtn(href='#' )
+                                            a.article_img_link(href='#'): img(src='i/range.jpg')
+
+                                        .article_title
+                                            a.article_link(href='#') Goldman Sachs: Bitcoin Could Be Viable Mon…
+                                            ul.article_stat
+                                                li
+                                                    span.article_stat_val._stat_views 212
+                                                li
+                                                    span.article_stat_val 2 minutes ago
+                                                li._first
+                                                    a.article_stat_val(href='#') Ariel Deschapell
+                                .news_col._third
+                                    .article_block
+                                        .article_img
+                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                a.article_action_btn.actionBtn(href='#' )
+                                            a.article_img_link(href='#'): img(src='i/range.jpg')
+
+                                        .article_title
+                                            a.article_link(href='#') China's Internet Finance Association Warns on …
+                                            ul.article_stat
+                                                li
+                                                    span.article_stat_val._stat_views 212
+                                                li
+                                                    span.article_stat_val 2 minutes ago
+                                                li._first
+                                                    a.article_stat_val(href='#') Ariel Deschapell
+                                .news_col._third
+                                    .article_block
+                                        .article_img
+                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                a.article_action_btn.actionBtn(href='#' )
+                                            a.article_img_link(href='#'): img(src='i/range.jpg')
+
+                                        .article_title._video
+                                            a.article_link(href='#') Biosensor Analysis Tool - Human Behaviour Research Synchroniz…
+                                            ul.article_stat
+                                                li
+                                                    span.article_stat_val._stat_views 212
+                                                li._fr
+                                                    span.article_stat_val 13:45
+
+                            .article_controls._analysis
+                                a.btn_v1.more_btn.gray_btn(href='#') More #Price analysis
+
+                        +aside_block()
 
             .nav_holder
                 +header()

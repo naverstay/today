@@ -1,18 +1,24 @@
 //*************************** header
 
 %header_btn {
-  position: absolute;
+  @include transition_all(border-color .3s, background .3s, opacity .3s);
   z-index: 7;
-  top: 12px;
+  position: relative;
+  display: block;
   border-radius: 100%;
   width: 48px;
   height: 48px;
-  line-height: 52px;
+  line-height: 48px;
   text-align: center;
-  color: #fff;
   font-size: 18px;
-  box-shadow: 0 0 1px rgba(0, 0, 0, .25);
-  background: transparentize($violette, .5);
+  color: $violette;
+  background: #f7f8f8;
+  border: 2px solid #f7f8f8;
+
+  &:hover {
+    border-color: $violette;
+    background: #fff;
+  }
 }
 
 .nav_holder {
@@ -21,8 +27,20 @@
   right: 0;
   left: 0;
   z-index: 5;
-  max-width: $body_width;
-  margin: 0 auto;
+  //margin: 0 auto;
+  //max-width: 952px + 32px;
+  //
+  //@include respond-to-min($resp_step_1) {
+  //  max-width: 1192px + 32px;
+  //}
+  //
+  //@include respond-to-min($resp_step_2) {
+  //  max-width: 1384px + 32px;
+  //}
+  //
+  //@include respond-to-min($resp_step_3) {
+  //  max-width: 1576px + 32px;
+  //}
 }
 
 .header {
@@ -33,14 +51,10 @@
   right: 0;
   left: 0;
   text-align: center;
-  line-height: 48px;
-  padding-top: 8px;
-  min-height: 72px;
-  background: url($prefix + 'i/header_bg.jpg') no-repeat 50% 50%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  //line-height: 48px;
+  padding-top: 18px;
+  min-height: 80px;
+  background: #fff;
 
   &._shadow {
     box-shadow: 0 3px 5px rgba(0, 0, 0, .75);
@@ -56,20 +70,22 @@
     -ms-transform: none !important;
     transform: none !important;
   }
+
+  @include respond-to-min($resp_step_2) {
+    min-height: 85px;
+  }
 }
 
 .menu_btn {
-  @include transition_all(opacity .3s);
   @extend %header_btn;
   opacity: 1;
-  left: 16px;
 
   &:before {
-    top: 19px;
+    top: 17px;
   }
 
   &:after {
-    top: 23px;
+    top: 21px;
   }
 
   span,
@@ -78,16 +94,16 @@
     @include transition_all(transform .3s, top .3s);
     content: '';
     position: absolute;
-    left: 17px;
+    left: 15px;
     width: 14px;
     height: 2px;
-    background: white;
+    background: $violette;
   }
 
   span {
     @include transition_all(opacity .3s);
     width: 8px;
-    top: 27px;
+    top: 25px;
     opacity: 1;
   }
 
@@ -101,12 +117,12 @@
   .menu_opened & {
     &:before {
       transform: rotate(-45deg);
-      top: 24px;
+      top: 22px;
     }
 
     &:after {
       transform: rotate(45deg);
-      top: 24px;
+      top: 22px;
     }
 
     span {
@@ -118,7 +134,6 @@
 .search_btn {
   @extend %header_btn;
   @extend %icon_pseudo;
-  right: 16px;
 
   &:before {
     content: $icon-search;
@@ -132,14 +147,14 @@
   .search_opened & {
     &:after,
     &:before {
-      @include transition_all(transform .3s, top 0.3s, background .3s);
+      @include transition_all(transform .3s, top .3s, background .3s);
       content: '';
       position: absolute;
-      left: 17px;
+      left: 15px;
       width: 14px;
       height: 2px;
-      top: 24px;
-      background: white;
+      top: 22px;
+      background: $violette;
     }
 
     &:before {
@@ -156,10 +171,8 @@
   @include transition_all(opacity .3s);
   position: relative;
   z-index: 6;
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 50px;
-  max-width: 100%;
+  float: left;
+  margin-left: 4px;
   opacity: 1;
 
   .search_opened & {
@@ -174,10 +187,30 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
+  max-width: 168px;
 
   img {
     display: block;
     width: 100%;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    max-width: 200px;
+  }
+}
+
+.user_menu {
+  float: right;
+  padding-top: 2px;
+  margin-right: -4px;
+
+  li {
+    float: left;
+    padding-right: 16px;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    padding-top: 10px;
   }
 }
 

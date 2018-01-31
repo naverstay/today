@@ -4,6 +4,7 @@
   height: 48px;
 
   &.more_btn {
+    @extend %firm_color;
     @extend %icon_pseudo;
     cursor: pointer;
     display: block;
@@ -15,6 +16,10 @@
       content: $icon-triangle;
       margin: 0 12px 0 -12px;
       font-size: 9px;
+    }
+
+    &:hover {
+      @extend %firm_border_color;
     }
   }
 
@@ -32,6 +37,41 @@
   }
 }
 
+.btn_v2 {
+  height: 40px;
+
+  &.head_subscribe_btn {
+    display: block;
+    border-radius: 20px;
+    padding: 10px 29px;
+    margin: 4px 8px;
+    font: 16px/20px $FrutigerNeueLTW1GBlack;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.btn_v3 {
+  height: 36px;
+
+  &.subscribe_btn {
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 23px;
+    padding: 9px 16px;
+    margin-bottom: 35px;
+    font: 18px/20px $FrutigerNeueLTW1GBlack;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
 .transp_btn {
   background: none;
   border: 2px solid #fff;
@@ -41,8 +81,50 @@
 }
 
 .gray_btn {
+  @include transition_all(border-color .3s, background .3s);
   color: $violette;
   background: #f7f8f8;
+  border: 2px solid #f7f8f8;
+
+  &:hover {
+    border-color: $violette;
+    background: #fff;
+  }
+}
+
+.btn_white {
+  @include transition_all(background .3s);
+  color: $violette;
+  background: #fff;
+
+  &:hover {
+    background: #f2eefb;
+  }
+}
+
+.btn_violette {
+  position: relative;
+  background: url(../i/firm_bg_violette.jpg) no-repeat 0 50%;
+  color: #fff;
+
+  &:before {
+    @include transition_all(opacity .3s);
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: inherit;
+    background: $violette;
+    opacity: 0;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
 }
 
 .btn_red {

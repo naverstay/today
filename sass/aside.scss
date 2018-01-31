@@ -1,0 +1,257 @@
+//*************************** aside
+
+.aside_info_box {
+  background: #f7f8f8;
+  padding: 30px 14px 12px;
+  margin-bottom: 14px;
+
+  @include respond-to-min($resp_step_3) {
+    padding: 30px 30px 4px;
+  }
+
+  @include respond-to-min($resp_step_4) {
+    margin-bottom: 16px;
+  }
+}
+
+.aside_box_caption {
+  font: 13px/28px $FrutigerNeueLTW1GBold;
+  color: $violette;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 26px;
+
+  @include respond-to-min($resp_step_3) {
+    margin-bottom: 20px;
+  }
+}
+
+.aside_caption_link {
+  @include transition_all(transform .3s);
+  color: $violette;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+
+  &:hover {
+    color: $violette_dark;
+  }
+}
+
+.aside_caption_icon {
+  @extend %icon_pseudo;
+  padding-right: 10px;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &._qoute {
+    &:before {
+      content: $icon-flash;
+    }
+  }
+
+  &._top {
+    &:before {
+      content: $icon-splash;
+    }
+  }
+
+  &._popular {
+    &:before {
+      content: $icon-close;
+    }
+  }
+
+  &._futurama {
+    &:before {
+      content: $icon-eye;
+    }
+  }
+
+}
+
+.recent_news_list {
+
+  > li {
+    margin-bottom: 23px;
+
+    @include respond-to-min($resp_step_3) {
+      margin-bottom: 28px;
+    }
+  }
+
+  + .aside_box_caption {
+    margin-top: 55px;
+  }
+}
+
+.recent_news {
+
+  .article_link {
+    font: 14px/1.1 $FrutigerNeueLTW1GBold;
+    letter-spacing: -.005em;
+
+    &:hover {
+      color: $violette;
+    }
+
+    @include respond-to-min($resp_step_3) {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    &._fz_16 {
+      font-size: 16px;
+      line-height: 1.4;
+
+      @include respond-to-min($resp_step_3) {
+        font-size: 18px;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .article_stat {
+    padding-top: 5px;
+    //line-height: 1.5;
+
+    //.article_stat_val._stat_views:before {
+    //  line-height: 1.3;
+    //}
+  }
+}
+
+.aside_banner {
+  margin-bottom: 14px;
+  position: relative;
+  max-height: 302px;
+  overflow: hidden;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    max-height: 328px;
+  }
+
+  @include respond-to-min($resp_step_3) {
+    max-height: 362px;
+  }
+
+  @include respond-to-min($resp_step_4) {
+    max-height: 714px;
+  }
+}
+
+.banner_content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 38px 34px;
+  overflow: hidden;
+
+  p {
+    font: 24px $FrutigerNeueLTW1GBlack;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    padding: 72px 56px 30px;
+  }
+
+  @include respond-to-min($resp_step_3) {
+    padding-top: 44px;
+  }
+
+  @include respond-to-min($resp_step_4) {
+    padding-top: 150px;
+  }
+}
+
+.aside_subscribe {
+  padding: 40px 24px 22px;
+  margin-bottom: 14px;
+  text-align: center;
+  color: #fff;
+  background: url(../i/subscribe_bg.jpg) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  p {
+    margin-bottom: 10px;
+    font: 18px/1.25 $FrutigerNeueLTW1GBlack;
+  }
+
+  .action_list {
+    margin: 0 auto;
+    max-width: 200px;
+  }
+
+  .action_link {
+    @include transition_all(background .3s);
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    background: $violette;
+    color: #fff;
+
+    &:before {
+      line-height: 34px;
+    }
+
+    &:hover {
+      background: $violette_dark;
+    }
+  }
+
+  .footer_logo {
+    margin-bottom: 10px;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    padding-top: 55px;
+    padding-bottom: 18px;
+
+    p {
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+
+    .btn_v3.subscribe_btn {
+      height: 46px;
+      padding: 14px 35px;
+      margin-bottom: 40px;
+    }
+
+    .footer_logo {
+      margin-bottom: 15px;
+    }
+  }
+
+  @include respond-to-min($resp_step_3) {
+    padding: 42px 50px 28px;
+  }
+
+  @include respond-to-min($resp_step_4) {
+    padding: 55px 50px 24px;
+    margin-bottom: 16px;
+
+    p {
+      font-size: 30px;
+      margin-bottom: 22px;
+    }
+
+    .btn_v3.subscribe_btn {
+      margin-bottom: 48px;
+    }
+  }
+}
+

@@ -10,7 +10,7 @@ body {
   font: 15px/1.2 $cross_font_Georgia;
   color: $default_t_color;
   background: #fff;
-  max-width: $body_width;
+  min-width: $body_width;
   margin: 0 auto;
 
   &.no_transition {
@@ -40,9 +40,12 @@ body {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  padding: 72px 0 0;
-  max-width: $body_width;
+  padding: 82px 0 0;
   margin: 0 auto;
+
+  @include respond-to-min($resp_step_2) {
+    padding-top: 92px;
+  }
 }
 
 .main_content {
@@ -51,9 +54,143 @@ body {
   position: relative;
 }
 
+.content_holder {
+  @extend %clearfix;
+  margin-left: -32px;
+}
+
+.content_block {
+  float: left;
+  width: 74.5%;
+  padding-left: 32px;
+}
+
+.aside_block {
+  padding-left: 32px;
+  padding-right: 12px;
+  float: left;
+  width: 25.5%;
+}
+
+.news_row {
+  @extend %clearfix;
+  margin-left: -20px;
+
+  .article_controls + & {
+    margin-top: 40px;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    //margin-left: -28px;
+  }
+}
+
+.news_col {
+  float: left;
+  padding-left: 32px;
+  width: 50%;
+
+  &._wide {
+    width: 100%;
+  }
+
+  @include respond-to-max($resp_step_2) {
+    ._show_2 & {
+      &._third + ._third ~ .news_col {
+        display: none;
+      }
+    }
+  }
+
+  @include respond-to-min($resp_step_2) {
+    //padding-left: 40px;
+
+    &._third {
+      width: 33.3333%;
+    }
+  }
+}
+
+.news_aggregator {
+  @extend %clearfix;
+  padding-right: 16px;
+  position: relative;
+
+  &:before {
+    right: 32px;
+    left: 32px;
+    top: 0;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    content: '';
+  }
+
+  + .article_controls {
+    margin: 0 0 22px;
+
+    @include respond-to-min($resp_step_2) {
+      margin: 0 0 28px;
+    }
+
+    @include respond-to-min($resp_step_3) {
+      margin: 0 0 35px;
+    }
+
+    @include respond-to-min($resp_step_4) {
+      margin: 0 0 32px;
+    }
+  }
+
+  &._features {
+    &:before {
+      background: $red;
+    }
+  }
+
+  > li {
+    float: left;
+    width: 50%;
+    padding-left: 16px;
+
+    @include respond-to-max($resp_step_2) {
+      &:nth-child(n+3) {
+        display: none;
+      }
+    }
+
+    @include respond-to-min($resp_step_2) {
+      width: 33.3333%;
+    }
+  }
+
+  .article_link {
+    font: 16px $FrutigerNeueLTW1GBold;
+    letter-spacing: .005em;
+  }
+
+  @include respond-to-min($resp_step_3) {
+    .article_stat {
+      padding-top: 10px;
+    }
+  }
+}
+
 .section_inner {
   width: 100%;
-  max-width: $body_width;
   margin: 0 auto;
   padding: 0 16px;
+  max-width: 952px + 32px;
+
+  @include respond-to-min($resp_step_2) {
+    max-width: 1192px + 32px;
+  }
+
+  @include respond-to-min($resp_step_3) {
+    max-width: 1384px + 32px;
+  }
+
+  @include respond-to-min($resp_step_4) {
+    max-width: 1576px + 32px;
+  }
 }

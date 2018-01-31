@@ -23,6 +23,18 @@
 }
 
 @font-face {
+  font-family: 'FrutigerNeueLTW1G-Medium';
+  src: url($prefix + 'fonts/FrutigerNeueLTW1G-Medium.eot');
+  src: url($prefix + 'fonts/FrutigerNeueLTW1G-Medium.eot?#iefix') format("embedded-opentype"),
+  url($prefix + 'fonts/FrutigerNeueLTW1G-Medium.woff') format("woff"),
+  url($prefix + 'fonts/FrutigerNeueLTW1G-Medium.woff2') format("woff2"),
+  url($prefix + 'fonts/FrutigerNeueLTW1G-Medium.ttf') format("truetype"),
+  url($prefix + 'fonts/FrutigerNeueLTW1G-Medium.svg') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'FrutigerNeueLTW1G-Book';
   src: url($prefix + 'fonts/FrutigerNeueLTW1G-Book.eot');
   src: url($prefix + 'fonts/FrutigerNeueLTW1G-Book.eot?#iefix') format("embedded-opentype"),

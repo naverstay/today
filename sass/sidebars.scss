@@ -215,6 +215,58 @@
 
 // *********  menu
 
+.tag_holder {
+  position: relative;
+  padding: 10px 12px;
+  background: $violette url(../i/firm_bg_violette.jpg) no-repeat 0 50%;
+
+  .main_menu {
+    opacity: 1;
+    float: left;
+    padding-top: 4px;
+    overflow: visible;
+
+    @include respond-to-max($resp_step_3) {
+      padding-left: 0;
+    }
+  }
+
+  .menu_item {
+    margin-bottom: 0;
+    padding: 0 21px;
+  }
+
+  .menu_link {
+    font-size: 20px;
+    text-decoration: none;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:before {
+      @include transition_all(opacity .3s, transform .3s);
+      @include transform_translate(0, 0);
+      content: '';
+      position: absolute;
+      top: -14px;
+      bottom: -12px;
+      right: -21px;
+      left: -21px;
+      background: $violette_dark;
+      opacity: 0;
+    }
+
+    &:hover {
+      &:before {
+        @include transform_translate(0, -4px);
+        opacity: 1;
+      }
+    }
+  }
+}
+
 .main_menu {
   @include transition_all(opacity .3s);
   opacity: 0;

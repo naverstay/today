@@ -1,19 +1,24 @@
 $pi: 3.14159265359;
 $square_root_of_2: 1.41421356237;
 
-$resp_step_2: 1040px;
+$resp_step_1: 1024px;
+$resp_step_2: 1280px;
+$resp_step_3: 1440px;
+$resp_step_4: 1680px;
 
-$content-max-w: 1440px;
-$body_width: 640px;
+$body_width: 952px;
+$content-max-w: $body_width;
 
-$prefix: '../';
+$prefix: './';
 
 $icomoon-font-path: $prefix + "fonts";
 $icomoon-font-name: 'crypto_icons';
 
 $FrutigerNeueLTW1GBlack: 'FrutigerNeueLTW1G-Black', sans-serif;
-$FrutigerNeueLTW1GBook: 'FrutigerNeueLTW1G-Book', sans-serif;
 $FrutigerNeueLTW1GBold: 'FrutigerNeueLTW1G-Bold', sans-serif;
+$FrutigerNeueLTW1GMedium: 'FrutigerNeueLTW1G-Medium', sans-serif;
+$FrutigerNeueLTW1GBook: 'FrutigerNeueLTW1G-Book', sans-serif;
+
 $Roboto: 'Roboto', sans-serif;
 $CirceBold: 'CirceBold', sans-serif;
 $PTSerif: 'PT Serif', serif;
@@ -36,6 +41,7 @@ $cross_font_Verdana: Verdana, 'Geneva CY', 'DejaVu Sans', sans-serif;
 $default_t_color: #000;
 $placeholder_color: #ccc;
 
+$violette_dark: #251050;
 $violette: #5c29c7;
 $violette_2: #9e358c;
 $orange: #fa500e;

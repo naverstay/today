@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'crypto_icons';
-  src:  url('#{$icomoon-font-path}/crypto_icons.eot?6yx6s3');
-  src:  url('#{$icomoon-font-path}/crypto_icons.eot?6yx6s3#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/crypto_icons.ttf?6yx6s3') format('truetype'),
-    url('#{$icomoon-font-path}/crypto_icons.woff?6yx6s3') format('woff'),
-    url('#{$icomoon-font-path}/crypto_icons.svg?6yx6s3#crypto_icons') format('svg');
+  src:  url('#{$icomoon-font-path}/crypto_icons.eot?na0twe');
+  src:  url('#{$icomoon-font-path}/crypto_icons.eot?na0twe#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/crypto_icons.ttf?na0twe') format('truetype'),
+    url('#{$icomoon-font-path}/crypto_icons.woff?na0twe') format('woff'),
+    url('#{$icomoon-font-path}/crypto_icons.svg?na0twe#crypto_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-flash {
+  &:before {
+    content: $icon-flash;
+  }
+}
 .icon-crypto {
   &:before {
     content: $icon-crypto;
@@ -109,6 +114,21 @@
 .icon-arrow-up {
   &:before {
     content: $icon-arrow-up;
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: $icon-arrow-right;
+  }
+}
+.icon-arrow-down {
+  &:before {
+    content: $icon-arrow-down;
+  }
+}
+.icon-arrow-left {
+  &:before {
+    content: $icon-arrow-left;
   }
 }
 

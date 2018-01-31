@@ -1,5 +1,6 @@
 .category_tip {
   @extend %icon_pseudo;
+  @extend %firm_bg_color;
   position: relative;
   margin: 0 17px 24px -16px;
   padding: 25px 20px 15px 0;
@@ -31,45 +32,44 @@
       left: 16px;
       top: 0;
     }
-
   }
 
-  &._stories,
-  &._top {
-    background: $violette;
-  }
-
-  &._release {
-    background: $violette_2;
-  }
-
-  &._analysis {
-    background: $orange;
-  }
-
-  &._pricewise {
-    background: $green;
-  }
-
-  &._sponsored {
-    background: $green_2;
-  }
-
-  &._pool {
-    background: $blue;
-  }
-
-  &._features {
-    background: $red;
-  }
-
-  &._wiki {
-    background: $brown;
-  }
-
-  &._watch {
-    background: $brown_2;
-  }
+  //&._stories,
+  //&._top {
+  //  background: $violette;
+  //}
+  //
+  //&._release {
+  //  background: $violette_2;
+  //}
+  //
+  //&._analysis {
+  //  background: $orange;
+  //}
+  //
+  //&._pricewise {
+  //  background: $green;
+  //}
+  //
+  //&._sponsored {
+  //  background: $green_2;
+  //}
+  //
+  //&._pool {
+  //  background: $blue;
+  //}
+  //
+  //&._features {
+  //  background: $red;
+  //}
+  //
+  //&._wiki {
+  //  background: $brown;
+  //}
+  //
+  //&._watch {
+  //  background: $brown_2;
+  //}
 }
 
 .category_link {

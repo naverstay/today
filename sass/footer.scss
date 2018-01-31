@@ -1,12 +1,12 @@
 .footer {
-  background: url(../i/footer_bg.jpg) no-repeat 50% 50%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  padding: 32px 0 30px;
-  text-align: center;
+  //background: url(../i/footer_bg.jpg) no-repeat 50% 50%;
+  //-webkit-background-size: cover;
+  //-moz-background-size: cover;
+  //-o-background-size: cover;
+  //background-size: cover;
+  //text-align: center;
   position: relative;
+  padding-top: 7px;
 
   p {
     color: #fff;
@@ -14,16 +14,43 @@
   }
 
   .action_list {
-    padding-top: 15px;
     margin: 0;
+    display: block;
+    float: left;
 
     li {
-
+      float: left;
+      padding: 0 6px 0 5px;
     }
 
     .action_link {
+      width: 46px;
+      height: 46px;
+
       &:before {
-        font-size: 18px;
+        font-size: 20px;
+        line-height: 46px;
+        z-index: 1;
+        color: #fff;
+        position: relative;
+      }
+
+      &:after {
+        @include transition_all(opacity .3s);
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: $violette_dark;
+        opacity: 0;
+      }
+
+      &:hover {
+        &:after {
+          opacity: 1;
+        }
       }
 
       span {
@@ -43,32 +70,185 @@
     p {
       color: $violette;
     }
+  }
+}
 
+.footer_follow_block {
+  position: relative;
+  padding: 0 12px;
+  color: #fff;
+  font: 14px/46px $FrutigerNeueLTW1GBlack;
+  background: $violette url(../i/firm_bg_violette.jpg) no-repeat 0 50%;
+
+  .lang_block {
+    margin-top: 7px;
+    float: right;
+  }
+}
+
+.copyright {
+  float: left;
+  padding: 11px;
+  color: #c0c0c0;
+  font: 10px/16px $FrutigerNeueLTW1GBold;
+
+  @include respond-to-min($resp_step_2) {
+    font-size: 11px;
+    padding: 12px;
+  }
+
+  @include respond-to-min($resp_step_4) {
+    padding: 15px;
+  }
+}
+
+.footer_subscribe_link {
+  position: relative;
+  padding: 0 12px;
+  margin-left: 4px;
+  color: #fff;
+
+  span {
+    position: relative;
+    z-index: 1;
+    display: block;
+
+    &:before {
+      @include transition_all(opacity .3s);
+      content: '';
+      position: absolute;
+      bottom: 11px;
+      right: 0;
+      left: 0;
+      height: 2px;
+      background: #fff;
+    }
+  }
+
+  &:after {
+    @include transition_all(opacity .3s);
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: $violette_dark;
+    opacity: 0;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+
+    span {
+      &:before {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.footer_follow_label {
+  float: left;
+  padding-left: 12px;
+  letter-spacing: .02em;
+
+  @include respond-to-min($resp_step_2) {
+    padding-left: 18px;
+  }
+
+  @include respond-to-min($resp_step_3) {
+    padding-left: 28px;
+  }
+
+  a,
+  span {
+    float: left;
+  }
+}
+
+.footer_menu_holder {
+  margin-left: 190px;
+  padding-top: 20px;
+  padding-bottom: 6px;
+
+  @include respond-to-min($resp_step_2) {
+    margin-left: 225px;
+    margin-right: -4px;
+    padding-top: 26px;
+    padding-bottom: 15px;
+  }
+
+  @include respond-to-min($resp_step_3) {
+    margin-left: 240px;
+  }
+
+  @include respond-to-min($resp_step_4) {
+    margin-right: -8px;
+  }
+
+  .main_menu {
+    @extend %global_flex_block_row_nowrap_space_between_center;
+    opacity: 1;
+
+    .menu_item {
+      padding: 0 0 0 10px;
+      margin-bottom: 15px;
+    }
+
+    .menu_link {
+      text-decoration: none;
+      color: $violette;
+      font: 16px $FrutigerNeueLTW1GBlack;
+
+      &:hover {
+        color: $violette_dark;
+      }
+
+      @include respond-to-min($resp_step_2) {
+        font-size: 18px;
+      }
+    }
   }
 }
 
 .footer_menu {
-  text-align: center;
-  padding: 0 30px 12px;
+  float: right;
+  padding: 8px 12px 14px;
 
   li {
     display: inline-block;
     vertical-align: top;
-    padding: 0 10px;
-    margin-bottom: 18px;
+    padding-left: 32px;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    padding-top: 10px;
+  }
+
+  @include respond-to-min($resp_step_4) {
+    padding-top: 11px;
   }
 }
 
 .footer_link {
-  color: #fff;
-  text-decoration: underline;
-  font: 16px $FrutigerNeueLTW1GBold;
-  letter-spacing: -.017em;
+  color: #c0c0c0;
+  text-decoration: none;
+  font: 10px/16px $FrutigerNeueLTW1GBold;
+
+  @include respond-to-min($resp_step_2) {
+    font-size: 11px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .footer_logo {
-  text-align: center;
-  margin-bottom: 7px;
+  float: left;
 }
 
 .go_top_holder {
@@ -96,11 +276,11 @@
 
 .go_top {
   @extend %icon_pseudo;
-  @include transition_all(right .3s, opacity .3s);
+  @include transition_all(left .3s, opacity .3s);
   position: absolute;
   bottom: 0;
   opacity: 0;
-  right: -65px;
+  left: -65px;
   width: 56px;
   height: 56px;
   font-size: 20px;
@@ -116,7 +296,7 @@
   }
 
   ._vis & {
-    right: 16px;
+    left: 14px;
     opacity: 1;
     pointer-events: all;
   }
@@ -156,4 +336,16 @@ $rectWidth: $content-max-w;
 
 .text_upper {
   text-transform: uppercase;
+}
+
+._vis_1280 {
+
+  @include respond-to-max($resp_step_2) {
+    display: none !important;
+  }
+}
+
+.chromeperfectpixel-overlay,
+.chromeperfectpixel-portal {
+  //pointer-events: none !important;
 }

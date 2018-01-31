@@ -1,23 +1,30 @@
 .attention_block {
   @extend %icon_pseudo;
-  padding: 14px 12px 14px 27px;
-  margin: 12px 0;
+  padding: 18px 12px 14px 27px;
+  margin: 14px 14px 12px;
   background: #f7f6ef;
   font: 13px $FrutigerNeueLTW1GBold;
   letter-spacing: -.017em;
   position: relative;
   z-index: 1;
+  display: block;
 
   p {
+    @include transition_all(color .3s);
+    font-size: 15px;
     line-height: 1.1;
   }
 
+  &:hover p {
+    color: $violette;
+  }
+
   &._warn {
-    border: 3px solid #ff0a24;
+    //border: 3px solid #ff0a24;
     color: #271a0f;
 
     &:before {
-      content: $icon-search;
+      content: $icon-flash;
       position: absolute;
       top: 50%;
       margin-top: -14px;
@@ -31,43 +38,162 @@
       text-align: center;
     }
   }
+
+  @include respond-to-min($resp_step_3) {
+    margin-bottom: 22px;
+  }
+}
+
+.attention_caption {
+  color: #fff;
+  height: 28px;
+  font: 14px/28px $FrutigerNeueLTW1GBlack;
+  letter-spacing: .01em;
+  padding-right: 13px;
+  float: left;
+  margin: -8px 18px 0 -11px;
+
+  + p {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  ._warn & {
+    background: #ff0a24;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    margin-right: 34px;
+  }
+}
+
+.attention_link {
+  @extend %icon_pseudo;
+  color: #ff0a24;
+  font-size: 18px;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  margin: -2px 0 -4px 30px;
+
+  &:before {
+    content: $icon-arrow-right;
+  }
 }
 
 .top_story_caption {
-  font: 13px $FrutigerNeueLTW1GBold;
+  @extend %firm_color;
+  font: 13px $FrutigerNeueLTW1GBlack;
   margin-top: 6px;
   margin-bottom: 17px;
   letter-spacing: .013em;
   position: relative;
   z-index: 1;
+
+  //._stories &,
+  //._top & {
+  //  color: $violette;
+  //}
+  //
+  //._release & {
+  //  color: $violette_2;
+  //}
+  //
+  //._analysis & {
+  //  color: $orange;
+  //}
+  //
+  //._pricewise & {
+  //  color: $green;
+  //}
+  //
+  //._sponsored & {
+  //  color: $green_2;
+  //}
+  //
+  //._pool & {
+  //  color: $blue;
+  //}
+  //
+  //._features & {
+  //  color: $red;
+  //}
+  //
+  //._wiki & {
+  //  color: $brown;
+  //}
+  //
+  //._watch & {
+  //  color: $brown_2;
+  //}
+}
+
+.article_reviews_holder {
+  padding-left: 10px;
+
+  .top_story_caption {
+    margin-bottom: 12px;
+  }
+
+  .article_reviews {
+    margin-bottom: 24px;
+
+    > li + li {
+      margin-top: 21px;
+
+      @include respond-to-min($resp_step_2) {
+        margin-top: 18px;
+      }
+
+      @include respond-to-min($resp_step_3) {
+        margin-top: 24px;
+      }
+    }
+
+    @include respond-to-min($resp_step_2) {
+      margin-bottom: 16px;
+    }
+  }
 }
 
 .article_block {
   position: relative;
-  margin-right: -16px;
+  //margin-right: -16px;
   margin-bottom: 16px;
 
-  &._top {
-    padding-top: 12px;
-    padding-bottom: 12px;
+  .content_block & {
+    //margin-right: -3px;
 
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      top: 0;
-      left: -16px;
-      right: 0;
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
+    @include respond-to-min($resp_step_2) {
+      //margin-right: -9px;
     }
+  }
 
-    .article_title {
-      padding-bottom: 25px;
+  &._top {
+    //padding-top: 12px;
+    //padding-bottom: 12px;
+
+    //&:after {
+    //  content: '';
+    //  position: absolute;
+    //  bottom: 0;
+    //  top: 0;
+    //  left: -16px;
+    //  right: 0;
+    //  background-repeat: no-repeat;
+    //  background-position: 0 0;
+    //  -webkit-background-size: cover;
+    //  -moz-background-size: cover;
+    //  -o-background-size: cover;
+    //  background-size: cover;
+    //}
+
+    @include respond-to-min($resp_step_2) {
+      &._top {
+        margin-bottom: 0;
+      }
     }
 
     &.story_block {
@@ -76,7 +202,7 @@
       }
 
       .top_story_caption {
-        color: #fff;
+        //color: #fff;
       }
     }
   }
@@ -91,25 +217,65 @@
 
     .article_link {
       font: 18px/1.4 $FrutigerNeueLTW1GBold;
+
+      &:hover {
+        color: $violette;
+      }
     }
 
     .article_stat {
-      clear: both;
-      padding-top: 7px;
+      padding-top: 5px;
     }
 
     .article_img {
-      float: left;
+      float: right;
       width: 88px;
       margin-bottom: 10px;
 
       + .article_title {
-        margin-left: 104px;
+        margin-right: 104px;
+
+        @include respond-to-min($resp_step_2) {
+          margin-right: 144px;
+        }
+
+        @include respond-to-min($resp_step_3) {
+          margin-right: 180px;
+        }
+
+        @include respond-to-min($resp_step_4) {
+          margin-right: 200px;
+        }
 
         .article_link {
           font-size: 16px;
-          letter-spacing: -.015em;
+          letter-spacing: 0;
+
+          @include respond-to-min($resp_step_3) {
+            font-size: 18px;
+          }
+
+          &._fz_18 {
+            @include respond-to-min($resp_step_2) {
+              font-size: 18px;
+            }
+            @include respond-to-min($resp_step_3) {
+              font-size: 20px;
+            }
+          }
         }
+      }
+
+      @include respond-to-min($resp_step_2) {
+        width: 110px;
+      }
+
+      @include respond-to-min($resp_step_3) {
+        width: 136px;
+      }
+
+      @include respond-to-min($resp_step_4) {
+        width: 160px;
       }
     }
   }
@@ -126,6 +292,122 @@
     }
   }
 
+  ._bordered & {
+    border-top: 8px solid;
+    margin-bottom: 6px;
+
+    .article_title {
+      padding-bottom: 15px;
+
+      @include respond-to-min($resp_step_3) {
+        padding: 21px 16px 23px 30px;
+      }
+    }
+
+    .article_link {
+      color: #000;
+      font-size: 16px;
+
+      @include respond-to-min($resp_step_3) {
+        font-size: 18px;
+        letter-spacing: -.007em;
+      }
+    }
+  }
+
+  ._stories &,
+  ._top & {
+    border-top-color: $violette;
+  }
+
+  ._release & {
+    border-top-color: $violette_2;
+  }
+
+  ._analysis & {
+    border-top-color: $orange;
+  }
+
+  ._pricewise & {
+    border-top-color: $green;
+  }
+
+  ._sponsored & {
+    border-top-color: $green_2;
+  }
+
+  ._pool & {
+    border-top-color: $blue;
+  }
+
+  ._features & {
+    border-top-color: $red;
+  }
+
+  ._wiki & {
+    border-top-color: $brown;
+  }
+
+  ._watch & {
+    border-top-color: $brown_2;
+  }
+}
+
+._bordered {
+  &._stories,
+  &._top {
+    .article_block .article_link:hover {
+      color: $violette;
+    }
+  }
+
+  &._release {
+    .article_block .article_link:hover {
+      color: $violette_2;
+    }
+  }
+
+  &._analysis {
+    .article_block .article_link:hover {
+      color: $orange;
+    }
+  }
+
+  &._pricewise {
+    .article_block .article_link:hover {
+      color: $green;
+    }
+  }
+
+  &._sponsored {
+    .article_block .article_link:hover {
+      color: $green_2;
+    }
+  }
+
+  &._pool {
+    .article_block .article_link:hover {
+      color: $blue;
+    }
+  }
+
+  &._features {
+    .article_block .article_link:hover {
+      color: $red;
+    }
+  }
+
+  &._wiki {
+    .article_block .article_link:hover {
+      color: $brown;
+    }
+  }
+
+  &._watch {
+    .article_block .article_link:hover {
+      color: $brown_2;
+    }
+  }
 }
 
 .article_quote {
@@ -142,7 +424,7 @@
       &:before {
         content: '\201C';
         position: absolute;
-        color: #000;
+        border-top-color: #000;
         top: -16px;
         left: 9px;
         font: 90px/1 $cross_font_Georgia;
@@ -210,20 +492,36 @@
 
 }
 
+.article_img_link {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
 .article_img {
   position: relative;
   overflow: hidden;
 
   img {
-    position: relative;
-    z-index: 1;
     display: block;
     width: 100%;
   }
 
   ._main & {
-    padding-right: 30px;
+    padding-right: 25px;
     padding-top: 14px;
+
+    @include respond-to-min($resp_step_2) {
+      padding-right: 30px;
+    }
+
+    @include respond-to-min($resp_step_3) {
+      padding-right: 40px;
+    }
+
+    @include respond-to-min($resp_step_4) {
+      padding-right: 50px;
+    }
 
     &:before {
       content: '';
@@ -231,7 +529,7 @@
       top: 0;
       left: 0;
       right: 0;
-      bottom: 20px;
+      bottom: 16px;
     }
 
     &:after {
@@ -246,8 +544,17 @@
   }
 
   ._article & {
-    margin-left: -16px;
-    padding-right: 17px;
+    //margin-left: -16px;
+    //padding-right: 17px;
+  }
+
+  ._top & {
+    padding-bottom: 34px;
+    padding-left: 10px;
+
+    @include respond-to-min($resp_step_2) {
+      padding-bottom: 12px;
+    }
   }
 
   ._stories &,
@@ -372,57 +679,142 @@
 .article_title {
   z-index: 1;
   position: relative;
-  padding: 17px 16px 20px 20px;
+  //padding: 17px 16px 20px 20px;
+  padding: 21px 16px 25px 20px;
   background: #f7f8f8;
+
+  ._top & {
+    @extend %icon_pseudo;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 88px;
+    max-height: 100%;
+    padding: 12px 10px 26px 8px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 18px;
+      bottom: 34px;
+      width: 8px;
+      left: 100%;
+      background: $violette;
+    }
+
+    &:before {
+      content: $icon-ufo;
+      position: absolute;
+      right: 0;
+      bottom: -25px;
+      font-size: 110px;
+      line-height: 1;
+      width: 90px;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .article_link {
+      font-size: 20px;
+      line-height: 1.35;
+
+      @include respond-to-min($resp_step_3) {
+        font-size: 22px;
+      }
+
+      &:hover {
+        color: $red;
+      }
+    }
+
+    @include respond-to-min($resp_step_2) {
+      right: 110px;
+      padding: 20px 14px 46px 14px;
+    }
+
+    @include respond-to-min($resp_step_3) {
+      right: 136px;
+      padding: 20px 14px 36px 14px;
+    }
+
+    @include respond-to-min($resp_step_4) {
+      right: 160px;
+      //padding: 20px 14px 39px 19px;
+    }
+  }
+
+  ._main & {
+
+    @include respond-to-min($resp_step_3) {
+      padding-left: 28px;
+    }
+  }
+
 }
 
 .article_link {
-  font: 20px $FrutigerNeueLTW1GBlack;
+  @include transition_all(color .3s);
+  font: 24px $FrutigerNeueLTW1GBold;
   letter-spacing: .021em;
   text-decoration: none;
   color: #000;
+
+  ._main &,
+  ._top & {
+    font-family: $FrutigerNeueLTW1GBlack;
+  }
+
+  @include respond-to-min($resp_step_3) {
+    font-size: 26px;
+  }
+
+  &.clr_violette {
+    &:hover {
+      color: $violette_dark;
+    }
+  }
 
   ._video & {
     font: 16px/1.4 $FrutigerNeueLTW1GBold;
     letter-spacing: -.015em;
   }
 
-  ._stories &,
-  ._top & {
-    color: $violette;
-  }
-
-  ._release & {
-    color: $violette_2;
-  }
-
-  ._analysis & {
-    color: $orange;
-  }
-
-  ._pricewise & {
-    color: $green;
-  }
-
-  ._sponsored & {
-    color: $green_2;
-  }
-
-  ._pool & {
-    color: $blue;
-  }
-
-  ._features & {
-    color: $red;
-  }
-
-  ._wiki & {
-    color: $brown;
-  }
-
-  ._watch & {
-    color: $brown_2;
-  }
+  //._stories & {
+  //  color: $violette;
+  //}
+  //
+  //._release & {
+  //  color: $violette_2;
+  //}
+  //
+  //._analysis & {
+  //  color: $orange;
+  //}
+  //
+  //._pricewise & {
+  //  color: $green;
+  //}
+  //
+  //._sponsored & {
+  //  color: $green_2;
+  //}
+  //
+  //._pool & {
+  //  color: $blue;
+  //}
+  //
+  //._features & {
+  //  color: $red;
+  //}
+  //
+  //._wiki & {
+  //  color: $brown;
+  //}
+  //
+  //._watch & {
+  //  color: $brown_2;
+  //}
 
   ._article & {
     color: #000;
@@ -431,31 +823,41 @@
 }
 
 .article_theme {
+  @include transition_all(color .3s);
   text-decoration: underline;
 
   .story_block & {
     color: $violette;
+
+    &:hover {
+      color: $violette_dark;
+    }
   }
 }
 
 .article_stat {
   @extend %clearfix;
-  padding-top: 9px;
+  padding-top: 13px;
   color: rgba(0, 0, 0, .4);
-  font: 12px/1.2 $FrutigerNeueLTW1GBook;
+  font: 12px/1.5 $FrutigerNeueLTW1GBook;
 
   li {
     float: left;
 
     &:before {
       content: '\007C';
-      padding: 0 5px;
+      padding: 0 7px;
     }
 
+    &._first,
     &:first-child {
       &:before {
         display: none;
       }
+    }
+
+    &._first {
+      clear: left;
     }
 
     &._fr {
@@ -474,6 +876,12 @@
   &._mod_1 {
     margin-bottom: 15px;
   }
+
+  ._top & {
+    padding-top: 10px;
+    position: relative;
+
+  }
 }
 
 .article_stat_val {
@@ -491,9 +899,20 @@
       left: 0;
       content: $icon-eye;
       font-size: 15px;
-      line-height: 1;
+      line-height: 1.3;
     }
   }
+
+  @at-root a#{&} {
+    @include transition_all(color .3s);
+    color: rgba(0, 0, 0, .4);
+
+    &:hover {
+      color: $violette;
+      @extend %firm_color;
+    }
+  }
+
 }
 
 .article_action {
@@ -510,9 +929,16 @@
   ._main & {
     top: 16px;
   }
+
+  ._top & {
+    left: auto;
+    right: 76px;
+    bottom: 91px;
+  }
 }
 
 .article_action_btn {
+  @include transition_all(background .3s);
   @extend %icon_pseudo;
   float: left;
   margin-top: 16px;
@@ -532,6 +958,11 @@
     content: $icon-share-alt;
     color: #fff;
   }
+
+  &:hover {
+    background: $violette;
+    @extend %firm_bg_color;
+  }
 }
 
 .article_tags {
@@ -547,6 +978,7 @@
 }
 
 .article_tag {
+  @extend %firm_bg_color;
   position: relative;
   min-width: 28px;
   height: 28px;
@@ -580,64 +1012,84 @@
     }
   }
 
-  &._stories,
-  &._top {
-    //&:before {
-    background: $violette;
-    //}
-  }
 
-  &._release {
-    //&:before {
-    background: $violette_2;
-    //}
-  }
 
-  &._analysis {
-    //&:before {
-    background: $orange;
-    //}
-  }
-
-  &._pricewise {
-    //&:before {
-    background: $green;
-    //}
-  }
-
-  &._sponsored {
-    //&:before {
-    background: $green_2;
-    //}
-  }
-
-  &._pool {
-    //&:before {
-    background: $blue;
-    //}
-  }
-
-  &._features {
-    //&:before {
-    background: $red;
-    //}
-  }
-
-  &._wiki {
-    //&:before {
-    background: $brown;
-    //}
-  }
-
-  &._watch {
-    //&:before {
-    background: $brown_2;
-    //}
-  }
+  //&._stories,
+  //&._top {
+  //  background: $violette;
+  //}
+  //
+  //&._release {
+  //  background: $violette_2;
+  //}
+  //
+  //&._analysis {
+  //  background: $orange;
+  //}
+  //
+  //&._pricewise {
+  //  background: $green;
+  //}
+  //
+  //&._sponsored {
+  //  background: $green_2;
+  //}
+  //
+  //&._pool {
+  //  background: $blue;
+  //}
+  //
+  //&._features {
+  //  background: $red;
+  //}
+  //
+  //&._wiki {
+  //  background: $brown;
+  //}
+  //
+  //&._watch {
+  //  background: $brown_2;
+  //}
 }
 
 .article_controls {
-  margin: 16px 0;
+  margin: 12px 0;
+}
+
+.article_title_link {
+  @include transition_all(color .3s);
+  @extend %icon_pseudo;
+  float: right;
+  padding-right: 36px;
+  position: relative;
+  z-index: 2;
+  color: rgba(0, 0, 0, .4);
+  font: 12px/20px $FrutigerNeueLTW1GBook;
+
+  &:before {
+    @include transition_all(color .3s);
+    content: $icon-arrow-right;
+    position: absolute;
+    right: 0;
+    font-size: 18px;
+  }
+
+  &:hover {
+    color: #000;
+
+    &:before {
+      @extend %firm_color;
+    }
+  }
+
+  ._bg & {
+    color: #fff;
+    font-family: $FrutigerNeueLTW1GBlack;
+
+    &:before {
+      color: #fff !important;
+    }
+  }
 }
 
 .article_group_title {
@@ -646,8 +1098,8 @@
   color: #fff;
   font: 18px $FrutigerNeueLTW1GBold;
   letter-spacing: .025em;
-  padding: 21px 10px 15px 60px;
-  margin: 0 7px 12px -16px;
+  padding: 11px 16px 7px 44px;
+  margin: 0 0 12px;
   background-position: 0 0;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -657,28 +1109,69 @@
 
   &:before {
     position: absolute;
-    top: 18px;
-    left: 16px;
+    z-index: 2;
+    top: 4px;
+    left: 2px;
     border-radius: 100%;
     background: #fff;
-    height: 28px;
-    width: 28px;
+    height: 32px;
+    width: 32px;
     font-size: 18px;
-    line-height: 28px;
+    line-height: 32px;
     text-align: center;
   }
 
+  span {
+    position: relative;
+    z-index: 2;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    margin-bottom: 16px;
+    padding-right: 9px;
+  }
+
+  @include respond-to-min($resp_step_3) {
+    margin-bottom: 15px;
+  }
+
+  &._bg {
+    background: none;
+    margin-top: 45px;
+    padding: 11px 36px 7px 68px;
+
+    &:before {
+      left: 21px;
+    }
+
+    @include respond-to-min($resp_step_3) {
+      margin-top: 40px;
+    }
+  }
+
   &._stories {
-    background-image: url(../i/story_title_violette.jpg);
+    color: #000;
+
+    //background-image: url(../i/story_title_violette.jpg);
 
     &:before {
       content: $icon-crypto;
-      color: $violette;
+      color: #fff;
+      background: $violette;
     }
   }
 
   &._features {
-    background-image: url(../i/story_title_red.jpg);
+    &:after {
+      content: '';
+      position: absolute;
+      height: 284px;
+      top: -20px;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      background-image: url(../i/group_bg_red.jpg);
+    }
 
     &:before {
       content: $icon-star;
@@ -687,28 +1180,64 @@
   }
 
   &._pool {
-    background-image: url(../i/story_title_blue.jpg);
+    color: #000;
+    //background-image: url(../i/story_title_blue.jpg);
 
     &:before {
       content: $icon-shark;
-      color: $blue;
+      color: #fff;
+      background: $blue;
+    }
+  }
+
+  &._pricewise {
+    color: #000;
+    //background-image: url(../i/story_title_blue.jpg);
+
+    &:before {
+      content: $icon-say;
+      color: #fff;
+      background: $green;
     }
   }
 
   &._analysis {
-    background-image: url(../i/story_title_orange.jpg);
+    color: #000;
+
+    //background-image: url(../i/story_title_orange.jpg);
 
     &:before {
       content: $icon-splash;
-      color: $orange;
+      color: #fff;
+      background: $orange;
     }
   }
 }
 
 .news_list {
 
+  .content_block & {
+    @include respond-to-min($resp_step_2) {
+      //padding-top: 4px;
+    }
+  }
+
   li {
     margin-top: 22px;
+
+    .content_block & {
+      margin-top: 24px;
+
+      @include respond-to-min($resp_step_2) {
+        margin-top: 26px;
+      }
+
+      @include respond-to-max($resp_step_4) {
+        &:nth-child(n+6) {
+          display: none;
+        }
+      }
+    }
   }
 
   &._related {
@@ -722,13 +1251,13 @@
 
 .news_item {
   @extend %clearfix;
-
 }
 
 .news_date {
   float: right;
-  width: 37px;
-  padding-top: 7px;
+  width: 40px;
+  margin-left: 10px;
+  padding-top: 10px;
   font: 12px/1.1 $FrutigerNeueLTW1GBook;
 
   .news_list & {
@@ -742,49 +1271,69 @@
 
 .news_name {
   letter-spacing: -.021em;
-  font: 20px/1.1 $FrutigerNeueLTW1GBold;
+  color: #000;
+  font: 20px/1.2 $FrutigerNeueLTW1GBold;
 
   ._related & {
     font-size: 16px;
     letter-spacing: .01em;
   }
 
-  ._stories &,
-  ._top & {
-    color: $violette;
+  @at-root a#{&} {
+    @include transition_all(color .3s);
+
+    &:hover {
+      color: $violette;
+    }
   }
 
-  ._release & {
-    color: $violette_2;
+  @include respond-to-min($resp_step_2) {
+    font-size: 22px;
+    line-height: 1.1;
   }
 
-  ._analysis & {
-    color: $orange;
+  @include respond-to-min($resp_step_3) {
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -.015em;
   }
 
-  ._pricewise & {
-    color: $green;
-  }
-
-  ._sponsored & {
-    color: $green_2;
-  }
-
-  ._pool & {
-    color: $blue;
-  }
-
-  ._features & {
-    color: $red;
-  }
-
-  ._wiki & {
-    color: $brown;
-  }
-
-  ._watch & {
-    color: $brown_2;
-  }
+  //._stories &,
+  //._top & {
+  //  color: $violette;
+  //}
+  //
+  //._release & {
+  //  color: $violette_2;
+  //}
+  //
+  //._analysis & {
+  //  color: $orange;
+  //}
+  //
+  //._pricewise & {
+  //  color: $green;
+  //}
+  //
+  //._sponsored & {
+  //  color: $green_2;
+  //}
+  //
+  //._pool & {
+  //  color: $blue;
+  //}
+  //
+  //._features & {
+  //  color: $red;
+  //}
+  //
+  //._wiki & {
+  //  color: $brown;
+  //}
+  //
+  //._watch & {
+  //  color: $brown_2;
+  //}
 
 }
 

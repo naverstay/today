@@ -148,6 +148,123 @@
     }
   }
 
+  %firm_color {
+    ._stories &,
+    ._top & {
+      color: $violette;
+    }
+
+    ._release & {
+      color: $violette_2;
+    }
+
+    ._analysis & {
+      color: $orange;
+    }
+
+    ._pricewise & {
+      color: $green;
+    }
+
+    ._sponsored & {
+      color: $green_2;
+    }
+
+    ._pool & {
+      color: $blue;
+    }
+
+    ._features & {
+      color: $red;
+    }
+
+    ._wiki & {
+      color: $brown;
+    }
+
+    ._watch & {
+      color: $brown_2;
+    }
+  }
+
+  %firm_border_color {
+    ._stories &,
+    ._top & {
+      border-color: $violette;
+    }
+
+    ._release & {
+      border-color: $violette_2;
+    }
+
+    ._analysis & {
+      border-color: $orange;
+    }
+
+    ._pricewise & {
+      border-color: $green;
+    }
+
+    ._sponsored & {
+      border-color: $green_2;
+    }
+
+    ._pool & {
+      border-color: $blue;
+    }
+
+    ._features & {
+      border-color: $red;
+    }
+
+    ._wiki & {
+      border-color: $brown;
+    }
+
+    ._watch & {
+      border-color: $brown_2;
+    }
+  }
+
+  %firm_bg_color {
+    ._stories &,
+    ._top & {
+      background-color: $violette;
+    }
+
+    ._release & {
+      background-color: $violette_2;
+    }
+
+    ._analysis & {
+      background-color: $orange;
+    }
+
+    ._pricewise & {
+      background-color: $green;
+    }
+
+    ._sponsored & {
+      background-color: $green_2;
+    }
+
+    ._pool & {
+      background-color: $blue;
+    }
+
+    ._features & {
+      background-color: $red;
+    }
+
+    ._wiki & {
+      background-color: $brown;
+    }
+
+    ._watch & {
+      background-color: $brown_2;
+    }
+  }
+
   %uri_size_repeat {
     background-size: contain !important;
     background-repeat: no-repeat !important;

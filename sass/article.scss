@@ -4,6 +4,8 @@
 }
 
 .article_author_link {
+  @extend %firm_color;
+
   &:before {
     content: '@';
   }
@@ -11,43 +13,43 @@
   span {
     text-decoration: underline;
   }
-
-  ._stories &,
-  ._top & {
-    color: $violette;
-  }
-
-  ._release & {
-    color: $violette_2;
-  }
-
-  ._analysis & {
-    color: $orange;
-  }
-
-  ._pricewise & {
-    color: $green;
-  }
-
-  ._sponsored & {
-    color: $green_2;
-  }
-
-  ._pool & {
-    color: $blue;
-  }
-
-  ._features & {
-    color: $red;
-  }
-
-  ._wiki & {
-    color: $brown;
-  }
-
-  ._watch & {
-    color: $brown_2;
-  }
+  //
+  //._stories &,
+  //._top & {
+  //  color: $violette;
+  //}
+  //
+  //._release & {
+  //  color: $violette_2;
+  //}
+  //
+  //._analysis & {
+  //  color: $orange;
+  //}
+  //
+  //._pricewise & {
+  //  color: $green;
+  //}
+  //
+  //._sponsored & {
+  //  color: $green_2;
+  //}
+  //
+  //._pool & {
+  //  color: $blue;
+  //}
+  //
+  //._features & {
+  //  color: $red;
+  //}
+  //
+  //._wiki & {
+  //  color: $brown;
+  //}
+  //
+  //._watch & {
+  //  color: $brown_2;
+  //}
 }
 
 .article_info {
@@ -168,45 +170,46 @@
 }
 
 .tag_link {
+  @extend %firm_color;
   font: 13px/22px $FrutigerNeueLTW1GBold;
   letter-spacing: -.017em;
 
-  ._stories &,
-  ._top & {
-    color: $violette;
-  }
-
-  ._release & {
-    color: $violette_2;
-  }
-
-  ._analysis & {
-    color: $orange;
-  }
-
-  ._pricewise & {
-    color: $green;
-  }
-
-  ._sponsored & {
-    color: $green_2;
-  }
-
-  ._pool & {
-    color: $blue;
-  }
-
-  ._features & {
-    color: $red;
-  }
-
-  ._wiki & {
-    color: $brown;
-  }
-
-  ._watch & {
-    color: $brown_2;
-  }
+  //._stories &,
+  //._top & {
+  //  color: $violette;
+  //}
+  //
+  //._release & {
+  //  color: $violette_2;
+  //}
+  //
+  //._analysis & {
+  //  color: $orange;
+  //}
+  //
+  //._pricewise & {
+  //  color: $green;
+  //}
+  //
+  //._sponsored & {
+  //  color: $green_2;
+  //}
+  //
+  //._pool & {
+  //  color: $blue;
+  //}
+  //
+  //._features & {
+  //  color: $red;
+  //}
+  //
+  //._wiki & {
+  //  color: $brown;
+  //}
+  //
+  //._watch & {
+  //  color: $brown_2;
+  //}
 }
 
 .article_telegram_block {
@@ -219,44 +222,45 @@
 }
 
 .telegram_link {
+  @extend %firm_color;
   font: 12px/14px $FrutigerNeueLTW1GBold;
 
-  ._stories &,
-  ._top & {
-    color: $violette;
-  }
-
-  ._release & {
-    color: $violette_2;
-  }
-
-  ._analysis & {
-    color: $orange;
-  }
-
-  ._pricewise & {
-    color: $green;
-  }
-
-  ._sponsored & {
-    color: $green_2;
-  }
-
-  ._pool & {
-    color: $blue;
-  }
-
-  ._features & {
-    color: $red;
-  }
-
-  ._wiki & {
-    color: $brown;
-  }
-
-  ._watch & {
-    color: $brown_2;
-  }
+  //._stories &,
+  //._top & {
+  //  color: $violette;
+  //}
+  //
+  //._release & {
+  //  color: $violette_2;
+  //}
+  //
+  //._analysis & {
+  //  color: $orange;
+  //}
+  //
+  //._pricewise & {
+  //  color: $green;
+  //}
+  //
+  //._sponsored & {
+  //  color: $green_2;
+  //}
+  //
+  //._pool & {
+  //  color: $blue;
+  //}
+  //
+  //._features & {
+  //  color: $red;
+  //}
+  //
+  //._wiki & {
+  //  color: $brown;
+  //}
+  //
+  //._watch & {
+  //  color: $brown_2;
+  //}
 }
 
 .related_title {

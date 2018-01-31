@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'crypto_icons';
-  src:  url('fonts/crypto_icons.eot?6yx6s3');
-  src:  url('fonts/crypto_icons.eot?6yx6s3#iefix') format('embedded-opentype'),
-    url('fonts/crypto_icons.ttf?6yx6s3') format('truetype'),
-    url('fonts/crypto_icons.woff?6yx6s3') format('woff'),
-    url('fonts/crypto_icons.svg?6yx6s3#crypto_icons') format('svg');
+  src:  url('fonts/crypto_icons.eot?na0twe');
+  src:  url('fonts/crypto_icons.eot?na0twe#iefix') format('embedded-opentype'),
+    url('fonts/crypto_icons.ttf?na0twe') format('truetype'),
+    url('fonts/crypto_icons.woff?na0twe') format('woff'),
+    url('fonts/crypto_icons.svg?na0twe#crypto_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-flash:before {
+  content: "\e90f";
+}
 .icon-crypto:before {
   content: "\e908";
 }
@@ -74,4 +77,13 @@
 }
 .icon-arrow-up:before {
   content: "\ea3a";
+}
+.icon-arrow-right:before {
+  content: "\ea3c";
+}
+.icon-arrow-down:before {
+  content: "\ea3e";
+}
+.icon-arrow-left:before {
+  content: "\ea40";
 }
