@@ -37,7 +37,7 @@
 
 .about_title {
   color: $violette;
-  font: 52px/1 $FrutigerNeueLTW1GBlack;
+  font: 52px/1 $RubikBlack;
   letter-spacing: .021em;
   margin-bottom: 15px;
 }
@@ -66,6 +66,7 @@
 }
 
 .about_team {
+  list-style: none;
 
   li {
     + li {
@@ -81,13 +82,13 @@
 }
 
 .team_unit_name {
-  font: 24px/1.1 $FrutigerNeueLTW1GBlack;
+  font: 24px/1.1 $RubikBlack;
   padding: 12px 0;
 }
 
 .team_unit_post {
   opacity: .5;
-  font: 14px $FrutigerNeueLTW1GBold;
+  font: 14px $RubikBold;
 }
 
 .team_unit_photo {

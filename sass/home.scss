@@ -3,7 +3,7 @@
   padding: 18px 12px 14px 27px;
   margin: 14px 14px 12px;
   background: #f7f6ef;
-  font: 13px $FrutigerNeueLTW1GBold;
+  font: 13px $RubikBold;
   letter-spacing: -.017em;
   position: relative;
   z-index: 1;
@@ -47,7 +47,7 @@
 .attention_caption {
   color: #fff;
   height: 28px;
-  font: 14px/28px $FrutigerNeueLTW1GBlack;
+  font: 14px/28px $RubikBlack;
   letter-spacing: .01em;
   padding-right: 13px;
   float: left;
@@ -85,7 +85,7 @@
 
 .top_story_caption {
   @extend %firm_color;
-  font: 13px $FrutigerNeueLTW1GBlack;
+  font: 13px $RubikBlack;
   margin-top: 6px;
   margin-bottom: 17px;
   letter-spacing: .013em;
@@ -138,6 +138,7 @@
   }
 
   .article_reviews {
+    list-style: none;
     margin-bottom: 24px;
 
     > li + li {
@@ -216,7 +217,7 @@
     }
 
     .article_link {
-      font: 18px/1.4 $FrutigerNeueLTW1GBold;
+      font: 18px/1.4 $RubikBold;
 
       &:hover {
         color: $violette;
@@ -417,21 +418,21 @@
   margin: 36px 0 23px -8px;
 
   p {
-    font: 20px/28px $FrutigerNeueLTW1GBlack;
+    font: 20px/28px $RubikBlack;
     letter-spacing: .012em;
 
-    &:first-child {
+    &:first-of-type {
       &:before {
         content: '\201C';
         position: absolute;
-        border-top-color: #000;
+        color: #000;
         top: -16px;
         left: 9px;
         font: 90px/1 $cross_font_Georgia;
       }
     }
 
-    &:last-child {
+    &:last-of-type {
       &:after {
         content: '\201D';
         position: absolute;
@@ -480,8 +481,7 @@
     }
   }
 
-  &:after {
-    content: attr(data-author);
+  span {
     position: absolute;
     bottom: 14px;
     left: 27px;
@@ -504,7 +504,7 @@
 
   img {
     display: block;
-    width: 100%;
+    max-width: 100%;
   }
 
   ._main & {
@@ -755,14 +755,16 @@
 
 .article_link {
   @include transition_all(color .3s);
-  font: 24px $FrutigerNeueLTW1GBold;
+  font: 24px $RubikBold;
   letter-spacing: .021em;
   text-decoration: none;
   color: #000;
 
+  @extend %firm_color;
+
   ._main &,
   ._top & {
-    font-family: $FrutigerNeueLTW1GBlack;
+    font-family: $RubikBlack;
   }
 
   @include respond-to-min($resp_step_3) {
@@ -776,45 +778,9 @@
   }
 
   ._video & {
-    font: 16px/1.4 $FrutigerNeueLTW1GBold;
+    font: 16px/1.4 $RubikBold;
     letter-spacing: -.015em;
   }
-
-  //._stories & {
-  //  color: $violette;
-  //}
-  //
-  //._release & {
-  //  color: $violette_2;
-  //}
-  //
-  //._analysis & {
-  //  color: $orange;
-  //}
-  //
-  //._pricewise & {
-  //  color: $green;
-  //}
-  //
-  //._sponsored & {
-  //  color: $green_2;
-  //}
-  //
-  //._pool & {
-  //  color: $blue;
-  //}
-  //
-  //._features & {
-  //  color: $red;
-  //}
-  //
-  //._wiki & {
-  //  color: $brown;
-  //}
-  //
-  //._watch & {
-  //  color: $brown_2;
-  //}
 
   ._article & {
     color: #000;
@@ -837,9 +803,10 @@
 
 .article_stat {
   @extend %clearfix;
+  list-style: none;
   padding-top: 13px;
   color: rgba(0, 0, 0, .4);
-  font: 12px/1.5 $FrutigerNeueLTW1GBook;
+  font: 12px/1.5 $RubikReg;
 
   li {
     float: left;
@@ -968,6 +935,7 @@
 .article_tags {
   position: absolute;
   z-index: 2;
+  list-style: none;
   bottom: 14px;
   left: 16px;
 
@@ -992,7 +960,7 @@
     display: inline-block;
     vertical-align: top;
     padding: 5px 14px 5px 4px;
-    font: 12px/18px $FrutigerNeueLTW1GBlack;
+    font: 12px/18px $RubikBlack;
     letter-spacing: .015em;
   }
 
@@ -1011,8 +979,6 @@
       padding-left: 5px;
     }
   }
-
-
 
   //&._stories,
   //&._top {
@@ -1064,7 +1030,7 @@
   position: relative;
   z-index: 2;
   color: rgba(0, 0, 0, .4);
-  font: 12px/20px $FrutigerNeueLTW1GBook;
+  font: 12px/20px $RubikReg;
 
   &:before {
     @include transition_all(color .3s);
@@ -1084,7 +1050,7 @@
 
   ._bg & {
     color: #fff;
-    font-family: $FrutigerNeueLTW1GBlack;
+    font-family: $RubikBlack;
 
     &:before {
       color: #fff !important;
@@ -1096,7 +1062,7 @@
   @extend %icon_pseudo;
   position: relative;
   color: #fff;
-  font: 18px $FrutigerNeueLTW1GBold;
+  font: 18px $RubikBold;
   letter-spacing: .025em;
   padding: 11px 16px 7px 44px;
   margin: 0 0 12px;
@@ -1212,9 +1178,58 @@
       background: $orange;
     }
   }
+
+  &._pricewise {
+    color: #000;
+
+    //background-image: url(../i/story_title_orange.jpg);
+
+    &:before {
+      content: $icon-splash;
+      color: #fff;
+      background: $orange;
+    }
+  }
+
+  &._cryptotips {
+    color: #000;
+
+    //background-image: url(../i/story_title_blue.jpg);
+
+    &:before {
+      content: $icon-ufo;
+      color: #fff;
+      background: $brown;
+    }
+  }
+
+  &._wiki {
+    color: #000;
+
+    //background-image: url(../i/story_title_orange.jpg);
+
+    &:before {
+      content: $icon-startwo;
+      color: #fff;
+      background: $brown_2;
+    }
+  }
+
+  &._ico {
+    color: #000;
+
+    //background-image: url(../i/story_title_orange.jpg);
+
+    &:before {
+      content: $icon-ico;
+      color: #fff;
+      background: $violette_2;
+    }
+  }
 }
 
 .news_list {
+  list-style: none;
 
   .content_block & {
     @include respond-to-min($resp_step_2) {
@@ -1258,7 +1273,7 @@
   width: 40px;
   margin-left: 10px;
   padding-top: 10px;
-  font: 12px/1.1 $FrutigerNeueLTW1GBook;
+  font: 12px/1.1 $RubikReg;
 
   .news_list & {
     color: rgba(0, 0, 0, .4);
@@ -1270,9 +1285,10 @@
 }
 
 .news_name {
+  @extend %firm_color;
   letter-spacing: -.021em;
   color: #000;
-  font: 20px/1.2 $FrutigerNeueLTW1GBold;
+  font: 20px/1.2 $RubikBold;
 
   ._related & {
     font-size: 16px;
@@ -1297,44 +1313,6 @@
     line-height: 1.2;
     letter-spacing: -.015em;
   }
-
-  //._stories &,
-  //._top & {
-  //  color: $violette;
-  //}
-  //
-  //._release & {
-  //  color: $violette_2;
-  //}
-  //
-  //._analysis & {
-  //  color: $orange;
-  //}
-  //
-  //._pricewise & {
-  //  color: $green;
-  //}
-  //
-  //._sponsored & {
-  //  color: $green_2;
-  //}
-  //
-  //._pool & {
-  //  color: $blue;
-  //}
-  //
-  //._features & {
-  //  color: $red;
-  //}
-  //
-  //._wiki & {
-  //  color: $brown;
-  //}
-  //
-  //._watch & {
-  //  color: $brown_2;
-  //}
-
 }
 
 .comments_block {

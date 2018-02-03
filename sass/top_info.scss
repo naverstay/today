@@ -19,7 +19,7 @@
   margin-left: 5px;
   margin-right: -45px;
   float: left;
-  font-family: $FrutigerNeueLTW1GBook;
+  font-family: $RubikReg;
 
   @include respond-to-min($resp_step_3) {
     margin-left: 10px;
@@ -69,7 +69,7 @@
   height: 48px;
   padding-left: 6px;
   margin: -8px 0 -8px -6px;
-  font: 20px $FrutigerNeueLTW1GBold;
+  font: 20px $RubikBold;
   color: #c0c0c0;
   position: relative;
   background: #fff !important;
@@ -124,7 +124,7 @@
   height: 30px;
   padding-top: 2px;
   padding-left: 26px;
-  font: 12px $FrutigerNeueLTW1GBlack;
+  font: 12px $RubikBlack;
   color: #fff;
   position: relative;
   background: transparent;

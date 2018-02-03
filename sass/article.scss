@@ -1,6 +1,6 @@
 .article_author {
   padding: 10px 17px 17px 0;
-  font: 12px $FrutigerNeueLTW1GBook;
+  font: 12px $RubikReg;
 }
 
 .article_author_link {
@@ -13,43 +13,6 @@
   span {
     text-decoration: underline;
   }
-  //
-  //._stories &,
-  //._top & {
-  //  color: $violette;
-  //}
-  //
-  //._release & {
-  //  color: $violette_2;
-  //}
-  //
-  //._analysis & {
-  //  color: $orange;
-  //}
-  //
-  //._pricewise & {
-  //  color: $green;
-  //}
-  //
-  //._sponsored & {
-  //  color: $green_2;
-  //}
-  //
-  //._pool & {
-  //  color: $blue;
-  //}
-  //
-  //._features & {
-  //  color: $red;
-  //}
-  //
-  //._wiki & {
-  //  color: $brown;
-  //}
-  //
-  //._watch & {
-  //  color: $brown_2;
-  //}
 }
 
 .article_info {
@@ -69,7 +32,7 @@
 
 .article_preview {
   position: relative;
-  font: 17px/24px $FrutigerNeueLTW1GBold;
+  font: 17px/24px $RubikBold;
   padding: 20px 20px 13px 16px;
   margin-bottom: 28px;
   margin-left: -16px;
@@ -159,6 +122,7 @@
 
 .article_tag_list {
   @extend %clearfix;
+  list-style: none;
   margin-left: -22px;
   margin-bottom: 20px;
 
@@ -171,49 +135,12 @@
 
 .tag_link {
   @extend %firm_color;
-  font: 13px/22px $FrutigerNeueLTW1GBold;
+  font: 13px/22px $RubikBold;
   letter-spacing: -.017em;
-
-  //._stories &,
-  //._top & {
-  //  color: $violette;
-  //}
-  //
-  //._release & {
-  //  color: $violette_2;
-  //}
-  //
-  //._analysis & {
-  //  color: $orange;
-  //}
-  //
-  //._pricewise & {
-  //  color: $green;
-  //}
-  //
-  //._sponsored & {
-  //  color: $green_2;
-  //}
-  //
-  //._pool & {
-  //  color: $blue;
-  //}
-  //
-  //._features & {
-  //  color: $red;
-  //}
-  //
-  //._wiki & {
-  //  color: $brown;
-  //}
-  //
-  //._watch & {
-  //  color: $brown_2;
-  //}
 }
 
 .article_telegram_block {
-  font: 12px/14px $FrutigerNeueLTW1GBook;
+  font: 12px/14px $RubikReg;
   margin-bottom: 28px;
 
   span {
@@ -223,49 +150,12 @@
 
 .telegram_link {
   @extend %firm_color;
-  font: 12px/14px $FrutigerNeueLTW1GBold;
-
-  //._stories &,
-  //._top & {
-  //  color: $violette;
-  //}
-  //
-  //._release & {
-  //  color: $violette_2;
-  //}
-  //
-  //._analysis & {
-  //  color: $orange;
-  //}
-  //
-  //._pricewise & {
-  //  color: $green;
-  //}
-  //
-  //._sponsored & {
-  //  color: $green_2;
-  //}
-  //
-  //._pool & {
-  //  color: $blue;
-  //}
-  //
-  //._features & {
-  //  color: $red;
-  //}
-  //
-  //._wiki & {
-  //  color: $brown;
-  //}
-  //
-  //._watch & {
-  //  color: $brown_2;
-  //}
+  font: 12px/14px $RubikBold;
 }
 
 .related_title {
   position: relative;
-  font: 18px/22px $FrutigerNeueLTW1GBold;
+  font: 18px/22px $RubikBold;
   padding: 20px 16px 18px;
   margin: 0 -16px 20px 0;
   color: #fff;
@@ -282,6 +172,7 @@
 
 .article_soc {
   @extend %clearfix;
+  list-style: none;
   margin-left: -4px;
   padding-right: 10px;
 
@@ -305,7 +196,7 @@
   height: 34px;
   text-align: center;
   border-radius: 17px;
-  font: 12px/32px $FrutigerNeueLTW1GBlack;
+  font: 12px/32px $RubikBlack;
   background: #fff;
   border: 1px solid transparent;
 
@@ -342,6 +233,48 @@
   &._t {
     &:before {
       content: $icon-tw;
+    }
+  }
+
+  &._g {
+    &:before {
+      content: $icon-gp;
+    }
+  }
+
+  &._l {
+    &:before {
+      content: $icon-in;
+    }
+  }
+
+  &._i {
+    &:before {
+      content: $icon-inst;
+    }
+  }
+
+  &._p {
+    &:before {
+      content: $icon-pint;
+    }
+  }
+
+  &._s {
+    &:before {
+      content: $icon-stm;
+    }
+  }
+
+  &._tm {
+    &:before {
+      content: $icon-tmblr;
+    }
+  }
+
+  &._rd {
+    &:before {
+      content: $icon-rd;
     }
   }
 
@@ -589,5 +522,104 @@
       }
     }
   }
+}
 
+.content_block {
+
+  h1, h3, h5, h2, h4, h6 {
+    margin-top: 1em;
+  }
+
+  h1 {
+    font: 22px $RubikBold;
+    letter-spacing: .02em;
+    margin-bottom: 18px;
+  }
+
+  h2 {
+    font: 20px $RubikMed;
+    letter-spacing: .025em;
+    margin-bottom: 18px;
+  }
+
+  h3 {
+    font: 18px $RubikBold;
+    letter-spacing: .015em;
+    margin-bottom: 16px;
+  }
+
+  h4 {
+    font: 20px $RubikMed;
+    letter-spacing: -.035em;
+    margin-bottom: 18px;
+  }
+
+  h5 {
+    font: 16px/1.4 $RubikMed;
+    letter-spacing: .015em;
+    margin-bottom: 16px;
+  }
+
+  h6 {
+    font: 15px $RubikBold;
+    letter-spacing: 0.01em;
+    margin-bottom: 16px;
+  }
+
+  h1, h3, h5 {
+    @extend %firm_color;
+  }
+
+  p {
+    margin-bottom: 1em;
+    font-size: 17px;
+    line-height: 1.3;
+    letter-spacing: .022em;
+  }
+
+  > ul {
+    margin-top: 28px;
+    list-style: none;
+
+    > li {
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 22px;
+      line-height: 1.6;
+      letter-spacing: .05em;
+
+      &:before {
+        @extend %firm_bg_color;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+      }
+
+      > ul {
+        margin-top: 22px;
+        list-style: none;
+
+        > li {
+          position: relative;
+          padding-left: 14px;
+          margin-bottom: 16px;
+
+          &:before {
+            @include transform_rotate(45);
+            @extend %firm_bg_color;
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 4px;
+            width: 8px;
+            height: 8px;
+          }
+        }
+      }
+    }
+  }
 }

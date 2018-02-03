@@ -113,6 +113,7 @@ body {
 
 .news_aggregator {
   @extend %clearfix;
+  list-style: none;
   padding-right: 16px;
   position: relative;
 
@@ -165,7 +166,7 @@ body {
   }
 
   .article_link {
-    font: 16px $FrutigerNeueLTW1GBold;
+    font: 16px $RubikBold;
     letter-spacing: .005em;
   }
 

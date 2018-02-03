@@ -74,7 +74,7 @@
     color: #fff;
 
     p {
-      font: 18px/24px $FrutigerNeueLTW1GBold;
+      font: 18px/24px $RubikBold;
       letter-spacing: .025em;
     }
   }
@@ -93,7 +93,7 @@
 .subscribe_title {
   color: #fff;
   padding: 0 36px;
-  font: 28px/32px $FrutigerNeueLTW1GBlack;
+  font: 28px/32px $RubikBlack;
   letter-spacing: .025em;
 
   .subscribe_fail &,
@@ -205,7 +205,7 @@
   opacity: 0;
   color: #fff;
   padding: 14px 0 34px 20px;
-  font: 24px $FrutigerNeueLTW1GBlack;
+  font: 24px $RubikBlack;
   letter-spacing: -.031em;
 
   .search_opened & {
@@ -270,6 +270,7 @@
 .main_menu {
   @include transition_all(opacity .3s);
   opacity: 0;
+  list-style: none;
   text-align: center;
   overflow-y: auto;
   padding: 0 20px;
@@ -288,7 +289,7 @@
   display: block;
   text-decoration: underline;
   color: #fff;
-  font: 24px $FrutigerNeueLTW1GBlack;
+  font: 24px $RubikBlack;
   letter-spacing: -.031em;
 }
 
@@ -308,6 +309,14 @@
       display: block;
     }
   }
+
+  .menu_opened & {
+    @include transform_translate(0, 0);
+
+    .subscribe_close {
+      display: none;
+    }
+  }
 }
 
 .footer_subscribe {
@@ -324,7 +333,11 @@
     right: -15px;
     width: 113px;
     height: 73px;
-    background: url(../i/footer_nlo.png) no-repeat 0 0;
+    background: url(../i/ufo.svg) no-repeat 0 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 }
 
@@ -376,7 +389,7 @@
 
   p {
     color: #f7f8f8;
-    font: 16px/1.3 $FrutigerNeueLTW1GBold;
+    font: 16px/1.3 $RubikBold;
     letter-spacing: -.021em;
   }
 
@@ -405,7 +418,7 @@
 }
 
 .footer_msg_title {
-  font: 20px/2 $FrutigerNeueLTW1GBlack;
+  font: 20px/2 $RubikBlack;
   color: #fff;
   letter-spacing: .017em;
   margin-bottom: 20px;
@@ -424,7 +437,7 @@
 
 .subscribe_link {
   color: $violette;
-  font: 16px $FrutigerNeueLTW1GBold;
+  font: 16px $RubikBold;
   text-decoration: underline;
   letter-spacing: -.017em;
 }
@@ -435,7 +448,7 @@
   background: #fff;
 
   p {
-    font: 20px/1.2 $FrutigerNeueLTW1GBlack;
+    font: 20px/1.2 $RubikBlack;
     letter-spacing: .017em;
     margin-bottom: 16px;
   }
@@ -448,6 +461,7 @@
 .action_list {
   @extend %global_flex_block_row_nowrap_space_between_stretch;
   text-align: center;
+  list-style: none;
   margin: 0 -12px;
 
   li {
@@ -467,7 +481,7 @@
   }
 
   span {
-    font: 13px $FrutigerNeueLTW1GBold;
+    font: 13px $RubikBold;
     letter-spacing: -.017em;
     margin-top: 12px;
     display: inline-block;

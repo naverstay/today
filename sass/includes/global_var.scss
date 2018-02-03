@@ -9,15 +9,16 @@ $resp_step_4: 1680px;
 $body_width: 952px;
 $content-max-w: $body_width;
 
-$prefix: './';
+$prefix: '../'; // development
+//$prefix: './'; // production
 
 $icomoon-font-path: $prefix + "fonts";
 $icomoon-font-name: 'crypto_icons';
 
-$FrutigerNeueLTW1GBlack: 'FrutigerNeueLTW1G-Black', sans-serif;
-$FrutigerNeueLTW1GBold: 'FrutigerNeueLTW1G-Bold', sans-serif;
-$FrutigerNeueLTW1GMedium: 'FrutigerNeueLTW1G-Medium', sans-serif;
-$FrutigerNeueLTW1GBook: 'FrutigerNeueLTW1G-Book', sans-serif;
+$RubikBlack: unquote("Rubik, sans-serif; font-weight:700");
+$RubikBold: unquote("Rubik, sans-serif; font-weight:700");
+$RubikMed: unquote("Rubik, sans-serif; font-weight:500");
+$RubikReg: unquote("Rubik, sans-serif; font-weight:400");
 
 $Roboto: 'Roboto', sans-serif;
 $CirceBold: 'CirceBold', sans-serif;

@@ -9,7 +9,7 @@
     cursor: pointer;
     display: block;
     text-align: center;
-    font: 13px/18px $FrutigerNeueLTW1GBold;
+    font: 13px/18px $RubikBold;
     padding: 15px;
 
     &:before {
@@ -27,7 +27,7 @@
     display: inline-block;
     vertical-align: top;
     letter-spacing: .05em;
-    font: 20px/24px $FrutigerNeueLTW1GBlack;
+    font: 20px/24px $RubikBlack;
     padding: 12px 14px;
 
     .error & {
@@ -45,7 +45,7 @@
     border-radius: 20px;
     padding: 10px 29px;
     margin: 4px 8px;
-    font: 16px/20px $FrutigerNeueLTW1GBlack;
+    font: 16px/20px $RubikBlack;
 
     span {
       position: relative;
@@ -63,7 +63,7 @@
     border-radius: 23px;
     padding: 9px 16px;
     margin-bottom: 35px;
-    font: 18px/20px $FrutigerNeueLTW1GBlack;
+    font: 18px/20px $RubikBlack;
 
     span {
       position: relative;

@@ -10,7 +10,7 @@
 
   p {
     color: #fff;
-    font: 12px $FrutigerNeueLTW1GBold;
+    font: 12px $RubikBold;
   }
 
   .action_list {
@@ -77,7 +77,7 @@
   position: relative;
   padding: 0 12px;
   color: #fff;
-  font: 14px/46px $FrutigerNeueLTW1GBlack;
+  font: 14px/46px $RubikBlack;
   background: $violette url(../i/firm_bg_violette.jpg) no-repeat 0 50%;
 
   .lang_block {
@@ -90,7 +90,7 @@
   float: left;
   padding: 11px;
   color: #c0c0c0;
-  font: 10px/16px $FrutigerNeueLTW1GBold;
+  font: 10px/16px $RubikBold;
 
   @include respond-to-min($resp_step_2) {
     font-size: 11px;
@@ -201,7 +201,7 @@
     .menu_link {
       text-decoration: none;
       color: $violette;
-      font: 16px $FrutigerNeueLTW1GBlack;
+      font: 16px $RubikBlack;
 
       &:hover {
         color: $violette_dark;
@@ -215,6 +215,7 @@
 }
 
 .footer_menu {
+  list-style: none;
   float: right;
   padding: 8px 12px 14px;
 
@@ -236,7 +237,7 @@
 .footer_link {
   color: #c0c0c0;
   text-decoration: none;
-  font: 10px/16px $FrutigerNeueLTW1GBold;
+  font: 10px/16px $RubikBold;
 
   @include respond-to-min($resp_step_2) {
     font-size: 11px;

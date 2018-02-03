@@ -3,7 +3,9 @@
 
 # IntelliJ project files
 .idea
+.sass-cache
 *.iml
 out
 gen
+node_modules/
 # Created by .ignore support plugin (hsz.mobi)

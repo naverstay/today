@@ -1,5 +1,5 @@
 - var prod = true;
-//- var prod = false;
+- var prod = false;
 
 mixin dev_head(page_title)
     head
@@ -22,6 +22,17 @@ mixin loop_while(counter)
     while i < counter
         -i++;
         block
+
+mixin action_list()
+  ul.action_list
+    li: a.action_link._w(href='#')
+      span Twitter
+    li: a.action_link._t(href='#')
+      span Telegram
+    li: a.action_link._f(href='#')
+      span Facebook
+    li: a.action_link._r(href='#')
+      span RSS
 
 mixin footer()
     .footer
@@ -317,7 +328,7 @@ mixin top_info()
                 option &#8381;
                 option &#163;
             .select_arrow
-            .select_overlay
+            //-.select_overlay
         .currency_info
             .currency_info_table
                 .currency_info_cell
@@ -379,15 +390,7 @@ mixin main_menu(subscribe)
             .footer_action
                 p Follow us with:
 
-                ul.action_list
-                    li: a.action_link._w(href='#')
-                        span Twitter
-                    li: a.action_link._t(href='#')
-                        span Telegram
-                    li: a.action_link._f(href='#')
-                        span Facebook
-                    li: a.action_link._r(href='#')
-                        span RSS
+                +action_list()
 
     .main_menu_holder
         ul.main_menu
@@ -412,15 +415,7 @@ mixin main_menu(subscribe)
             .footer_action
                 p Follow us with:
 
-                ul.action_list
-                    li: a.action_link._w(href='#')
-                        span Twitter
-                    li: a.action_link._t(href='#')
-                        span Telegram
-                    li: a.action_link._f(href='#')
-                        span Facebook
-                    li: a.action_link._r(href='#')
-                        span RSS
+                +action_list()
 
             .footer_form
                 form.validateMe.formParent.subscribeForm(action='#')
@@ -446,9 +441,17 @@ mixin main_menu(subscribe)
 mixin article_soc(cls)
     ul.article_soc(class= cls)
         li: a.action_sh._r._active(href='#')
-        li: a.action_sh._f(href='#')
-        li: a.action_sh._t(href='#')
-        li: a.action_sh._t(href='#')
+        li: a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+        li: a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
+        li: a.action_sh._g(href='#' data-network="googleplus" class='st-custom-button')
+
+        li: a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
+        li: a.action_sh._l(href='#' data-network="linkedin" class='st-custom-button')
+        li: a.action_sh._i(href='#' data-network="instagram" class='st-custom-button')
+        li: a.action_sh._p(href='#' data-network="pinterest" class='st-custom-button')
+        li: a.action_sh._s(href='#' data-network="pinterest" class='st-custom-button')
+        li: a.action_sh._tm(href='#' data-network="tumblr" class='st-custom-button')
+
         li: a.action_sh._more(href='#') more…
         li: a.action_sh._count(href='#') 250k
 
@@ -479,12 +482,16 @@ mixin header()
                     a.menu_btn.menuBtn(href='#')
                         span
 
-mixin scripts()
+mixin scripts(share)
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Rubik:400,500,700', media='all')
+
     -if (!prod)
         link(rel='stylesheet', href='styles/header_global.css?t=' + time, media='all')
 
     link(rel='stylesheet', href='styles/main_global.css?t=' + time, media='all')
 
+    - if (share)
+        script(src='//platform-api.sharethis.com/js/sharethis.js#property=5a748f426507d000137b57b6&product=custom-share-buttons')
     - if (prod)
         script(src='js/main.min.js?t=' + time)
     - else
