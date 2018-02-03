@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'crypto_icons';
-  src:  url('#{$icomoon-font-path}/crypto_icons.eot?na0twe');
-  src:  url('#{$icomoon-font-path}/crypto_icons.eot?na0twe#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/crypto_icons.ttf?na0twe') format('truetype'),
-    url('#{$icomoon-font-path}/crypto_icons.woff?na0twe') format('woff'),
-    url('#{$icomoon-font-path}/crypto_icons.svg?na0twe#crypto_icons') format('svg');
+  src:  url('#{$icomoon-font-path}/crypto_icons.eot?hh30o3');
+  src:  url('#{$icomoon-font-path}/crypto_icons.eot?hh30o3#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/crypto_icons.ttf?hh30o3') format('truetype'),
+    url('#{$icomoon-font-path}/crypto_icons.woff?hh30o3') format('woff'),
+    url('#{$icomoon-font-path}/crypto_icons.svg?hh30o3#crypto_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,111 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-crown {
+  &:before {
+    content: $icon-crown;
+  }
+}
+.icon-feather {
+  &:before {
+    content: $icon-feather;
+  }
+}
+.icon-futurama {
+  &:before {
+    content: $icon-futurama;
+  }
+}
+.icon-gone {
+  &:before {
+    content: $icon-gone;
+  }
+}
+.icon-heart {
+  &:before {
+    content: $icon-heart;
+  }
+}
+.icon-ico {
+  &:before {
+    content: $icon-ico;
+  }
+}
+.icon-lamp {
+  &:before {
+    content: $icon-lamp;
+  }
+}
+.icon-quote {
+  &:before {
+    content: $icon-quote;
+  }
+}
+.icon-startwo {
+  &:before {
+    content: $icon-startwo;
+  }
+}
+.icon-vial {
+  &:before {
+    content: $icon-vial;
+  }
+}
+.icon-dg {
+  &:before {
+    content: $icon-dg;
+  }
+}
+.icon-en {
+  &:before {
+    content: $icon-en;
+  }
+}
+.icon-gp {
+  &:before {
+    content: $icon-gp;
+  }
+}
+.icon-in {
+  &:before {
+    content: $icon-in;
+  }
+}
+.icon-inst {
+  &:before {
+    content: $icon-inst;
+  }
+}
+.icon-pint {
+  &:before {
+    content: $icon-pint;
+  }
+}
+.icon-rd {
+  &:before {
+    content: $icon-rd;
+  }
+}
+.icon-sk {
+  &:before {
+    content: $icon-sk;
+  }
+}
+.icon-sl {
+  &:before {
+    content: $icon-sl;
+  }
+}
+.icon-stm {
+  &:before {
+    content: $icon-stm;
+  }
+}
+.icon-tmblr {
+  &:before {
+    content: $icon-tmblr;
+  }
+}
 .icon-flash {
   &:before {
     content: $icon-flash;
