@@ -3,7 +3,7 @@
   padding: 18px 12px 14px 27px;
   margin: 14px 14px 12px;
   background: #f7f6ef;
-  font: 13px $RubikBold;
+  font: 13px $RubikMed;
   letter-spacing: -.017em;
   position: relative;
   z-index: 1;
@@ -83,6 +83,10 @@
   }
 }
 
+.article_reviews {
+  list-style: none;
+}
+
 .top_story_caption {
   @extend %firm_color;
   font: 13px $RubikBlack;
@@ -92,53 +96,7 @@
   position: relative;
   z-index: 1;
 
-  //._stories &,
-  //._top & {
-  //  color: $violette;
-  //}
-  //
-  //._release & {
-  //  color: $violette_2;
-  //}
-  //
-  //._analysis & {
-  //  color: $orange;
-  //}
-  //
-  //._pricewise & {
-  //  color: $green;
-  //}
-  //
-  //._sponsored & {
-  //  color: $green_2;
-  //}
-  //
-  //._pool & {
-  //  color: $blue;
-  //}
-  //
-  //._features & {
-  //  color: $red;
-  //}
-  //
-  //._wiki & {
-  //  color: $brown;
-  //}
-  //
-  //._watch & {
-  //  color: $brown_2;
-  //}
-}
-
-.article_reviews_holder {
-  padding-left: 10px;
-
-  .top_story_caption {
-    margin-bottom: 12px;
-  }
-
   .article_reviews {
-    list-style: none;
     margin-bottom: 24px;
 
     > li + li {
@@ -155,6 +113,296 @@
 
     @include respond-to-min($resp_step_2) {
       margin-bottom: 16px;
+    }
+  }
+}
+
+.article_main_photo {
+  @extend %icon_pseudo;
+  position: relative;
+  padding: 4px 0 0 12px;
+
+  .article_heading {
+    padding-right: 180px;
+  }
+
+  &:before {
+    @extend %firm_color;
+    content: $icon-ufo;
+    position: absolute;
+    top: -55px;
+    right: -33px;
+    width: 213px;
+    overflow: hidden;
+    font-size: 283px;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    .article_heading {
+      padding-right: 0;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .article_img {
+    padding: 0 0 0 20px;
+    margin-right: 30px;
+
+    &:before {
+      @extend %firm_bg_color;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      bottom: 75px;
+    }
+  }
+
+  .article_tags {
+    margin-left: 25px;
+    //margin-left: 48px;
+    margin-bottom: 10px;
+  }
+
+  .article_link {
+    font-size: 28px;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    .article_img {
+      margin-right: 272px;
+
+      &:before {
+        bottom: 52px;
+      }
+    }
+
+    .article_tags {
+      margin-left: 68px;
+      margin-bottom: 10px;
+    }
+
+    .article_link {
+      font-size: 32px;
+    }
+  }
+
+  @include respond-to-min($resp_step_3) {
+    .article_img {
+      margin-right: 336px;
+
+      &:before {
+        bottom: 52px;
+      }
+    }
+
+    .article_tags {
+      margin-left: 52px;
+    }
+
+    .article_link {
+      font-size: 38px;
+    }
+  }
+
+  @include respond-to-min($resp_step_4) {
+    padding: 12px 0 0 12px;
+
+    .article_img {
+      margin-right: 380px;
+      padding-left: 36px;
+
+      &:before {
+        width: 36px;
+        bottom: 40px;
+      }
+    }
+
+    .article_tags {
+      margin-left: 68px;
+    }
+
+    .article_link {
+      font-size: 44px;
+    }
+  }
+}
+
+.article_info_holder {
+  position: relative;
+  padding-top: 25px;
+  padding-left: 10px;
+
+  .article_info {
+    margin: 0 auto 6px;
+    max-width: 640px;
+    background: none;
+  }
+
+  .article_text {
+    margin: 0 auto;
+    max-width: 610px;
+
+    > p {
+      font-size: 20px;
+      line-height: 1.4;
+      margin-bottom: 1.35em;
+    }
+
+    .article_stat {
+      padding-top: 0;
+      margin-bottom: 14px;
+    }
+
+    @include respond-to-min($resp_step_2) {
+      padding-left: 10px;
+      max-width: 740px;
+
+      .article_stat {
+        padding-top: 30px;
+      }
+    }
+
+    @include respond-to-min($resp_step_3) {
+      padding-left: 15px;
+
+      .article_stat {
+        padding-top: 6px;
+      }
+    }
+
+    @include respond-to-min($resp_step_4) {
+      padding-left: 40px;
+      max-width: 800px;
+    }
+
+    figure {
+      margin-top: 34px;
+      margin-bottom: 34px;
+
+      .article_action {
+        left: auto;
+        right: 78px;
+      }
+
+      p {
+        background: #f8f8f8;
+        padding: 20px 40px 32px;
+        font-size: 17px;
+        line-height: 1.45;
+
+        @include respond-to-min($resp_step_3) {
+          padding: 27px 30px 35px;
+        }
+
+        @include respond-to-min($resp_step_4) {
+          padding: 24px 32px 36px;
+        }
+      }
+
+      @include respond-to-min($resp_step_3) {
+        margin-top: 50px;
+        margin-bottom: 42px;
+      }
+
+      @include respond-to-min($resp_step_3) {
+        margin-top: 40px;
+      }
+
+      @include respond-to-min($resp_step_4) {
+        margin-top: 62px;
+        margin-bottom: 26px;
+      }
+    }
+
+    blockquote {
+      p {
+        @extend %firm_color;
+      }
+    }
+  }
+
+  .article_soc li {
+    padding-right: 8px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .article_preview {
+    @extend %icon_pseudo;
+    @extend %firm_border_color;
+    font-weight: 500;
+    max-width: 610px;
+    margin: 0 auto 34px;
+
+    &:before {
+      @extend %firm_color;
+    }
+  }
+
+  @include respond-to-min($resp_step_2) {
+    padding-top: 30px;
+
+    .article_info {
+      max-width: 750px;
+      margin-bottom: 12px;
+    }
+
+    .article_preview {
+      position: absolute;
+      right: 0;
+      bottom: 100%;
+      margin-bottom: 0;
+      width: 244px;
+      border-style: solid;
+      border-width: 4px 0;
+      padding: 20px 10px 84px;
+      font-size: 22px;
+      line-height: 28px;
+
+      &:before {
+        content: $icon-ufo;
+        position: absolute;
+        overflow: hidden;
+        bottom: -40px;
+        right: -32px;
+        width: 125px;
+        font-size: 160px;
+      }
+    }
+  }
+
+  @include respond-to-min($resp_step_3) {
+
+    .article_preview {
+      width: 292px;
+      font-size: 24px;
+      line-height: 32px;
+      padding: 20px 10px 84px;
+
+      &:before {
+        bottom: -47px;
+        right: -33px;
+        width: 150px;
+        font-size: 195px;
+      }
+    }
+  }
+
+  @include respond-to-min($resp_step_4) {
+    padding-right: 25px;
+
+    .article_preview {
+      width: 332px;
+      font-size: 26px;
+      line-height: 34px;
+      padding: 35px 10px 155px;
     }
   }
 }
@@ -217,7 +465,7 @@
     }
 
     .article_link {
-      font: 18px/1.4 $RubikBold;
+      font: 18px/1.4 $RubikMed;
 
       &:hover {
         color: $violette;
@@ -411,87 +659,6 @@
   }
 }
 
-.article_quote {
-  position: relative;
-  background: #f7f8f8;
-  padding: 26px 16px 44px 28px;
-  margin: 36px 0 23px -8px;
-
-  p {
-    font: 20px/28px $RubikBlack;
-    letter-spacing: .012em;
-
-    &:first-of-type {
-      &:before {
-        content: '\201C';
-        position: absolute;
-        color: #000;
-        top: -16px;
-        left: 9px;
-        font: 90px/1 $cross_font_Georgia;
-      }
-    }
-
-    &:last-of-type {
-      &:after {
-        content: '\201D';
-        position: absolute;
-        color: #000;
-        bottom: -42px;
-        right: 7px;
-        font: 90px/1 $cross_font_Georgia;
-      }
-    }
-
-    ._stories &,
-    ._top & {
-      color: $violette;
-    }
-
-    ._release & {
-      color: $violette_2;
-    }
-
-    ._analysis & {
-      color: $orange;
-    }
-
-    ._pricewise & {
-      color: $green;
-    }
-
-    ._sponsored & {
-      color: $green_2;
-    }
-
-    ._pool & {
-      color: $blue;
-    }
-
-    ._features & {
-      color: $red;
-    }
-
-    ._wiki & {
-      color: $brown;
-    }
-
-    ._watch & {
-      color: $brown_2;
-    }
-  }
-
-  span {
-    position: absolute;
-    bottom: 14px;
-    left: 27px;
-    opacity: .4;
-    font-size: 13px;
-    line-height: 22px;
-  }
-
-}
-
 .article_img_link {
   display: block;
   position: relative;
@@ -572,7 +739,7 @@
 
   ._analysis & {
     &:before {
-      background: $orange;
+      background: $green;
     }
   }
 
@@ -608,6 +775,12 @@
 
   ._watch & {
     &:before {
+      background: $violette_2;
+    }
+  }
+
+  ._crypto & {
+    &:before {
       background: $brown_2;
     }
   }
@@ -637,6 +810,7 @@
     left: 50%;
   }
 
+  &._news,
   &._stories,
   &._top {
     background: transparentize($violette, .2);
@@ -671,6 +845,10 @@
   }
 
   &._watch {
+    background: transparentize($violette_2, .2);
+  }
+
+  &._crypto {
     background: transparentize($brown_2, .2);
   }
 
@@ -750,12 +928,11 @@
       padding-left: 28px;
     }
   }
-
 }
 
 .article_link {
   @include transition_all(color .3s);
-  font: 24px $RubikBold;
+  font: 24px $RubikMed;
   letter-spacing: .021em;
   text-decoration: none;
   color: #000;
@@ -778,13 +955,13 @@
   }
 
   ._video & {
-    font: 16px/1.4 $RubikBold;
+    //font: 16px/1.4 $RubikBold;
     letter-spacing: -.015em;
   }
 
   ._article & {
     color: #000;
-    letter-spacing: .08em;
+    letter-spacing: .045em;
   }
 }
 
@@ -841,13 +1018,25 @@
   }
 
   &._mod_1 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    padding-top: 7px;
+
+    @include respond-to-min($resp_step_2) {
+      padding-top: 10px;
+    }
+
+    @include respond-to-min($resp_step_3) {
+      margin-bottom: 30px;
+    }
+
+    @include respond-to-min($resp_step_4) {
+      margin-bottom: 35px;
+    }
   }
 
   ._top & {
     padding-top: 10px;
     position: relative;
-
   }
 }
 
@@ -872,14 +1061,12 @@
 
   @at-root a#{&} {
     @include transition_all(color .3s);
-    color: rgba(0, 0, 0, .4);
+    @extend %firm_color;
 
     &:hover {
-      color: $violette;
-      @extend %firm_color;
+      text-decoration: underline;
     }
   }
-
 }
 
 .article_action {
@@ -946,7 +1133,6 @@
 }
 
 .article_tag {
-  @extend %firm_bg_color;
   position: relative;
   min-width: 28px;
   height: 28px;
@@ -980,46 +1166,58 @@
     }
   }
 
-  //&._stories,
-  //&._top {
-  //  background: $violette;
-  //}
-  //
-  //&._release {
-  //  background: $violette_2;
-  //}
-  //
-  //&._analysis {
-  //  background: $orange;
-  //}
-  //
-  //&._pricewise {
-  //  background: $green;
-  //}
-  //
-  //&._sponsored {
-  //  background: $green_2;
-  //}
-  //
-  //&._pool {
-  //  background: $blue;
-  //}
-  //
-  //&._features {
-  //  background: $red;
-  //}
-  //
-  //&._wiki {
-  //  background: $brown;
-  //}
-  //
-  //&._watch {
-  //  background: $brown_2;
-  //}
+  &._news,
+  &._stories,
+  &._top {
+    background: $violette;
+  }
+
+  &._release {
+    background: $violette_2;
+  }
+
+  &._analysis {
+    background: $orange;
+  }
+
+  &._pricewise {
+    background: $green;
+  }
+
+  &._sponsored {
+    background: $green_2;
+  }
+
+  &._pool {
+    background: $blue;
+  }
+
+  &._features {
+    background: $red;
+  }
+
+  &._wiki {
+    background: $brown;
+    //}
+  }
+
+  &._crypto {
+    //&:before {
+    background: $brown_2;
+    //}
+  }
+
+  &._watch {
+    background: $violette_2;
+  }
 }
 
 .article_controls {
   margin: 12px 0;
+
+  &._mod_1 {
+    margin-top: 0;
+  }
 }
 
 .article_title_link {
@@ -1115,6 +1313,15 @@
     }
   }
 
+  &._news {
+    background-image: url(../i/stories_bg.svg);
+
+    &:before {
+      content: $icon-ufo;
+      color: $violette;
+    }
+  }
+
   &._stories {
     color: #000;
 
@@ -1136,7 +1343,7 @@
       right: 0;
       left: 0;
       z-index: 1;
-      background-image: url(../i/group_bg_red.jpg);
+      background-image: url(../i/features_bg.svg);
     }
 
     &:before {
@@ -1191,7 +1398,7 @@
     }
   }
 
-  &._cryptotips {
+  &._crypto {
     color: #000;
 
     //background-image: url(../i/story_title_blue.jpg);

@@ -1,6 +1,5 @@
 .category_tip {
   @extend %icon_pseudo;
-  @extend %firm_bg_color;
   position: relative;
   margin: 0 17px 24px -16px;
   padding: 25px 20px 15px 0;
@@ -34,42 +33,47 @@
     }
   }
 
-  //&._stories,
-  //&._top {
-  //  background: $violette;
-  //}
-  //
-  //&._release {
-  //  background: $violette_2;
-  //}
-  //
-  //&._analysis {
-  //  background: $orange;
-  //}
-  //
-  //&._pricewise {
-  //  background: $green;
-  //}
-  //
-  //&._sponsored {
-  //  background: $green_2;
-  //}
-  //
-  //&._pool {
-  //  background: $blue;
-  //}
-  //
-  //&._features {
-  //  background: $red;
-  //}
-  //
-  //&._wiki {
-  //  background: $brown;
-  //}
-  //
-  //&._watch {
-  //  background: $brown_2;
-  //}
+  &._news,
+  &._stories,
+  &._top {
+    background: $violette;
+  }
+
+  &._release {
+    background: $violette_2;
+  }
+
+  &._analysis {
+    background: $orange;
+  }
+
+  &._pricewise {
+    background: $green;
+  }
+
+  &._sponsored {
+    background: $green_2;
+  }
+
+  &._pool {
+    background: $blue;
+  }
+
+  &._features {
+    background: $red;
+  }
+
+  &._wiki {
+    background: $brown;
+  }
+
+  &._crypto {
+    background: $brown_2;
+  }
+
+  &._watch {
+    background: $violette_2;
+  }
 }
 
 .category_link {
@@ -117,6 +121,7 @@
     letter-spacing: -.05em;
   }
 
+  &._news,
   &._stories,
   &._top {
     &:before {
@@ -155,6 +160,16 @@
 
     .category_link {
       background: $green;
+    }
+  }
+
+  &._news {
+    &:before {
+      border-bottom-color: $violette;
+    }
+
+    .category_link {
+      background: $violette;
     }
   }
 
@@ -198,7 +213,7 @@
     }
   }
 
-  &._watch {
+  &._crypto {
     &:before {
       border-bottom-color: $brown_2;
     }
@@ -208,4 +223,13 @@
     }
   }
 
+  &._watch {
+    &:before {
+      border-bottom-color: $violette_2;
+    }
+
+    .category_link {
+      background: $violette_2;
+    }
+  }
 }

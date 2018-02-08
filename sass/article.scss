@@ -13,10 +13,16 @@
   span {
     text-decoration: underline;
   }
+
+  &:hover {
+    span {
+      text-decoration: none;
+    }
+  }
 }
 
 .article_info {
-  margin-left: -16px;
+  margin-left: 12px;
   padding-left: 16px;
   background: #f7f8f8;
 
@@ -32,12 +38,14 @@
 
 .article_preview {
   position: relative;
-  font: 17px/24px $RubikBold;
-  padding: 20px 20px 13px 16px;
+  font: 22px/30px $RubikMed;
+  padding-bottom: 27px;
+  //padding: 20px 20px 13px 16px;
   margin-bottom: 28px;
-  margin-left: -16px;
+  letter-spacing: .025em;
   border-bottom: 4px solid #000;
 
+  ._news &,
   ._stories &,
   ._top & {
     border-bottom-color: $violette;
@@ -71,8 +79,12 @@
     border-bottom-color: $brown;
   }
 
-  ._watch & {
+  ._crypto & {
     border-bottom-color: $brown_2;
+  }
+
+  ._watch & {
+    border-bottom-color: $violette_2;
   }
 }
 
@@ -124,18 +136,18 @@
   @extend %clearfix;
   list-style: none;
   margin-left: -22px;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 
   li {
     float: left;
-    padding-left: 22px;
+    padding-left: 21px;
     margin-top: 7px;
   }
 }
 
 .tag_link {
   @extend %firm_color;
-  font: 13px/22px $RubikBold;
+  font: 13px/22px $RubikMed;
   letter-spacing: -.017em;
 }
 
@@ -155,18 +167,64 @@
 
 .related_title {
   position: relative;
-  font: 18px/22px $RubikBold;
-  padding: 20px 16px 18px;
-  margin: 0 -16px 20px 0;
-  color: #fff;
-  letter-spacing: .022em;
+  font: 18px $RubikMed;
+  padding: 20px 12px 8px;
+  margin-bottom: 10px;
+  color: #000;
+
+  @include respond-to-min($resp_step_2) {
+    font-size: 22px;
+    padding: 18px 12px 10px;
+    margin-bottom: 15px;
+  }
+
+  @include respond-to-min($resp_step_3) {
+    font-size: 24px;
+    padding: 27px 12px 18px;
+  }
+
+  //color: #fff;
+  //-webkit-background-size: cover;
+  //-moz-background-size: cover;
+  //-o-background-size: cover;
+  //background-size: cover;
+  //background-repeat: no-repeat;
+  //background-position: 50% 50%;
+
+  &._news {
+    background-image: url(../i/stories_bg.svg);
+  }
 
   &._stories {
-    background: url(../i/related_bg_blue.jpg) no-repeat 50% 50%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-image: url(../i/stories_bg.svg);
+  }
+
+  &._features {
+    background-image: url(../i/features_bg.svg);
+  }
+
+  &._pool {
+    background-image: url(../i/sharks_pool_bg.svg);
+  }
+
+  &._analysis {
+    background-image: url(../i/pricewise_bg.svg);
+  }
+
+  &._pricewise {
+    background-image: url(../i/pricewise_bg.svg);
+  }
+
+  &._crypto {
+    background-image: url(../i/crypto.svg);
+  }
+
+  &._wiki {
+    background-image: url(../i/wikicoin_bg.svg);
+  }
+
+  &._watch {
+    background-image: url(../i/ico_bg.svg);
   }
 }
 
@@ -178,11 +236,8 @@
 
   li {
     padding-left: 4px;
+    padding-right: 12px;
     float: left;
-
-    &:last-child {
-      float: right;
-    }
   }
 }
 
@@ -197,7 +252,6 @@
   text-align: center;
   border-radius: 17px;
   font: 12px/32px $RubikBlack;
-  background: #fff;
   border: 1px solid transparent;
 
   &:before {
@@ -278,6 +332,7 @@
     }
   }
 
+  ._news &,
   ._stories &,
   ._top & {
     color: $violette;
@@ -351,7 +406,7 @@
     }
   }
 
-  ._watch & {
+  ._crypto & {
     color: $brown_2;
 
     &._active,
@@ -360,9 +415,20 @@
     }
   }
 
+  ._watch & {
+    color: $violette_2;
+
+    &._active,
+    &:hover {
+      background: $violette_2;
+    }
+  }
+
   &._more {
+    background: #fff;
     width: auto;
     min-width: 34px;
+    border-radius: 2px;
     padding: 0 10px 0 14px;
   }
 
@@ -395,6 +461,7 @@
       border-right: 6px solid #fff;
     }
 
+    ._news &,
     ._stories &,
     ._top & {
       border-color: $violette;
@@ -508,7 +575,7 @@
       }
     }
 
-    ._watch & {
+    ._crypto & {
       border-color: $brown_2;
 
       &:before {
@@ -521,49 +588,206 @@
         }
       }
     }
+
+    ._watch & {
+      border-color: $violette_2;
+
+      &:before {
+        border-right-color: $violette_2;
+      }
+
+      &:hover {
+        &:after {
+          border-right-color: $violette_2;
+        }
+      }
+    }
   }
 }
 
 .content_block {
+
+  blockquote {
+    position: relative;
+    padding: 26px 0 47px;
+    margin: 44px 0 2px;
+
+    @include respond-to-min($resp_step_2) {
+      margin-bottom: 7px;
+    }
+
+    @include respond-to-min($resp_step_3) {
+      margin-bottom: 15px;
+    }
+
+    @include respond-to-min($resp_step_4) {
+      margin-top: 68px;
+    }
+
+    p {
+      @extend %firm_color;
+      font: 20px/28px $RubikBold;
+      letter-spacing: .012em;
+
+      &:first-of-type {
+        &:before {
+          content: '\201C';
+          position: absolute;
+          color: #000;
+          top: -16px;
+          left: -40px;
+          font: 90px/1 $cross_font_Georgia;
+        }
+      }
+
+      &:last-of-type {
+        &:after {
+          content: '\201D';
+          position: absolute;
+          color: #000;
+          bottom: -18px;
+          right: -25px;
+          font: 90px/1 $cross_font_Georgia;
+
+          @include respond-to-min($resp_step_2) {
+            right: -15px;
+          }
+
+          @include respond-to-min($resp_step_4) {
+            right: -83px;
+          }
+        }
+      }
+    }
+
+    i {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      opacity: .4;
+      font-size: 13px;
+      line-height: 22px;
+      letter-spacing: .035em;
+      font-style: normal;
+
+      @include respond-to-min($resp_step_2) {
+        bottom: 34px;
+      }
+
+      @include respond-to-min($resp_step_3) {
+        bottom: 40px;
+      }
+    }
+  }
 
   h1, h3, h5, h2, h4, h6 {
     margin-top: 1em;
   }
 
   h1 {
-    font: 22px $RubikBold;
+    font: 28px $RubikBold;
     letter-spacing: .02em;
-    margin-bottom: 18px;
+    margin-bottom: 25px;
+
+    @include respond-to-min($resp_step_2) {
+      font-size: 32px;
+    }
+
+    @include respond-to-min($resp_step_3) {
+      font-size: 38px;
+    }
+
+    @include respond-to-min($resp_step_4) {
+      font-size: 44px;
+    }
   }
 
   h2 {
-    font: 20px $RubikMed;
+    font: 26px $RubikMed;
     letter-spacing: .025em;
-    margin-bottom: 18px;
+    margin-bottom: 22px;
+
+    @include respond-to-min($resp_step_2) {
+      font-size: 28px;
+    }
+
+    @include respond-to-min($resp_step_3) {
+      font-size: 34px;
+    }
+
+    @include respond-to-min($resp_step_4) {
+      font-size: 40px;
+      letter-spacing: 0;
+      margin-bottom: 30px;
+    }
   }
 
   h3 {
-    font: 18px $RubikBold;
+    font: 22px $RubikBold;
     letter-spacing: .015em;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+
+    @include respond-to-min($resp_step_2) {
+      font-size: 24px;
+    }
+
+    @include respond-to-min($resp_step_3) {
+      font-size: 28px;
+    }
+
+    @include respond-to-min($resp_step_4) {
+      font-size: 34px;
+      margin-bottom: 27px;
+    }
   }
 
   h4 {
-    font: 20px $RubikMed;
+    font: 22px $RubikMed;
     letter-spacing: -.035em;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
+
+    @include respond-to-min($resp_step_2) {
+      font-size: 24px;
+    }
+
+    @include respond-to-min($resp_step_3) {
+      font-size: 26px;
+      letter-spacing: 0;
+    }
+
+    @include respond-to-min($resp_step_4) {
+      font-size: 32px;
+      margin-bottom: 28px;
+    }
   }
 
   h5 {
-    font: 16px/1.4 $RubikMed;
+    font: 20px/1.4 $RubikMed;
     letter-spacing: .015em;
     margin-bottom: 16px;
+
+    @include respond-to-min($resp_step_3) {
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+
+    @include respond-to-min($resp_step_4) {
+      font-size: 26px;
+    }
   }
 
   h6 {
-    font: 15px $RubikBold;
+    font: 18px $RubikBold;
     letter-spacing: 0.01em;
     margin-bottom: 16px;
+
+    @include respond-to-min($resp_step_3) {
+      font-size: 20px;
+    }
+
+    @include respond-to-min($resp_step_4) {
+      letter-spacing: 0.02em;
+    }
   }
 
   h1, h3, h5 {
@@ -572,18 +796,18 @@
 
   p {
     margin-bottom: 1em;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.3;
     letter-spacing: .022em;
   }
 
   > ul {
-    margin-top: 28px;
+    margin-top: 25px;
     list-style: none;
 
     > li {
       position: relative;
-      padding-left: 32px;
+      padding-left: 40px;
       margin-bottom: 22px;
       line-height: 1.6;
       letter-spacing: .05em;
@@ -592,7 +816,7 @@
         @extend %firm_bg_color;
         content: '';
         position: absolute;
-        left: 0;
+        left: 2px;
         top: 5px;
         width: 12px;
         height: 12px;
@@ -605,18 +829,20 @@
 
         > li {
           position: relative;
-          padding-left: 14px;
-          margin-bottom: 16px;
+          padding-left: 24px;
+          margin-bottom: 24px;
+          line-height: 1.2;
 
           &:before {
             @include transform_rotate(45);
             @extend %firm_bg_color;
             content: '';
             position: absolute;
-            left: -10px;
-            top: 4px;
+            left: 0;
+            top: 5px;
             width: 8px;
             height: 8px;
+            line-height: 1;
           }
         }
       }

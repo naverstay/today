@@ -63,6 +63,12 @@ body {
   float: left;
   width: 74.5%;
   padding-left: 32px;
+
+  .content_block {
+    float: none;
+    width: auto;
+    padding-left: 0;
+  }
 }
 
 .aside_block {
@@ -92,6 +98,40 @@ body {
 
   &._wide {
     width: 100%;
+  }
+
+  ._col_3 & {
+    width: 33.3333%;
+    margin-bottom: 14px;
+
+    .article_block {
+
+      .article_title {
+        padding: 15px 8px 15px 12px;
+
+        @include respond-to-min($resp_step_2) {
+          padding: 16px 16px 23px 28px;
+        }
+
+        @include respond-to-min($resp_step_3) {
+          padding: 16px 16px 23px 28px;
+        }
+      }
+
+      .article_link {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: .035em;
+      }
+
+      .article_stat {
+        padding-top: 8px;
+
+        @include respond-to-max($resp_step_2) {
+          padding-top: 0;
+        }
+      }
+    }
   }
 
   @include respond-to-max($resp_step_2) {
@@ -166,7 +206,7 @@ body {
   }
 
   .article_link {
-    font: 16px $RubikBold;
+    font: 16px $RubikMed;
     letter-spacing: .005em;
   }
 

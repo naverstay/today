@@ -149,6 +149,7 @@
   }
 
   %firm_color {
+    ._news &,
     ._stories &,
     ._top & {
       color: $violette;
@@ -188,6 +189,7 @@
   }
 
   %firm_border_color {
+    ._news &,
     ._stories &,
     ._top & {
       border-color: $violette;
@@ -227,6 +229,7 @@
   }
 
   %firm_bg_color {
+    ._news &,
     ._stories &,
     ._top & {
       background-color: $violette;
