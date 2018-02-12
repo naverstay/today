@@ -1,0 +1,79 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto главная')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +tag_holder()
+
+                    a.attention_block._warn(href='#')
+                        .attention_caption Breaking news
+                        p
+                            span Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+                            span.attention_link
+
+                    .content_holder
+                        .content_block
+                            .category_filter._pool
+                                ul.filter_list
+                                    li: a.filter_link._active(href='#') All articles
+                                    li: a.filter_link(href='#') Coins
+                                    li: a.filter_link(href='#') Persons
+                                    li: a.filter_link(href='#') Other
+
+                            .news_row._pool._bordered._tags_mode
+                                .news_col._third
+                                    .article_block._tag
+                                        .article_title.icon-shark
+                                            a.article_link(href='#') Piscina<br>de tiburones
+
+                                            p Crypto Space tiene que ver con ideas, así que encuentre opiniones que hagan reflexionar, blogs de expertos y entrevistas con grandes y buenos.
+
+                                +loop_while(7)
+                                    .news_col._third
+                                        .article_block._pool
+                                            .article_img
+                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                    a.article_action_btn.actionBtn(href='#' )
+                                                a.article_img_link(href='#'): img(src='i/range.jpg')
+
+                                            .article_title
+                                                a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
+                                                ul.article_stat
+                                                    li
+                                                        span.article_stat_val._stat_views 212
+                                                    li
+                                                        span.article_stat_val 2 minutes ago
+                                                    li._first
+                                                        a.article_stat_val(href='#') Ariel Deschapell
+
+                                    .news_col._third
+                                        .article_block._pool
+                                            .article_img
+                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                    a.article_action_btn.actionBtn(href='#' )
+                                                a.article_img_link(href='#'): img(src='i/range.jpg')
+
+                                            .article_title
+                                                a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
+                                                ul.article_stat
+                                                    li
+                                                        span.article_stat_val._stat_views 212
+                                                    li
+                                                        span.article_stat_val 2 minutes ago
+                                                    li._first
+                                                        a.article_stat_val(href='#') Ariel Deschapell
+
+                        +aside_block()
+
+            .nav_holder
+                +header()
+                +main_menu()
+                +search()
+
+            +footer()
+
+        +scripts()

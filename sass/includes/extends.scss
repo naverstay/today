@@ -5,7 +5,7 @@
   }
 
   %global_flex_block_row_wrap_flex-start {
-    @include flex_block(row wrap, flex-start);
+    @include flex_block(row wrap, flex-start, stretch);
   }
 
   %global_flex_block_row_wrap_center {

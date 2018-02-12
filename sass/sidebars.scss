@@ -266,6 +266,10 @@
       }
     }
   }
+
+  &._mod_1 {
+    //margin-bottom: 22px;
+  }
 }
 
 .main_menu {
@@ -514,3 +518,38 @@
     }
   }
 }
+
+.category_filter {
+  background: #f8f8f8;
+  padding: 18px 20px;
+  margin-bottom: 24px;
+  margin-left: 12px;
+}
+
+.filter_link {
+  @extend %firm_color;
+  font: 16px $RubikBold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &._active {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
+.filter_list {
+  @extend %clearfix;
+  margin-left: -50px;
+  list-style: none;
+
+  li {
+    float: left;
+    padding-left: 50px;
+  }
+}
+
+

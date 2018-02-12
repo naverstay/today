@@ -411,6 +411,7 @@
   position: relative;
   //margin-right: -16px;
   margin-bottom: 16px;
+  min-height: 100%;
 
   .content_block & {
     //margin-right: -3px;
@@ -442,6 +443,7 @@
     @include respond-to-min($resp_step_2) {
       &._top {
         margin-bottom: 0;
+        min-height: 0;
       }
     }
 
@@ -452,6 +454,76 @@
 
       .top_story_caption {
         //color: #fff;
+      }
+    }
+  }
+
+  &._tag {
+    @extend %icon_pseudo;
+    height: 100%;
+    padding-bottom: 6px;
+
+    &:before {
+      position: absolute;
+      content: $icon-ufo;
+      color: #fff;
+      width: 100px;
+      bottom: 0;
+      right: 0px;
+      height: 140px;
+      font-size: 205px;
+      overflow: hidden;
+      line-height: 1;
+      z-index: 2;
+    }
+
+    .article_title {
+      @extend %icon_pseudo;
+      @extend %firm_bg_color;
+      height: 100%;
+      padding: 90px 10px 30px 33px !important;
+
+      &:before {
+        color: #fff;
+        position: absolute;
+        font-size: 50px;
+        top: 22px;
+        left: 27px;
+      }
+    }
+
+    p {
+      font: 14px/24px $RubikMed;
+      color: #fff;
+      letter-spacing: 0;
+    }
+
+    ._bordered & {
+      .article_link {
+        color: #fff !important;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        margin-left: 16px;
+        margin-bottom: 22px;
+        font-size: 24px;
+        font-weight: 700;
+
+        &:before {
+          content: '#';
+          position: absolute;
+          top: 0;
+          right: 100%;
+        }
+
+        @include respond-to-min($resp_step_2) {
+          font-size: 28px;
+        }
+
+        @include respond-to-min($resp_step_4) {
+          font-size: 34px;
+        }
+
       }
     }
   }
@@ -1213,7 +1285,7 @@
 }
 
 .article_controls {
-  margin: 12px 0;
+  margin: 12px 0 12px 12px;
 
   &._mod_1 {
     margin-top: 0;
@@ -1343,6 +1415,12 @@
       right: 0;
       left: 0;
       z-index: 1;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
       background-image: url(../i/features_bg.svg);
     }
 

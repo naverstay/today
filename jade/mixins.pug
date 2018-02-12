@@ -298,8 +298,8 @@ mixin aside_block()
                             li._first
                                 a.article_stat_val(href='#') Ariel Deschapell
 
-mixin tag_holder()
-    .tag_holder.clearfix
+mixin tag_holder(cls)
+    .tag_holder.clearfix(class= cls)
         .lang_block
             select.lang_select
                 option eng

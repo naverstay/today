@@ -80,6 +80,7 @@ body {
 
 .news_row {
   @extend %clearfix;
+  @extend %global_flex_block_row_wrap_flex-start;
   margin-left: -20px;
 
   .article_controls + & {
@@ -98,6 +99,18 @@ body {
 
   &._wide {
     width: 100%;
+  }
+
+  ._tags_mode & {
+    margin-bottom: 14px;
+
+    .article_block {
+      background: #f7f8f8;
+    }
+
+    @include respond-to-min($resp_step_3) {
+      margin-bottom: 18px;
+    }
   }
 
   ._col_3 & {

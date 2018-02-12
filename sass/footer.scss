@@ -90,7 +90,7 @@
   float: left;
   padding: 11px;
   color: #c0c0c0;
-  font: 10px/16px $RubikBold;
+  font: 10px/16px $RubikMed;
 
   @include respond-to-min($resp_step_2) {
     font-size: 11px;
@@ -237,7 +237,7 @@
 .footer_link {
   color: #c0c0c0;
   text-decoration: none;
-  font: 10px/16px $RubikBold;
+  font: 10px/16px $RubikMed;
 
   @include respond-to-min($resp_step_2) {
     font-size: 11px;
