@@ -72,6 +72,37 @@
   }
 }
 
+.btn_v4 {
+  height: 34px;
+
+  &.telegram_btn {
+    float: right;
+    padding: 5px 12px;
+    font: 14px/24px $RubikBold;
+
+    span {
+      padding: 0 5px;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+
+    .btn_icon {
+      font-size: 20px;
+    }
+  }
+}
+
+.btn_blue {
+  @include transition_all(background .3s);
+  color: #fff;
+  background: #179cdf;
+
+  &:hover {
+    background: darken(#179cdf, 5%);
+  }
+}
+
 .transp_btn {
   background: none;
   border: 2px solid #fff;

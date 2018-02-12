@@ -129,7 +129,6 @@
     -o-background-size: cover;
     background-size: cover;
   }
-
 }
 
 .article_tag_list {
@@ -149,6 +148,20 @@
   @extend %firm_color;
   font: 13px/22px $RubikMed;
   letter-spacing: -.017em;
+}
+
+.article_telegram_section {
+  @extend %clearfix;
+  background: #000;
+  margin-left: -16px;
+  padding: 7px 10px 7px 24px;
+  text-align: left;
+  color: #fff;
+  font: 14px/34px $RubikReg;
+
+  > span {
+    letter-spacing: .018em;
+  }
 }
 
 .article_telegram_block {
