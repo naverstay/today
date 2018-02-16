@@ -636,6 +636,7 @@
     }
   }
 
+  ._news &,
   ._stories &,
   ._top & {
     border-top-color: $violette;
@@ -675,6 +676,7 @@
 }
 
 ._bordered {
+  &._news,
   &._stories,
   &._top {
     .article_block .article_link:hover {
@@ -796,6 +798,7 @@
     }
   }
 
+  ._news &,
   ._stories &,
   ._top & {
     &:before {
