@@ -469,7 +469,7 @@
       color: #fff;
       width: 100px;
       bottom: 0;
-      right: 0px;
+      right: 0;
       height: 140px;
       font-size: 205px;
       overflow: hidden;
@@ -515,6 +515,68 @@
           top: 0;
           right: 100%;
         }
+
+        @include respond-to-min($resp_step_2) {
+          font-size: 28px;
+        }
+
+        @include respond-to-min($resp_step_4) {
+          font-size: 34px;
+        }
+
+      }
+    }
+  }
+
+  &._tag-2 {
+    @extend %icon_pseudo;
+    height: 100%;
+    padding-bottom: 6px;
+
+    &:before {
+      position: absolute;
+      content: $icon-ufo;
+      color: #fff;
+      width: 100px;
+      bottom: 0;
+      right: 0;
+      height: 140px;
+      font-size: 205px;
+      overflow: hidden;
+      line-height: 1;
+      z-index: 2;
+    }
+
+    .article_title {
+      @extend %firm_bg_color;
+      height: 100%;
+      padding: 90px 10px 30px 33px !important;
+
+      &:before {
+        content: '#';
+        color: #fff;
+        position: absolute;
+        top: 25px;
+        left: 28px;
+        font: 54px/1 $RubikMed;
+      }
+    }
+
+    p {
+      font: 14px/24px $RubikMed;
+      color: #fff;
+      letter-spacing: 0;
+    }
+
+    ._bordered & {
+      .article_link {
+        color: #fff !important;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        margin-bottom: 22px;
+        font-size: 24px;
+        font-weight: 700;
 
         @include respond-to-min($resp_step_2) {
           font-size: 28px;
