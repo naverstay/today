@@ -7,58 +7,65 @@ html(lang='ru')
         .wrapper
             .main_content
                 .section_inner
-                    +top_info()
-
-                    .attention_block._warn
-                        p Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+                    +tag_holder()
 
                     .about_block
-                        .about_title About Us
+                        .about_contacts
+                            .about_title Contacts
+                            p We are also giving you useful tips and reference information that will help you deal with.
+                            ul.about_contacts_list
+                                li.icon-feather
+                                    .contacts_caption Editorial
+                                    a.contacts_link(href='#') @cryptocomes.com
+                                li.icon-lamp
+                                    .contacts_caption Partnerships
+                                    a.contacts_link(href='#') @cryptocomes.com
+                                li.icon-vial
+                                    .contacts_caption Advertising
+                                    a.contacts_link(href='#') @cryptocomes.com
+                                li.icon-heart
+                                    .contacts_caption Other
+                                    a.contacts_link(href='#') @cryptocomes.com
 
-                        ul.action_list
-                            li: a.action_link._w(href='#')
-                                span Twitter
-                            li: a.action_link._t(href='#')
-                                span Telegram
-                            li: a.action_link._f(href='#')
-                                span Facebook
-                            li: a.action_link._r(href='#')
-                                span RSS
+                        .about_info
+                            .about_info_title
+                                .about_title CryptoComes —<br>is a crypto community news platform that covers the crypto industry, Blockchain, AI and all new generation technology.
 
-                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+                            .about_text
+                                p Keeping you tuned to the latest industry and community news, we also run regular price analysis and strategical forecasts, trend reviews, experts’ opinions, interviews with the great and the good, feature stories and investigations in all possible formats.<br><br>
 
-                    .about_action
-                        img(src='i/about_share.png')
+                                p We are also giving you useful tips and reference information that will help you deal with such a complex and burgeoning industry as the crypto and the new gen tech. CryptoComes is a journalistic project founded primarily by editors with extensive experience in both high-quality journalism and the crypto industry.
+
+                                p We have established and developed some very successful projects, but we are not satisfied with the current situation when many publications are compromising the truth selling out to the highest bidder and twisting their reporting because of the easy money they can get from advertisers and sponsors. We are convinced that the crypto community deserves better. Our journalism is built upon such editorial values as accuracy, impartiality, independence and accountability.
+
+                                p Regardless of the origin of a story, we always adhere to the basic principles of honesty, integrity and respon-sibility. We are committed to deal fairly and openly with our audience. That’s why we have developed and are keeping our Editorial Guidelines setting out principles and practices that cover our commitment to editorial values.
+
+                                p As journalists, we are the curators of the news and information gathered, and we have a responsibility not to mislead. At the same time, we appreciate when members of our audience are sharing their experience or expertise with us through social media or by other means. We are open to exchanging opinions with you. Stay tuned and let’s build a better community together!
 
                     .about_team_holder
+                        .about_title Persons
                         ul.about_team
-                            li
-                                .team_unit
-                                    .team_unit_photo
-                                        img(src='i/chief.jpg')
-                                    .team_unit_name Konstantin<br>Bradly
-                                    .team_unit_post Chief of Chief
-
-                            li
-                                .team_unit
-                                    .team_unit_photo
-                                        img(src='i/chief.jpg')
-                                    .team_unit_name Amelia<br>Harris
-                                    .team_unit_post Ofiice manager
-
-                            li
-                                .team_unit
-                                    .team_unit_photo
-                                        img(src='i/chief.jpg')
-                                    .team_unit_name Alejandro<br>Quinn
-                                    .team_unit_post Anthropogenesis maniac
-
+                            +loop_while(3)
+                                li
+                                    .team_unit
+                                        .team_unit_photo
+                                            img(src='i/person_1.jpg')
+                                        .team_unit_info
+                                            .team_unit_name Viola<br>McCormick
+                                            .team_unit_post Ofiice manager
+                                li
+                                    .team_unit
+                                        .team_unit_photo
+                                            img(src='i/person_1.jpg')
+                                        .team_unit_info
+                                            .team_unit_name Katharine Parsons
+                                            .team_unit_post Ofiice manager
 
             .nav_holder
                 +header()
                 +main_menu()
                 +search()
 
-            +footer(true)
+            +footer()
 
         +scripts()

@@ -1,21 +1,18 @@
 .about_block {
-  @extend %icon_pseudo;
+  @extend %clearfix;
   position: relative;
-  padding: 107px 0 15px;
+  padding: 12px 12px 0;
+  margin-bottom: 55px;
 
   &:before {
-    @extend %hor_centr;
-    content: $icon-ufo;
+    content: '';
     position: absolute;
-    top: -117px;
-    padding-left: 12px;
-    font-size: 417px;
-    line-height: 1;
-    color: $violette;
-  }
-
-  .action_list {
-    margin: 0 0 25px;
+    top: 12px;
+    bottom: 0;
+    left: 12px;
+    width: 300px;
+    display: block;
+    background: #f8f8f8;
   }
 
   > p {
@@ -25,85 +22,179 @@
   }
 }
 
-.about_action {
-  margin-bottom: 24px;
+.about_contacts {
+  position: relative;
+  z-index: 1;
+  width: 300px;
+  float: left;
+  padding: 55px 30px;
 
-  img {
-    display: inline-block;
-    vertical-align: top;
-    max-width: 100%;
+  p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 26px;
   }
 }
 
 .about_title {
-  color: $violette;
-  font: 52px/1 $RubikBlack;
+  color: $default_t_color;
+  font: 32px/1 $RubikBlack;
   letter-spacing: .021em;
   margin-bottom: 15px;
 }
 
-.about_team_holder {
-  padding: 34px 0 32px 36px;
-  margin-left: -16px;
-  margin-right: 17px;
+.about_info {
   position: relative;
-  background: url(../i/footer_bg_2.svg) no-repeat 50% 50%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: -33px;
-    height: 6px;
-    background: $violette;
-  }
-
+  margin-left: 403px;
 }
 
-.about_team {
-  list-style: none;
+.about_text {
+  padding-left: 15px;
+  margin-right: 185px;
+  margin-top: -16px;
 
-  li {
-    + li {
-      margin-top: 48px;
+  p {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: .024em;
+
+    + p {
+      margin-top: 52px;
     }
   }
 }
 
-.team_unit {
+.about_info_title {
+  position: relative;
+  padding: 24px 70px 0 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: $violette url(../i/about_stars.png) no-repeat 100% 0;
+  }
+
+  .about_title {
+    @extend %icon_pseudo;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    padding: 50px 140px 64px 15px;
+    line-height: 1.25;
+
+    &:before {
+      content: $icon-ufo;
+      position: absolute;
+      bottom: -82px;
+      right: -54px;
+      font-size: 240px;
+      line-height: 1;
+    }
+  }
+}
+
+.about_contacts_list {
+  list-style: none;
+  color: $violette;
+  padding-top: 20px;
+
+  li {
+    position: relative;
+    margin-top: 48px;
+    padding-left: 48px;
+
+    &:before {
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      width: 42px;
+      height: 42px;
+      font-size: 30px;
+      line-height: 42px;
+      text-align: center;
+    }
+  }
+}
+
+.contacts_link {
+  color: $violette;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: .065em;
+}
+
+.contacts_caption {
+  font: 24px $RubikMed;
+  margin-bottom: 3px;
+}
+
+.about_team_holder {
+  margin-bottom: 30px;
+  padding: 0 12px;
+
+  .about_title {
+    padding-left: 30px;
+    margin-bottom: 48px;
+    letter-spacing: 0;
+  }
+}
+
+.about_team {
   @extend %clearfix;
-  color: #fff;
-  letter-spacing: .025em;
+  list-style: none;
+  margin: 0 -1%  -10px -86px;
+
+  li {
+    float: left;
+    width: 33%;
+    padding-left: 86px;
+    margin-bottom: 40px;
+  }
+}
+
+.team_unit {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+
+  }
+}
+
+.team_unit_info {
+  padding: 16px 10px 30px 32px;
+  border-left: 8px solid $violette;
 }
 
 .team_unit_name {
-  font: 24px/1.1 $RubikBlack;
-  padding: 12px 0;
+  font: 22px/26px $RubikBlack;
+  margin-bottom: 7px;
 }
 
 .team_unit_post {
   opacity: .5;
-  font: 14px $RubikBold;
+  letter-spacing: 0.01em;
+  font: 14px $RubikReg;
 }
 
 .team_unit_photo {
   float: right;
   margin-right: -17px;
-  width: 96px;
+  width: 134px;
+  background: #f8f8f8;
+  padding: 0 20px 20px 0;
 
   img {
     display: block;
     max-width: 100%;
   }
 
-  + .team_unit_post,
-  + .team_unit_name {
-    margin-right: 100px;
+  + .team_unit_info {
+    margin-right: 150px;
   }
-
 }

@@ -13,7 +13,7 @@
   }
 
   %global_flex_block_row_nowrap_flex-start {
-    @include flex_block(row nowrap, flex-start);
+    @include flex_block(row nowrap, flex-start, stretch);
   }
 
   %global_flex_block_row_nowrap_flex-end {
