@@ -676,7 +676,7 @@
   ._bordered & {
     @extend %global_flex_block_column_nowrap_flex-start_stretch;
     border-top: 8px solid;
-    margin-bottom: 6px;
+    //margin-bottom: 6px;
 
     .article_title {
       @include flex(1 0 auto);
