@@ -277,7 +277,7 @@
 
 .go_top {
   @extend %icon_pseudo;
-  @include transition_all(left .3s, opacity .3s);
+  @include transition_all(left .3s, background .3s, color .3s, opacity .3s);
   position: absolute;
   bottom: 0;
   opacity: 0;
@@ -288,12 +288,19 @@
   line-height: 58px;
   text-align: center;
   border-radius: 100%;
-  color: #fff;
-  background: #000;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50), 0 12px 14px 0 rgba(0, 0, 0, 0.50);
+  color: $violette;
+  background: #fff;
+  box-shadow: 0 12px 14px 0 rgba(37, 16, 80, 0.10);
+  //box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50), 0 12px 14px 0 rgba(0, 0, 0, 0.50);
 
   &:before {
     content: $icon-arrow-up;
+  }
+
+  &:hover {
+    color: #fff;
+    background: $violette_dark;
+    box-shadow: 0 2px 4px 0 rgba(37, 16, 80, 0.30), 0 12px 14px 0 rgba(37, 16, 80, 0.20);
   }
 
   ._vis & {

@@ -354,29 +354,51 @@ mixin top_info()
             .currency_info_table
                 .currency_info_cell
                     p
-                        span BTC
+                        span BCH
                         span.clr_green (+10.82%)
                     p
-                        span.currency_val 2636.79
-                .currency_info_cell
+                        span.currency_val 3236.51
+                //-.currency_info_cell
                     .currency_info_chart
                         img(src='i/chart_btc.png')
+
                 .currency_info_cell
                     p
-                        span BCH
-                        span.clr_red_2 (-8.82%)
+                        span BTC
+                        span.clr_red_2 (-81.82%)
                     p
-                        span.currency_val 3236.51
-                .currency_info_cell
+                        span.currency_val 2636.79
+                //-.currency_info_cell
                     .currency_info_chart
                         img(src='i/chart_bch.png')
+
                 .currency_info_cell
                     p
                         span ETH
-                        span.clr_red_2 (-8.82%)
+                        span.clr_red_2 (-83.82%)
                     p
-                        span.currency_val 26236.79
+                        span.currency_val 2636.79
+                //-.currency_info_cell
+                    .currency_info_chart
+                        img(src='i/chart_btc.png')
+
                 .currency_info_cell
+                    p
+                        span GBT
+                        span.clr_green (+10.82%)
+                    p
+                        span.currency_val 3236.51
+                //-.currency_info_cell
+                    .currency_info_chart
+                        img(src='i/chart_bch.png')
+
+                .currency_info_cell
+                    p
+                        span GBB
+                        span.clr_green (+10.82%)
+                    p
+                        span.currency_val 33236.51
+                //-.currency_info_cell
                     .currency_info_chart
                         img(src='i/chart_eth.png')
 
@@ -494,14 +516,14 @@ mixin header()
             +top_info()
 
             ul.user_menu
-                li._vis_1280
-                    a.head_subscribe_btn.btn_v2.btn_violette.openSubscribe(href='#')
-                        span Subscribe
-                li
-                    a.search_btn.searchBtn(href='#')
                 //-li
                     a.menu_btn.menuBtn(href='#')
                         span
+                li
+                    a.search_btn.searchBtn(href='#')
+                li._vis_1280
+                    a.head_subscribe_btn.btn_v2.btn_violette.openSubscribe(href='#')
+                        span Subscribe
 
 mixin scripts(share)
     link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Rubik:400,500,700', media='all')

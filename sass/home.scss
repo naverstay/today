@@ -65,7 +65,7 @@
   }
 
   @include respond-to-min($resp_step_2) {
-    margin-right: 34px;
+    //margin-right: 34px;
   }
 }
 
@@ -95,6 +95,10 @@
   letter-spacing: .013em;
   position: relative;
   z-index: 1;
+
+  .article_title & {
+    margin: 10px 0 7px;
+  }
 
   .article_reviews {
     margin-bottom: 24px;
@@ -1020,7 +1024,7 @@
     left: 0;
     right: 88px;
     max-height: 100%;
-    padding: 12px 10px 26px 8px;
+    padding: 12px 10px 32px 8px;
 
     &:after {
       content: '';
@@ -1035,9 +1039,9 @@
     &:before {
       content: $icon-ufo;
       position: absolute;
-      right: 0;
-      bottom: -25px;
-      font-size: 110px;
+      right: 2px;
+      bottom: -30px;
+      font-size: 112px;
       line-height: 1;
       width: 90px;
       overflow: hidden;
@@ -1559,7 +1563,7 @@
     //background-image: url(../i/story_title_blue.jpg);
 
     &:before {
-      content: $icon-ufo;
+      content: $icon-lamp;
       color: #fff;
       background: $brown;
     }
@@ -1577,7 +1581,7 @@
     }
   }
 
-  &._ico {
+  &._watch {
     color: #000;
 
     //background-image: url(../i/story_title_orange.jpg);

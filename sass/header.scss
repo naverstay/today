@@ -203,16 +203,19 @@
 .user_menu {
   list-style: none;
   float: right;
+  min-width: 200px;
   padding-top: 2px;
   margin-right: -4px;
 
   li {
-    float: left;
+    float: right;
     padding-right: 16px;
   }
 
   @include respond-to-min($resp_step_2) {
     padding-top: 10px;
+    padding-left: 50px;
+    min-width: 350px;
   }
 }
 
@@ -229,5 +232,5 @@
 }
 
 .currency_val {
-  font: 13px $RubikBold;
+  font: 13px $RubikMed;
 }

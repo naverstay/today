@@ -229,11 +229,8 @@
     opacity: 1;
     float: left;
     padding-top: 4px;
+    padding-left: 0;
     overflow: visible;
-
-    @include respond-to-max($resp_step_3) {
-      padding-left: 0;
-    }
   }
 
   .menu_item {
