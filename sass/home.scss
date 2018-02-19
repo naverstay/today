@@ -504,17 +504,17 @@
         display: inline-block;
         vertical-align: top;
         position: relative;
-        margin-left: 16px;
+        //margin-left: 16px;
         margin-bottom: 22px;
         font-size: 24px;
         font-weight: 700;
 
-        &:before {
-          content: '#';
-          position: absolute;
-          top: 0;
-          right: 100%;
-        }
+        //&:before {
+        //  content: '#';
+        //  position: absolute;
+        //  top: 0;
+        //  right: 100%;
+        //}
 
         @include respond-to-min($resp_step_2) {
           font-size: 28px;
