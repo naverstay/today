@@ -145,6 +145,8 @@ $(function ($) {
         ajax.send();
     });
 
+    initSubscribePopup();
+
     initValidation();
 
 });
@@ -224,8 +226,18 @@ function checkHeader() {
     }
 }
 
-function initValidation() {
-    $('.validateMe').each(function (ind) {
+function initSubscribePopup() {
+    $('.openSubscribe').popup({
+        backOpacity: 0.6,
+        content: $('#popup_subscribe'),
+        afterOpen: function (e) {
+            initValidation('.validatePopup');
+        }
+    });
+}
+
+function initValidation(el) {
+    $(el || '.validateMe').each(function (ind) {
         var f = $(this);
 
         f.validationEngine({

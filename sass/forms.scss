@@ -71,7 +71,36 @@
   &.error {
     border-color: #ff0a24;
   }
+}
 
+.input_v2 {
+  @include transition_all(border-color .3s);
+  display: block;
+  height: 48px;
+  width: 100%;
+  color: $violette;
+  border: 2px solid $violette;
+  border-radius: 2px;
+  font: 18px/20px $RubikMed;
+  padding: 12px;
+
+  &::-moz-placeholder {
+    color: $violette;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $violette;
+  }
+
+  &.error {
+    color: #ff0a24;
+    border-color: #ff0a24;
+  }
+
+  &.success {
+    color: #000;
+    border-color: #000;
+  }
 }
 
 .input_w {

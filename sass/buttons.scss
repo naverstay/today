@@ -151,6 +151,12 @@
     opacity: 0;
   }
 
+  &._black {
+    &:before {
+      background: #000;
+    }
+  }
+
   &:hover {
     &:before {
       opacity: 1;

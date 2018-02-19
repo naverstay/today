@@ -46,6 +46,7 @@ module.exports = function (grunt) {
                 files: {
                     'js/main.min.js': [
                         'js/jquery1.10.js',
+                        'js/jquery.popup.min.js',
                         'js/jquery.sticky-kit.min.js',
                         'js/auto-complete.js',
                         'js/jquery.validationEngine.js',

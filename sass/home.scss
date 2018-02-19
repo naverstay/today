@@ -1,10 +1,10 @@
 .attention_block {
   @extend %icon_pseudo;
-  padding: 18px 12px 14px 27px;
+  padding: 16px 12px 14px 27px;
   margin: 14px 14px 12px;
   background: #f7f6ef;
   font: 13px $RubikMed;
-  letter-spacing: -.017em;
+  letter-spacing: -.038em;
   position: relative;
   z-index: 1;
   display: block;
@@ -27,15 +27,15 @@
       content: $icon-flash;
       position: absolute;
       top: 50%;
-      margin-top: -14px;
+      margin-top: -13px;
       left: -12px;
       width: 28px;
       height: 28px;
-      font-size: 14px;
+      font-size: 18px;
       line-height: 28px;
       background: #ff0a24;
+      padding-left: 2px;
       color: #fff;
-      text-align: center;
     }
   }
 
@@ -51,7 +51,7 @@
   letter-spacing: .01em;
   padding-right: 13px;
   float: left;
-  margin: -8px 18px 0 -11px;
+  margin: -6px 27px 0 -11px;
 
   + p {
     max-width: 100%;
@@ -76,7 +76,7 @@
   line-height: 1;
   display: inline-block;
   vertical-align: middle;
-  margin: -2px 0 -4px 30px;
+  margin: -2px 0 -4px 35px;
 
   &:before {
     content: $icon-arrow-right;
@@ -440,11 +440,9 @@
     //  background-size: cover;
     //}
 
-    @include respond-to-min($resp_step_2) {
-      &._top {
-        margin-bottom: 0;
-        min-height: 0;
-      }
+    &._top {
+      margin-bottom: 0;
+      min-height: 0;
     }
 
     &.story_block {
@@ -1381,8 +1379,8 @@
   padding-right: 36px;
   position: relative;
   z-index: 2;
-  color: rgba(0, 0, 0, .4);
   font: 12px/20px $RubikReg;
+  color: rgba(0, 0, 0, .4) !important;
 
   &:before {
     @include transition_all(color .3s);
@@ -1392,8 +1390,14 @@
     font-size: 18px;
   }
 
+  span {
+    @include transition_all(color .3s);
+  }
+
   &:hover {
-    color: #000;
+    span {
+      color: #000 !important;
+    }
 
     &:before {
       @extend %firm_color;
@@ -1401,8 +1405,10 @@
   }
 
   ._bg & {
-    color: #fff;
-    font-family: $RubikBlack;
+    span {
+      color: #fff;
+      font-family: $RubikBlack;
+    }
 
     &:before {
       color: #fff !important;
@@ -1414,9 +1420,9 @@
   @extend %icon_pseudo;
   position: relative;
   color: #fff;
-  font: 18px $RubikBold;
-  letter-spacing: .025em;
-  padding: 11px 16px 7px 44px;
+  font: 20px $RubikMed;
+  letter-spacing: .005em;
+  padding: 9px 16px 9px 44px;
   margin: 0 0 12px;
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -1456,7 +1462,7 @@
   &._bg {
     background: none;
     margin-top: 45px;
-    padding: 11px 36px 7px 68px;
+    padding: 9px 36px 9px 68px;
 
     &:before {
       left: 21px;
@@ -1492,7 +1498,7 @@
     &:after {
       content: '';
       position: absolute;
-      height: 284px;
+      height: 118px;
       top: -20px;
       right: 0;
       left: 0;

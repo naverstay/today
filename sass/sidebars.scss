@@ -298,8 +298,9 @@
   display: block;
   text-decoration: underline;
   color: #fff;
-  font: 24px $RubikBlack;
-  letter-spacing: -.031em;
+  font: 24px $RubikMed;
+  //letter-spacing: -.031em;
+  letter-spacing: .02em;
 }
 
 .menu_footer {

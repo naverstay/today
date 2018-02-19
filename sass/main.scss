@@ -169,15 +169,16 @@ a {
   list-style: none;
   padding-right: 16px;
   position: relative;
+  z-index: 1;
 
   &:before {
-    right: 32px;
-    left: 32px;
-    top: 0;
-    bottom: 0;
-    display: block;
-    position: absolute;
-    content: '';
+    //right: 32px;
+    //left: 32px;
+    //top: 0;
+    //bottom: 0;
+    //display: block;
+    //position: absolute;
+    //content: '';
   }
 
   + .article_controls {

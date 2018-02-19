@@ -1,0 +1,99 @@
+.popup_box {
+  background: #fff;
+  text-align: center;
+  position: relative;
+  width: 410px;
+  max-width: 100%;
+  box-shadow: none;
+  padding: 42px 24px 22px;
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    background: $violette;
+    height: 4px;
+    right: 24px;
+    left: 24px;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font: 14px/1.2 $RubikMed;
+    color: $violette_dark;
+    letter-spacing: 0;
+    padding-top: 5px;
+  }
+
+  .footer_action {
+    padding: 10px 10px 1px;
+    font-size: 18px;
+  }
+
+  .subscribe_btn {
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .action_link {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+
+    &:before {
+      line-height: 48px;
+    }
+
+    &:hover {
+      color: #fff;
+      background: $violette;
+    }
+  }
+
+  .input_w {
+    margin-bottom: 12px;
+  }
+
+  .popup_close {
+    font-size: 20px;
+    color: #000;
+  }
+
+  .subscribe_btn {
+    width: 100%;
+  }
+}
+
+.subscribe_logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 154px;
+  margin-bottom: 25px;
+  margin-left: -8px;
+  max-width: 100%;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.popup_inner {
+  margin: 0 auto;
+  max-width: 268px;
+}
+
+.popup_caption {
+  font: 32px/1.15 $RubikMed;
+  margin-bottom: 33px;
+}

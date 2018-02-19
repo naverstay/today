@@ -187,11 +187,16 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
+  max-width: 168px;
 
   img {
     display: block;
     width: 200px;
     max-width: 100%;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    max-width: 200px;
   }
 }
 
