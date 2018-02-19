@@ -183,8 +183,12 @@
       color: $brown;
     }
 
-    ._watch & {
+    ._crypto & {
       color: $brown_2;
+    }
+
+    ._watch & {
+      color: $violette_2;
     }
   }
 
@@ -223,8 +227,12 @@
       border-color: $brown;
     }
 
-    ._watch & {
+    ._crypto & {
       border-color: $brown_2;
+    }
+
+    ._watch & {
+      border-color: $violette_2;
     }
   }
 
@@ -263,8 +271,12 @@
       background-color: $brown;
     }
 
-    ._watch & {
+    ._crypto & {
       background-color: $brown_2;
+    }
+
+    ._watch & {
+      background-color: $violette_2;
     }
   }
 

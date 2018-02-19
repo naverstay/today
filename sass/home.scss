@@ -734,8 +734,12 @@
     border-top-color: $brown;
   }
 
-  ._watch & {
+  ._crypto & {
     border-top-color: $brown_2;
+  }
+
+  ._watch & {
+    border-top-color: $violette_2;
   }
 }
 
@@ -790,9 +794,15 @@
     }
   }
 
-  &._watch {
+  &._crypto {
     .article_block .article_link:hover {
       color: $brown_2;
+    }
+  }
+
+  &._watch {
+    .article_block .article_link:hover {
+      color: $violette_2;
     }
   }
 }
