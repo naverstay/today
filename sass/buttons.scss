@@ -95,7 +95,7 @@
 
 .btn_blue {
   @include transition_all(background .3s);
-  color: #fff;
+  color: #fff !important;
   background: #179cdf;
 
   &:hover {

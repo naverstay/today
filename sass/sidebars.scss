@@ -219,7 +219,11 @@
   position: relative;
   margin-bottom: 14px;
   padding: 10px 12px;
-  background: $violette url(../i/firm_bg_violette.jpg) no-repeat 0 50%;
+  background: $violette url(../i/stories_bg.svg) no-repeat 0 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
   .main_menu {
     opacity: 1;

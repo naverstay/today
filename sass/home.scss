@@ -676,10 +676,12 @@
   }
 
   ._bordered & {
+    @extend %global_flex_block_column_nowrap_flex-start_stretch;
     border-top: 8px solid;
     margin-bottom: 6px;
 
     .article_title {
+      @include flex(1 0 auto);
       padding-bottom: 15px;
 
       @include respond-to-min($resp_step_3) {
@@ -1097,7 +1099,7 @@
   }
 
   ._article & {
-    color: #000;
+    color: #000 !important;
     letter-spacing: .045em;
   }
 }
@@ -1354,6 +1356,7 @@
 
   &._mod_1 {
     margin-top: 0;
+    margin-left: 0;
   }
 }
 
@@ -1506,17 +1509,6 @@
     }
   }
 
-  &._pricewise {
-    color: #000;
-    //background-image: url(../i/story_title_blue.jpg);
-
-    &:before {
-      content: $icon-say;
-      color: #fff;
-      background: $green;
-    }
-  }
-
   &._analysis {
     color: #000;
 
@@ -1537,7 +1529,7 @@
     &:before {
       content: $icon-splash;
       color: #fff;
-      background: $orange;
+      background: $green;
     }
   }
 
@@ -1637,7 +1629,7 @@
 .news_name {
   @extend %firm_color;
   letter-spacing: -.021em;
-  color: #000;
+  color: #000 !important;
   font: 20px/1.2 $RubikBold;
 
   ._related & {

@@ -48,25 +48,31 @@
 
   &._qoute {
     &:before {
-      content: $icon-flash;
+      content: $icon-quote;
     }
   }
 
   &._top {
     &:before {
-      content: $icon-splash;
+      content: $icon-crown;
     }
   }
 
   &._popular {
     &:before {
-      content: $icon-close;
+      content: $icon-heart;
+    }
+  }
+
+  &._comments {
+    &:before {
+      content: $icon-feather;
     }
   }
 
   &._futurama {
     &:before {
-      content: $icon-eye;
+      content: $icon-futurama;
     }
   }
 }

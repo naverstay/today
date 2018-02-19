@@ -814,6 +814,10 @@
     letter-spacing: .022em;
   }
 
+  a {
+    @extend %firm_color;
+  }
+
   > ul {
     margin-top: 25px;
     list-style: none;
