@@ -810,6 +810,10 @@
   img {
     display: block;
     max-width: 100%;
+
+    .article_block & {
+      width: 100%;
+    }
   }
 
   ._main & {
@@ -1279,7 +1283,7 @@
   display: inline-block;
   vertical-align: top;
   border-radius: 14px;
-  color: #fff;
+  color: #fff !important;
 
   span {
     display: inline-block;
