@@ -387,6 +387,7 @@
       line-height: 28px;
 
       &:before {
+        z-index: -1;
         content: $icon-ufo;
         position: absolute;
         overflow: hidden;
@@ -1491,6 +1492,69 @@
         background: #fff;
       }
     }
+
+    &._news,
+    &._stories,
+    &._top {
+      .article_group_link:before {
+        color: $violette;
+      }
+    }
+
+    &._release {
+      .article_group_link:before {
+        color: $violette_2;
+      }
+    }
+
+    &._analysis {
+      .article_group_link:before {
+        color: $orange;
+      }
+    }
+
+    &._pricewise {
+      .article_group_link:before {
+        color: $green;
+      }
+    }
+
+    &._sponsored {
+      .article_group_link:before {
+        color: $green_2;
+      }
+    }
+
+    &._pool {
+      .article_group_link:before {
+        color: $blue;
+      }
+    }
+
+    &._features {
+      .article_group_link:before {
+        color: $red;
+      }
+    }
+
+    &._wiki {
+      .article_group_link:before {
+        color: $brown;
+      }
+    }
+
+    &._crypto {
+      .article_group_link:before {
+        color: $brown_2;
+      }
+    }
+
+    &._watch {
+      .article_group_link:before {
+        color: $violette_2;
+      }
+    }
+
     @include respond-to-min($resp_step_3) {
       margin-top: 40px;
     }
