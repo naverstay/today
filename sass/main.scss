@@ -83,7 +83,6 @@ a {
 }
 
 .news_row {
-  @extend %clearfix;
   @extend %global_flex_block_row_wrap_flex-start;
   margin-left: -20px;
 

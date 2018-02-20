@@ -197,8 +197,8 @@
   position: absolute;
   top: 100%;
   margin-top: 10px;
-  left: -6px;
-  width: 100vw;
+  left: -100vw;
+  right: -100vw;
   height: 0;
   z-index: 4;
   pointer-events: none;

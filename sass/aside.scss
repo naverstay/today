@@ -27,14 +27,14 @@
 }
 
 .aside_caption_link {
-  @include transition_all(transform .3s);
+  //@include transition_all(transform .3s);
   color: $violette;
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
 
   &:hover {
-    color: $violette_dark;
+    //color: $violette_dark;
   }
 }
 

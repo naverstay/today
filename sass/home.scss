@@ -85,19 +85,29 @@
 
 .article_reviews {
   list-style: none;
+
+  > li {
+    + li {
+      padding-top: 5px;
+    }
+  }
+}
+
+.article_reviews_holder {
+  padding-left: 8px;
 }
 
 .top_story_caption {
   @extend %firm_color;
   font: 13px $RubikBlack;
-  margin-top: 6px;
-  margin-bottom: 17px;
+  margin-top: 11px;
+  margin-bottom: 13px;
   letter-spacing: .013em;
   position: relative;
   z-index: 1;
 
   .article_title & {
-    margin: 10px 0 7px;
+    margin: 10px 0 11px;
   }
 
   .article_reviews {
@@ -431,29 +441,13 @@
     }
   }
 
+  &._main {
+    min-height: 0;
+  }
+
   &._top {
-    //padding-top: 12px;
-    //padding-bottom: 12px;
-
-    //&:after {
-    //  content: '';
-    //  position: absolute;
-    //  bottom: 0;
-    //  top: 0;
-    //  left: -16px;
-    //  right: 0;
-    //  background-repeat: no-repeat;
-    //  background-position: 0 0;
-    //  -webkit-background-size: cover;
-    //  -moz-background-size: cover;
-    //  -o-background-size: cover;
-    //  background-size: cover;
-    //}
-
-    &._top {
-      margin-bottom: 0;
-      min-height: 0;
-    }
+    margin-bottom: 0;
+    min-height: 0;
 
     &.story_block {
       &:after {
@@ -615,16 +609,17 @@
     }
 
     .article_stat {
-      padding-top: 5px;
+      padding-top: 10px;
     }
 
     .article_img {
       float: right;
       width: 88px;
+      margin-top: 4px;
       margin-bottom: 10px;
 
       + .article_title {
-        margin-right: 104px;
+        margin-right: 100px;
 
         @include respond-to-min($resp_step_2) {
           margin-right: 144px;
@@ -1030,7 +1025,7 @@
     left: 0;
     right: 88px;
     max-height: 100%;
-    padding: 12px 10px 32px 8px;
+    padding: 12px 10px 34px 8px;
 
     &:after {
       content: '';
@@ -1055,8 +1050,12 @@
     }
 
     .article_link {
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: top;
+      max-height: 6.5em;
       font-size: 20px;
-      line-height: 1.35;
+      line-height: 1.3;
 
       @include respond-to-min($resp_step_3) {
         font-size: 22px;
@@ -1093,8 +1092,7 @@
 
 .article_link {
   @include transition_all(color .3s);
-  font: 24px $RubikMed;
-  letter-spacing: .021em;
+  font: 22px $RubikMed;
   text-decoration: none;
   color: #000;
 
@@ -1105,8 +1103,16 @@
     font-family: $RubikBlack;
   }
 
+  @include respond-to-min($resp_step_2) {
+    font-size: 24px;
+  }
+
   @include respond-to-min($resp_step_3) {
     font-size: 26px;
+  }
+
+  @include respond-to-min($resp_step_4) {
+    font-size: 28px;
   }
 
   &.clr_violette {
@@ -1142,9 +1148,9 @@
 .article_stat {
   @extend %clearfix;
   list-style: none;
-  padding-top: 13px;
+  padding-top: 11px;
   color: rgba(0, 0, 0, .4);
-  font: 12px/1.5 $RubikReg;
+  font: 11px/1.5 $RubikReg;
 
   li {
     float: left;
@@ -1199,6 +1205,10 @@
     padding-top: 10px;
     position: relative;
   }
+
+  .news_item & {
+    padding-top: 5px;
+  }
 }
 
 .article_stat_val {
@@ -1216,7 +1226,7 @@
       left: 0;
       content: $icon-eye;
       font-size: 15px;
-      line-height: 1.3;
+      line-height: 1.2;
     }
   }
 
@@ -1386,18 +1396,20 @@
   @include transition_all(color .3s);
   @extend %icon_pseudo;
   float: right;
-  padding-right: 36px;
+  padding-right: 33px;
   position: relative;
   z-index: 2;
-  font: 12px/20px $RubikReg;
-  color: rgba(0, 0, 0, .4) !important;
+  font: 13px/24px $RubikMed;
+  color: #c0c0c0;
+  letter-spacing: .02em;
 
   &:before {
     @include transition_all(color .3s);
     content: $icon-arrow-right;
     position: absolute;
-    right: 0;
+    right: -6px;
     font-size: 18px;
+    line-height: 24px;
   }
 
   span {
@@ -1427,12 +1439,11 @@
 }
 
 .article_group_title {
-  @extend %icon_pseudo;
   position: relative;
   color: #fff;
   font: 20px $RubikMed;
   letter-spacing: .005em;
-  padding: 9px 16px 9px 44px;
+  padding: 9px 16px 9px 0;
   margin: 0 0 12px;
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -1440,25 +1451,6 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-  &:before {
-    position: absolute;
-    z-index: 2;
-    top: 4px;
-    left: 2px;
-    border-radius: 100%;
-    background: #fff;
-    height: 32px;
-    width: 32px;
-    font-size: 18px;
-    line-height: 32px;
-    text-align: center;
-  }
-
-  span {
-    position: relative;
-    z-index: 2;
-  }
 
   @include respond-to-min($resp_step_2) {
     margin-bottom: 16px;
@@ -1472,39 +1464,8 @@
   &._bg {
     background: none;
     margin-top: 45px;
-    padding: 9px 36px 9px 68px;
+    padding: 9px 36px 9px 0;
 
-    &:before {
-      left: 21px;
-    }
-
-    @include respond-to-min($resp_step_3) {
-      margin-top: 40px;
-    }
-  }
-
-  &._news {
-    background-image: url(../i/stories_bg.svg);
-
-    &:before {
-      content: $icon-ufo;
-      color: $violette;
-    }
-  }
-
-  &._stories {
-    color: #000;
-
-    //background-image: url(../i/story_title_violette.jpg);
-
-    &:before {
-      content: $icon-crypto;
-      color: #fff;
-      background: $violette;
-    }
-  }
-
-  &._features {
     &:after {
       content: '';
       position: absolute;
@@ -1519,82 +1480,143 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: 50% 50%;
-      background-image: url(../i/features_bg.svg);
     }
 
-    &:before {
-      content: $icon-star;
-      color: $red;
+    .article_group_link {
+      padding-left: 68px;
+      color: #fff;
+
+      &:before {
+        left: 21px;
+        background: #fff;
+      }
+    }
+    @include respond-to-min($resp_step_3) {
+      margin-top: 40px;
     }
   }
 
-  &._pool {
-    color: #000;
+  &._news {
+    &:after {
+      background-image: url(../i/stories_bg.svg);
+    }
+  }
+
+  &._features {
+    &:after {
+      background-image: url(../i/features_bg.svg);
+    }
+  }
+}
+
+.article_group_link {
+  @include transition_all(color .3s);
+  @extend %icon_pseudo;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  z-index: 2;
+  padding-left: 44px;
+  color: #000;
+
+  &:before {
+    position: absolute;
+    z-index: 2;
+    top: -4px;
+    left: 2px;
+    border-radius: 100%;
+    color: #fff;
+    height: 32px;
+    width: 32px;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  &:hover {
+    @extend %firm_color;
+  }
+
+  ._news & {
+    &:before {
+      content: $icon-ufo;
+      color: $violette;
+    }
+  }
+
+  ._stories & {
+
+    //background-image: url(../i/story_title_violette.jpg);
+
+    &:before {
+      content: $icon-crypto;
+      background: $violette;
+    }
+  }
+
+  ._features & {
+
+    &:before {
+      content: $icon-star;
+      background: $red;
+    }
+  }
+
+  ._pool & {
     //background-image: url(../i/story_title_blue.jpg);
 
     &:before {
       content: $icon-shark;
-      color: #fff;
       background: $blue;
     }
   }
 
-  &._analysis {
-    color: #000;
+  ._analysis & {
 
     //background-image: url(../i/story_title_orange.jpg);
 
     &:before {
       content: $icon-splash;
-      color: #fff;
       background: $orange;
     }
   }
 
-  &._pricewise {
-    color: #000;
+  ._pricewise & {
 
     //background-image: url(../i/story_title_orange.jpg);
 
     &:before {
       content: $icon-splash;
-      color: #fff;
       background: $green;
     }
   }
 
-  &._crypto {
-    color: #000;
+  ._crypto & {
 
     //background-image: url(../i/story_title_blue.jpg);
 
     &:before {
       content: $icon-lamp;
-      color: #fff;
       background: $brown;
     }
   }
 
-  &._wiki {
-    color: #000;
+  ._wiki & {
 
     //background-image: url(../i/story_title_orange.jpg);
 
     &:before {
       content: $icon-startwo;
-      color: #fff;
       background: $brown_2;
     }
   }
 
-  &._watch {
-    color: #000;
+  ._watch & {
 
     //background-image: url(../i/story_title_orange.jpg);
 
     &:before {
       content: $icon-ico;
-      color: #fff;
       background: $violette_2;
     }
   }
@@ -1609,7 +1631,7 @@
     }
   }
 
-  li {
+  > li {
     margin-top: 22px;
 
     .content_block & {
@@ -1658,9 +1680,8 @@
 
 .news_name {
   @extend %firm_color;
-  letter-spacing: -.021em;
   color: #000 !important;
-  font: 20px/1.2 $RubikBold;
+  font: 18px/1.4 $RubikMed;
 
   ._related & {
     font-size: 16px;
@@ -1676,14 +1697,18 @@
   }
 
   @include respond-to-min($resp_step_2) {
-    font-size: 22px;
-    line-height: 1.1;
+    font-size: 20px;
+    //line-height: 1.1;
   }
 
   @include respond-to-min($resp_step_3) {
+    font-size: 22px;
+    //line-height: 1.2;
+    //letter-spacing: -.015em;
+  }
+
+  @include respond-to-min($resp_step_4) {
     font-size: 24px;
-    line-height: 1.2;
-    letter-spacing: -.015em;
   }
 }
 
