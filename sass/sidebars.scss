@@ -235,7 +235,11 @@
 
   .menu_item {
     margin-bottom: 0;
-    padding: 0 21px;
+    padding: 0 15px;
+
+    @include respond-to-min($resp_step_2) {
+      padding: 0 21px;
+    }
   }
 
   .menu_link {

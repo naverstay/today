@@ -32,8 +32,19 @@
   }
 
   &._action_only {
-    margin-top: 50px;
-    margin-bottom: 7px;
+    max-width: 610px;
+    margin: 50px auto 7px;
+
+    @include respond-to-min($resp_step_2) {
+      max-width: 740px;
+    }
+
+    @include respond-to-min($resp_step_3) {
+    }
+
+    @include respond-to-min($resp_step_4) {
+      max-width: 800px;
+    }
   }
 }
 
