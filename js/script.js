@@ -231,19 +231,19 @@ function initSubscribePopup() {
         backOpacity: 0.6,
         content: $('#popup_subscribe'),
         afterOpen: function (e) {
-            initValidation('.validatePopup');
+            initValidation('.validatePopup', 1);
         }
     });
 }
 
-function initValidation(el) {
+function initValidation(el, prompts) {
     $(el || '.validateMe').each(function (ind) {
         var f = $(this);
 
         f.validationEngine({
             //binded: true,
             scroll: false,
-            showPrompts: false,
+            showPrompts: !!prompts,
             showArrow: false,
             addSuccessCssClassToField: 'success',
             addFailureCssClassToField: 'error',

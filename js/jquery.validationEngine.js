@@ -830,7 +830,7 @@
               field.removeClass(options.addSuccessCssClassToField).removeClass(options.addFailureCssClassToField);
               field.closest(options.parentFieldClass).removeClass(options.addSuccessCssClassToField).removeClass(options.addFailureCssClassToField);
               field.closest(options.parentFormClass).removeClass(options.addSuccessCssClassToField).removeClass(options.addFailureCssClassToField);
-            } else {              
+            } else {
               /* remove all classes */
               if (options.addSuccessCssClassToField) {
                 field.removeClass(options.addSuccessCssClassToField);
