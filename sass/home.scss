@@ -255,6 +255,18 @@
       font-size: 20px;
       line-height: 1.4;
       margin-bottom: 1.35em;
+
+      > img {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 100%;
+      }
+    }
+
+    > img {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 100%;
     }
 
     .article_stat {
