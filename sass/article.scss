@@ -355,6 +355,12 @@
     }
   }
 
+  &._tg {
+    &:before {
+      content: $icon-tg;
+    }
+  }
+
   &._rd {
     &:before {
       content: $icon-rd;
