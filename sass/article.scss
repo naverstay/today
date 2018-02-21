@@ -634,7 +634,7 @@
   }
 }
 
-.article_text .content_block {
+.article_text {
 
   blockquote {
     position: relative;
@@ -841,7 +841,7 @@
     @extend %firm_color;
   }
 
-  > ul {
+  ul:not(.article_stat):not(.article_tag_list) {
     margin-top: 25px;
     list-style: none;
 
