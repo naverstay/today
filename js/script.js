@@ -13,6 +13,12 @@ $(function ($) {
     $subscribeBlock = $('.subscribeBlock');
     $subscribeTrigger = $('#subscribeTrigger');
 
+    $(document).on('click', function (e) {
+        if ($(e.target).closest('.articleActionBlock').length !== 1) {
+            $('.articleActionBlock').removeClass('_opened');
+        }
+    });
+
     $body
         .delegate('.subscribeForm', 'submit', function (e) {
             var form = $(this);
@@ -27,6 +33,12 @@ $(function ($) {
                     $('.subscribeBlock').addClass('subscribe_fail');
                 }
             }
+        })
+        .delegate('.actionBtn', 'click', function () {
+            var parent = $(this).closest('.articleActionBlock');
+            $('.articleActionBlock').not(parent).removeClass('_opened');
+            parent.toggleClass('_opened');
+            return false;
         })
         .delegate('select', 'change', function () {
             this.blur();

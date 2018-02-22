@@ -818,8 +818,9 @@
 }
 
 .article_img {
+  @extend %icon_pseudo;
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
 
   img {
     display: block;
@@ -856,13 +857,15 @@
     }
 
     &:after {
-      content: '';
+      content: $icon-ufo;
+      font-size: 280px;
+      line-height: 1;
       position: absolute;
-      bottom: -30px;
-      right: -140px;
-      width: 252px;
-      height: 163px;
-      background: url(../i/nlo.png) no-repeat 0 0;
+      bottom: 0;
+      height: 187px;
+      width: 145px;
+      right: 0;
+      overflow: hidden;
     }
   }
 
@@ -1256,9 +1259,10 @@
     top: 16px;
   }
 
+  .article_info_holder .article_text figure &,
   ._top & {
     left: auto;
-    right: 76px;
+    right: 78px;
     bottom: 91px;
   }
 }
@@ -1266,9 +1270,6 @@
 .article_action_btn {
   @include transition_all(background .3s);
   @extend %icon_pseudo;
-  float: left;
-  margin-top: 16px;
-  margin-left: 32px;
   position: absolute;
   top: 0;
   left: 0;
@@ -1288,6 +1289,150 @@
   &:hover {
     background: $violette;
     @extend %firm_bg_color;
+  }
+
+  ._opened & {
+    @extend %firm_bg_color;
+    color: #fff;
+  }
+}
+
+.article_action_block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: left;
+  margin-top: 16px;
+  margin-left: 32px;
+
+  //&._opened {
+  //  z-index: 1000;
+  //
+  //  &:before {
+  //    content: '';
+  //    position: absolute;
+  //    left: -100vw;
+  //    right: -100vw;
+  //    top: -10000vh;
+  //    bottom: -10000vh;
+  //    background: rgba(255, 255, 255, .8);
+  //  }
+  //}
+}
+
+.action_block {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 45px;
+  padding: 16px;
+  margin-left: 14px;
+  background: #fff;
+  box-shadow: 6px 12px 14px 0 rgba(37, 16, 80, .1);
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    border-bottom: 14px solid #fff;
+    border-right: 14px solid transparent;
+  }
+
+  ._opened & {
+    display: block;
+  }
+
+  .article_info_holder .article_text figure &,
+  ._top & {
+    left: auto;
+    right: -14px;
+
+    &:before {
+      left: auto;
+      right: 0;
+      border-right: 0;
+      border-left: 14px solid transparent;
+    }
+  }
+}
+
+.action_block_close {
+  @include transition_all(background .3s, color .3s);
+  @extend %icon_pseudo;
+  position: absolute;
+  right: 17px;
+  top: 14px;
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+
+  &:before {
+    content: $icon-close;
+    font-size: 14px;
+    line-height: 32px;
+  }
+
+  &:hover {
+    @extend %firm_color;
+    background: #f8f8f8;
+  }
+}
+
+.action_block_title {
+  font: 18px $RubikBold;
+  color: #000;
+  padding: 3px 30px 15px 8px;
+  border-bottom: 2px solid #f8f8f8;
+}
+
+.action_block_list {
+  @extend %clearfix;
+  width: 280px;
+  list-style: none;
+  margin-bottom: -5px;
+  margin-right: -14px;
+  padding: 12px 0 0 10px;
+
+  li {
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.action_soc {
+  @include transition_all(color .3s);
+  @extend %firm_color;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 32px;
+  font: 14px/20px $RubikMed;
+
+  span {
+    @include transition_all(border-bottom-color .3s);
+    display: inline;
+    border-bottom: 1px solid transparent;
+  }
+
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+  }
+
+  &:hover {
+    color: #000;
+
+    span {
+      border-bottom-color: #000;
+    }
   }
 }
 

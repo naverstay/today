@@ -103,6 +103,32 @@ mixin footer()
                     li: a.action_link._t(href='#')
                     li: a.action_link._r(href='#')
 
+mixin action_block()
+    .article_action_block.articleActionBlock
+        a.article_action_btn.actionBtn(href='#')
+        .action_block
+            a.action_block_close.actionBtn(href='#')
+            .action_block_title Share it
+            ul.action_block_list
+                li: a.action_soc.icon-fb(href='#' data-network="facebook" class='st-custom-button')
+                    span Facebook
+                li: a.action_soc.icon-tw(href='#' data-network="twitter" class='st-custom-button')
+                    span Twitter
+                li: a.action_soc.icon-rd(href='#' data-network="reddit" class='st-custom-button')
+                    span Reddit
+                li: a.action_soc.icon-in(href='#' data-network="linkedin" class='st-custom-button')
+                    span Linkedin
+                li: a.action_soc.icon-inst(href='#' data-network="instagram" class='st-custom-button')
+                    span instagram
+                li: a.action_soc.icon-pint(href='#' data-network="pinterest" class='st-custom-button')
+                    span Pinterest
+                li: a.action_soc.icon-stm(href='#' data-network="pinterest" class='st-custom-button')
+                    span Steemit
+                li: a.action_soc.icon-tmblr(href='#' data-network="tumblr" class='st-custom-button')
+                    span tumblr
+                li: a.action_soc.icon-tg(href='#' data-network="googleplus" class='st-custom-button')
+                    span Telegram
+
 mixin aside_block()
     .aside_block
         .aside_info_box
