@@ -93,6 +93,42 @@
   }
 }
 
+.btn_v5 {
+  height: 68px;
+
+  &.subscr_btn {
+    display: block;
+    padding: 13px 12px;
+    text-align: center;
+    font: 20px/42px $RubikMed;
+    color: #fff;
+    letter-spacing: .015em;
+
+    &._tg {
+      background: #139bd0;
+    }
+
+    &._fb {
+      background: #3b5998;
+    }
+
+    &._tw {
+      background: #1cb7eb;
+    }
+
+    > span {
+      padding: 0 7px;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+
+    .btn_icon {
+      font-size: 34px;
+    }
+  }
+}
+
 .btn_blue {
   @include transition_all(background .3s);
   color: #fff !important;
