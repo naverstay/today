@@ -174,6 +174,16 @@
       width: 20px;
       bottom: 75px;
     }
+
+    &._no_title {
+      max-width: 610px;
+      margin: 0 auto;
+      padding-left: 0;
+
+      &:before {
+        left: -20px;
+      }
+    }
   }
 
   .article_tags {
@@ -189,6 +199,16 @@
   @include respond-to-min($resp_step_2) {
     .article_img {
       margin-right: 272px;
+
+      &._no_title {
+        position: relative;
+        padding-left: 10px;
+        max-width: 740px;
+
+        &:before {
+          left: -10px;
+        }
+      }
 
       &:before {
         bottom: 52px;
@@ -229,6 +249,15 @@
     .article_img {
       margin-right: 380px;
       padding-left: 36px;
+
+      &._no_title {
+        max-width: 800px;
+        padding-left: 24px;
+
+        &:before {
+          left: -12px;
+        }
+      }
 
       &:before {
         width: 36px;
@@ -1471,6 +1500,7 @@
     font-size: 18px;
     width: 28px;
     height: 28px;
+    line-height: 28px;
     //border-radius: inherit;
     display: inline-block;
     vertical-align: top;

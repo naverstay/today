@@ -65,6 +65,10 @@
   letter-spacing: .025em;
   border-bottom: 4px solid #000;
 
+  &._no_title {
+    border: 0 !important;
+  }
+
   ._news &,
   ._stories &,
   ._top & {
