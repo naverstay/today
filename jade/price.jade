@@ -1,0 +1,201 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto price')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +tag_holder()
+
+                    a.attention_block._warn(href='#')
+                        .attention_caption Breaking news
+                        p
+                            span Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+                            span.attention_link
+
+                    .widget_holder
+                        .widget_aside
+                            .stat_holder
+                                .stat_holder_title
+                                    span.clr_violette._fw_b Coins
+
+                                    ul.stat_holder_controls
+                                        li: a.stat_link(href='#') Monthly
+                                        li: a.stat_link._active(href='#') Daily
+
+                                dl.stat_list
+                                    dt
+                                        a.stat_item._active(href='#')
+                                            span Bitcoin
+                                            span._abbr BTC
+                                    dd
+                                        span.clr_green +8.29%
+
+                                    dt
+                                        a.stat_item(href='#')
+                                            span Ethereum
+                                            span._abbr ETH
+                                    dd
+                                        span.clr_green +6.12%
+
+                                    dt
+                                        a.stat_item(href='#')
+                                            span Ripple
+                                            span._abbr XRP
+                                    dd
+                                        span.clr_green +8.29%
+
+                                    dt
+                                        a.stat_item(href='#')
+                                            span Bitcoin Cash
+                                            span._abbr BHC
+                                    dd
+                                        span.clr_green +6.12%
+
+                                    dt
+                                        a.stat_item(href='#')
+                                            span Litecoin
+                                            span._abbr LTC
+                                    dd
+                                        span.clr_green +8.29%
+
+                                    dt
+                                        a.stat_item(href='#')
+                                            span NEO
+                                            span._abbr NEO
+                                    dd
+                                        span.clr_green +6.12%
+
+                                    dt
+                                        a.stat_item(href='#')
+                                            span Cardano
+                                            span._abbr ADA
+                                    dd
+                                        span.clr_green +8.29%
+
+                                    dt
+                                        a.stat_item(href='#')
+                                            span Stellar
+                                            span._abbr XLM
+                                    dd
+                                        span.clr_green +6.12%
+
+                                    dt
+                                        a.stat_item(href='#')
+                                            span EOS
+                                            span._abbr EOS
+                                    dd
+                                        span.clr_green +8.29%
+
+                                    dt
+                                        a.stat_item(href='#')
+                                            span IOTA
+                                            span._abbr MIOTA
+                                    dd
+                                        span.clr_green +6.12%
+
+                                p
+                                    a.stat_item._more(href='#') More coins
+
+                            .stat_widget_holder
+                                +widget_converter()
+
+                        .widget_block
+                            .stat_caption Bitcoin Price Index
+
+                            .stat_widget_holder
+                                +widget_summary()
+
+                            .action_soc_holder
+                                h3.stat_label Share bitcoin price now
+
+                                ul.action_soc._brand
+                                    li: a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+                                    li: a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
+                                    li: a.action_sh._i(href='#' data-network="instagram" class='st-custom-button')
+                                    li: a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
+                                    li: a.action_sh._tg(href='#')
+
+                            .stat_widget_holder
+                                +widget_chart()
+
+                            .stat_widget_holder
+                                +widget_history()
+
+                            .related_title Related Articles and News
+
+                            .news_row._bordered._col_3_wide
+                                +loop_while(2)
+                                    .news_col._pricewise
+                                        .article_block
+                                            .article_img
+                                                ul.article_tags
+                                                    li
+                                                        span.icon-say.article_tag._pricewise
+                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                    +action_block()
+                                                a.article_img_link(href='#'): img(src='i/range.jpg')
+
+                                            .article_title
+                                                a.article_link(href='#') Bitcoin Price Seeks Direction as Trading Range Narrows
+                                                ul.article_stat
+                                                    li
+                                                        span.article_stat_val Jan 10, 2018 at 10:00
+                                                    li
+                                                        span.article_stat_val._stat_views 212
+                                                    li._first
+                                                        span.article_stat_val Ariel Deschapell
+                                    .news_col._pool
+                                        .article_block
+                                            .article_img
+                                                ul.article_tags
+                                                    li
+                                                        span.icon-crown.article_tag._pool
+                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                    +action_block()
+                                                a.article_img_link(href='#'): img(src='i/range.jpg')
+
+                                            .article_title
+                                                a.article_link(href='#') Chinese Finance Association Cautions on Overseas ICOs
+                                                ul.article_stat
+                                                    li
+                                                        span.article_stat_val Jan 10, 2018 at 10:00
+                                                    li
+                                                        span.article_stat_val._stat_views 212
+                                                    li._first
+                                                        span.article_stat_val Ariel Deschapell
+                                    .news_col._analysis
+                                        .article_block
+                                            .article_img
+                                                ul.article_tags
+                                                    li
+                                                        span.icon-splash.article_tag._analysis
+                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                    +action_block()
+                                                a.article_img_link(href='#'): img(src='i/range.jpg')
+
+                                            .article_title
+                                                a.article_link(href='#') Bitcoin Price Seeks Direction as Trading Range Narrows
+                                                ul.article_stat
+                                                    li
+                                                        span.article_stat_val Jan 10, 2018 at 10:00
+                                                    li
+                                                        span.article_stat_val._stat_views 212
+                                                    li._first
+                                                        span.article_stat_val Ariel Deschapell
+
+                            .news_row
+                                .news_col._wide
+                                    .article_controls._mod_1
+                                        a.btn_v1.more_btn.gray_btn(href='#') More related articles and news
+
+            .nav_holder
+                +main_menu(true)
+                +search()
+
+            +header()
+            +footer()
+
+        +scripts(true)

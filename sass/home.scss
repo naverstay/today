@@ -471,6 +471,10 @@
     }
   }
 
+  &._active {
+    z-index: 5;
+  }
+
   &._main {
     min-height: 0;
   }
@@ -1461,6 +1465,32 @@
 
     span {
       border-bottom-color: #000;
+    }
+  }
+}
+
+.action_soc_holder {
+  @extend %clearfix;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+  border-bottom: 2px solid #f8f8f8;
+}
+
+.action_soc {
+  list-style: none;
+
+  &._brand {
+    float: left;
+    padding-left: 30px;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 4px;
+      margin-bottom: 10px;
     }
   }
 }

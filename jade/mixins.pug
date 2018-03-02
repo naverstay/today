@@ -51,7 +51,7 @@ mixin footer()
                 li.menu_item
                     a.menu_link(href='#'): span Features
                 li.menu_item
-                    a.menu_link(href='#'): span Analysis
+                    a.menu_link(href='price.html'): span Analysis
                 li.menu_item
                     a.menu_link(href='#'): span Wikicoin
 
@@ -362,7 +362,7 @@ mixin tag_holder(cls)
             li.menu_item
                 a.menu_link(href='#'): span Features
             li.menu_item
-                a.menu_link(href='#'): span Analysis
+                a.menu_link(href='price.html'): span Analysis
             li.menu_item
                 a.menu_link(href='#'): span Wikicoin
 
@@ -550,6 +550,77 @@ mixin header()
                 li._vis_1280
                     a.head_subscribe_btn.btn_v2.btn_violette.openSubscribe(href='#')
                         span Subscribe
+
+mixin widget_history()
+    | <script type="text/javascript">
+    | baseUrl = "https://widgets.cryptocompare.com/";
+    | var scripts = document.getElementsByTagName("script");
+    | var embedder = scripts[ scripts.length - 1 ];
+    | var cccTheme = {"General":{"borderWidth":"2px","borderColor":"#F8F8F8"},"Rows":{"borderColor":"#F8F8F8","upColor":"#266D11","downColor":"#C7293D"}};
+    | (function (){
+    | var appName = encodeURIComponent(window.location.hostname);
+    | if(appName == ""){appName="local";}
+    | var s = document.createElement("script");
+    | s.type = "text/javascript";
+    | s.async = true;
+    | var theUrl = baseUrl+'serve/v1/coin/histo_week?fsym=BTC&tsym=USD';
+    | s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+    | embedder.parentNode.appendChild(s);
+    | })();
+    | </script>
+
+mixin widget_chart()
+    | <script type="text/javascript">
+    | baseUrl = "https://widgets.cryptocompare.com/";
+    | var scripts = document.getElementsByTagName("script");
+    | var embedder = scripts[ scripts.length - 1 ];
+    | var cccTheme = {"General":{"borderWidth":"2px","borderColor":"#F8F8F8"},"Tabs":{"borderColor":"#F8F8F8","activeBorderColor":"#5C29C7"}};
+    | (function (){
+    | var appName = encodeURIComponent(window.location.hostname);
+    | if(appName == ""){appName="local";}
+    | var s = document.createElement("script");
+    | s.type = "text/javascript";
+    | s.async = true;
+    | var theUrl = baseUrl+'serve/v3/coin/chart?fsym=BTC&tsyms=USD,EUR,CNY,GBP';
+    | s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+    | embedder.parentNode.appendChild(s);
+    | })();
+    | </script>
+
+mixin widget_summary()
+    | <script type="text/javascript">
+    | baseUrl = "https://widgets.cryptocompare.com/";
+    | var scripts = document.getElementsByTagName("script");
+    | var embedder = scripts[ scripts.length - 1 ];
+    | (function (){
+    | var appName = encodeURIComponent(window.location.hostname);
+    | if(appName == ""){appName="local";}
+    | var s = document.createElement("script");
+    | s.type = "text/javascript";
+    | s.async = true;
+    | var theUrl = baseUrl+'serve/v1/coin/summary?fsym=BTC&tsyms=USD,EUR,CNY,GBP,RUB';
+    | s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+    | embedder.parentNode.appendChild(s);
+    | })();
+    | </script>
+
+mixin widget_converter()
+    | <script type="text/javascript">
+    | baseUrl = "https://widgets.cryptocompare.com/";
+    | var scripts = document.getElementsByTagName("script");
+    | var embedder = scripts[ scripts.length - 1 ];
+    | var cccTheme = {"General":{"background":"#F8F8F8","borderWidth":"0","headerTextColor":"#5C29C7","headerTextSize":"16px"}};
+    | (function (){
+    | var appName = encodeURIComponent(window.location.hostname);
+    | if(appName == ""){appName="local";}
+    | var s = document.createElement("script");
+    | s.type = "text/javascript";
+    | s.async = true;
+    | var theUrl = baseUrl+'serve/v1/coin/converter?fsym=BTC&tsyms=USD,EUR,CNY,GBP,RUB';
+    | s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+    | embedder.parentNode.appendChild(s);
+    | })();
+    | </script>
 
 mixin scripts(share)
     link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Rubik:400,500,700', media='all')

@@ -179,4 +179,12 @@ select::-ms-expand {
   display: none;
 }
 
+input::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
 /*-----------------------------form elements###*/

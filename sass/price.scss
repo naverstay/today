@@ -1,0 +1,310 @@
+.widget_holder {
+  @extend %clearfix;
+  padding: 10px 14px;
+}
+
+.widget_block {
+  margin-left: 238px;
+
+  @include respond-to-min($resp_step_2) {
+    margin-left: 356px;
+  }
+}
+
+.widget_aside {
+  width: 208px;
+  float: left;
+
+  @include respond-to-min($resp_step_2) {
+    width: 268px;
+  }
+}
+
+.stat_holder {
+  padding: 16px 18px 20px 14px;
+  background: #f8f8f8;
+  margin-bottom: 14px;
+
+  .form_cell {
+    padding-top: 5px;
+
+    + .form_cell {
+      margin-top: 17px;
+    }
+  }
+}
+
+.stat_label {
+  float: left;
+  font: 26px/40px $RubikMed;
+  margin-bottom: 16px;
+}
+
+.stat_holder_title {
+  @extend %clearfix;
+  font: 13px $RubikBold;
+  margin-bottom: 30px;
+
+  span {
+    font-size: 16px;
+  }
+}
+
+.stat_holder_controls {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding-top: 2px;
+  font-family: $RubikMed;
+
+  li {
+    float: left;
+    padding-left: 15px;
+  }
+}
+
+.stat_link {
+  @include transition_all(color .3s);
+  color: #c0c0c0;
+
+  &._active,
+  &:hover {
+    color: #999;
+  }
+}
+
+.stat_list {
+  @extend %clearfix;
+  margin-bottom: 18px;
+
+  dd, dt {
+    margin-bottom: 12px;
+  }
+
+  dt {
+    float: left;
+    clear: both;
+  }
+
+  dd {
+    float: right;
+    font: 11px/14px $RubikReg;
+    padding-top: 6px;
+  }
+}
+
+.stat_item {
+  @include transition_all(color .3s);
+  color: #999;
+  font: 13px/18px $RubikMed;
+
+  &._active,
+  &:hover {
+    color: #000;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  ._abbr {
+    height: 14px;
+    line-height: 14px;
+    font-size: 9px;
+    padding: 0 3px;
+    background: #999;
+    color: #fff;
+    margin-left: 8px;
+  }
+
+  &._more {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 24px;
+
+    &:after,
+    &:before {
+      @include transition_all(background .3s);
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 8px;
+      background: #999;
+    }
+
+    &:before {
+      width: 12px;
+      height: 2px;
+      margin: -1px 0 0 -6px;
+    }
+
+    &:after {
+      width: 2px;
+      height: 12px;
+      margin: -6px 0 0 -1px;
+    }
+
+    &:hover {
+      &:after,
+      &:before {
+        background: #000;
+      }
+    }
+  }
+}
+
+.stat_currency {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  right: 2px;
+  width: 65px;
+  text-align: center;
+  font: 13px/30px $RubikMed;
+}
+
+.stat_select {
+  border-radius: 0;
+  border: 0;
+  color: #000;
+  font: 13px/30px $RubikMed;
+  display: inline-block;
+  vertical-align: top;
+
+  &:focus {
+    color: $violette;
+
+    + .select_arrow {
+      color: $violette;
+      -webkit-transform: rotate(180deg) translate(0, 4px);
+      -ms-transform: rotate(180deg) translate(0, 4px);
+      transform: rotate(180deg) translate(0, 4px);
+    }
+  }
+}
+
+.stat_select_w {
+  padding-right: 16px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  .select_arrow {
+    top: 1px;
+    right: 0;
+    color: #c0c0c0;
+  }
+}
+
+.stat_caption {
+  font: 38px $RubikBold;
+  margin: 24px 0 22px;
+}
+
+.stat_widget_holder {
+  margin-bottom: 25px;
+  background: #f8f8f8;
+
+  .ccc-widget {
+    font-family: $RubikMed;
+    padding-bottom: 14px;
+
+    > div {
+      padding: 13px 16px 13px 12px !important;
+      background: none !important;
+    }
+  }
+
+  .histoTitleConverter {
+    font: 700 16px Rubik, sans-serif !important;
+    color: $violette !important;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+
+  .section-converter-ccc {
+    input.priceInput {
+      border-width: 2px 0 2px 2px;
+      height: 32px;
+      border-radius: 1px;
+      font-size: 14px;
+      border-color: rgba(0, 0, 0, .1);
+    }
+
+    + label.priceLabel {
+      margin-top: 22px;
+    }
+  }
+
+  .poweredByWrapper {
+    display: none;
+  }
+
+  .fromSymbolLabel {
+    width: 67px;
+    text-align: center;
+    height: 32px;
+    font: 13px/30px $RubikMed;
+    border-width: 2px;
+    border-color: rgba(0, 0, 0, .1);
+
+    + div {
+      margin-right: 67px !important;
+    }
+  }
+
+  label.priceLabel {
+    color: #000;
+    font: 13px $RubikMed;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+    margin-bottom: 9px;
+  }
+
+  .styledSelect {
+    @include transition_all(color .3s);
+    width: 67px;
+    border-radius: 0;
+    padding-right: 20px;
+    padding-left: 5px;
+    border-width: 2px;
+    color: #000;
+    border-color: rgba(0, 0, 0, .1);
+    font: 13px/30px $RubikMed;
+    height: 32px;
+    position: relative;
+
+    + div {
+      @extend %icon_pseudo;
+      margin-right: 67px !important;
+      position: relative;
+
+      &:before {
+        @include transition_all(transform .3s, color .3s, margin .3s);
+        content: $icon-triangle;
+        position: absolute;
+        left: 100%;
+        margin-left: 46px;
+        top: 50%;
+        font-size: 8px;
+        margin-top: -3px;
+        color: #c0c0c0;
+      }
+    }
+
+    &:focus {
+      color: $violette;
+
+      + div:before {
+        color: $violette;
+        margin-top: 0;
+        -webkit-transform: rotate(180deg) translate(0, 4px);
+        -ms-transform: rotate(180deg) translate(0, 4px);
+        transform: rotate(180deg) translate(0, 4px);
+      }
+    }
+  }
+}

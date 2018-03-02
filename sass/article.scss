@@ -315,15 +315,32 @@
     }
   }
 
+  ._brand & {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 22px;
+    line-height: 40px;
+    color: #fff;
+  }
+
   &._f {
     &:before {
       content: $icon-fb;
+    }
+
+    ._brand & {
+      background: #385184;
     }
   }
 
   &._t {
     &:before {
       content: $icon-tw;
+    }
+
+    ._brand & {
+      background: #1da1f2;
     }
   }
 
@@ -342,6 +359,10 @@
   &._i {
     &:before {
       content: $icon-inst;
+    }
+
+    ._brand & {
+      background: #ed4956;
     }
   }
 
@@ -367,11 +388,19 @@
     &:before {
       content: $icon-tg;
     }
+
+    ._brand & {
+      background: #08c;
+    }
   }
 
   &._rd {
     &:before {
       content: $icon-rd;
+    }
+
+    ._brand & {
+      background: #fa500e;
     }
   }
 

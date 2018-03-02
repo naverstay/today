@@ -106,3 +106,33 @@
 .input_w {
   position: relative;
 }
+
+.input_w {
+  position: relative;
+
+  &._has_currency {
+
+    input {
+      padding-right: 77px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: 67px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: rgba(0, 0, 0, .1);
+    }
+  }
+}
+
+.label_v1 {
+  color: #000;
+  font: 13px $RubikMed;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 7px;
+}
+

@@ -15,7 +15,7 @@ $(function ($) {
 
     $(document).on('click', function (e) {
         if ($(e.target).closest('.articleActionBlock').length !== 1) {
-            $('.articleActionBlock').removeClass('_opened');
+            $('.articleActionBlock').removeClass('_opened').closest('.article_block').removeClass('_active');
         }
     });
 
@@ -36,8 +36,8 @@ $(function ($) {
         })
         .delegate('.actionBtn', 'click', function () {
             var parent = $(this).closest('.articleActionBlock');
-            $('.articleActionBlock').not(parent).removeClass('_opened');
-            parent.toggleClass('_opened');
+            $('.articleActionBlock').not(parent).removeClass('_opened').closest('.article_block').removeClass('_active');
+            parent.toggleClass('_opened').closest('.article_block').toggleClass('_active');
             return false;
         })
         .delegate('select', 'change', function () {
