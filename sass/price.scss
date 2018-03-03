@@ -4,11 +4,19 @@
 }
 
 .widget_block {
-  margin-left: 238px;
+  margin-left: 226px;
+
+  .related_title {
+    padding-top: 30px;
+  }
 
   @include respond-to-min($resp_step_2) {
-    margin-left: 356px;
+    margin-left: 286px;
   }
+}
+
+.widget_wrapper {
+  padding-left: 12px;
 }
 
 .widget_aside {
@@ -32,6 +40,10 @@
       margin-top: 17px;
     }
   }
+
+  @include respond-to-min($resp_step_2) {
+    padding: 30px 26px 26px 22px;
+  }
 }
 
 .stat_label {
@@ -48,6 +60,10 @@
   span {
     font-size: 16px;
   }
+
+  @include respond-to-min($resp_step_2) {
+    margin-bottom: 28px;
+  }
 }
 
 .stat_holder_controls {
@@ -60,6 +76,10 @@
   li {
     float: left;
     padding-left: 15px;
+
+    &._active {
+      float: right;
+    }
   }
 }
 
@@ -67,7 +87,7 @@
   @include transition_all(color .3s);
   color: #c0c0c0;
 
-  &._active,
+  ._active &,
   &:hover {
     color: #999;
   }
@@ -90,6 +110,26 @@
     float: right;
     font: 11px/14px $RubikReg;
     padding-top: 6px;
+
+    span {
+      display: none;
+    }
+  }
+
+  &[data-stat='1'] {
+    dd {
+      span[data-stat='1'] {
+        display: block;
+      }
+    }
+  }
+
+  &[data-stat='2'] {
+    dd {
+      span[data-stat='2'] {
+        display: block;
+      }
+    }
   }
 }
 
@@ -97,11 +137,6 @@
   @include transition_all(color .3s);
   color: #999;
   font: 13px/18px $RubikMed;
-
-  &._active,
-  &:hover {
-    color: #000;
-  }
 
   span {
     display: inline-block;
@@ -116,6 +151,18 @@
     background: #999;
     color: #fff;
     margin-left: 8px;
+  }
+
+  &._active {
+    color: #000;
+
+    ._abbr {
+      background: $violette;
+    }
+  }
+
+  &:hover {
+    color: #000;
   }
 
   &._more {
@@ -207,14 +254,134 @@
   margin-bottom: 25px;
   background: #f8f8f8;
 
+  .widget_block & {
+    background: none;
+    margin-bottom: 12px;
+  }
+
   .ccc-widget {
     font-family: $RubikMed;
     padding-bottom: 14px;
 
     > div {
-      padding: 13px 16px 13px 12px !important;
       background: none !important;
+      border: 2px solid #f8f8f8 !important;
     }
+
+    &.ccc-converter {
+
+      @include respond-to-min($resp_step_2) {
+        padding: 9px 5px 16px;
+      }
+    }
+
+    &.ccc-summary {
+      > div {
+        padding: 21px 20px 30px !important;
+      }
+
+      .tabcontent {
+        @extend %clearfix;
+
+        .col-lg-6 {
+          width: 50.5%;
+          float: left;
+          padding-left: 23px;
+          padding-top: 10px;
+        }
+
+        .highlightsWrapper {
+          padding: 0;
+          width: 49.5%;
+        }
+      }
+    }
+
+    &.ccc-chart-v3 {
+      padding-bottom: 0;
+
+      > div:first-child {
+        padding: 0 !important;
+        border: 0 !important;
+      }
+
+      .chartTypeTabLinks {
+        font-weight: 400;
+        font-size: 20px;
+        padding: 6px 24px;
+      }
+
+      .cTypeTabActive {
+        background: $violette;
+      }
+    }
+
+    &.ccc-histo-week {
+      padding-bottom: 0;
+
+      > div {
+        padding: 20px 0 3px;
+      }
+
+      div.histoTitle {
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 10px;
+
+        + div.histoRow {
+
+          div {
+            font-size: 16px;
+            font-weight: 500 !important;
+          }
+        }
+      }
+
+      div.histoRow {
+        padding: 18px 0;
+
+        div {
+          font-size: 14px;
+          padding: 0 30px;
+          font-weight: 400 !important;
+        }
+      }
+    }
+  }
+
+  .cccCustomRadioContainer span.radio::before {
+    width: 20px;
+    height: 20px;
+    left: -25px;
+    border-radius: 10px;
+  }
+
+  .cccCustomRadioContainer span.radio::after {
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: -21px;
+    border-radius: 6px;
+  }
+
+  .cccCustomRadioContainer span.checkbox::before {
+    width: 16px;
+    height: 16px;
+    left: -25px;
+  }
+
+  .cccCustomRadioContainer span.checkbox::after {
+    left: -21px;
+    top: -4px;
+    height: 5px;
+    width: 9px;
+  }
+
+  .cccCustomRadioContainer {
+    padding-left: 25px;
+    line-height: 24px;
+    margin-bottom: 10px;
   }
 
   .histoTitleConverter {
@@ -307,4 +474,59 @@
       }
     }
   }
+
+  .tabContainer {
+    margin-left: -6px;
+  }
+
+  .tablinks {
+    margin: 0 0 10px 6px;
+    padding: 2px 5px;
+
+    &.active {
+      border-color: $violette !important;
+    }
+  }
+
+  .highlightsWrapper {
+    border: 2px solid $violette;
+    margin-bottom: 20px;
+  }
+
+  .highlights {
+    display: block;
+    padding-bottom: 6px;
+  }
+
+  .change-value {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .price-value {
+    font: 48px/1.2 $RubikBold;
+    white-space: nowrap;
+    margin-top: 5px;
+  }
+
+  .table-row .value,
+  .table-row .title {
+    margin-top: 5px;
+    padding: 0 3px;
+    font-size: 13px;
+  }
+
+  .positive {
+    color: $green;
+  }
+
+  .negative {
+    color: $red;
+  }
+
+}
+
+.cryptocompare-logo {
+  display: none !important;
 }

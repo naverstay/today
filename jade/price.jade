@@ -22,79 +22,89 @@ html(lang='ru')
                                     span.clr_violette._fw_b Coins
 
                                     ul.stat_holder_controls
-                                        li: a.stat_link(href='#') Monthly
-                                        li: a.stat_link._active(href='#') Daily
+                                        li: a.statLink.stat_link(href='#' data-stat=1) Monthly
+                                        li._active: a.statLink.stat_link(href='#' data-stat=2) Daily
 
-                                dl.stat_list
+                                dl.stat_list.statList(data-stat=2)
                                     dt
                                         a.stat_item._active(href='#')
                                             span Bitcoin
                                             span._abbr BTC
                                     dd
-                                        span.clr_green +8.29%
+                                        span(data-stat=1).clr_green +8.29%
+                                        span(data-stat=2).clr_green +18.29%
 
                                     dt
                                         a.stat_item(href='#')
                                             span Ethereum
                                             span._abbr ETH
                                     dd
-                                        span.clr_green +6.12%
+                                        span(data-stat=1).clr_green +6.12%
+                                        span(data-stat=2).clr_green +16.12%
 
                                     dt
                                         a.stat_item(href='#')
                                             span Ripple
                                             span._abbr XRP
                                     dd
-                                        span.clr_green +8.29%
+                                        span(data-stat=1).clr_green +8.29%
+                                        span(data-stat=2).clr_green +18.29%
 
                                     dt
                                         a.stat_item(href='#')
                                             span Bitcoin Cash
                                             span._abbr BHC
                                     dd
-                                        span.clr_green +6.12%
+                                        span(data-stat=1).clr_green +6.12%
+                                        span(data-stat=2).clr_green +16.12%
 
                                     dt
                                         a.stat_item(href='#')
                                             span Litecoin
                                             span._abbr LTC
                                     dd
-                                        span.clr_green +8.29%
+                                        span(data-stat=1).clr_green +8.29%
+                                        span(data-stat=2).clr_green +18.29%
 
                                     dt
                                         a.stat_item(href='#')
                                             span NEO
                                             span._abbr NEO
                                     dd
-                                        span.clr_green +6.12%
+                                        span(data-stat=1).clr_green +6.12%
+                                        span(data-stat=2).clr_green +16.12%
 
                                     dt
                                         a.stat_item(href='#')
                                             span Cardano
                                             span._abbr ADA
                                     dd
-                                        span.clr_green +8.29%
+                                        span(data-stat=1).clr_green +8.29%
+                                        span(data-stat=2).clr_green +18.29%
 
                                     dt
                                         a.stat_item(href='#')
                                             span Stellar
                                             span._abbr XLM
                                     dd
-                                        span.clr_green +6.12%
+                                        span(data-stat=1).clr_green +6.12%
+                                        span(data-stat=2).clr_green +16.12%
 
                                     dt
                                         a.stat_item(href='#')
                                             span EOS
                                             span._abbr EOS
                                     dd
-                                        span.clr_green +8.29%
+                                        span(data-stat=1).clr_green +8.29%
+                                        span(data-stat=2).clr_green +18.29%
 
                                     dt
                                         a.stat_item(href='#')
                                             span IOTA
                                             span._abbr MIOTA
                                     dd
-                                        span.clr_green +6.12%
+                                        span(data-stat=1).clr_green +6.12%
+                                        span(data-stat=2).clr_green +16.12%
 
                                 p
                                     a.stat_item._more(href='#') More coins
@@ -103,26 +113,27 @@ html(lang='ru')
                                 +widget_converter()
 
                         .widget_block
-                            .stat_caption Bitcoin Price Index
+                            .widget_wrapper
+                                .stat_caption Bitcoin Price Index
 
-                            .stat_widget_holder
-                                +widget_summary()
+                                .stat_widget_holder
+                                    +widget_summary()
 
-                            .action_soc_holder
-                                h3.stat_label Share bitcoin price now
+                                .action_soc_holder
+                                    h3.stat_label Share bitcoin price now
 
-                                ul.action_soc._brand
-                                    li: a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
-                                    li: a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
-                                    li: a.action_sh._i(href='#' data-network="instagram" class='st-custom-button')
-                                    li: a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
-                                    li: a.action_sh._tg(href='#')
+                                    ul.action_soc._brand
+                                        li: a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+                                        li: a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
+                                        li: a.action_sh._i(href='#' data-network="instagram" class='st-custom-button')
+                                        li: a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
+                                        li: a.action_sh._tg(href='#')
 
-                            .stat_widget_holder
-                                +widget_chart()
+                                .stat_widget_holder
+                                    +widget_chart()
 
-                            .stat_widget_holder
-                                +widget_history()
+                                .stat_widget_holder
+                                    +widget_history()
 
                             .related_title Related Articles and News
 

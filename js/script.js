@@ -43,6 +43,12 @@ $(function ($) {
         .delegate('select', 'change', function () {
             this.blur();
         })
+        .delegate('.statLink', 'click', function () {
+            var btn = $(this);
+            btn.parent().addClass('_active').siblings().removeClass('_active');
+            $('.statList').attr('data-stat', btn.attr('data-stat'));
+            return false;
+        })
         .delegate('.subscribeLink', 'click', function () {
             $('.subscribeBlock').addClass('open_subscribe');
             return false;
