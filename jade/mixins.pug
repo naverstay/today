@@ -526,11 +526,98 @@ mixin article_soc(cls)
 
 mixin search()
     .search_holder
-        .search_title Search
-        form(action='#')
-            .form_cell
-                input.completeIt.search_input(placeholder='search...')
-                button.filter_btn
+        .search_head
+            .section_inner
+                .search_form
+                    form(action='#')
+                        .form_cell
+                            input.search_input(placeholder='search...')
+                            button.filter_btn
+
+                .search_title
+                    span Search results&nbsp;
+                    span._counter — 200 articles and news
+        .search_body
+            .section_inner
+                .news_row
+                    +loop_while(3)
+                        .news_col
+                            ul.article_reviews._article
+                                li
+                                    .article_block._review
+                                        .article_img
+                                            a.article_img_link(href='#'): img(src='i/remote.jpg')
+                                        .article_title
+                                            a.article_link(href='#') CFTC Tech Advisors to Talk #[span.clr_violette(href='#') Crypto, Blockchain] This Week
+                                        ul.article_stat
+                                            li
+                                                span.article_stat_val Jan 10, 2018 at 10:00
+                                            li
+                                                span.article_stat_val._stat_views 212
+                                            li._first
+                                                .article_stat_val Ariel Deschapell
+                                li
+                                    .article_block._review
+                                        .article_img
+                                            a.article_img_link(href='#'): img(src='i/remote.jpg')
+
+                                        .article_title
+                                            a.article_link(href='#') Lightning Network May Not Solve Bitcoin's Scaling 'Trilemma'
+                                        ul.article_stat
+                                            li
+                                                span.article_stat_val Jan 10, 2018 at 10:00
+                                            li
+                                                span.article_stat_val._stat_views 212
+                                            li._first
+                                                .article_stat_val Ariel Deschapell
+                                li
+                                    .article_block._review
+                                        .article_img
+                                            a.article_img_link(href='#'): img(src='i/remote.jpg')
+
+                                        .article_title
+                                            a.article_link(href='#') 2018's Challenge: Promote Responsible Blockchain
+                                        ul.article_stat
+                                            li
+                                                span.article_stat_val Jan 10, 2018 at 10:00
+                                            li
+                                                span.article_stat_val._stat_views 212
+                                            li._first
+                                                .article_stat_val Ariel Deschapell
+
+                                li
+                                    .article_block._review
+                                        .article_img
+                                            a.article_img_link(href='#'): img(src='i/remote.jpg')
+
+                                        .article_title
+                                            a.article_link(href='#') Bulgaria Joins 'International Operation' Against OneCoin
+                                        ul.article_stat
+                                            li
+                                                span.article_stat_val Jan 10, 2018 at 10:00
+                                            li
+                                                span.article_stat_val._stat_views 212
+                                            li._first
+                                                .article_stat_val Ariel Deschapell
+
+                                li
+                                    .article_block._review
+                                        .article_img
+                                            a.article_img_link(href='#'): img(src='i/remote.jpg')
+
+                                        .article_title
+                                            a.article_link(href='#') TSMC Expects 'Strong' Crypto Mining Demand to Continue
+                                        ul.article_stat
+                                            li
+                                                span.article_stat_val Jan 10, 2018 at 10:00
+                                            li
+                                                span.article_stat_val._stat_views 212
+                                            li._first
+                                                .article_stat_val Ariel Deschapell
+
+        .search_footer
+            .section_inner
+                a.btn_v1.more_btn.gray_btn(href='#') More search results
 
 mixin header()
     .header
@@ -637,7 +724,7 @@ mixin scripts(share)
     - else
         script(src='js/jquery1.10.js?t=' + time)
         script(src='js/jquery.popup.min.js?t=' + time)
-        script(src='js/auto-complete.js?t=' + time)
+        //-script(src='js/auto-complete.js?t=' + time)
         script(src='js/jquery.validationEngine.js?t=' + time)
         script(src='js/jquery.validationEngine-ru.js?t=' + time)
         script(src='js/slick.js?t=' + time)

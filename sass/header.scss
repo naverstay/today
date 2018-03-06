@@ -66,6 +66,7 @@
 
   .menu_opened &,
   .search_opened & {
+    //position: fixed;
     //-webkit-transform: none !important;
     //-ms-transform: none !important;
     //transform: none !important;
@@ -175,12 +176,12 @@
   margin-left: 4px;
   opacity: 1;
 
-  .search_opened & {
-    @include transition_all(opacity .3s, z-index .01s .3s);
-    opacity: 0;
-    z-index: 1;
-    pointer-events: none;
-  }
+  //.search_opened & {
+  //  @include transition_all(opacity .3s, z-index .01s .3s);
+  //  opacity: 0;
+  //  z-index: 1;
+  //  pointer-events: none;
+  //}
 }
 
 .logo {

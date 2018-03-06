@@ -20,6 +20,11 @@ body {
       transition: none !important;
     }
   }
+
+  &.search_opened {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 a {
@@ -109,6 +114,36 @@ a {
 
     @include respond-to-min($resp_step_3) {
       margin-bottom: 18px;
+    }
+  }
+
+  .search_body & {
+    width: 33.3333%;
+
+    .article_block._review {
+      margin-bottom: 20px;
+      padding-right: 40px;
+      min-height: 0;
+
+      .article_link {
+        font-size: 14px !important;
+
+        &:hover {
+          color: $violette !important;
+        }
+      }
+
+      .article_img {
+        width: 88px !important;
+
+        + .article_title {
+          margin-right: 100px !important;
+        }
+      }
+
+      .article_stat {
+        padding-top: 5px;
+      }
     }
   }
 
