@@ -40,12 +40,59 @@
 .btn_v2 {
   height: 40px;
 
+  &.create_release_btn {
+    float: right;
+    display: block;
+    padding: 9px 21px;
+    border-radius: 2px;
+    font: 16px/20px $RubikBold;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
   &.head_subscribe_btn {
     display: block;
     border-radius: 20px;
     padding: 10px 29px;
     margin: 4px 8px;
     font: 16px/20px $RubikBlack;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &.release_btn {
+    @extend %firm_color;
+    display: block;
+    padding: 10px 29px;
+    font: 14px/20px $RubikBold;
+    background: #fff;
+    text-align: center;
+    border-radius: 2px;
+    margin: 20px 23px 0 0;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &.upload_btn {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 21px;
+    margin-bottom: 17px;
+    margin-top: 13px;
+    font: 14px/20px $RubikBold;
+    background: #fff;
+    text-align: center;
+    border-radius: 2px;
 
     span {
       position: relative;
@@ -197,6 +244,30 @@
     &:before {
       opacity: 1;
     }
+  }
+}
+
+.gray_btn_2 {
+  @include transition_all(background .3s, color .3s);
+  border: 2px solid rgba(0, 0, 0, .1);
+  background: #fff;
+  color: $violette;
+
+  &:hover {
+    background: $violette;
+    color: #fff;
+  }
+}
+
+.btn_violette_2 {
+  @include transition_all(background .3s, color .3s);
+  border: 2px solid rgba(0, 0, 0, .1);
+  background: $violette;
+  color: #fff;
+
+  &:hover {
+    background: #fff;
+    color: $violette;
   }
 }
 

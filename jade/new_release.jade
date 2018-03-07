@@ -1,0 +1,83 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto новый пресс-релиз')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +tag_holder()
+
+                    a.attention_block._warn(href='#')
+                        .attention_caption Breaking news
+                        p
+                            span Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+                            span.attention_link
+
+                    .new_release_holder
+                        h2 Submit a Press Release
+                        p Share your press release with our readers. It will appear at the top of the Home Page in Press releases section. Readers are also able to access Press Releases in our catalog. We publish Press releases only after the payment has been cleared and an editor reviewed the text.
+
+                        p Press releases for inappropriate or fraudulent products and services will not be published. Cointelegraph has a right to refuse to publish your press release offering you a refund.
+
+                .release_form_holder
+                    .section_inner
+                        .new_release_form
+                            form(action='#')
+                                .form_cell
+                                    label.label_v2(for='release_title') Title
+                                    .input_w
+                                        input#release_title.input_v3
+                                .form_cell
+                                    label.label_v2(for='release_content') Content
+                                    .input_w
+                                        textarea#release_content.input_v3
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='release_company_name') Company name
+                                        .input_w
+                                            input#release_company_name.input_v3
+                                    .form_cell
+                                        label.label_v2(for='release_company_site') Company site
+                                        .input_w
+                                            input#release_company_site.input_v3
+                                .form_cell
+                                    label.label_v2(for='release_contacts') Company Contacts
+                                    .input_w
+                                        input#release_contacts.input_v3(disabled='disabled')
+                                .form_cell
+                                    label.label_v2(for='release_files')
+                                        span File Upload Image/logo Upload
+                                        span.clr_gray &nbsp;— min 720x480, max 1mb
+                                    .input_w
+                                        label.btn_v2.upload_btn.gray_btn_2: span Select file
+                                            input#release_files.hide(type='file')
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='release_time') Publication time
+                                        .input_w
+                                            input#release_time.input_v3.success
+                                    .form_cell
+                                        label.label_v2(for='release_email') Your Email
+                                        .input_w
+                                            input#release_email.input_v3.error
+
+                                .release_summary
+                                    .form_group
+                                        .form_cell
+                                            p
+                                                span.clr_gray The price per release is&nbsp;
+                                                span 0.8 BTC
+                                            span._hash 1ECGUKEosEhaZnywCVxw6e1VUcPRqGkhvd
+                                        .form_cell
+                                            button.btn_v2.btn_violette_2.create_release_btn: span Submit press release
+
+            .nav_holder
+                //-+main_menu()
+                +search()
+
+            +header()
+            +footer()
+
+        +scripts()

@@ -626,6 +626,12 @@
     }
   }
 
+  &._no_icon {
+    &:before {
+      display: none;
+    }
+  }
+
   &._review {
     @extend %clearfix;
 

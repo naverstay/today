@@ -932,3 +932,71 @@
     }
   }
 }
+
+.new_release_holder {
+  margin: 0 auto;
+  max-width: 688px;
+  padding-top: 34px;
+
+  h2 {
+    font: 38px $RubikBold;
+    margin-bottom: 25px;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 28px;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    max-width: 760px;
+  }
+}
+
+.release_form_holder {
+  border: solid #f8f8f8;
+  border-width: 1px 0;
+  margin: 50px 0 25px;
+  padding: 43px 0 8px;
+}
+
+.new_release_form {
+  margin: 0 auto;
+  max-width: 688px;
+
+  .form_cell {
+    margin-bottom: 28px;
+  }
+
+  .form_group {
+    @extend %clearfix;
+    margin-left: -32px;
+
+    .form_cell {
+      width: 50%;
+      padding-left: 32px;
+      float: left;
+    }
+  }
+
+  @include respond-to-min($resp_step_2) {
+    max-width: 760px;
+  }
+}
+
+.release_summary {
+  margin-top: 10px;
+  border-top: 1px solid #f8f8f8;
+  padding: 28px 0;
+
+  p {
+    margin-top: 4px;
+    font: 14px $RubikBold;
+  }
+
+  ._hash {
+    color: #c0c0c0;
+    font: 9px $RubikMed;
+  }
+}

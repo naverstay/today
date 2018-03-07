@@ -1,0 +1,75 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto пресс-релиз')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +tag_holder()
+
+                    a.attention_block._warn(href='#')
+                        .attention_caption Breaking news
+                        p
+                            span Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+                            span.attention_link
+
+                    .content_holder
+                        .content_block
+                            .news_row._bordered._tags_mode._release
+                                .news_col._third
+                                    .article_block._tag._no_icon
+                                        .article_title.icon-crown
+                                            a.article_link(href='#') Press Releases
+
+                                            p Crypto Space tiene que ver con ideas, así que encuentre opiniones que hagan reflexionar, blogs de expertos y entrevistas con grandes y buenos.
+
+                                            p
+                                                a.btn_v2.release_btn(href='new_release.html'): span Submit Press Release
+
+                                +loop_while(7)
+                                    .news_col._third
+                                        .article_block._release
+                                            .article_img
+                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                    +action_block()
+                                                a.article_img_link(href='#'): img(src='i/range.jpg')
+
+                                            .article_title
+                                                a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
+                                                ul.article_stat
+                                                    li
+                                                        span.article_stat_val._stat_views 212
+                                                    li
+                                                        span.article_stat_val 2 minutes ago
+                                                    li._first
+                                                        a.article_stat_val(href='#') Ariel Deschapell
+
+                                    .news_col._third
+                                        .article_block._release
+                                            .article_img
+                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                    +action_block()
+                                                a.article_img_link(href='#'): img(src='i/range.jpg')
+
+                                            .article_title
+                                                a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
+                                                ul.article_stat
+                                                    li
+                                                        span.article_stat_val._stat_views 212
+                                                    li
+                                                        span.article_stat_val 2 minutes ago
+                                                    li._first
+                                                        a.article_stat_val(href='#') Ariel Deschapell
+
+                        +aside_block()
+
+            .nav_holder
+                //-+main_menu()
+                +search()
+
+            +header()
+            +footer()
+
+        +scripts()
