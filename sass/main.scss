@@ -237,7 +237,6 @@ a {
 
 .news_aggregator {
   @extend %global_flex_block_row_wrap_flex-start;
-  @extend %clearfix;
   list-style: none;
   padding-right: 16px;
   position: relative;
