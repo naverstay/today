@@ -562,6 +562,12 @@
       content: $icon-rss;
     }
   }
+
+  &._y {
+    &:before {
+      content: $icon-youtube;
+    }
+  }
 }
 
 .category_filter {
