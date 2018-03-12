@@ -750,7 +750,7 @@
   }
 
   ._release & {
-    border-top-color: $violette_2;
+    border-top-color: $pink;
   }
 
   ._analysis & {
@@ -797,7 +797,7 @@
 
   &._release {
     .article_block .article_link:hover {
-      color: $violette_2;
+      color: $pink;
     }
   }
 
@@ -932,7 +932,7 @@
 
   ._release & {
     &:before {
-      background: $violette_2;
+      background: $pink;
     }
   }
 
@@ -1016,7 +1016,7 @@
   }
 
   &._release {
-    background: transparentize($violette_2, .2);
+    background: transparentize($pink, .2);
   }
 
   &._analysis {
@@ -1556,7 +1556,7 @@
   }
 
   &._release {
-    background: $violette_2;
+    background: $pink;
   }
 
   &._analysis {
@@ -1714,7 +1714,7 @@
 
     &._release {
       .article_group_link:before {
-        color: $violette_2;
+        color: $pink;
       }
     }
 

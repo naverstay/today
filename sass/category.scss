@@ -40,7 +40,7 @@
   }
 
   &._release {
-    background: $violette_2;
+    background: $pink;
   }
 
   &._analysis {
@@ -135,11 +135,11 @@
 
   &._release {
     &:before {
-      border-bottom-color: $violette_2;
+      border-bottom-color: $pink;
     }
 
     .category_link {
-      background: $violette_2;
+      background: $pink;
     }
   }
 

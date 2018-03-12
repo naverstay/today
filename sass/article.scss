@@ -76,7 +76,7 @@
   }
 
   ._release & {
-    border-bottom-color: $violette_2;
+    border-bottom-color: $pink;
   }
 
   ._analysis & {
@@ -416,11 +416,11 @@
   }
 
   ._release & {
-    color: $violette_2;
+    color: $pink;
 
     &._active,
     &:hover {
-      background: $violette_2;
+      background: $pink;
     }
   }
 
@@ -550,15 +550,15 @@
     }
 
     ._release & {
-      border-color: $violette_2;
+      border-color: $pink;
 
       &:before {
-        border-right-color: $violette_2;
+        border-right-color: $pink;
       }
 
       &:hover {
         &:after {
-          border-right-color: $violette_2;
+          border-right-color: $pink;
         }
       }
     }
