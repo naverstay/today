@@ -167,6 +167,8 @@ $(function ($) {
 
     initValidation();
 
+    initMask();
+
 });
 
 $(window)
@@ -252,6 +254,12 @@ function initSubscribePopup() {
             initValidation('.validatePopup', 1);
         }
     });
+}
+
+function initMask() {
+  $("input").filter(function (i, el) {
+    return $(el).attr('data-inputmask') !== void 0;
+  }).inputmask();
 }
 
 function initValidation(el, prompts) {

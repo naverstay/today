@@ -104,8 +104,8 @@ mixin footer()
                     li: a.action_link._t(href='#')
                     li: a.action_link._r(href='#')
 
-mixin action_block()
-    .article_action_block.articleActionBlock
+mixin action_block(calendar)
+    .article_action_block.articleActionBlock(class= calendar ? '_calendar' : '')
         a.article_action_btn.actionBtn(href='#')
         .action_block
             a.action_block_close.actionBtn(href='#')
@@ -129,6 +129,10 @@ mixin action_block()
                     span tumblr
                 li: a.action_soc.icon-tg(href='#' data-network="googleplus" class='st-custom-button')
                     span Telegram
+
+        - if (calendar)
+            .article_calendar_holder
+              a.article_calendar_link(href='#') Add
 
 mixin aside_block()
     .aside_block
@@ -710,7 +714,7 @@ mixin widget_converter()
     | })();
     | </script>
 
-mixin scripts(share)
+mixin scripts(share, mask)
     link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Rubik:400,500,700', media='all')
 
     -if (!prod)
@@ -725,6 +729,7 @@ mixin scripts(share)
     - else
         script(src='js/jquery1.10.js?t=' + time)
         script(src='js/jquery.popup.min.js?t=' + time)
+        script(src='js/jquery.inputmask.bundle.js?t=' + time)
         //-script(src='js/auto-complete.js?t=' + time)
         script(src='js/jquery.validationEngine.js?t=' + time)
         script(src='js/jquery.validationEngine-ru.js?t=' + time)

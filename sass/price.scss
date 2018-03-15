@@ -66,12 +66,16 @@
   }
 }
 
+.stat_holder_icon {
+  padding-right: 5px;
+}
+
 .stat_holder_controls {
   float: right;
   list-style: none;
   margin: 0;
   padding-top: 2px;
-  font-family: $RubikMed;
+  font: 13px $RubikMed;
 
   li {
     float: left;
@@ -79,6 +83,30 @@
 
     &._active {
       float: right;
+    }
+  }
+
+  .stat_caption & {
+    padding-top: 22px;
+
+    li {
+      padding-left: 24px;
+
+      &._first {
+        position: relative;
+        padding-right: 40px;
+        margin-right: 18px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          height: 10px;
+          margin-top: -5px;
+          border-right: 1px solid #c0c0c0;
+        }
+      }
     }
   }
 }
@@ -246,8 +274,45 @@
 }
 
 .stat_caption {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
   font: 38px $RubikBold;
   margin: 24px 0 22px;
+
+  .widget_block & {
+    padding-left: 10px;
+  }
+}
+
+.event_controls {
+  float: right;
+
+  li {
+    float: left;
+
+  }
+}
+
+.date_select {
+  @extend .input_v3;
+  display: block;
+
+  + .select_arrow {
+    top: 15px;
+    right: 16px;
+  }
+
+  &:focus {
+    color: $violette;
+
+    + .select_arrow {
+      color: $violette;
+      -webkit-transform: rotate(180deg) translate(0, 4px);
+      -ms-transform: rotate(180deg) translate(0, 4px);
+      transform: rotate(180deg) translate(0, 4px);
+    }
+  }
 }
 
 .stat_widget_holder {

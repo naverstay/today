@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Crypto новый пресс-релиз</title>
+    <title>Crypto новое событие</title>
     <!-- saved from url=(0014)about:internet -->
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=952, initial-scale=1.0"/>
@@ -34,9 +34,8 @@
             <div class="attention_caption">Breaking news</div>
             <p><span>Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'</span><span class="attention_link"></span></p></a>
           <div class="new_release_holder">
-            <h2>Submit a Press Release</h2>
+            <h2>Submit a Events</h2>
             <p>Share your press release with our readers. It will appear at the top of the Home Page in Press releases section. Readers are also able to access Press Releases in our catalog. We publish Press releases only after the payment has been cleared and an editor reviewed the text.</p>
-            <p>Press releases for inappropriate or fraudulent products and services will not be published. Cointelegraph has a right to refuse to publish your press release offering you a refund.</p>
           </div>
         </div>
         <div class="release_form_holder">
@@ -44,65 +43,89 @@
             <div class="new_release_form">
               <form action="#">
                 <div class="form_cell">
-                  <label class="label_v2" for="release_title">Title</label>
+                  <label class="label_v2" for="event_title">Title</label>
                   <div class="input_w">
-                    <input class="input_v3" id="release_title">
+                    <input class="input_v3" id="event_title">
                   </div>
                 </div>
                 <div class="form_cell">
-                  <label class="label_v2" for="release_content">Content</label>
+                  <label class="label_v2" for="event_description">Description</label>
                   <div class="input_w">
-                    <textarea class="input_v3" id="release_content"></textarea>
+                    <input class="input_v3" id="event_description">
+                  </div>
+                </div>
+                <div class="form_cell">
+                  <label class="label_v2" for="event_content">Content</label>
+                  <div class="input_w">
+                    <textarea class="input_v3" id="event_content"></textarea>
                   </div>
                 </div>
                 <div class="form_group">
                   <div class="form_cell">
-                    <label class="label_v2" for="release_company_name">Company name</label>
-                    <div class="input_w">
-                      <input class="input_v3" id="release_company_name">
+                    <div class="form_group">
+                      <div class="form_cell">
+                        <label class="label_v2" for="event_date_start"><span>Date&nbsp;</span><span class="clr_gray">— start</span></label>
+                        <div class="input_w">
+                          <input class="input_v3" id="event_date_start" data-inputmask="'alias': 'mm.dd.yyyy', 'placeholder': 'MM.DD.YYYY', 'clearIncomplete': 'true'">
+                        </div>
+                      </div>
+                      <div class="form_cell">
+                        <label class="label_v2" for="event_date_end"><span>Date&nbsp;</span><span class="clr_gray">— end</span></label>
+                        <div class="input_w">
+                          <input class="input_v3" id="event_date_end" data-inputmask="'alias': 'mm.dd.yyyy', 'placeholder': 'MM.DD.YYYY', 'clearIncomplete': 'true'">
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="form_cell">
-                    <label class="label_v2" for="release_company_site">Company site</label>
+                    <label class="label_v2" for="event_site">Site</label>
                     <div class="input_w">
-                      <input class="input_v3" id="release_company_site">
+                      <input class="input_v3" id="event_site">
+                    </div>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_countries">Countries</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_countries">
+                    </div>
+                  </div>
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_cities">Cities</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_cities">
                     </div>
                   </div>
                 </div>
                 <div class="form_cell">
-                  <label class="label_v2" for="release_contacts">Company Contacts</label>
-                  <div class="input_w">
-                    <input class="input_v3" id="release_contacts" disabled="disabled">
-                  </div>
-                </div>
-                <div class="form_cell">
-                  <label class="label_v2" for="release_files"><span>File Upload Image/logo Upload</span><span class="clr_gray">&nbsp;— min 720x480, max 1mb</span></label>
+                  <label class="label_v2" for="event_files"><span>File Upload Image/logo Upload</span><span class="clr_gray">&nbsp;— min 720x480, max 1mb</span></label>
                   <div class="input_w">
                     <label class="btn_v2 upload_btn gray_btn_2"><span>Select file
-                        <input class="hide" id="release_files" type="file"></span></label>
+                        <input class="hide" id="event_files" type="file"></span></label>
                   </div>
                 </div>
                 <div class="form_group">
                   <div class="form_cell">
-                    <label class="label_v2" for="release_time">Publication time</label>
+                    <label class="label_v2" for="event_author_email">Your Email</label>
                     <div class="input_w">
-                      <input class="input_v3 success" id="release_time">
+                      <input class="input_v3 success" id="event_author_email">
                     </div>
                   </div>
                   <div class="form_cell">
-                    <label class="label_v2" for="release_email">Your Email</label>
+                    <label class="label_v2" for="event_author_name">Your Name</label>
                     <div class="input_w">
-                      <input class="input_v3 error" id="release_email">
+                      <input class="input_v3 error" id="event_author_name">
                     </div>
                   </div>
                 </div>
                 <div class="release_summary">
                   <div class="form_group">
                     <div class="form_cell">
-                      <p><span class="clr_gray">The price per release is&nbsp;</span><span>0.8 BTC</span></p><span class="_hash">1ECGUKEosEhaZnywCVxw6e1VUcPRqGkhvd</span>
+                      <p>&nbsp;</p>
                     </div>
                     <div class="form_cell">
-                      <button class="btn_v2 btn_violette_2 create_release_btn"><span>Submit press release</span></button>
+                      <button class="btn_v2 btn_violette_2 create_release_btn"><span>Submit events</span></button>
                     </div>
                   </div>
                 </div>

@@ -1,0 +1,110 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto price')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +tag_holder()
+
+                    a.attention_block._warn(href='#')
+                        .attention_caption Breaking news
+                        p
+                            span Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+                            span.attention_link
+
+                    .widget_holder
+                        .widget_aside
+                            .stat_holder
+                                .stat_holder_title
+                                    span.icon-filter.clr_violette.stat_holder_icon
+                                    span.clr_violette._fw_b Filter
+                                    ul.stat_holder_controls
+                                        li: a.stat_link(href='#') Clear
+
+                                form(action='#')
+                                    .form_cell
+                                        label.label_v1(for='filter_countries') Countries
+                                        .input_w
+                                            input#filter_countries.input_v3(placeholder='' value='Russia')
+                                    .form_cell
+                                        label.label_v1(for='filter_cities') Cities
+                                        .input_w
+                                            input#filter_cities.input_v3(placeholder='All cities')
+
+                                    .form_cell
+                                        label.label_v1(for='filter_date') Date
+                                        .input_w
+                                            select#filter_date.date_select
+                                                option 22.10.2017
+                                                option 24.10.2017
+                                                option 26.10.2017
+                                            .select_arrow
+
+                        .widget_block
+                            .stat_caption.clearfix
+                                span Events
+                                ul.stat_holder_controls
+                                    li._first: a.stat_link(href='#') Submit events
+                                    li: a.stat_link(href='#') Past
+                                    li: a.stat_link(href='#') Future
+                            .news_row._col_3._events
+                                +loop_while(4)
+                                    .news_col
+                                        .article_block
+                                            .article_img
+                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                    +action_block(true)
+                                                a.article_img_link(href='#'): img(src='i/event.jpg')
+
+                                            .article_title
+                                                a.article_link(href='#') SXSW Crypto Summit: New Girls on the Block
+                                                ul.article_stat.clr_violette
+                                                    li
+                                                        span.article_stat_val Mar 12
+                                                    li
+                                                        span.article_stat_val Santa Clara, United States
+                                    .news_col
+                                        .article_block
+                                            .article_img
+                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                    +action_block(true)
+                                                a.article_img_link(href='#'): img(src='i/event.jpg')
+
+                                            .article_title
+                                                a.article_link(href='#') Chinese Finance Association Cautions on Overseas ICOs
+                                                ul.article_stat.clr_violette
+                                                    li
+                                                        span.article_stat_val Mar 12
+                                                    li
+                                                        span.article_stat_val Santa Clara, United States
+                                    .news_col
+                                        .article_block
+                                            .article_img
+                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                    +action_block(true)
+                                                a.article_img_link(href='#'): img(src='i/event.jpg')
+
+                                            .article_title
+                                                a.article_link(href='#') Bitcoin Price Seeks Direction as Trading Range Narrows
+                                                ul.article_stat.clr_violette
+                                                    li
+                                                        span.article_stat_val Mar 12
+                                                    li
+                                                        span.article_stat_val Santa Clara, United States
+
+                            .news_row
+                                .news_col._wide
+                                    .article_controls._mod_1
+                                        a.btn_v1.more_btn.gray_btn(href='#') More  events
+
+            .nav_holder
+                +main_menu(true)
+                +search()
+
+            +header()
+            +footer()
+
+        +scripts()

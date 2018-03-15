@@ -718,6 +718,14 @@
     }
   }
 
+  ._events & {
+    @extend %global_flex_block_column_nowrap_flex-start_stretch;
+
+    .article_title {
+      @include flex(1 0 auto);
+    }
+  }
+
   ._bordered & {
     @extend %global_flex_block_column_nowrap_flex-start_stretch;
     border-top: 8px solid;
@@ -1336,13 +1344,45 @@
   }
 }
 
+.article_calendar_holder {
+  float: right;
+  margin-right: 18px;
+}
+
+.article_calendar_link {
+  @include transition_all(background .3s);
+  @extend %icon_pseudo;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  height: 28px;
+  border-radius: 14px;
+  color: #fff;
+  padding: 8px 15px 6px 36px;
+  font: 12px/14px $RubikMed;
+  background: rgba(0, 0, 0, 0.4);
+
+  &:before {
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    font-size: 14px;
+    content: $icon-calendar;
+  }
+
+  &:hover {
+    background: $violette;
+    @extend %firm_bg_color;
+  }
+}
+
 .article_action_block {
   position: absolute;
   top: 0;
   left: 0;
   float: left;
   margin-top: 16px;
-  margin-left: 32px;
+  margin-left: 31px;
 
   //&._opened {
   //  z-index: 1000;
@@ -1357,6 +1397,28 @@
   //    background: rgba(255, 255, 255, .8);
   //  }
   //}
+
+  &._calendar {
+    width: 192px;
+
+    ._col_3_wide & {
+      @include respond-to-max($resp_step_2) {
+        width: 312px;
+      }
+    }
+
+    @include respond-to-min($resp_step_2) {
+      width: 252px;
+    }
+
+    @include respond-to-min($resp_step_3) {
+      width: 315px;
+    }
+
+    @include respond-to-min($resp_step_4) {
+      width: 380px;
+    }
+  }
 }
 
 .action_block {

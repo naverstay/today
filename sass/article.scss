@@ -967,6 +967,10 @@
 
   .form_cell {
     margin-bottom: 28px;
+
+    .form_group .form_cell {
+      margin-bottom: 0;
+    }
   }
 
   .form_group {
