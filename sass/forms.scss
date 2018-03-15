@@ -1,9 +1,9 @@
 .autocomplete_v1 {
   //display: block !important;
   max-width: 100%;
-  background-color: transparent;
-  border: 0;
-  margin-top: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  background: #fff;
   box-shadow: none;
 
   .autocomplete-suggestion {
@@ -11,19 +11,18 @@
     @extend %clearfix;
     position: relative;
     padding: 9px 0;
-    color: #fff;
+    color: #000;
 
     &.selected {
       background-color: transparent;
-      color: #a7a7a7;
+      color: $violette;
     }
   }
 
   .search_result {
     white-space: normal;
-    padding-left: 37px;
-    font: 16px/1.4 $RubikBold;
-    letter-spacing: -.021em;
+    font: 13px/1.2 $RubikMed;
+    padding: 3px 16px;
   }
 
   .search_date {

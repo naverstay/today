@@ -47,9 +47,9 @@ html(lang='ru')
                             .stat_caption.clearfix
                                 span Events
                                 ul.stat_holder_controls
-                                    li._first: a.stat_link(href='#') Submit events
+                                    li._first: a.stat_link(href='new_event.html') Submit events
                                     li: a.stat_link(href='#') Past
-                                    li: a.stat_link(href='#') Future
+                                    li._active: a.stat_link(href='#') Future
                             .news_row._col_3._events
                                 +loop_while(4)
                                     .news_col

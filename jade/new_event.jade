@@ -58,11 +58,11 @@ html(lang='ru')
                                     .form_cell
                                         label.label_v2(for='event_countries') Countries
                                         .input_w
-                                            input#event_countries.input_v3
+                                            input#event_countries.input_v3.completeIt(data-url='./data/countries.json')
                                     .form_cell
                                         label.label_v2(for='event_cities') Cities
                                         .input_w
-                                            input#event_cities.input_v3
+                                            input#event_cities.input_v3.completeIt(data-url='./data/cities.json')
                                 .form_cell
                                     label.label_v2(for='event_files')
                                         span File Upload Image/logo Upload
