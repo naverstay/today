@@ -134,7 +134,7 @@ mixin action_block(calendar)
             .article_calendar_holder
               a.article_calendar_link(href='#') Add
 
-mixin aside_block()
+mixin aside_block(calendar)
     .aside_block
         .aside_info_box
             .aside_box_caption
@@ -185,6 +185,38 @@ mixin aside_block()
                                 span.article_stat_val._stat_views 212
                             li._first
                                 a.article_stat_val(href='#') Ariel Deschapell
+
+        - if (calendar)
+            .aside_info_box
+                .aside_box_caption
+                    span.aside_caption_icon._calendar
+                    .aside_caption_link Upcoming CryptoEvents
+
+                ul.recent_news_list
+                    li
+                        .recent_news
+                            a.article_link(href='#') SXSW Crypto Summit: New Girls on the Block
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
+
+                    li
+                        .recent_news
+                            a.article_link(href='#') BlockShow Europe Meetups: Stockholm
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
+
+                    li
+                        a.recent_news_link(href='#') Show all
 
         .aside_subscribe
             .footer_logo

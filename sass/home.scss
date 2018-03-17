@@ -138,6 +138,10 @@
 
   .article_heading {
     padding-right: 180px;
+
+    ._event & {
+      padding-right: 0;
+    }
   }
 
   &:before {
@@ -149,6 +153,10 @@
     width: 213px;
     overflow: hidden;
     font-size: 283px;
+
+    ._event & {
+      display: none;
+    }
   }
 
   @include respond-to-min($resp_step_2) {
@@ -173,6 +181,10 @@
       left: 0;
       width: 20px;
       bottom: 75px;
+
+      ._event & {
+        display: none;
+      }
     }
 
     &._no_title {
@@ -333,6 +345,12 @@
       margin-top: 34px;
       margin-bottom: 34px;
 
+      ._event & {
+        .article_img {
+          margin-bottom: 0;
+        }
+      }
+
       .article_action {
         left: auto;
         right: 78px;
@@ -425,11 +443,70 @@
         width: 125px;
         font-size: 160px;
       }
+
+      ._event & {
+        font: 18px/24px $RubikReg;
+        color: #fff;
+        width: 272px;
+        margin-bottom: 28px;
+        padding: 26px 33px 106px;
+
+        &:before {
+          content: '';
+          top: 0;
+          right: 100% !important;
+          bottom: 0 !important;
+          width: 595px;
+          height: auto;
+          background: inherit;
+        }
+      }
+
+      ._event._news &,
+      ._event._stories &,
+      ._event._top & {
+        background-color: $violette;
+      }
+
+      ._event._release & {
+        background-color: $pink;
+      }
+
+      ._event._analysis & {
+        background-color: $orange;
+      }
+
+      ._event._pricewise & {
+        background-color: $green;
+      }
+
+      ._event._sponsored & {
+        background-color: $green_2;
+      }
+
+      ._event._pool & {
+        background-color: $blue;
+      }
+
+      ._event._features & {
+        background-color: $red;
+      }
+
+      ._event._wiki & {
+        background-color: $brown;
+      }
+
+      ._event._crypto & {
+        background-color: $brown_2;
+      }
+
+      ._event._watch & {
+        background-color: $violette_2;
+      }
     }
   }
 
   @include respond-to-min($resp_step_3) {
-
     .article_preview {
       width: 292px;
       font-size: 24px;
@@ -442,6 +519,14 @@
         width: 150px;
         font-size: 195px;
       }
+
+      ._event & {
+        width: 336px;
+
+        &:before {
+          width: 675px;
+        }
+      }
     }
   }
 
@@ -453,6 +538,14 @@
       font-size: 26px;
       line-height: 34px;
       padding: 35px 10px 155px;
+
+      ._event & {
+        width: 380px;
+
+        &:before {
+          width: 758px;
+        }
+      }
     }
   }
 }
@@ -1181,6 +1274,12 @@
     color: #000 !important;
     letter-spacing: .045em;
   }
+
+  ._event & {
+    color: #000 !important;
+    font-weight: 700;
+    letter-spacing: .025em;
+  }
 }
 
 .article_theme {
@@ -1259,6 +1358,10 @@
 
   .news_item & {
     padding-top: 5px;
+  }
+
+  ._event & {
+    font-size: 12px;
   }
 }
 

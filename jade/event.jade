@@ -1,0 +1,165 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto event')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +tag_holder()
+
+                    a.attention_block._warn(href='#')
+                        .attention_caption Breaking news
+                        p
+                            span Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+                            span.attention_link
+
+                    .content_holder
+                        .content_block
+                            .article_block.story_block._event._news
+                                .article_main_photo
+                                    .article_heading
+                                        //-a.article_link(href='#') Hawaiian Bylls Wougd Capture Crypto Under&nbsp;Money Transmission Law
+                                        a.article_link(href='#') NEM Foundation: Stoleg Coyncheck Funds Not Sent to Exchanges
+                                        //-a.article_link(href='#') Google's DoubleClick Ads Used to Distribute Crypto Mining Malware
+
+                                    ul.article_stat._mod_1
+                                        li
+                                            span.article_stat_val
+                                                span.clr_gray Start event —&nbsp;
+                                            a.article_stat_val(href='#') Jan 10, 2018 at 10:00
+                                        li
+                                            span.article_stat_val
+                                                span.clr_gray End event —&nbsp;
+                                            a.article_stat_val(href='#')  Jan 11, 2018 at 15:00
+                                        li
+                                            a.article_stat_val(href='#') Santa Clara, United States
+
+                                    .article_img
+                                        .article_img_link: img(src='i/hong_kong.jpg')
+
+                                .article_info_holder
+                                    .article_info
+                                        +article_soc('_news')
+
+                                    .article_preview
+                                        span Beep - Friends Messenger is a fully loaded chat app for the younger generation that allows you to add creativity and fun to your voice messages.
+
+                                        a.article_preview_link(href='#')
+                                            span Website
+
+                                    .article_text
+                                        p When President Trump delivers his first State of the Union address on Tuesday at 9 p.m. ET, his most fervent supporters are anxious that he will squander the most high-profile moment of his presidency with a soft speech that bends more to the predilections of the political establishment in Washington and less to the populist army that sent him there to drain the swamp.
+
+                                        blockquote(cite='#')
+                                            p Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten.
+                                            i Neil Gaiman, Coraline
+
+                                        p The South Korean government announced today it will move to prohibit domestic cryptocurrency exchanges from allowing users to make transactions through anonymous accounts, local news sources report.
+
+                                        p As part of what appears to be a series of updates designed to improve oversight of industry practices, the government will also seek to bar banks from issuing new virtual accounts to cryptocurrency exchanges.
+
+                                        figure
+                                            .article_img
+                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                    +action_block()
+                                                a.article_img_link(href='#'): img(src='i/event_1.jpg')
+                                            p According to the South Korean news agency Yonhap, the announcements were made by Hong Nam-ki, the minister of the Office for Government Policy Coordination, after discussion with vice ministers from other governmental bodies regarding the recent rise in cryptocurrency interest and ownership domestically.
+
+                                        p According to the South Korean news agency Yonhap, the announcements were made by Hong Nam-ki, the minister of the Office for Government Policy Coordination, after discussion with vice ministers from other governmental bodies regarding the recent rise in cryptocurrency interest and ownership domestically.
+
+                                        ul.article_stat
+                                          li
+                                              span.article_stat_val
+                                                  span.clr_gray Start event —&nbsp;
+                                              a.article_stat_val(href='#') Jan 10, 2018 at 10:00
+
+                                        ul.article_tag_list
+                                            li: a.tag_link(href='#') #hotnews
+                                            li: a.tag_link(href='#') #korea
+                                            li: a.tag_link(href='#') #exchange
+                                            li: a.tag_link(href='#') #government
+                                            li: a.tag_link(href='#') #minister
+
+                                .article_info._action_only
+                                    +article_soc('_news')
+
+                            .related_title Related Articles and News
+
+                            .news_row._bordered._col_3
+                                +loop_while(1)
+                                    .news_col._pricewise
+                                        .article_block
+                                            .article_img
+                                                ul.article_tags
+                                                    li
+                                                        span.icon-say.article_tag._pricewise
+                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                    +action_block()
+                                                a.article_img_link(href='#'): img(src='i/range.jpg')
+
+                                            .article_title
+                                                a.article_link(href='#') Bitcoin Price Seeks Direction as Trading Range Narrows
+                                                ul.article_stat
+                                                    li
+                                                        span.article_stat_val Jan 10, 2018 at 10:00
+                                                    li
+                                                        span.article_stat_val._stat_views 212
+                                                    li._first
+                                                        span.article_stat_val Ariel Deschapell
+                                    .news_col._pool
+                                        .article_block
+                                            .article_img
+                                                ul.article_tags
+                                                    li
+                                                        span.icon-crown.article_tag._pool
+                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                    +action_block()
+                                                a.article_img_link(href='#'): img(src='i/range.jpg')
+
+                                            .article_title
+                                                a.article_link(href='#') Chinese Finance Association Cautions on Overseas ICOs
+                                                ul.article_stat
+                                                    li
+                                                        span.article_stat_val Jan 10, 2018 at 10:00
+                                                    li
+                                                        span.article_stat_val._stat_views 212
+                                                    li._first
+                                                        span.article_stat_val Ariel Deschapell
+                                    .news_col._analysis
+                                        .article_block
+                                            .article_img
+                                                ul.article_tags
+                                                    li
+                                                        span.icon-splash.article_tag._analysis
+                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                    +action_block()
+                                                a.article_img_link(href='#'): img(src='i/range.jpg')
+
+                                            .article_title
+                                                a.article_link(href='#') Bitcoin Price Seeks Direction as Trading Range Narrows
+                                                ul.article_stat
+                                                    li
+                                                        span.article_stat_val Jan 10, 2018 at 10:00
+                                                    li
+                                                        span.article_stat_val._stat_views 212
+                                                    li._first
+                                                        span.article_stat_val Ariel Deschapell
+
+                            .news_row
+                                .news_col._wide
+                                    .article_controls._mod_1
+                                        a.btn_v1.more_btn.gray_btn(href='#') More related articles and news
+
+                        +aside_block(true)
+
+
+            .nav_holder
+                +main_menu(true)
+                +search()
+
+            +header()
+            +footer()
+
+        +scripts(true)

@@ -75,6 +75,21 @@
       content: $icon-futurama;
     }
   }
+
+  &._calendar {
+    &:before {
+      content: $icon-calendar;
+    }
+  }
+}
+
+.recent_news_link {
+  color: $violette;
+  font: 14px $RubikMed;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .recent_news_list {

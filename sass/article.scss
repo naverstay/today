@@ -56,6 +56,41 @@
   margin-top: 40px;
 }
 
+.article_preview_link {
+  @extend %icon_pseudo;
+  @extend %firm_color;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 26px;
+  padding-left: 2px;
+
+  &:before {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    content: $icon-arrow-right;
+  }
+
+  span {
+    text-decoration: underline;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    color: #fff !important;
+    position: absolute;
+    left: 30px;
+    padding-right: 36px;
+    bottom: 24px;
+    font: 14px $RubikMed;
+
+    &:before {
+      top: 0;
+      font-size: 18px;
+    }
+  }
+}
+
 .article_preview {
   position: relative;
   font: 22px/30px $RubikMed;
@@ -878,6 +913,14 @@
     vertical-align: top;
     max-width: 100%;
     margin: 30px 0;
+  }
+
+  .article_img {
+    margin: 30px 0;
+
+    img {
+      margin: 0;
+    }
   }
 
   a {
