@@ -114,6 +114,7 @@
 .stat_link {
   @include transition_all(color .3s);
   color: #c0c0c0;
+  font: 13px $RubikMed;
 
   ._active &,
   &:hover {

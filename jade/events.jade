@@ -26,27 +26,63 @@ html(lang='ru')
 
                                 form(action='#')
                                     .form_cell
-                                        label.label_v1(for='filter_countries') Countries
+                                        label.label_v1(for='filter_country') Country
                                         .input_w
-                                            input#filter_countries.input_v3(placeholder='' value='Russia')
+                                            input#filter_country.input_v3(placeholder='' value='Russia')
                                     .form_cell
-                                        label.label_v1(for='filter_cities') Cities
+                                        label.label_v1(for='filter_city') City
                                         .input_w
-                                            input#filter_cities.input_v3(placeholder='All cities')
+                                            input#filter_city.input_v3(placeholder='All cities')
 
                                     .form_cell
-                                        label.label_v1(for='filter_date') Date
+                                        label.label_v1(for='filter_date') Month
                                         .input_w
                                             select#filter_date.date_select
-                                                option 22.10.2017
-                                                option 24.10.2017
-                                                option 26.10.2017
+                                                option Archived
+                                                option(selected='') March 2018
+                                                option April 2018
+                                                option May 2018
+                                                option June 2018
+                                                option March 2018
+                                                option April 2018
+                                                option May 2018
+                                                option June 2018
+                                                option July 2018
+                                                option August 2018
+                                                option September 2018
+                                                option October 2018
+                                                option November 2018
+                                                option December 2018
+                                                option January 2019
+                                                option February 2019
+                                                option March 2019
+                                                option April 2019
+                                                option May 2019
+                                                option June 2019
+                                                option July 2019
+                                                option August 2019
+                                                option September 2019
+                                                option October 2019
+                                                option November 2019
+                                                option December 2019
+
+                                        .select_arrow
+
+                                    .form_cell
+                                        label.label_v1(for='filter_date') Event Type
+                                        .input_w
+                                            select#filter_type.date_select
+                                                option All events
+                                                option Conferences and shows
+                                                option MeetUps
                                             .select_arrow
+
+                            .text_center: a.stat_link(href='new_event.html', style='text-decoration: underline;') Submit new event
 
                         .widget_block
                             .stat_caption.clearfix
                                 span Events
-                                ul.stat_holder_controls
+                                //-ul.stat_holder_controls
                                     li._first: a.stat_link(href='new_event.html') Submit events
                                     li: a.stat_link(href='#') Past
                                     li._active: a.stat_link(href='#') Future

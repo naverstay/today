@@ -16,8 +16,8 @@ html(lang='ru')
                             span.attention_link
 
                     .new_release_holder
-                        h2 Submit a Events
-                        p Share your press release with our readers. It will appear at the top of the Home Page in Press releases section. Readers are also able to access Press Releases in our catalog. We publish Press releases only after the payment has been cleared and an editor reviewed the text.
+                        h2 Submit new event
+                        p Know of a crypto event we should add? Tell us about an upcoming industry event you don't see listed. We publish events only after an editor reviewed the text.
 
                 .release_form_holder
                     .section_inner
@@ -28,11 +28,11 @@ html(lang='ru')
                                     .input_w
                                         input#event_title.input_v3
                                 .form_cell
-                                    label.label_v2(for='event_description') Description
+                                    label.label_v2(for='event_description') Short description
                                     .input_w
                                         input#event_description.input_v3
                                 .form_cell
-                                    label.label_v2(for='event_content') Content
+                                    label.label_v2(for='event_content') Details
                                     .input_w
                                         textarea#event_content.input_v3
                                 .form_group
@@ -56,16 +56,16 @@ html(lang='ru')
                                             input#event_site.input_v3
                                 .form_group
                                     .form_cell
-                                        label.label_v2(for='event_countries') Countries
+                                        label.label_v2(for='event_country') Country
                                         .input_w
-                                            input#event_countries.input_v3.completeIt(data-url='./data/countries.json')
+                                            input#event_country.input_v3.completeIt(data-url='./data/countries.json')
                                     .form_cell
-                                        label.label_v2(for='event_cities') Cities
+                                        label.label_v2(for='event_city') City
                                         .input_w
-                                            input#event_cities.input_v3.completeIt(data-url='./data/cities.json')
+                                            input#event_city.input_v3.completeIt(data-url='./data/cities.json')
                                 .form_cell
                                     label.label_v2(for='event_files')
-                                        span File Upload Image/logo Upload
+                                        span File Upload / Logo / Image
                                         span.clr_gray &nbsp;— min 720x480, max 1mb
                                     .input_w
                                         label.btn_v2.upload_btn.gray_btn_2: span Select file
@@ -74,11 +74,11 @@ html(lang='ru')
                                     .form_cell
                                         label.label_v2(for='event_author_email') Your Email
                                         .input_w
-                                            input#event_author_email.input_v3.success
+                                            input#event_author_email.input_v3
                                     .form_cell
-                                        label.label_v2(for='event_author_name') Your Name
+                                        label.label_v2(for='event_author_name') Other contacts
                                         .input_w
-                                            input#event_author_name.input_v3.error
+                                            input#event_author_name.input_v3
 
                                 .release_summary
                                     .form_group
@@ -86,7 +86,7 @@ html(lang='ru')
                                             p &nbsp;
 
                                         .form_cell
-                                            button.btn_v2.btn_violette_2.create_release_btn: span Submit events
+                                            button.btn_v2.btn_violette_2.create_release_btn: span Submit new event
 
             .nav_holder
                 //-+main_menu()
