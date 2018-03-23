@@ -46,6 +46,12 @@
   top: 2px;
   left: 0;
 
+  &._hot {
+    &:before {
+      content: $icon-bonfire;
+    }
+  }
+
   &._qoute {
     &:before {
       content: $icon-quote;

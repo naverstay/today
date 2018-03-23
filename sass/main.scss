@@ -53,7 +53,7 @@ a {
   margin: 0 auto;
 
   @include respond-to-min($resp_step_2) {
-    padding-top: 92px;
+    padding-top: 88px;
   }
 }
 

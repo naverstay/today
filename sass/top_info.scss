@@ -1,20 +1,18 @@
 .top_info {
-  padding: 10px 8px 4px 25px;
+  padding: 7px 8px 4px 25px;
   display: inline-block;
   vertical-align: middle;
   text-align: left;
 
   @include respond-to-min($resp_step_2) {
     //padding: 18px 30px 4px 0;
-    padding-top: 20px;
+    padding-top: 10px;
   }
 
   @include respond-to-min($resp_step_3) {
     padding-right: 35px;
-  }
-
-  @include respond-to-min($resp_step_4) {
-    padding-right: 50px;
+    padding-top: 12px;
+    min-width: 63%;
   }
 }
 
@@ -55,19 +53,94 @@
   display: table-cell;
   vertical-align: top;
   //padding-left: 6px;
-  padding-left: 32px;
+  padding-left: 36px;
 
   &:first-child {
     padding-left: 10px;
+  }
+
+  @include respond-to-max($resp_step_2) {
+    &:nth-child(n+6) {
+      display: none;
+    }
+  }
+
+  @include respond-to-min($resp_step_2) {
+    padding-left: 35px;
+
+    &:first-child {
+      padding-left: 10px;
+    }
+  }
+
+  @include respond-to-min($resp_step_3) {
+    padding-left: 57px;
+
+    &:first-child {
+      padding-left: 5px;
+    }
+  }
+
+  @include respond-to-min($resp_step_4) {
+    padding-left: 75px;
+
+    &:first-child {
+      padding-left: 0;
+    }
   }
 
   span {
     padding-right: 4px;
   }
 
+  .trend {
+    @extend %icon_pseudo;
+    position: relative;
+    white-space: nowrap;
+    padding: 0 0 0 5px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 5px;
+      height: 1px;
+      background: #828282;
+    }
+
+    &:after {
+      font-size: 8px;
+    }
+
+    &._up {
+      color: rgba(46, 155, 14, 0.9);
+
+      &:before {
+        background: rgba(46, 155, 14, 0.9);
+      }
+
+      &:after {
+        content: ' ' + $icon-asc;
+      }
+    }
+
+    &._down {
+      color: #ff0a24;
+
+      &:before {
+        background: #ff0a24;
+      }
+
+      &:after {
+        content: ' ' + $icon-desc;
+      }
+    }
+  }
+
   p {
     + p {
-      margin-top: 3px;
+      margin-top: 8px;
 
       @include respond-to-min($resp_step_2) {
         //margin-top: 7px;

@@ -299,13 +299,14 @@
       bottom: -12px;
       right: -21px;
       left: -21px;
-      background: $violette_dark;
+      //background: $violette_dark;
+      background: rgba(0, 0, 0, 0.35);
       opacity: 0;
     }
 
     &:hover {
       &:before {
-        @include transform_translate(0, -4px);
+        //@include transform_translate(0, -4px);
         opacity: 1;
       }
     }

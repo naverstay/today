@@ -40,6 +40,14 @@
 .btn_v2 {
   height: 40px;
 
+  &.submit_release_btn {
+    display: block;
+    margin-bottom: 12px;
+    text-align: center;
+    padding: 10px;
+    font: 16px/20px $RubikBold;
+  }
+
   &.create_release_btn {
     float: right;
     display: block;
@@ -268,6 +276,16 @@
   &:hover {
     background: #fff;
     color: $violette;
+  }
+}
+
+.btn_violette_3 {
+  @include transition_all(background .3s, color .3s);
+  background: $violette;
+  color: #fff;
+
+  &:hover {
+    background: darken($violette, 10%);
   }
 }
 

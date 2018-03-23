@@ -1,6 +1,6 @@
-[*]
-indent_style = space
-indent_size = 2
-[*.jade, *.pug]
+[*.jade,*.pug]
 indent_style = space
 indent_size = 4
+[*.scss, *.sass]
+indent_style = space
+indent_size = 2

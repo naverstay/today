@@ -134,68 +134,19 @@ mixin action_block(calendar)
             .article_calendar_holder
               a.article_calendar_link(href='#') Add
 
-mixin aside_block(calendar)
-    .aside_block
-        .aside_info_box
-            .aside_box_caption
-                span.aside_caption_icon._qoute
-                .aside_caption_link Most viewed news
-
-            ul.recent_news_list
-                li
-                    .recent_news
-                        a.article_link(href='#') South Korean Regulator Fines Crypto Exchanges over Privacy Failures
-                        ul.article_stat
-                            li
-                                span.article_stat_val Jan 10, 2018 at 10:00
-                            li
-                                span.article_stat_val._stat_views 212
-                            li._first
-                                a.article_stat_val(href='#') Ariel Deschapell
-
-                li
-                    .recent_news
-                        a.article_link(href='#') Amazon User Orders Bitcoin Miner, Gets 'Boss Baby' DVD Instead
-                        ul.article_stat
-                            li
-                                span.article_stat_val Jan 10, 2018 at 10:00
-                            li
-                                span.article_stat_val._stat_views 212
-                            li._first
-                                a.article_stat_val(href='#') Ariel Deschapell
-
-                li
-                    .recent_news
-                        a.article_link(href='#') Payment Processor Stripe to End Support for Bitcoin
-                        ul.article_stat
-                            li
-                                span.article_stat_val Jan 10, 2018 at 10:00
-                            li
-                                span.article_stat_val._stat_views 212
-                            li._first
-                                a.article_stat_val(href='#') Ariel Deschapell
-
-                li
-                    .recent_news
-                        a.article_link(href='#') Just Because It's Bad for Your Coin Doesn't Mean It's FUD
-                        ul.article_stat
-                            li
-                                span.article_stat_val Jan 10, 2018 at 10:00
-                            li
-                                span.article_stat_val._stat_views 212
-                            li._first
-                                a.article_stat_val(href='#') Ariel Deschapell
-
-        - if (calendar)
+mixin aside_block(calendar, release)
+    - if (release)
+        .aside_block
+            a.btn_v2.submit_release_btn.btn_violette_3(href='new_release.html') Submit press release
             .aside_info_box
                 .aside_box_caption
-                    span.aside_caption_icon._calendar
-                    .aside_caption_link Upcoming CryptoEvents
+                    span.aside_caption_icon._hot
+                    .aside_caption_link Most viewed news
 
                 ul.recent_news_list
                     li
                         .recent_news
-                            a.article_link(href='#') SXSW Crypto Summit: New Girls on the Block
+                            a.article_link(href='#') South Korean Regulator Fines Crypto Exchanges over Privacy Failures
                             ul.article_stat
                                 li
                                     span.article_stat_val Jan 10, 2018 at 10:00
@@ -206,7 +157,7 @@ mixin aside_block(calendar)
 
                     li
                         .recent_news
-                            a.article_link(href='#') BlockShow Europe Meetups: Stockholm
+                            a.article_link(href='#') Amazon User Orders Bitcoin Miner, Gets 'Boss Baby' DVD Instead
                             ul.article_stat
                                 li
                                     span.article_stat_val Jan 10, 2018 at 10:00
@@ -216,171 +167,275 @@ mixin aside_block(calendar)
                                     a.article_stat_val(href='#') Ariel Deschapell
 
                     li
-                        a.recent_news_link(href='#') Show all
+                        .recent_news
+                            a.article_link(href='#') Payment Processor Stripe to End Support for Bitcoin
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
 
-        .aside_subscribe
-            .footer_logo
-                a.logo(href='index.html')
-                    img(src= 'i/logo_c.svg')
+                    li
+                        .recent_news
+                            a.article_link(href='#') Just Because It's Bad for Your Coin Doesn't Mean It's FUD
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
 
-            p The latest news  twice a week
 
-            a.btn_white.btn_v3.subscribe_btn.openSubscribe(href='#'): span Subscribe
+    - else
+        .aside_block
+            .aside_info_box
+                .aside_box_caption
+                    span.aside_caption_icon._qoute
+                    .aside_caption_link Most viewed news
 
-            ul.action_list
-                li: a.action_link._w(href='#')
-                li: a.action_link._t(href='#')
-                li: a.action_link._f(href='#')
-                li: a.action_link._r(href='#')
+                ul.recent_news_list
+                    li
+                        .recent_news
+                            a.article_link(href='#') South Korean Regulator Fines Crypto Exchanges over Privacy Failures
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
 
-        .aside_info_box
-            .aside_box_caption
-                span.aside_caption_icon._top
-                .aside_caption_link Top Story
+                    li
+                        .recent_news
+                            a.article_link(href='#') Amazon User Orders Bitcoin Miner, Gets 'Boss Baby' DVD Instead
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
 
-            ul.recent_news_list
-                li
-                    .recent_news
-                        a.article_link._fz_16(href='#') Building a Base?<br> Bitcoin Demand at $10K Hints at Move Higher
-                        ul.article_stat
-                            li
-                                span.article_stat_val Jan 10, 2018 at 10:00
-                            li
-                                span.article_stat_val._stat_views 212
-                            li._first
-                                a.article_stat_val(href='#') Ariel Deschapell
+                    li
+                        .recent_news
+                            a.article_link(href='#') Payment Processor Stripe to End Support for Bitcoin
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
 
-            .aside_box_caption
-                span.aside_caption_icon._comments
-                .aside_caption_link Most commented articles
+                    li
+                        .recent_news
+                            a.article_link(href='#') Just Because It's Bad for Your Coin Doesn't Mean It's FUD
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
 
-            ul.recent_news_list
-                li
-                    .recent_news
-                        a.article_link(href='#') South Korean Regulator Fines Crypto Exchanges over Privacy Failures
-                        ul.article_stat
-                            li
-                                span.article_stat_val Jan 10, 2018 at 10:00
-                            li
-                                span.article_stat_val._stat_views 212
-                            li._first
-                                a.article_stat_val(href='#') Ariel Deschapell
+            - if (calendar)
+                .aside_info_box
+                    .aside_box_caption
+                        span.aside_caption_icon._calendar
+                        .aside_caption_link Upcoming CryptoEvents
 
-                li
-                    .recent_news
-                        a.article_link(href='#') Amazon User Orders Bitcoin Miner, Gets 'Boss Baby' DVD Instead
-                        ul.article_stat
-                            li
-                                span.article_stat_val Jan 10, 2018 at 10:00
-                            li
-                                span.article_stat_val._stat_views 212
-                            li._first
-                                a.article_stat_val(href='#') Ariel Deschapell
+                    ul.recent_news_list
+                        li
+                            .recent_news
+                                a.article_link(href='#') SXSW Crypto Summit: New Girls on the Block
+                                ul.article_stat
+                                    li
+                                        span.article_stat_val Jan 10, 2018 at 10:00
+                                    li
+                                        span.article_stat_val._stat_views 212
+                                    li._first
+                                        a.article_stat_val(href='#') Ariel Deschapell
 
-                li
-                    .recent_news
-                        a.article_link(href='#') Payment Processor Stripe to End Support for Bitcoin
-                        ul.article_stat
-                            li
-                                span.article_stat_val Jan 10, 2018 at 10:00
-                            li
-                                span.article_stat_val._stat_views 212
-                            li._first
-                                a.article_stat_val(href='#') Ariel Deschapell
+                        li
+                            .recent_news
+                                a.article_link(href='#') BlockShow Europe Meetups: Stockholm
+                                ul.article_stat
+                                    li
+                                        span.article_stat_val Jan 10, 2018 at 10:00
+                                    li
+                                        span.article_stat_val._stat_views 212
+                                    li._first
+                                        a.article_stat_val(href='#') Ariel Deschapell
 
-                li
-                    .recent_news
-                        a.article_link(href='#') Just Because It's Bad for Your Coin Doesn't Mean It's FUD
-                        ul.article_stat
-                            li
-                                span.article_stat_val Jan 10, 2018 at 10:00
-                            li
-                                span.article_stat_val._stat_views 212
-                            li._first
-                                a.article_stat_val(href='#') Ariel Deschapell
+                        li
+                            a.recent_news_link(href='#') Show all
 
-        .aside_banner
-            img(src='i/aside_banner_1.jpg')
-            .banner_content
-                p Banner.
+            .aside_subscribe
+                .footer_logo
+                    a.logo(href='index.html')
+                        img(src= 'i/logo_c.svg')
 
-        .aside_info_box
-            .aside_box_caption
-                span.aside_caption_icon._popular
-                .aside_caption_link Most popular stories
+                p The latest news  twice a week
 
-            ul.recent_news_list
-                li
-                    .recent_news
-                        a.article_link(href='#') South Korean Regulator Fines Crypto Exchanges over Privacy Failures
-                        ul.article_stat
-                            li
-                                span.article_stat_val Jan 10, 2018 at 10:00
-                            li
-                                span.article_stat_val._stat_views 212
-                            li._first
-                                a.article_stat_val(href='#') Ariel Deschapell
+                a.btn_white.btn_v3.subscribe_btn.openSubscribe(href='#'): span Subscribe
 
-                li
-                    .recent_news
-                        a.article_link(href='#') Amazon User Orders Bitcoin Miner, Gets 'Boss Baby' DVD Instead
-                        ul.article_stat
-                            li
-                                span.article_stat_val Jan 10, 2018 at 10:00
-                            li
-                                span.article_stat_val._stat_views 212
-                            li._first
-                                a.article_stat_val(href='#') Ariel Deschapell
+                ul.action_list
+                    li: a.action_link._w(href='#')
+                    li: a.action_link._t(href='#')
+                    li: a.action_link._f(href='#')
+                    li: a.action_link._r(href='#')
 
-                li
-                    .recent_news
-                        a.article_link(href='#') Payment Processor Stripe to End Support for Bitcoin
-                        ul.article_stat
-                            li
-                                span.article_stat_val Jan 10, 2018 at 10:00
-                            li
-                                span.article_stat_val._stat_views 212
-                            li._first
-                                a.article_stat_val(href='#') Ariel Deschapell
+            .aside_info_box
+                .aside_box_caption
+                    span.aside_caption_icon._top
+                    .aside_caption_link Top Story
 
-        .aside_info_box
-            .aside_box_caption
-                span.aside_caption_icon._futurama
-                .aside_caption_link Futurama
+                ul.recent_news_list
+                    li
+                        .recent_news
+                            a.article_link._fz_16(href='#') Building a Base?<br> Bitcoin Demand at $10K Hints at Move Higher
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
 
-            ul.recent_news_list
-                li
-                    .recent_news
-                        a.article_link(href='#') South Korean Regulator Fines Crypto Exchanges over Privacy Failures
-                        ul.article_stat
-                            li
-                                span.article_stat_val Jan 10, 2018 at 10:00
-                            li
-                                span.article_stat_val._stat_views 212
-                            li._first
-                                a.article_stat_val(href='#') Ariel Deschapell
+                .aside_box_caption
+                    span.aside_caption_icon._comments
+                    .aside_caption_link Most commented articles
 
-                li
-                    .recent_news
-                        a.article_link(href='#') Amazon User Orders Bitcoin Miner, Gets 'Boss Baby' DVD Instead
-                        ul.article_stat
-                            li
-                                span.article_stat_val Jan 10, 2018 at 10:00
-                            li
-                                span.article_stat_val._stat_views 212
-                            li._first
-                                a.article_stat_val(href='#') Ariel Deschapell
+                ul.recent_news_list
+                    li
+                        .recent_news
+                            a.article_link(href='#') South Korean Regulator Fines Crypto Exchanges over Privacy Failures
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
 
-                li
-                    .recent_news
-                        a.article_link(href='#') Payment Processor Stripe to End Support for Bitcoin
-                        ul.article_stat
-                            li
-                                span.article_stat_val Jan 10, 2018 at 10:00
-                            li
-                                span.article_stat_val._stat_views 212
-                            li._first
-                                a.article_stat_val(href='#') Ariel Deschapell
+                    li
+                        .recent_news
+                            a.article_link(href='#') Amazon User Orders Bitcoin Miner, Gets 'Boss Baby' DVD Instead
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
+
+                    li
+                        .recent_news
+                            a.article_link(href='#') Payment Processor Stripe to End Support for Bitcoin
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
+
+                    li
+                        .recent_news
+                            a.article_link(href='#') Just Because It's Bad for Your Coin Doesn't Mean It's FUD
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
+
+            .aside_banner
+                img(src='i/aside_banner_1.jpg')
+                .banner_content
+                    p Banner.
+
+            .aside_info_box
+                .aside_box_caption
+                    span.aside_caption_icon._popular
+                    .aside_caption_link Most popular stories
+
+                ul.recent_news_list
+                    li
+                        .recent_news
+                            a.article_link(href='#') South Korean Regulator Fines Crypto Exchanges over Privacy Failures
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
+
+                    li
+                        .recent_news
+                            a.article_link(href='#') Amazon User Orders Bitcoin Miner, Gets 'Boss Baby' DVD Instead
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
+
+                    li
+                        .recent_news
+                            a.article_link(href='#') Payment Processor Stripe to End Support for Bitcoin
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
+
+            .aside_info_box
+                .aside_box_caption
+                    span.aside_caption_icon._futurama
+                    .aside_caption_link Futurama
+
+                ul.recent_news_list
+                    li
+                        .recent_news
+                            a.article_link(href='#') South Korean Regulator Fines Crypto Exchanges over Privacy Failures
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
+
+                    li
+                        .recent_news
+                            a.article_link(href='#') Amazon User Orders Bitcoin Miner, Gets 'Boss Baby' DVD Instead
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
+
+                    li
+                        .recent_news
+                            a.article_link(href='#') Payment Processor Stripe to End Support for Bitcoin
+                            ul.article_stat
+                                li
+                                    span.article_stat_val Jan 10, 2018 at 10:00
+                                li
+                                    span.article_stat_val._stat_views 212
+                                li._first
+                                    a.article_stat_val(href='#') Ariel Deschapell
 
 mixin tag_holder(cls)
     .tag_holder.clearfix(class= cls)
@@ -418,7 +473,8 @@ mixin top_info()
                 .currency_info_cell
                     p
                         span BCH
-                        span.clr_green (+10.82%)
+                        span.trend._up 2%
+                        //span.clr_green (+10.82%)
                     p
                         span.currency_val 3236.51
                 //-.currency_info_cell
@@ -428,7 +484,8 @@ mixin top_info()
                 .currency_info_cell
                     p
                         span BTC
-                        span.clr_red_2 (-81.82%)
+                        span.trend 0%
+                        //span.clr_red_2 (-81.82%)
                     p
                         span.currency_val 2636.79
                 //-.currency_info_cell
@@ -438,7 +495,8 @@ mixin top_info()
                 .currency_info_cell
                     p
                         span ETH
-                        span.clr_red_2 (-83.82%)
+                        span.trend._up 1%
+                        //span.clr_red_2 (-83.82%)
                     p
                         span.currency_val 2636.79
                 //-.currency_info_cell
@@ -447,8 +505,9 @@ mixin top_info()
 
                 .currency_info_cell
                     p
-                        span GBT
-                        span.clr_green (+10.82%)
+                        span LTC
+                        span.trend._down -3%
+                        //span.clr_green (+10.82%)
                     p
                         span.currency_val 3236.51
                 //-.currency_info_cell
@@ -457,8 +516,25 @@ mixin top_info()
 
                 .currency_info_cell
                     p
-                        span GBB
-                        span.clr_green (+10.82%)
+                        span XRP
+                        span.trend._down -3%
+                        //span.clr_green (+10.82%)
+                    p
+                        span.currency_val 33236.51
+
+                .currency_info_cell
+                    p
+                        span ADA
+                        span.trend._down -10%
+                        //span.clr_green (+10.82%)
+                    p
+                        span.currency_val 33236.51
+
+                .currency_info_cell
+                    p
+                        span NEO
+                        span.trend._down -6%
+                        //span.clr_green (+10.82%)
                     p
                         span.currency_val 33236.51
                 //-.currency_info_cell
@@ -671,7 +747,7 @@ mixin header()
                         span
                 li
                     a.search_btn.searchBtn(href='#')
-                li._vis_1280
+                li
                     a.head_subscribe_btn.btn_v2.btn_violette.openSubscribe(href='#')
                         span Subscribe
 
