@@ -104,46 +104,10 @@
     border: 0 !important;
   }
 
-  ._news &,
-  ._stories &,
-  ._top & {
-    border-bottom-color: $violette;
-  }
-
-  ._release & {
-    border-bottom-color: $pink;
-  }
-
-  ._analysis & {
-    border-bottom-color: $orange;
-  }
-
-  ._pricewise & {
-    border-bottom-color: $green;
-  }
-
-  ._sponsored & {
-    border-bottom-color: $green_2;
-  }
-
-  ._pool & {
-    border-bottom-color: $blue;
-  }
-
-  ._features & {
-    border-bottom-color: $red;
-  }
-
-  ._wiki & {
-    border-bottom-color: $brown;
-  }
-
-  ._crypto & {
-    border-bottom-color: $brown_2;
-  }
-
-  ._watch & {
-    border-bottom-color: $violette_2;
+  @each $cls, $color in $firm-colors {
+    .#{$cls} & {
+      border-bottom-color: $color;
+    }
   }
 }
 
@@ -439,95 +403,14 @@
     }
   }
 
-  ._news &,
-  ._stories &,
-  ._top & {
-    color: $violette;
+  @each $cls, $color in $firm-colors {
+    .#{$cls} & {
+      color: $color;
 
-    &._active,
-    &:hover {
-      background: $violette;
-    }
-  }
-
-  ._release & {
-    color: $pink;
-
-    &._active,
-    &:hover {
-      background: $pink;
-    }
-  }
-
-  ._analysis & {
-    color: $orange;
-
-    &._active,
-    &:hover {
-      background: $orange;
-    }
-  }
-
-  ._pricewise & {
-    color: $green;
-
-    &._active,
-    &:hover {
-      background: $green;
-    }
-  }
-
-  ._sponsored & {
-    color: $green_2;
-
-    &._active,
-    &:hover {
-      background: $green_2;
-    }
-  }
-
-  ._pool & {
-    color: $blue;
-
-    &._active,
-    &:hover {
-      background: $blue;
-    }
-  }
-
-  ._features & {
-    color: $red;
-
-    &._active,
-    &:hover {
-      background: $red;
-    }
-  }
-
-  ._wiki & {
-    color: $brown;
-
-    &._active,
-    &:hover {
-      background: $brown;
-    }
-  }
-
-  ._crypto & {
-    color: $brown_2;
-
-    &._active,
-    &:hover {
-      background: $brown_2;
-    }
-  }
-
-  ._watch & {
-    color: $violette_2;
-
-    &._active,
-    &:hover {
-      background: $violette_2;
+      &._active,
+      &:hover {
+        background: $color;
+      }
     }
   }
 
@@ -568,144 +451,18 @@
       border-right: 6px solid #fff;
     }
 
-    ._news &,
-    ._stories &,
-    ._top & {
-      border-color: $violette;
+    @each $cls, $color in $firm-colors {
+      .#{$cls} & {
+        border-color: $color;
 
-      &:before {
-        border-right-color: $violette;
-      }
-
-      &:hover {
-        &:after {
-          border-right-color: $violette;
+        &:before {
+          border-right-color: $color;
         }
-      }
-    }
 
-    ._release & {
-      border-color: $pink;
-
-      &:before {
-        border-right-color: $pink;
-      }
-
-      &:hover {
-        &:after {
-          border-right-color: $pink;
-        }
-      }
-    }
-
-    ._analysis & {
-      border-color: $orange;
-
-      &:before {
-        border-right-color: $orange;
-      }
-
-      &:hover {
-        &:after {
-          border-right-color: $orange;
-        }
-      }
-    }
-
-    ._pricewise & {
-      border-color: $green;
-
-      &:before {
-        border-right-color: $green;
-      }
-
-      &:hover {
-        &:after {
-          border-right-color: $green;
-        }
-      }
-    }
-
-    ._sponsored & {
-      border-color: $green_2;
-
-      &:before {
-        border-right-color: $green_2;
-      }
-
-      &:hover {
-        &:after {
-          border-right-color: $green_2;
-        }
-      }
-    }
-
-    ._pool & {
-      border-color: $blue;
-
-      &:before {
-        border-right-color: $blue;
-      }
-
-      &:hover {
-        &:after {
-          border-right-color: $blue;
-        }
-      }
-    }
-
-    ._features & {
-      border-color: $red;
-
-      &:before {
-        border-right-color: $red;
-      }
-
-      &:hover {
-        &:after {
-          border-right-color: $red;
-        }
-      }
-    }
-
-    ._wiki & {
-      border-color: $brown;
-
-      &:before {
-        border-right-color: $brown;
-      }
-
-      &:hover {
-        &:after {
-          border-right-color: $brown;
-        }
-      }
-    }
-
-    ._crypto & {
-      border-color: $brown_2;
-
-      &:before {
-        border-right-color: $brown_2;
-      }
-
-      &:hover {
-        &:after {
-          border-right-color: $brown_2;
-        }
-      }
-    }
-
-    ._watch & {
-      border-color: $violette_2;
-
-      &:before {
-        border-right-color: $violette_2;
-      }
-
-      &:hover {
-        &:after {
-          border-right-color: $violette_2;
+        &:hover {
+          &:after {
+            border-right-color: $color;
+          }
         }
       }
     }

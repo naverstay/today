@@ -149,134 +149,26 @@
   }
 
   %firm_color {
-    ._news &,
-    ._stories &,
-    ._top & {
-      color: $violette;
-    }
-
-    ._release & {
-      color: $pink;
-    }
-
-    ._analysis & {
-      color: $orange;
-    }
-
-    ._pricewise & {
-      color: $green;
-    }
-
-    ._sponsored & {
-      color: $green_2;
-    }
-
-    ._pool & {
-      color: $blue;
-    }
-
-    ._features & {
-      color: $red;
-    }
-
-    ._wiki & {
-      color: $brown;
-    }
-
-    ._crypto & {
-      color: $brown_2;
-    }
-
-    ._watch & {
-      color: $violette_2;
+    @each $cls, $color in $firm-colors {
+      .#{$cls} & {
+        color: $color;
+      }
     }
   }
 
   %firm_border_color {
-    ._news &,
-    ._stories &,
-    ._top & {
-      border-color: $violette;
-    }
-
-    ._release & {
-      border-color: $pink;
-    }
-
-    ._analysis & {
-      border-color: $orange;
-    }
-
-    ._pricewise & {
-      border-color: $green;
-    }
-
-    ._sponsored & {
-      border-color: $green_2;
-    }
-
-    ._pool & {
-      border-color: $blue;
-    }
-
-    ._features & {
-      border-color: $red;
-    }
-
-    ._wiki & {
-      border-color: $brown;
-    }
-
-    ._crypto & {
-      border-color: $brown_2;
-    }
-
-    ._watch & {
-      border-color: $violette_2;
+    @each $cls, $color in $firm-colors {
+      .#{$cls} & {
+        border-color: $color;
+      }
     }
   }
 
   %firm_bg_color {
-    ._news &,
-    ._stories &,
-    ._top & {
-      background-color: $violette;
-    }
-
-    ._release & {
-      background-color: $pink;
-    }
-
-    ._analysis & {
-      background-color: $orange;
-    }
-
-    ._pricewise & {
-      background-color: $green;
-    }
-
-    ._sponsored & {
-      background-color: $green_2;
-    }
-
-    ._pool & {
-      background-color: $blue;
-    }
-
-    ._features & {
-      background-color: $red;
-    }
-
-    ._wiki & {
-      background-color: $brown;
-    }
-
-    ._crypto & {
-      background-color: $brown_2;
-    }
-
-    ._watch & {
-      background-color: $violette_2;
+    @each $cls, $color in $firm-colors {
+      .#{$cls} & {
+        background-color: $color;
+      }
     }
   }
 

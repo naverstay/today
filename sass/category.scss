@@ -33,46 +33,10 @@
     }
   }
 
-  &._news,
-  &._stories,
-  &._top {
-    background: $violette;
-  }
-
-  &._release {
-    background: $pink;
-  }
-
-  &._analysis {
-    background: $orange;
-  }
-
-  &._pricewise {
-    background: $green;
-  }
-
-  &._sponsored {
-    background: $green_2;
-  }
-
-  &._pool {
-    background: $blue;
-  }
-
-  &._features {
-    background: $red;
-  }
-
-  &._wiki {
-    background: $brown;
-  }
-
-  &._crypto {
-    background: $brown_2;
-  }
-
-  &._watch {
-    background: $violette_2;
+  @each $cls, $color in $firm-colors {
+    &.#{$cls} {
+      background: $color;
+    }
   }
 }
 
@@ -121,115 +85,15 @@
     letter-spacing: -.05em;
   }
 
-  &._news,
-  &._stories,
-  &._top {
-    &:before {
-      border-bottom-color: $violette;
-    }
+  @each $cls, $color in $firm-colors {
+    &.#{$cls} {
+      &:before {
+        border-bottom-color: $color;
+      }
 
-    .category_link {
-      background: $violette;
-    }
-  }
-
-  &._release {
-    &:before {
-      border-bottom-color: $pink;
-    }
-
-    .category_link {
-      background: $pink;
-    }
-  }
-
-  &._analysis {
-    &:before {
-      border-bottom-color: $orange;
-    }
-
-    .category_link {
-      background: $orange;
-    }
-  }
-
-  &._pricewise {
-    &:before {
-      border-bottom-color: $green;
-    }
-
-    .category_link {
-      background: $green;
-    }
-  }
-
-  &._news {
-    &:before {
-      border-bottom-color: $violette;
-    }
-
-    .category_link {
-      background: $violette;
-    }
-  }
-
-  &._sponsored {
-    &:before {
-      border-bottom-color: $green_2;
-    }
-
-    .category_link {
-      background: $green_2;
-    }
-  }
-
-  &._pool {
-    &:before {
-      border-bottom-color: $blue;
-    }
-
-    .category_link {
-      background: $blue;
-    }
-  }
-
-  &._features {
-    &:before {
-      border-bottom-color: $red;
-    }
-
-    .category_link {
-      background: $red;
-    }
-  }
-
-  &._wiki {
-    &:before {
-      border-bottom-color: $brown;
-    }
-
-    .category_link {
-      background: $brown;
-    }
-  }
-
-  &._crypto {
-    &:before {
-      border-bottom-color: $brown_2;
-    }
-
-    .category_link {
-      background: $brown_2;
-    }
-  }
-
-  &._watch {
-    &:before {
-      border-bottom-color: $violette_2;
-    }
-
-    .category_link {
-      background: $violette_2;
+      .category_link {
+        background: $color;
+      }
     }
   }
 }

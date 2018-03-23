@@ -462,46 +462,10 @@
         }
       }
 
-      ._event._news &,
-      ._event._stories &,
-      ._event._top & {
-        background-color: $violette;
-      }
-
-      ._event._release & {
-        background-color: $pink;
-      }
-
-      ._event._analysis & {
-        background-color: $orange;
-      }
-
-      ._event._pricewise & {
-        background-color: $green;
-      }
-
-      ._event._sponsored & {
-        background-color: $green_2;
-      }
-
-      ._event._pool & {
-        background-color: $blue;
-      }
-
-      ._event._features & {
-        background-color: $red;
-      }
-
-      ._event._wiki & {
-        background-color: $brown;
-      }
-
-      ._event._crypto & {
-        background-color: $brown_2;
-      }
-
-      ._event._watch & {
-        background-color: $violette_2;
+      @each $cls, $color in $firm-colors {
+        ._event.#{$cls} & {
+          background-color: $color;
+        }
       }
     }
   }
@@ -844,109 +808,19 @@
     }
   }
 
-  ._news &,
-  ._stories &,
-  ._top & {
-    border-top-color: $violette;
-  }
-
-  ._release & {
-    border-top-color: $pink;
-  }
-
-  ._analysis & {
-    border-top-color: $orange;
-  }
-
-  ._pricewise & {
-    border-top-color: $green;
-  }
-
-  ._sponsored & {
-    border-top-color: $green_2;
-  }
-
-  ._pool & {
-    border-top-color: $blue;
-  }
-
-  ._features & {
-    border-top-color: $red;
-  }
-
-  ._wiki & {
-    border-top-color: $brown;
-  }
-
-  ._crypto & {
-    border-top-color: $brown_2;
-  }
-
-  ._watch & {
-    border-top-color: $violette_2;
+  @each $cls, $color in $firm-colors {
+    .#{$cls} & {
+      border-top-color: $color;
+    }
   }
 }
 
 ._bordered {
-  &._news,
-  &._stories,
-  &._top {
-    .article_block .article_link:hover {
-      color: $violette;
-    }
-  }
-
-  &._release {
-    .article_block .article_link:hover {
-      color: $pink;
-    }
-  }
-
-  &._analysis {
-    .article_block .article_link:hover {
-      color: $orange;
-    }
-  }
-
-  &._pricewise {
-    .article_block .article_link:hover {
-      color: $green;
-    }
-  }
-
-  &._sponsored {
-    .article_block .article_link:hover {
-      color: $green_2;
-    }
-  }
-
-  &._pool {
-    .article_block .article_link:hover {
-      color: $blue;
-    }
-  }
-
-  &._features {
-    .article_block .article_link:hover {
-      color: $red;
-    }
-  }
-
-  &._wiki {
-    .article_block .article_link:hover {
-      color: $brown;
-    }
-  }
-
-  &._crypto {
-    .article_block .article_link:hover {
-      color: $brown_2;
-    }
-  }
-
-  &._watch {
-    .article_block .article_link:hover {
-      color: $violette_2;
+  @each $cls, $color in $firm-colors {
+    &.#{$cls} {
+      .article_block .article_link:hover {
+        color: $color;
+      }
     }
   }
 }
@@ -1023,65 +897,11 @@
     }
   }
 
-  ._news &,
-  ._stories &,
-  ._top & {
-    &:before {
-      background: $violette;
-    }
-  }
-
-  ._release & {
-    &:before {
-      background: $pink;
-    }
-  }
-
-  ._analysis & {
-    &:before {
-      background: $green;
-    }
-  }
-
-  ._pricewise & {
-    &:before {
-      background: $green;
-    }
-  }
-
-  ._sponsored & {
-    &:before {
-      background: $green_2;
-    }
-  }
-
-  ._pool & {
-    &:before {
-      background: $blue;
-    }
-  }
-
-  ._features & {
-    &:before {
-      background: $red;
-    }
-  }
-
-  ._wiki & {
-    &:before {
-      background: $brown;
-    }
-  }
-
-  ._watch & {
-    &:before {
-      background: $violette_2;
-    }
-  }
-
-  ._crypto & {
-    &:before {
-      background: $brown_2;
+  @each $cls, $color in $firm-colors {
+    .#{$cls} & {
+      &:before {
+        background: $color;
+      }
     }
   }
 }
@@ -1110,48 +930,11 @@
     left: 50%;
   }
 
-  &._news,
-  &._stories,
-  &._top {
-    background: transparentize($violette, .2);
+  @each $cls, $color in $firm-colors {
+    &.#{$cls} {
+      background: transparentize($color, .2);
+    }
   }
-
-  &._release {
-    background: transparentize($pink, .2);
-  }
-
-  &._analysis {
-    background: transparentize($orange, .2);
-  }
-
-  &._pricewise {
-    background: transparentize($green, .2);
-  }
-
-  &._sponsored {
-    background: transparentize($green_2, .2);
-  }
-
-  &._pool {
-    background: transparentize($blue, .2);
-  }
-
-  &._features {
-    background: transparentize($red, .2);
-  }
-
-  &._wiki {
-    background: transparentize($brown, .2);
-  }
-
-  &._watch {
-    background: transparentize($violette_2, .2);
-  }
-
-  &._crypto {
-    background: transparentize($brown_2, .2);
-  }
-
 }
 
 .article_title {
@@ -1714,49 +1497,10 @@
     }
   }
 
-  &._news,
-  &._stories,
-  &._top {
-    background: $violette;
-  }
-
-  &._release {
-    background: $pink;
-  }
-
-  &._analysis {
-    background: $orange;
-  }
-
-  &._pricewise {
-    background: $green;
-  }
-
-  &._sponsored {
-    background: $green_2;
-  }
-
-  &._pool {
-    background: $blue;
-  }
-
-  &._features {
-    background: $red;
-  }
-
-  &._wiki {
-    background: $brown;
-    //}
-  }
-
-  &._crypto {
-    //&:before {
-    background: $brown_2;
-    //}
-  }
-
-  &._watch {
-    background: $violette_2;
+  @each $cls, $color in $firm-colors {
+    &.#{$cls} {
+      background: $color;
+    }
   }
 }
 
@@ -1869,65 +1613,11 @@
       }
     }
 
-    &._news,
-    &._stories,
-    &._top {
-      .article_group_link:before {
-        color: $violette;
-      }
-    }
-
-    &._release {
-      .article_group_link:before {
-        color: $pink;
-      }
-    }
-
-    &._analysis {
-      .article_group_link:before {
-        color: $orange;
-      }
-    }
-
-    &._pricewise {
-      .article_group_link:before {
-        color: $green;
-      }
-    }
-
-    &._sponsored {
-      .article_group_link:before {
-        color: $green_2;
-      }
-    }
-
-    &._pool {
-      .article_group_link:before {
-        color: $blue;
-      }
-    }
-
-    &._features {
-      .article_group_link:before {
-        color: $red;
-      }
-    }
-
-    &._wiki {
-      .article_group_link:before {
-        color: $brown;
-      }
-    }
-
-    &._crypto {
-      .article_group_link:before {
-        color: $brown_2;
-      }
-    }
-
-    &._watch {
-      .article_group_link:before {
-        color: $violette_2;
+    @each $cls, $color in $firm-colors {
+      &.#{$cls} {
+        .article_group_link:before {
+          color: $color;
+        }
       }
     }
 
@@ -1977,87 +1667,19 @@
     @extend %firm_color;
   }
 
-  ._news & {
-    &:before {
-      content: $icon-ufo;
-      color: $violette;
+  @each $cls, $color in $firm-colors {
+    .#{$cls} & {
+      &:before {
+        color: $color;
+      }
     }
   }
 
-  ._stories & {
-
-    //background-image: url(../i/story_title_violette.jpg);
-
-    &:before {
-      content: $icon-crypto;
-      background: $violette;
-    }
-  }
-
-  ._features & {
-
-    &:before {
-      content: $icon-star;
-      background: $red;
-    }
-  }
-
-  ._pool & {
-    //background-image: url(../i/story_title_blue.jpg);
-
-    &:before {
-      content: $icon-shark;
-      background: $blue;
-    }
-  }
-
-  ._analysis & {
-
-    //background-image: url(../i/story_title_orange.jpg);
-
-    &:before {
-      content: $icon-splash;
-      background: $orange;
-    }
-  }
-
-  ._pricewise & {
-
-    //background-image: url(../i/story_title_orange.jpg);
-
-    &:before {
-      content: $icon-splash;
-      background: $green;
-    }
-  }
-
-  ._crypto & {
-
-    //background-image: url(../i/story_title_blue.jpg);
-
-    &:before {
-      content: $icon-lamp;
-      background: $brown;
-    }
-  }
-
-  ._wiki & {
-
-    //background-image: url(../i/story_title_orange.jpg);
-
-    &:before {
-      content: $icon-startwo;
-      background: $brown_2;
-    }
-  }
-
-  ._watch & {
-
-    //background-image: url(../i/story_title_orange.jpg);
-
-    &:before {
-      content: $icon-ico;
-      background: $violette_2;
+  @each $cls, $content in $firm-icons {
+    .#{$cls} & {
+      &:before {
+        content: $content;
+      }
     }
   }
 }
