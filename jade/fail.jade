@@ -1,0 +1,34 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto fail')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +tag_holder()
+
+                    a.attention_block._warn(href='#')
+                        .attention_caption Breaking news
+                        p
+                            span Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+                            span.attention_link
+
+                    .msg_block
+                        .msg_title We are sorry :(
+
+                        p Server error occured. Please try again later
+
+                        .msg_status._fail
+                        p
+                            a.msg_link(href='#') BACK TO EVENTS
+
+            .nav_holder
+                +main_menu(true)
+                +search()
+
+            +header()
+            +footer()
+
+        +scripts(true)

@@ -899,6 +899,7 @@
 }
 
 .leave_comment_btn {
+  @include transition_all(color .3s);
   font: 13px/20px $RubikMed;
   color: #999;
 
@@ -908,8 +909,12 @@
     padding: 0 5px;
   }
 
-  ._icon {
+  .btn_icon {
     font-size: 18px;
+  }
+
+  &:hover {
+    color: #b8b8b8;
   }
 }
 

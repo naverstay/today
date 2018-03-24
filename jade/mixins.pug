@@ -650,17 +650,21 @@ mixin article_share(cls, tw, fb)
             li._right
                 a.btn_v4.subscr_btn._tw(href='#')
                     span Follow on
-                    span.icon-tw._icon
+                    span.icon-tw.btn_icon
         - else if (fb)
             li._right
                 a.btn_v4.subscr_btn._fb(href='#')
                     span Follow on
-                    span.icon-fb._icon
+                    span.icon-fb.btn_icon
         - else
             li._right
                 a.btn_v4.subscr_btn(href='#')
                     span Subscribe
 
+mixin stat_action()
+    li.stat_action
+        a.stat_action_link._f(href='#')
+        a.stat_action_link._w(href='#')
 
 mixin search()
     .search_holder
@@ -869,4 +873,7 @@ mixin scripts(share, mask)
         script(src='js/slick.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
+
+
+
 
