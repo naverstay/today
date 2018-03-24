@@ -130,6 +130,54 @@
 .btn_v4 {
   height: 34px;
 
+  &.subscr_btn {
+    @include transition_all(background .3s);
+    display: block;
+    padding: 5px 15px;
+    min-width: 132px;
+    border-radius: 17px;
+    text-align: center;
+    font: 14px/24px $RubikBold;
+    color: #fff;
+    letter-spacing: .015em;
+    background: $violette;
+
+    &:hover {
+      background: #6e31ef;
+    }
+
+    ._icon {
+      font-size: 18px;
+    }
+
+    &._fb {
+      background: #385184;
+
+      &:hover {
+        background: #43619e;
+      }
+    }
+
+    &._tw {
+      background: #1da1f2;
+
+      &:hover {
+        background: #23c1ff;
+      }
+    }
+
+    > span {
+      padding: 0 3px;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+
+    .btn_icon {
+      font-size: 34px;
+    }
+  }
+
   &.telegram_btn {
     float: right;
     padding: 5px 12px;

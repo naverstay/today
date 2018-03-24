@@ -512,6 +512,10 @@
       }
     }
   }
+
+  ._comment & {
+    padding-top: 0;
+  }
 }
 
 .article_block {
@@ -812,6 +816,10 @@
     .#{$cls} & {
       border-top-color: $color;
     }
+  }
+
+  &._comment {
+    margin-bottom: 0;
   }
 }
 

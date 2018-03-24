@@ -89,7 +89,7 @@ $firm-icons: (
   _wiki: $icon-startwo,
   _crypto: $icon-lamp,
   _watch: $icon-ico,
-  _ai: ''
+  _ai: $icon-ai
 );
 
 @mixin opacity($val : 1, $important : 0) {

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'crypto_icons';
-  src:  url('fonts/crypto_icons.eot?z0vj0r');
-  src:  url('fonts/crypto_icons.eot?z0vj0r#iefix') format('embedded-opentype'),
-    url('fonts/crypto_icons.ttf?z0vj0r') format('truetype'),
-    url('fonts/crypto_icons.woff?z0vj0r') format('woff'),
-    url('fonts/crypto_icons.svg?z0vj0r#crypto_icons') format('svg');
+  src:  url('fonts/crypto_icons.eot?alobc0');
+  src:  url('fonts/crypto_icons.eot?alobc0#iefix') format('embedded-opentype'),
+    url('fonts/crypto_icons.ttf?alobc0') format('truetype'),
+    url('fonts/crypto_icons.woff?alobc0') format('woff'),
+    url('fonts/crypto_icons.svg?alobc0#crypto_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -35,6 +35,9 @@
 }
 .icon-chevron-left:before {
   content: "\e926";
+}
+.icon-ai:before {
+  content: "\e92f";
 }
 .icon-ufo_3:before {
   content: "\e92a";

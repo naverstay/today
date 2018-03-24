@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'crypto_icons';
-  src: url('#{$icomoon-font-path}/crypto_icons.eot?z0vj0r');
-  src: url('#{$icomoon-font-path}/crypto_icons.eot?z0vj0r#iefix') format('embedded-opentype'),
-  url('#{$icomoon-font-path}/crypto_icons.ttf?z0vj0r') format('truetype'),
-  url('#{$icomoon-font-path}/crypto_icons.woff?z0vj0r') format('woff'),
-  url('#{$icomoon-font-path}/crypto_icons.svg?z0vj0r#crypto_icons') format('svg');
+  src: url('#{$icomoon-font-path}/crypto_icons.eot?alobc0');
+  src: url('#{$icomoon-font-path}/crypto_icons.eot?alobc0#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/crypto_icons.ttf?alobc0') format('truetype'),
+  url('#{$icomoon-font-path}/crypto_icons.woff?alobc0') format('woff'),
+  url('#{$icomoon-font-path}/crypto_icons.svg?alobc0#crypto_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -54,6 +54,12 @@
 .icon-chevron-left {
   &:before {
     content: unicode($icon-chevron-left);
+  }
+}
+
+.icon-ai {
+  &:before {
+    content: unicode($icon-ai);
   }
 }
 

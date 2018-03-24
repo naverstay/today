@@ -637,6 +637,31 @@ mixin article_soc(cls)
         li: a.action_sh._more(href='#') more…
         li: a.action_sh._count(href='#') 250k
 
+mixin article_share(cls, tw, fb)
+    ul.article_soc(class= cls)
+        li: a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+        li: a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
+        li: a.action_sh._g(href='#' data-network="googleplus" class='st-custom-button')
+        li: a.action_sh._l(href='#' data-network="linkedin" class='st-custom-button')
+        li: a.action_sh._tg(href='#')
+        li: a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
+
+        - if (tw)
+            li._right
+                a.btn_v4.subscr_btn._tw(href='#')
+                    span Follow on
+                    span.icon-tw._icon
+        - else if (fb)
+            li._right
+                a.btn_v4.subscr_btn._fb(href='#')
+                    span Follow on
+                    span.icon-fb._icon
+        - else
+            li._right
+                a.btn_v4.subscr_btn(href='#')
+                    span Subscribe
+
+
 mixin search()
     .search_holder
         .search_head
@@ -844,3 +869,4 @@ mixin scripts(share, mask)
         script(src='js/slick.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
+

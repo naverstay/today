@@ -171,6 +171,20 @@
   @extend %firm_color;
   font: 13px/22px $RubikMed;
   letter-spacing: -.017em;
+
+  .article_tag_list._tags_2 & {
+    display: block;
+    font-weight: 400;
+    line-height: 30px;
+    padding: 0 12px;
+    border-radius: 15px;
+    color: #999;
+    background: #f7f8f8;
+
+    &:hover {
+      color: #b8b8b8;
+    }
+  }
 }
 
 .article_telegram_section {
@@ -274,6 +288,27 @@
     padding-left: 4px;
     padding-right: 12px;
     float: left;
+
+    &._right {
+      float: right;
+    }
+  }
+
+  &._action {
+    padding: 21px 14px 21px 15px;
+    background: #f7f8f8;
+    margin-top: 8px;
+    margin-bottom: 25px;
+
+    .article_info_holder & {
+      li {
+        padding-right: 7px;
+      }
+    }
+
+    .action_sh {
+      color: #fff;
+    }
   }
 }
 
@@ -314,22 +349,18 @@
     }
   }
 
-  ._brand & {
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    font-size: 22px;
-    line-height: 40px;
-    color: #fff;
-  }
-
   &._f {
     &:before {
       content: $icon-fb;
     }
 
+    ._action &,
     ._brand & {
       background: #385184;
+
+      &:hover {
+        background: #43619e;
+      }
     }
   }
 
@@ -338,8 +369,13 @@
       content: $icon-tw;
     }
 
+    ._action &,
     ._brand & {
       background: #1da1f2;
+
+      &:hover {
+        background: #23c1ff;
+      }
     }
   }
 
@@ -347,11 +383,29 @@
     &:before {
       content: $icon-gp;
     }
+
+    ._action &,
+    ._brand & {
+      background: #d44132;
+
+      &:hover {
+        background: #fe4e3c;
+      }
+    }
   }
 
   &._l {
     &:before {
       content: $icon-in;
+    }
+
+    ._action &,
+    ._brand & {
+      background: #007bb6;
+
+      &:hover {
+        background: #0094da;
+      }
     }
   }
 
@@ -360,8 +414,13 @@
       content: $icon-inst;
     }
 
+    ._action &,
     ._brand & {
       background: #ed4956;
+
+      &:hover {
+        background: #ff5867;
+      }
     }
   }
 
@@ -388,8 +447,13 @@
       content: $icon-tg;
     }
 
+    ._action &,
     ._brand & {
       background: #08c;
+
+      &:hover {
+        background: #00a3f5;
+      }
     }
   }
 
@@ -398,8 +462,13 @@
       content: $icon-rd;
     }
 
+    ._action &,
     ._brand & {
       background: #fa500e;
+
+      &:hover {
+        background: #ff6011;
+      }
     }
   }
 
@@ -412,6 +481,15 @@
         background: $color;
       }
     }
+  }
+
+  ._brand & {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 22px;
+    line-height: 40px;
+    color: #fff;
   }
 
   &._more {
@@ -673,7 +751,7 @@
   }
 
   .article_img {
-    margin: 30px 0;
+    margin: 30px 0 0;
 
     img {
       margin: 0;
@@ -802,5 +880,49 @@
   ._hash {
     color: #c0c0c0;
     font: 9px $RubikMed;
+  }
+}
+
+.leave_comment_tip {
+  line-height: 18px;
+  font-size: 14px;
+  letter-spacing: .01em;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.leave_comment_block {
+  border: solid #c0c0c0;
+  border-width: 1px 0;
+  text-align: center;
+  padding: 9px;
+}
+
+.leave_comment_btn {
+  font: 13px/20px $RubikMed;
+  color: #999;
+
+  span {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px;
+  }
+
+  ._icon {
+    font-size: 18px;
+  }
+}
+
+.release_info {
+  font-size: 20px;
+  line-height: 40px;
+  padding: 20px 0;
+  border-top: 1px solid #c0c0c0;
+
+  dt {
+    clear: both;
+    float: left;
+    font-weight: bold;
+    padding-right: 15px;
   }
 }
