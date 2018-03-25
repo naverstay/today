@@ -17,7 +17,7 @@ module.exports = function (grunt) {
             }
         },
         wellington: {
-            your_target: {
+            styles: {
                 src: [
                     'sass/main_global.scss',
                     'sass/header_global.scss'
@@ -51,7 +51,7 @@ module.exports = function (grunt) {
                         'js/auto-complete.js',
                         'js/jquery.validationEngine.js',
                         'js/jquery.validationEngine-ru.js',
-                        'js/slick.js',
+                        'js/swiper.min.js',
                         'js/script.js'
                     ]
                 }

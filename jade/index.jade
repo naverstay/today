@@ -7,7 +7,7 @@ html(lang='ru')
         .wrapper
             .main_content
                 .section_inner
-                    +tag_holder()
+                    +tag_holder('_slider', true)
 
                     a.attention_block._warn(href='#')
                         .attention_caption Breaking news
@@ -397,7 +397,7 @@ html(lang='ru')
                                         a.article_group_link(href='#')
                                             span Press Release
                                         a.article_title_link(href='#') All #Press Release
-                                        a.article_title_link._submit(href='#') Submit press release
+                                        a.article_title_link._submit(href='new_release.html') Submit press release
 
                                 .news_col._third
                                     .article_block

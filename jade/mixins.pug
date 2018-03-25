@@ -437,26 +437,55 @@ mixin aside_block(calendar, release)
                                 li._first
                                     a.article_stat_val(href='#') Ariel Deschapell
 
-mixin tag_holder(cls)
-    .tag_holder.clearfix(class= cls)
-        .lang_block
-            select.lang_select
-                option eng
-                option rus
-            .select_arrow
-        ul.main_menu
-            li.menu_item
-                a.menu_link(href='#'): span News
-            li.menu_item
-                a.menu_link(href='#'): span Sharks Pool
-            li.menu_item
-                a.menu_link(href='#'): span Pricewise
-            li.menu_item
-                a.menu_link(href='#'): span Features
-            li.menu_item
-                a.menu_link(href='price.html'): span Analysis
-            li.menu_item
-                a.menu_link(href='#'): span Wikicoin
+mixin tag_holder(cls, slider)
+    - if (slider)
+        .tag_holder.clearfix(class= cls)
+            .lang_block
+                select.lang_select
+                    option eng
+                    option rus
+                .select_arrow
+            .tag_slider_holder
+                .tag_prev.tagPrev
+                .tag_next.tagNext
+                .swiper-container
+                    ul.main_menu.swiper-wrapper
+                        li.menu_item.swiper-slide
+                            a.menu_link(href='#'): span News
+                        li.menu_item.swiper-slide
+                            a.menu_link(href='#'): span Features
+                        li.menu_item.swiper-slide
+                            a.menu_link(href='#'): span Sharks Pool
+                        li.menu_item.swiper-slide
+                            a.menu_link(href='#'): span Pricewise
+                        li.menu_item.swiper-slide
+                            a.menu_link(href='#'): span CryptoTips
+                        li.menu_item.swiper-slide
+                            a.menu_link(href='#'): span ICO Watch
+                        li.menu_item.swiper-slide
+                            a.menu_link(href='price.html'): span PriceIndex
+                        li.menu_item.swiper-slide
+                            a.menu_link(href='#'): span Wikicoin
+    - else
+        .tag_holder.clearfix(class= cls)
+            .lang_block
+                select.lang_select
+                    option eng
+                    option rus
+                .select_arrow
+            ul.main_menu
+                li.menu_item
+                    a.menu_link(href='#'): span News
+                li.menu_item
+                    a.menu_link(href='#'): span Sharks Pool
+                li.menu_item
+                    a.menu_link(href='#'): span Pricewise
+                li.menu_item
+                    a.menu_link(href='#'): span Features
+                li.menu_item
+                    a.menu_link(href='price.html'): span Analysis
+                li.menu_item
+                    a.menu_link(href='#'): span Wikicoin
 
 mixin top_info()
     .top_info
@@ -870,10 +899,6 @@ mixin scripts(share, mask)
         script(src='js/auto-complete.js?t=' + time)
         script(src='js/jquery.validationEngine.js?t=' + time)
         script(src='js/jquery.validationEngine-ru.js?t=' + time)
-        script(src='js/slick.js?t=' + time)
+        script(src='js/swiper.min.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
-
-
-
-

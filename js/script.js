@@ -1,5 +1,5 @@
 var $wnd, $body, $header, $footer,
-    $subscribeTrigger, $subscribeBlock, $goTop, $goTopHolder, didScroll,
+    $subscribeTrigger, $subscribeBlock, $goTop, $goTopHolder, didScroll, tagSlider,
     lastScrollTop = 0, delta = 5,
     subscribe_spacer = 270;
 
@@ -171,6 +171,8 @@ $(function ($) {
 
     initMask();
 
+    initTagSlider();
+
 });
 
 $(window)
@@ -258,10 +260,38 @@ function initSubscribePopup() {
     });
 }
 
+function initTagSlider() {
+    tagSlider = new Swiper('.swiper-container', {
+        setWrapperSize: false,
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        freeMode: true,
+        watchOverflow: true,
+        roundLengths: true,
+        navigation: {
+            nextEl: '.tagNext',
+            prevEl: '.tagPrev'
+        }
+    });
+
+    $('body')
+        .delegate('.tagNext', 'mouseenter', function () {
+            if (!isTouch()) tagSlider.slideNext();
+        })
+        .delegate('.tagPrev', 'mouseenter', function () {
+            if (!isTouch()) tagSlider.slidePrev();
+        });
+}
+
+function isTouch() {
+    return 'ontouchstart' in window        // works on most browsers
+        || navigator.maxTouchPoints;       // works on IE10/11 and Surface
+}
+
 function initMask() {
-  $("input").filter(function (i, el) {
-    return $(el).attr('data-inputmask') !== void 0;
-  }).inputmask();
+    $("input").filter(function (i, el) {
+        return $(el).attr('data-inputmask') !== void 0;
+    }).inputmask();
 }
 
 function initValidation(el, prompts) {
