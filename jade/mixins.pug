@@ -57,7 +57,7 @@ mixin footer()
                         li: a.footer_col_link(href='#'): span PriceIndex
 
                 .footer_col.s_3
-                    .footer_col_caption Categories
+                    .footer_col_caption Sections
 
                     ul.footer_col_menu
                         li: a.footer_col_link(href='#'): span Advertise
@@ -73,17 +73,22 @@ mixin footer()
                     .follow_form
                         form(action='#')
                             .follow_cell
-                                .input_w
-                                    input.input_v4(placeholder='Enter your email')
-                            .follow_cell
                                 button.btn_v4.subscr_btn()
                                     span Subscribe
+                            .follow_cell
+                                .input_w
+                                    input.input_v4(placeholder='Enter your email')
 
-        .section_inner.clearfix.copyright_block
-            .copyright ©2018 CryptoComes
-            ul.footer_menu.hide
+                    ul.footer_follow_list
+                        li: a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+                        li: a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
+                        li: a.action_sh._tg(href='#')
+
+        .section_inner.clearfix: .copyright_block
+            .copyright © CryptoComes 2017 - 2018. All rights reserved
+            ul.footer_menu
+                li: a.footer_link(href='#') Terms and conditions
                 li: a.footer_link(href='#') Privacy Policy
-                li: a.footer_link(href='#') Terms of Service
 
         .go_top_holder.goTopHolder
             .section_inner
