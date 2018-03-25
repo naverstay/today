@@ -214,6 +214,51 @@
   }
 }
 
+.footer_col {
+  float: left;
+
+  p {
+    color: $violette;
+    font: 13px/16px $RubikReg;
+    margin-bottom: 10px;
+  }
+
+  &.s_2 {
+    width: 30%;
+  }
+
+  &.s_3 {
+    width: 30%;
+  }
+
+  &.s_4 {
+    width: 40%;
+  }
+}
+
+.footer_col_menu {
+  list-style: none;
+  float: left;
+  width: 50%;
+
+  li {
+    margin-bottom: 5px;
+  }
+}
+
+.footer_col_link {
+  text-decoration: none;
+  letter-spacing: .2em;
+  color: $violette;
+  font: 13px/25px $RubikReg;
+}
+
+.footer_col_caption {
+  color: $violette;
+  font: 16px $RubikReg;
+  margin-bottom: 15px;
+}
+
 .footer_menu {
   list-style: none;
   float: right;

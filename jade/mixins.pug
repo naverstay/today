@@ -35,7 +35,61 @@ mixin action_list()
       span RSS
 
 mixin footer()
-    .footer
+    .footer._footer_v2
+        .section_inner.clearfix
+            .footer_logo
+                a.logo(href='index.html')
+                    img(src= 'i/logo_h.png')
+
+            .footer_menu_holder
+                .footer_col.s_2
+                    .footer_col_caption Categories
+
+                    ul.footer_col_menu
+                        li: a.footer_col_link(href='#'): span News
+                        li: a.footer_col_link(href='#'): span Features
+                        li: a.footer_col_link(href='#'): span SharksPool
+                        li: a.footer_col_link(href='#'): span Pricewise
+                    ul.footer_col_menu
+                        li: a.footer_col_link(href='#'): span CryptoTips
+                        li: a.footer_col_link(href='#'): span ICOWatch
+                        li: a.footer_col_link(href='#'): span WikiCoin
+                        li: a.footer_col_link(href='#'): span PriceIndex
+
+                .footer_col.s_3
+                    .footer_col_caption Categories
+
+                    ul.footer_col_menu
+                        li: a.footer_col_link(href='#'): span Advertise
+                        li: a.footer_col_link(href='#'): span Partnership
+                        li: a.footer_col_link(href='#'): span Cryptofeeds
+                    ul.footer_col_menu
+                        li: a.footer_col_link(href='#'): span About CryptoComes
+                        li: a.footer_col_link(href='#'): span Contacts
+
+                .footer_col.s_4
+                    .footer_col_caption Follow us
+                    p To get hot news and stories
+                    .follow_form
+                        form(action='#')
+                            .follow_cell
+                                .input_w
+                                    input.input_v4(placeholder='Enter your email')
+                            .follow_cell
+                                button.btn_v4.subscr_btn()
+                                    span Subscribe
+
+        .section_inner.clearfix.copyright_block
+            .copyright ©2018 CryptoComes
+            ul.footer_menu.hide
+                li: a.footer_link(href='#') Privacy Policy
+                li: a.footer_link(href='#') Terms of Service
+
+        .go_top_holder.goTopHolder
+            .section_inner
+                a.go_top.goTop(href='#')
+
+    //-.footer
         .section_inner.clearfix
             .footer_logo
                 a.logo(href='index.html')
@@ -902,3 +956,9 @@ mixin scripts(share, mask)
         script(src='js/swiper.min.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
+
+
+
+
+
+

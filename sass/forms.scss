@@ -135,8 +135,39 @@ textarea.input_v3 {
   height: 240px;
 }
 
-.input_w {
-  position: relative;
+.input_v4 {
+  @include transition_all(border-color .3s);
+  display: block;
+  height: 34px;
+  width: 100%;
+  color: $violette;
+  border: 1px solid $violette;
+  border-radius: 2px;
+  font: 11px/14px $RubikMed;
+  padding: 10px 15px;
+  background: #fff;
+
+  &::-moz-placeholder {
+    color: $violette;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $violette;
+  }
+
+  &.error {
+    color: #ff0a24;
+    border-color: #ff0a24;
+  }
+
+  &.success {
+    color: #000;
+    border-color: #000;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    padding: 10px 35px;
+  }
 }
 
 .input_w {
