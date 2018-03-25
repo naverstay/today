@@ -374,10 +374,15 @@
   }
 
   .action_sh {
+    @include transition_all(color .3s, border-color .3s);
     color: $violette;
     border: 1px solid $violette;
-  }
 
+    &:hover {
+      color: #7835ff !important;
+      border-color: #7835ff;
+    }
+  }
 }
 
 .footer_col_link {
