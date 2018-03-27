@@ -126,8 +126,11 @@
 }
 
 .dialog_v1 {
+  position: fixed;
+
   .ui-widget-header {
     border: 0;
     background-color: transparent;
   }
 }
+
