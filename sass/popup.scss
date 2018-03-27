@@ -97,3 +97,37 @@
   font: 32px/1.15 $RubikMed;
   margin-bottom: 33px;
 }
+
+.follow_caption {
+  font: 30px/1.15 $RubikBold;
+  padding: 40px 0 20px;
+  margin-bottom: 33px;
+  text-align: center;
+}
+
+.follow_tips {
+  font: 20px/1.2 $RubikReg;
+  margin-bottom: 20px;
+  min-height: 110px;
+  text-align: center;
+}
+
+.follow_counter {
+  text-align: center;
+  color: #bdbdbd;
+  padding-top: 120px;
+  padding-bottom: 40px;
+  font: 15px/1.2 $RubikReg;
+}
+
+.follow_widget {
+  margin-bottom: 33px;
+  text-align: center;
+}
+
+.dialog_v1 {
+  .ui-widget-header {
+    border: 0;
+    background-color: transparent;
+  }
+}

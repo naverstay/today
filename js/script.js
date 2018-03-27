@@ -1,5 +1,6 @@
 var $wnd, $body, $header, $footer,
     $subscribeTrigger, $subscribeBlock, $goTop, $goTopHolder, didScroll, tagSlider,
+    $followPopup, followCountDown,
     lastScrollTop = 0, delta = 5,
     subscribe_spacer = 270;
 
@@ -167,12 +168,13 @@ $(function ($) {
 
     initSubscribePopup();
 
+    initFollowPopup();
+
     initValidation();
 
     initMask();
 
     initTagSlider();
-
 });
 
 $(window)
@@ -260,6 +262,45 @@ function initSubscribePopup() {
     });
 }
 
+function initFollowPopup() {
+
+    $followPopup = $('#follow_popup').dialog({
+        autoOpen: true,
+        modal: true,
+        closeOnEscape: true,
+        closeText: '',
+        dialogClass: 'dialog_v1',
+        //appendTo: '.wrapper',
+        width: 788,
+        draggable: true,
+        collision: "fit",
+        position: {my: "top center", at: "top center", of: window},
+        open: function (event, ui) {
+            $body.addClass('modal_opened overlay_v2');
+
+            startFollowCountDown();
+        },
+        close: function (event, ui) {
+            $body.removeClass('modal_opened overlay_v2');
+        }
+    });
+}
+
+function startFollowCountDown() {
+    var time = 20;
+
+    followCountDown = setInterval(function () {
+        time--;
+
+        $('.followCounter').text(plural(time, 'second','seconds','seconds'));
+
+        if (!time) {
+            clearInterval(followCountDown);
+            $followPopup.dialog('close');
+        }
+    }, 1000);
+}
+
 function initTagSlider() {
     tagSlider = new Swiper('.swiper-container', {
         setWrapperSize: false,
@@ -281,6 +322,10 @@ function initTagSlider() {
         .delegate('.tagPrev', 'mouseenter', function () {
             if (!isTouch()) tagSlider.slidePrev();
         });
+}
+
+function plural(n, str1, str2, str5) {
+	return n + ' ' + ((((n % 10) == 1) && ((n % 100) != 11)) ? (str1) : (((((n % 10) >= 2) && ((n % 10) <= 4)) && (((n % 100) < 10) || ((n % 100) >= 20))) ? (str2) : (str5)))
 }
 
 function isTouch() {
