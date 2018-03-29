@@ -265,7 +265,7 @@ function initSubscribePopup() {
 function initFollowPopup() {
 
     $followPopup = $('#follow_popup').dialog({
-        autoOpen: true,
+        autoOpen: false,
         modal: true,
         closeOnEscape: true,
         closeText: '',

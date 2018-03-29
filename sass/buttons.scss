@@ -162,6 +162,14 @@
       }
     }
 
+    &._tg {
+      background: #08c;
+
+      &:hover {
+        background: #00a3f5;
+      }
+    }
+
     > span {
       padding: 0 3px;
       display: inline-block;
