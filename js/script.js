@@ -166,12 +166,6 @@ $(function ($) {
         ajax.send();
     });
 
-    initSubscribePopup();
-
-    initFollowPopup();
-
-    initBonusPopup();
-
     initValidation();
 
     initMask();
@@ -182,6 +176,12 @@ $(function ($) {
 $(window)
     .on('load', function () {
         checkHeader();
+
+        initSubscribePopup();
+
+        initFollowPopup();
+
+        initBonusPopup();
     })
     .on('scroll', function () {
         var scrtop = getScrollTop(),
