@@ -1,5 +1,9 @@
 @import "../../crypto_icons/variables";
 
+@function unicode($str) {
+  @return unquote("\"") + $str + unquote("\"");
+}
+
 $pi: 3.14159265359;
 $square_root_of_2: 1.41421356237;
 

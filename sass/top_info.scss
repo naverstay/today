@@ -123,7 +123,7 @@
       }
 
       &:after {
-        content: ' ' + $icon-asc;
+        content: unicode(' ' + $icon-asc);
       }
     }
 
@@ -135,7 +135,7 @@
       }
 
       &:after {
-        content: ' ' + $icon-desc;
+        content: unicode(' ' + $icon-desc);
       }
     }
   }
@@ -262,7 +262,7 @@
   transform-origin: 50% 50%;
 
   &:before {
-    content: $icon-triangle;
+    content: unicode($icon-triangle);
   }
 }
 

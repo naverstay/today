@@ -69,7 +69,7 @@
     position: absolute;
     right: 0;
     top: 2px;
-    content: $icon-arrow-right;
+    content: unicode($icon-arrow-right);
   }
 
   span {
@@ -136,7 +136,7 @@
   }
 
   &:before {
-    content: $icon-ufo;
+    content: unicode($icon-ufo);
     position: absolute;
     top: 0;
     right: 7px;
@@ -343,7 +343,7 @@
     line-height: 26px;
 
     &:before {
-      content: $icon-share-alt;
+      content: unicode($icon-share-alt);
       font-size: 14px;
       line-height: 26px;
     }
@@ -351,7 +351,7 @@
 
   &._f {
     &:before {
-      content: $icon-fb;
+      content: unicode($icon-fb);
     }
 
     ._action &,
@@ -366,7 +366,7 @@
 
   &._t {
     &:before {
-      content: $icon-tw;
+      content: unicode($icon-tw);
     }
 
     ._action &,
@@ -381,7 +381,7 @@
 
   &._g {
     &:before {
-      content: $icon-gp;
+      content: unicode($icon-gp);
     }
 
     ._action &,
@@ -396,7 +396,7 @@
 
   &._l {
     &:before {
-      content: $icon-in;
+      content: unicode($icon-in);
     }
 
     ._action &,
@@ -411,7 +411,7 @@
 
   &._i {
     &:before {
-      content: $icon-inst;
+      content: unicode($icon-inst);
     }
 
     ._action &,
@@ -426,25 +426,25 @@
 
   &._p {
     &:before {
-      content: $icon-pint;
+      content: unicode($icon-pint);
     }
   }
 
   &._s {
     &:before {
-      content: $icon-stm;
+      content: unicode($icon-stm);
     }
   }
 
   &._tm {
     &:before {
-      content: $icon-tmblr;
+      content: unicode($icon-tmblr);
     }
   }
 
   &._tg {
     &:before {
-      content: $icon-tg;
+      content: unicode($icon-tg);
     }
 
     ._action &,
@@ -459,7 +459,7 @@
 
   &._rd {
     &:before {
-      content: $icon-rd;
+      content: unicode($icon-rd);
     }
 
     ._action &,

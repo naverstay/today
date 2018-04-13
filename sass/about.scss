@@ -229,7 +229,7 @@
     line-height: 1.25;
 
     &:before {
-      content: $icon-ufo;
+      content: unicode($icon-ufo);
       position: absolute;
       bottom: -123px;
       right: -47px;

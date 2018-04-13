@@ -48,43 +48,43 @@
 
   &._hot {
     &:before {
-      content: $icon-bonfire;
+      content: unicode($icon-bonfire);
     }
   }
 
   &._qoute {
     &:before {
-      content: $icon-quote;
+      content: unicode($icon-quote);
     }
   }
 
   &._top {
     &:before {
-      content: $icon-crown;
+      content: unicode($icon-crown);
     }
   }
 
   &._popular {
     &:before {
-      content: $icon-heart;
+      content: unicode($icon-heart);
     }
   }
 
   &._comments {
     &:before {
-      content: $icon-feather;
+      content: unicode($icon-feather);
     }
   }
 
   &._futurama {
     &:before {
-      content: $icon-futurama;
+      content: unicode($icon-futurama);
     }
   }
 
   &._calendar {
     &:before {
-      content: $icon-calendar;
+      content: unicode($icon-calendar);
     }
   }
 }

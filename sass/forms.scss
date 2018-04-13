@@ -247,7 +247,7 @@ textarea.input_v3 {
     font-size: 46px;
 
     &:before {
-      content: $icon-ufo_3;
+      content: unicode($icon-ufo_3);
     }
   }
 
@@ -259,7 +259,7 @@ textarea.input_v3 {
     margin-top: 38px;
 
     &:before {
-      content: $icon-close;
+      content: unicode($icon-close);
     }
   }
 }

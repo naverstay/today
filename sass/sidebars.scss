@@ -27,7 +27,7 @@
   overflow: hidden;
 
   &:before {
-    content: $icon-ufo;
+    content: unicode($icon-ufo);
     position: absolute;
     pointer-events: none;
     color: #000;
@@ -237,7 +237,7 @@
   color: #fff;
 
   &:before {
-    content: $icon-search;
+    content: unicode($icon-search);
     color: $violette;
   }
 
@@ -373,7 +373,7 @@
 
       &:after,
       &:before {
-        content: $icon-chevron_r_thin;
+        content: unicode($icon-chevron_r_thin);
       }
     }
 
@@ -382,7 +382,7 @@
 
       &:after,
       &:before {
-        content: $icon-chevron_l_thin;
+        content: unicode($icon-chevron_l_thin);
       }
     }
 
@@ -493,7 +493,7 @@
   display: none;
 
   &:before {
-    content: $icon-close;
+    content: unicode($icon-close);
     color: $violette;
     font-size: 22px;
     line-height: 1;
@@ -632,31 +632,31 @@
 
   &._w {
     &:before {
-      content: $icon-tw;
+      content: unicode($icon-tw);
     }
   }
 
   &._t {
     &:before {
-      content: $icon-tg;
+      content: unicode($icon-tg);
     }
   }
 
   &._f {
     &:before {
-      content: $icon-fb;
+      content: unicode($icon-fb);
     }
   }
 
   &._r {
     &:before {
-      content: $icon-rss;
+      content: unicode($icon-rss);
     }
   }
 
   &._y {
     &:before {
-      content: $icon-youtube;
+      content: unicode($icon-youtube);
     }
   }
 }

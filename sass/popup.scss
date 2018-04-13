@@ -1,3 +1,20 @@
+%icon_pseudo {
+  &:after,
+  &:before { /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: $icomoon-font-name !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
 .popup_box {
   background: #fff;
   text-align: center;
@@ -132,5 +149,87 @@
     border: 0;
     background-color: transparent;
   }
+}
+
+.ui-widget-overlay {
+
+  .overlay_v2 & {
+    background: rgba(0, 0, 0, .8);
+  }
+}
+
+.ui-dialog {
+  &.dialog_v2 {
+    padding: 0;
+    border: 0;
+    border-radius: 5px;
+
+    .ui-dialog-content {
+      padding: 0;
+    }
+  }
+
+  &.dialog_title_v1 {
+    .ui-dialog-titlebar-close {
+      @extend %icon_pseudo;
+      background: none;
+      border: 0;
+      width: 20px;
+      height: 20px;
+      top: 20px;
+      right: 15px;
+      text-align: center;
+
+      &:before {
+        content: unicode($icon-close);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: #fff;
+        font-size: 18px;
+        line-height: 20px;
+        text-indent: 0;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    .ui-dialog-titlebar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      border: 0;
+      background: none;
+      z-index: 1;
+    }
+  }
+
+}
+
+.bonus_img {
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.bonus_caption {
+  text-align: center;
+  color: #000;
+  font: 30px/36px $RubikBlack;
+  padding: 40px 20px;
+}
+
+.bonus_controls {
+  text-align: center;
+  padding: 5px 20px 70px;
 }
 

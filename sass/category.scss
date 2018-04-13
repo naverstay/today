@@ -6,7 +6,7 @@
   list-style: none;
 
   &:before {
-    content: $icon-ufo;
+    content: unicode($icon-ufo);
     position: absolute;
     right: -115px;
     top: 50%;
@@ -55,7 +55,7 @@
   margin-bottom: 10px;
 
   &:before {
-    content: $icon-say;
+    content: unicode($icon-say);
     position: absolute;
     top: 6px;
     left: 8px;

@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'crypto_icons';
-  src: url('#{$icomoon-font-path}/crypto_icons.eot?alobc0');
-  src: url('#{$icomoon-font-path}/crypto_icons.eot?alobc0#iefix') format('embedded-opentype'),
-  url('#{$icomoon-font-path}/crypto_icons.ttf?alobc0') format('truetype'),
-  url('#{$icomoon-font-path}/crypto_icons.woff?alobc0') format('woff'),
-  url('#{$icomoon-font-path}/crypto_icons.svg?alobc0#crypto_icons') format('svg');
+  src: url('#{$icomoon-font-path}/crypto_icons.eot?qe2icy');
+  src: url('#{$icomoon-font-path}/crypto_icons.eot?qe2icy#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/crypto_icons.ttf?qe2icy') format('truetype'),
+  url('#{$icomoon-font-path}/crypto_icons.woff?qe2icy') format('woff'),
+  url('#{$icomoon-font-path}/crypto_icons.svg?qe2icy#crypto_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -31,6 +31,18 @@
 
 @function unicode($str) {
   @return unquote("\"") + $str + unquote("\"");
+}
+
+.icon-clock {
+  &:before {
+    content: unicode($icon-clock);
+  }
+}
+
+.icon-rocket {
+  &:before {
+    content: unicode($icon-rocket);
+  }
 }
 
 .icon-filter {

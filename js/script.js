@@ -170,6 +170,8 @@ $(function ($) {
 
     initFollowPopup();
 
+    initBonusPopup();
+
     initValidation();
 
     initMask();
@@ -279,6 +281,28 @@ function initFollowPopup() {
             $body.addClass('modal_opened overlay_v2');
 
             startFollowCountDown();
+        },
+        close: function (event, ui) {
+            $body.removeClass('modal_opened overlay_v2');
+        }
+    });
+}
+
+function initBonusPopup() {
+
+    $followPopup = $('#bonus_popup').dialog({
+        autoOpen: true,
+        modal: true,
+        closeOnEscape: true,
+        closeText: '',
+        dialogClass: 'dialog_v2 dialog_title_v1',
+        //appendTo: '.wrapper',
+        width: 600,
+        draggable: true,
+        collision: "fit",
+        position: {my: "top center", at: "top center", of: window},
+        open: function (event, ui) {
+            $body.addClass('modal_opened overlay_v2');
         },
         close: function (event, ui) {
             $body.removeClass('modal_opened overlay_v2');
