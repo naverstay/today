@@ -1008,8 +1008,7 @@ mixin stat_action()
         a.stat_action_link._w(href='#')
 
 mixin search()
-
-    //-.search_holder
+    .search_holder
         .search_head
             .section_inner
                 .search_form
@@ -1018,10 +1017,10 @@ mixin search()
                             input.search_input(placeholder='search...')
                             button.filter_btn
 
-                .search_title
+                //-.search_title
                     span Search results&nbsp;
                     span._counter — 200 articles and news
-        .search_body
+        //-.search_body
             .section_inner
                 .news_row
                     +loop_while(3)
@@ -1099,7 +1098,7 @@ mixin search()
                                             li._first
                                                 .article_stat_val Ariel Deschapell
 
-        .search_footer
+        //-.search_footer
             .section_inner
                 a.btn_v1.more_btn.gray_btn(href='#') More search results
 
@@ -1117,7 +1116,7 @@ mixin header()
                     a.menu_btn.menuBtn(href='#')
                         span
                 li
-                    a.search_btn.searchBtn_(href='#')
+                    a.search_btn.searchBtn(href='#')
                 li
                     a.head_subscribe_btn.btn_v2.btn_gray_3.openSubscribe(href='#')
                         span Subscribe
