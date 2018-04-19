@@ -47,6 +47,26 @@
 .btn_v2 {
   height: 40px;
 
+  &.comment_btn {
+    @extend %icon_pseudo;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    font: 16px/21px $RubikBold;
+    color: $clr_blue;
+
+    &:after {
+      content: unicode($icon-chevron_r_thin);
+      transform: rotate(90deg);
+      color: #eee;
+      font-size: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+      padding-bottom: 12px;
+    }
+  }
+
   &.offer_btn {
     display: block;
     text-align: center;
@@ -234,7 +254,7 @@
     text-align: center;
     font: 14px/24px $RubikBold;
     color: #fff;
-    //letter-spacing: .015em;
+    margin-left: 20px;
     background: $violette;
 
     &:hover {

@@ -9,30 +9,26 @@ html(lang='ru')
                 .section_inner
                     +tag_holder('_slider', true)
 
-                    a.attention_block._warn(href='#')
-                        .attention_caption Breaking news
-                        p
-                            span Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
-                            span.attention_link
-
                     .content_holder
                         .content_block
+                            ul.bread_crumbs
+                                li: a.crumb_link(href='#') Cryptocomes
+                                li: a.crumb_link(href='#') Pricewise
+
                             .article_block.story_block._article._pricewise
                                 .article_main_photo
                                     .article_heading
-                                        //-a.article_link(href='#') Hawaiian Bylls Wougd Capture Crypto Under&nbsp;Money Transmission Law
-                                        //-a.article_link(href='#') NEM Foundation: Stoleg Coyncheck Funds Not Sent to Exchanges
-                                        a.article_link(href='#') Google's DoubleClick Ads Used to Distribute Crypto Mining Malware
+                                        //-a.article_link(href='article.html') Hawaiian Bylls Wougd Capture Crypto Under&nbsp;Money Transmission Law
+                                        //-a.article_link(href='article.html') NEM Foundation: Stoleg Coyncheck Funds Not Sent to Exchanges
+                                        a.article_link(href='article.html') NEM Foundation: Stoleg Coyncheck<br> Funds Not Sent to Exchanges
 
                                     ul.article_stat._mod_1
                                         li
+                                            a.article_stat_val(href='#') John Doe
+                                        li
+                                            span.article_stat_val._stat_time 2h
+                                        li
                                             span.article_stat_val._stat_views 212
-                                        li
-                                            span.article_stat_val Jan 10, 2018 at 10:00
-                                        li
-                                            span by Ariel Deschapell&nbsp;
-                                            a.article_author_link(href='#')
-                                                span anthropomaniac
 
                                     .article_img
                                         ul.article_tags
@@ -43,17 +39,22 @@ html(lang='ru')
 
                                 .article_info_holder
                                     .article_info
-                                        +article_soc('_pool')
+                                        +article_share('_action', true)
+                                        //-+article_soc('_pool')
 
                                     .article_preview iGaming platform provider Cash Bet has partnered with Arsenal Football Club in a deal that will promote the firm's new crypto token.
                                     //.article_preview Hong Kong authorities have launched a campaign to educate the public on the risks associated with ICO and cryptocurrency investment.
 
                                     .article_text
-                                        p The South Korean government announced today it will move to prohibit domestic cryptocurrency exchanges from allowing users to make transactions through anonymous accounts, local news sources report.
+                                        .article_contents Contents
 
-                                        p As part of what appears to be a series of updates designed to improve oversight of industry practices, the government will also seek to bar banks from issuing new virtual accounts to cryptocurrency exchanges.
+                                        ul.contents_list
+                                            li: a.contents_link(href='#') Bitcoinization of space
+                                            li: a.contents_link(href='#') Cryptocurrencies running away from Earth
+                                            li: a.contents_link(href='#') Internet 2.0
+                                            li: a.contents_link(href='#') States are going there, too
 
-                                        p According to the South Korean news agency Yonhap, the announcements were made by Hong Nam-ki, the minister of the Office for Government&nbsp;Policy Coordination, after discussion with vice ministers from other governmental bodies regarding the recent rise in cryptocurrency interest and ownership domestically.
+                                        p When President Trump delivers his first State of the Union address on Tuesday at 9 p.m. ET, his most fervent supporters are anxious that he will squander the most high-profile moment of his presidency with a soft speech that bends more to the predilections of the political establishment in Washington and less to the populist army that sent him there to #[a(href='#') drain the swamp].
 
                                         blockquote(cite='#')
                                             p Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten.
@@ -61,154 +62,122 @@ html(lang='ru')
 
                                         p The South Korean government announced today it will move to prohibit domestic cryptocurrency exchanges from allowing users to make transactions through anonymous accounts, local news sources report.
 
-                                        p As part of what appears to be a series of updates designed to improve oversight of industry practices, the government will also seek to bar banks from issuing new virtual accounts to cryptocurrency exchanges.
-
-                                        figure
+                                        .article_related
                                             .article_img
-                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                    +action_block()
-                                                a.article_img_link(href='#'): img(src='i/yonghap.jpg')
-                                            p According to the South Korean news agency Yonhap, the announcements were made by Hong Nam-ki, the minister of the Office for Government Policy Coordination, after discussion with vice ministers from other governmental bodies regarding the recent rise in cryptocurrency interest and ownership domestically.
+                                                a.article_img_link(href='article.html'): img(src='i/ZenCash_Interview.jpg')
+                                            ul.related_tags
+                                                li: a.icon-attach.article_tag._wide._news(href='#')
+                                                    span SEE RELATED
+
+                                            h4.article_related_caption Future of Crypto is Selective Transparency: Rob Viglione of ZenCash on Privacy Protocols
+                                            ul.article_stat
+                                                li
+                                                    a.article_stat_val(href='#') John Doe
+                                                li
+                                                    span.article_stat_val._stat_time 2h
+                                                li
+                                                    span.article_stat_val._stat_views 212
+
 
                                         p According to the South Korean news agency Yonhap, the announcements were made by Hong Nam-ki, the minister of the Office for Government Policy Coordination, after discussion with vice ministers from other governmental bodies regarding the recent rise in cryptocurrency interest and ownership domestically.
 
+                                        ul
+                                            li
+                                                P According to the South Korean news agency Yonhap, the announcements were made by Hong Nam-ki
+                                            li
+                                                p According to the South Korean news agency Yonhap, the announcements were made by Hong Nam-ki
+
+                                                ul
+                                                    li
+                                                        p According to the South Korean news agency Yonhap, the announcements were made by Hong Nam-ki
+
+                                        figure
+                                            p: img(src='i/Pic01_30.jpg')
+                                            i How bitcoin price fall down
+
+                                        h1 H1 NEM Foundation: Stoleg Coyncheck Funds Not Sent to Exchanges
+                                        p The South Korean government announced today it will move to prohibit domestic cryptocurrency exchanges from allowing users to make transactions through anonymous accounts, local news sources report.
+
+                                        h2 H2 NEM Foundation: Stoleg Coyncheck Funds Not Sent to Exchanges
+
+                                        h3 H3 NEM Foundation: Stoleg Coyncheck Funds Not Sent to Exchanges
+
+                                        h4 H4 NEM Foundation: Stoleg Coyncheck Funds Not Sent to Exchanges
+
+                                        h5 H5 NEM Foundation: Stoleg Coyncheck Funds Not Sent to Exchanges
+
+                                        h6 H6 NEM Foundation: Stoleg Coyncheck Funds Not Sent to Exchanges
+
+                                        p The South Korean government announced today it will move to prohibit domestic cryptocurrency exchanges from allowing users to make transactions through anonymous accounts, local news sources report.
+
+                                    .article_info._bottom
+                                        +article_share('_action', true)
+
                                         ul.article_stat
                                             li
+                                                a.article_stat_val(href='#') John Doe
+                                            li
+                                                span.article_stat_val._stat_time 2h
+                                            li
                                                 span.article_stat_val._stat_views 212
-                                            li
-                                                span.article_stat_val Jan 10, 2018 at 10:00
-                                            li
-                                                span by Ariel Deschapell&nbsp;
-                                                a.article_author_link(href='#')
-                                                    span anthropomaniac
 
-                                        ul.article_tag_list
-                                            li: a.tag_link(href='#') #hotnews
-                                            li: a.tag_link(href='#') #korea
-                                            li: a.tag_link(href='#') #exchange
-                                            li: a.tag_link(href='#') #government
-                                            li: a.tag_link(href='#') #minister
+                                        .article_text
+                                            ul.article_tag_list
+                                                +loop_while(14)
+                                                    li: a.tag_link(href='#') #Supertag
 
                                         //-.article_telegram_block
                                             span ! Get more awesome news in our&nbsp;&nbsp;
                                             a.telegram_link(href='#') Telegram channel
 
-                                        .article_telegram_section
+                                        //-.article_telegram_section
                                             span.fl ! Get more awesome news in our Telegram channel
                                             a.btn_v4.btn_blue.telegram_btn(href='#')
                                                 span Subscribe telegram
                                                 span.icon-tg.btn_icon
 
-                                        .content_block
-                                            h1 H1 &nbsp;-&nbsp; Foundagyon: Stoleg Coyncheck Funds Not Sent to Exchanges
-                                            p When President Trump delivers his first State of the Union address on Tuesday at 9 p.m. ET, his most fervent supporters.
-                                            h2 H2 &nbsp;-&nbsp; When Pgysident Trump delivers his first State of the Union
-                                            p When President Trump delivers his first State of the Union address on Tuesday at 9 p.m. ET, his most fervent supporters.
-                                            h3 H3 &nbsp;-&nbsp; the most high-profile moment of his presidency with a soft speech
-                                            p When President Trump delivers his first State of the Union address on Tuesday at 9 p.m. ET, his most fervent supporters.
-                                            h4 H4 &nbsp;-&nbsp; the most high-profile moment of his presidency with a soft speech his most fervent supporters
-                                            p When President Trump delivers his first State of the Union address on Tuesday at 9 p.m. ET, his most fervent supporters.
-                                            h5 H5 &nbsp;-&nbsp; the most high-profile moment of his presidency with a soft speech his most fervent supporters
-                                            p When President Trump delivers his first State of the Union address on Tuesday at 9 p.m. ET, his most fervent supporters. #[a(href='#') link]
-                                            h6 H6 &nbsp;-&nbsp; the most high-profile moment of his presidency with a soft speech his most fervent supporters
-                                            p When President Trump delivers his first State of the Union address on Tuesday at 9 p.m. ET, his most fervent supporters.
-
-                                            h6 List &nbsp;-&nbsp; the most high-profile mom
-
-                                            ul
-                                                li: span When President Trump delivers his first State of the Union address on Tuesday at 9 p.m.
-                                                li
-                                                    span Soft speech that bends more to the predilections of the political establishment to the populist army that sent him there to drain the swamp.
-
-                                                    ul
-                                                        li: span When President Trump delivers his first State of the Union address on Tuesday at 9 p.m.  that bends more to the predilections
-                                                        li: span Union address on Tuesday at 9 p.m.  that bends more to the predilections
-
-                                .article_subscribe_wide
+                                //-.article_subscribe_wide
                                     a.btn_v5.subscr_btn._tg(href='#')
                                         span.btn_icon.icon-tg
                                         span Join CryptoComes #[span._unl Telegram channel]
-                                .article_subscribe_wide
+                                //-.article_subscribe_wide
                                     a.btn_v5.subscr_btn._fb(href='#')
                                         span.btn_icon.icon-fb
                                         span Join CryptoComes #[span._unl Facebook page]
-                                .article_subscribe_wide
+                                //-.article_subscribe_wide
                                     a.btn_v5.subscr_btn._tw(href='#')
                                         span.btn_icon.icon-tw
                                         span Join CryptoComes #[span._unl on Twitter]
 
-                                .article_info._action_only
-                                    +article_soc('_pool')
+                            .comment_holder
+                                a.btn_v2.comment_btn(href='#') Click to leave your comment
 
-                            .related_title Related Articles and News
+                            .article_block.story_block._article._pricewise
+                                .article_main_photo
+                                    .article_heading
+                                        //-a.article_link(href='article.html') Hawaiian Bylls Wougd Capture Crypto Under&nbsp;Money Transmission Law
+                                        //-a.article_link(href='article.html') NEM Foundation: Stoleg Coyncheck Funds Not Sent to Exchanges
+                                        a.article_link(href='article.html') NEM Foundation: Stoleg Coyncheck<br> Funds Not Sent to Exchanges
 
-                            .news_row._bordered._col_3
-                                +loop_while(2)
-                                    .news_col._pricewise
-                                        .article_block
-                                            .article_img
-                                                ul.article_tags
-                                                    li
-                                                        span.icon-say.article_tag._pricewise
-                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                    +action_block()
-                                                a.article_img_link(href='#'): img(src='i/range.jpg')
+                                    ul.article_stat._mod_1
+                                        li
+                                            a.article_stat_val(href='#') John Doe
+                                        li
+                                            span.article_stat_val._stat_time 2h
+                                        li
+                                            span.article_stat_val._stat_views 212
 
-                                            .article_title
-                                                a.article_link(href='#') Bitcoin Price Seeks Direction as Trading Range Narrows
-                                                ul.article_stat
-                                                    li
-                                                        span.article_stat_val Jan 10, 2018 at 10:00
-                                                    li
-                                                        span.article_stat_val._stat_views 212
-                                                    li._first
-                                                        span.article_stat_val Ariel Deschapell
-                                    .news_col._pool
-                                        .article_block
-                                            .article_img
-                                                ul.article_tags
-                                                    li
-                                                        span.icon-crown.article_tag._pool
-                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                    +action_block()
-                                                a.article_img_link(href='#'): img(src='i/range.jpg')
+                                    .article_img
+                                        ul.article_tags
+                                            li
+                                                a.icon-say.article_tag._wide._pricewise(href='#')
+                                                    span PRICEWISE
+                                        .article_img_link: img(src='i/hong_kong.jpg')
 
-                                            .article_title
-                                                a.article_link(href='#') Chinese Finance Association Cautions on Overseas ICOs
-                                                ul.article_stat
-                                                    li
-                                                        span.article_stat_val Jan 10, 2018 at 10:00
-                                                    li
-                                                        span.article_stat_val._stat_views 212
-                                                    li._first
-                                                        span.article_stat_val Ariel Deschapell
-                                    .news_col._analysis
-                                        .article_block
-                                            .article_img
-                                                ul.article_tags
-                                                    li
-                                                        span.icon-splash.article_tag._analysis
-                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                    +action_block()
-                                                a.article_img_link(href='#'): img(src='i/range.jpg')
-
-                                            .article_title
-                                                a.article_link(href='#') Bitcoin Price Seeks Direction as Trading Range Narrows
-                                                ul.article_stat
-                                                    li
-                                                        span.article_stat_val Jan 10, 2018 at 10:00
-                                                    li
-                                                        span.article_stat_val._stat_views 212
-                                                    li._first
-                                                        span.article_stat_val Ariel Deschapell
-
-                            .news_row
-                                .news_col._wide
-                                    .article_controls._mod_1
-                                        a.btn_v1.more_btn.gray_btn(href='#') More related articles and news
+                                .article_info_holder
+                                    .article_preview iGaming platform provider Cash Bet has partnered with Arsenal Football Club in a deal that will promote the firm's new crypto token.
 
                         +aside_block()
-
 
             .nav_holder
                 +main_menu(true)

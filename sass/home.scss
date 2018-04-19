@@ -245,7 +245,7 @@
 
     .article_tags {
       margin-left: 68px;
-      margin-bottom: 10px;
+      margin-bottom: 23px;
     }
 
     .article_link {
@@ -305,7 +305,7 @@
 
 .article_info_holder {
   position: relative;
-  padding-top: 25px;
+  padding-top: 12px;
   padding-left: 10px;
 
   .article_info {
@@ -336,8 +336,8 @@
     }
 
     @include respond-to-min($resp_step_2) {
-      padding-left: 10px;
-      max-width: 740px;
+      padding-right: 30px;
+      max-width: 730px;
 
       .article_stat {
         padding-top: 30px;
@@ -358,8 +358,8 @@
     }
 
     figure {
-      margin-top: 34px;
-      margin-bottom: 34px;
+      margin-top: 25px;
+      margin-bottom: 48px;
 
       ._event & {
         .article_img {
@@ -373,10 +373,21 @@
       }
 
       p {
-        background: #f8f8f8;
-        padding: 20px 40px 32px;
-        font-size: 17px;
-        line-height: 1.45;
+        margin-bottom: 0;
+
+        img {
+          margin-bottom: 0;
+        }
+
+        + i {
+          display: block;
+          font-style: italic;
+          background: #f7f8f8;
+          padding: 18px 20px 10px;
+          color: #bbb;
+          font-size: 20px;
+          line-height: 26px;
+        }
 
         @include respond-to-min($resp_step_3) {
           padding: 27px 30px 35px;
@@ -399,12 +410,6 @@
       @include respond-to-min($resp_step_4) {
         margin-top: 62px;
         margin-bottom: 26px;
-      }
-    }
-
-    blockquote {
-      p {
-        @extend %firm_color;
       }
     }
   }
@@ -430,7 +435,6 @@
   }
 
   @include respond-to-min($resp_step_2) {
-    padding-top: 30px;
 
     .article_info {
       max-width: 750px;
@@ -445,19 +449,19 @@
       width: 244px;
       border-style: solid;
       border-width: 4px 0;
-      padding: 20px 10px 84px;
+      padding: 24px 10px 88px;
       font-size: 22px;
-      line-height: 28px;
+      line-height: 31px;
 
       &:before {
         z-index: -1;
         content: unicode($icon-ufo);
         position: absolute;
         overflow: hidden;
-        bottom: -40px;
+        bottom: -45px;
         right: -32px;
-        width: 125px;
-        font-size: 160px;
+        width: 144px;
+        font-size: 190px;
       }
 
       ._event & {
@@ -1138,6 +1142,7 @@
     //font-family: $RubikBlack;
     //letter-spacing: -.01em;
     color: #000;
+    font-weight: 700;
   }
 
   @include respond-to-min($resp_step_2) {
@@ -1199,6 +1204,19 @@
   padding-top: 15px;
   color: #bbb;
   font: 12px/14px $RubikReg;
+
+  .article_main_photo & {
+    font-size: 14px;
+    line-height: 18px;
+
+    ._stat_time {
+      padding-left: 28px;
+    }
+
+    ._stat_views {
+      padding-left: 30px;
+    }
+  }
 
   li {
     float: left;
@@ -1654,9 +1672,9 @@ a.article_stat_val {
 
 .article_tag {
   position: relative;
-  min-width: 24px;
-  height: 24px;
-  line-height: 22px;
+  min-width: 30px;
+  height: 30px;
+  line-height: 28px;
   display: inline-block;
   vertical-align: top;
   border-radius: 0 2px 0 2px;
@@ -1665,8 +1683,8 @@ a.article_stat_val {
   span {
     display: inline-block;
     vertical-align: top;
-    padding: 5px 10px 5px 1px;
-    font: 10px/14px $RubikBold;
+    padding: 8px 10px 8px 6px;
+    font: 12px/14px $RubikBold;
     //letter-spacing: .015em;
     text-transform: uppercase;
   }
@@ -1679,9 +1697,9 @@ a.article_stat_val {
 
   &:before {
     font-size: 16px;
-    width: 24px;
-    height: 24px;
-    line-height: 24px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
     //border-radius: inherit;
     display: inline-block;
     vertical-align: top;
@@ -1777,10 +1795,6 @@ a.article_stat_val {
   &:hover {
     color: darken(#c0c0c0, 10%);
 
-    span {
-      color: #000 !important;
-    }
-
     &:before {
       @extend %firm_color;
     }
@@ -1801,7 +1815,7 @@ a.article_stat_val {
 .article_group_title {
   position: relative;
   color: #000;
-  font: 18px/24px $RubikMed;
+  font: 18px/24px $RubikBold;
   //letter-spacing: .005em;
   padding: 9px 16px 9px 0;
   margin: 5px 0 12px;
@@ -2029,6 +2043,4 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
-
-
 
