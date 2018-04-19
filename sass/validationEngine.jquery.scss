@@ -48,9 +48,8 @@
     margin-top: -14px !important;
 
     .input_w & {
-      top: auto !important;
-      bottom: 100% !important;
-      margin: 0 0 5px !important;
+      top: 100% !important;
+      margin: 2px 0 0 !important;
     }
   }
 
@@ -249,7 +248,7 @@ body.rtl .formError .formErrorArrow {
   &.relative_mode {
     .formErrorContent {
       background: none;
-      color: $red;
+      color: #e87272;
       padding: 0;
       font-size: 11px;
 
@@ -265,6 +264,12 @@ body.rtl .formError .formErrorArrow {
       height: 1.2em;
       overflow: hidden;
       max-width: 100%;
+
+      span {
+        + span {
+          display: none;
+        }
+      }
     }
   }
 
@@ -378,8 +383,8 @@ body.rtl .formError .formErrorArrow {
 }
 
 .error input {
-  box-shadow: 0 0 1em red !important;
-  border: 2px solid red !important;
+  //box-shadow: 0 0 1em red !important;
+  //border: 2px solid red !important;
 }
 
 @media only screen and (max-width: 720px) {

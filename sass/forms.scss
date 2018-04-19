@@ -68,7 +68,7 @@
   }
 
   &.error {
-    border-color: #ff0a24;
+    border-color: #e87272;
   }
 }
 
@@ -92,8 +92,8 @@
   }
 
   &.error {
-    color: #ff0a24;
-    border-color: #ff0a24;
+    color: #e87272;
+    border-color: #e87272;
   }
 
   &.success {
@@ -156,13 +156,48 @@ textarea.input_v3 {
   }
 
   &.error {
-    color: #ff0a24;
-    border-color: #ff0a24;
+    color: #e87272;
+    border-color: #e87272;
   }
 
   &.success {
     color: #000;
     border-color: #000;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    padding: 10px 35px;
+  }
+}
+
+.input_v5 {
+  @include transition_all(border-color .3s);
+  display: block;
+  height: 40px;
+  width: 100%;
+  color: $clr_black;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  font: 14px/16px $RubikReg;
+  padding: 11px 15px;
+  background: #fff;
+
+  &::-moz-placeholder {
+    color: #bbb;
+  }
+
+  &::-webkit-input-placeholder {
+    color: #bbb;
+  }
+
+  &.error {
+    color: #e87272;
+    border-color: #e87272;
+  }
+
+  &.success {
+    color: #27ae60;
+    border-color: #27ae60;
   }
 
   @include respond-to-min($resp_step_2) {
@@ -252,8 +287,8 @@ textarea.input_v3 {
   }
 
   &._fail {
-    color: #ff0a24;
-    border-color: #ff0a24;
+    color: #e87272;
+    border-color: #e87272;
     line-height: 74px;
     font-size: 36px;
     margin-top: 38px;

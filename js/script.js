@@ -29,9 +29,9 @@ $(function ($) {
                 // todo remove
 
                 if (form.find('input').first().val().length > 1) {
-                    $('.subscribeBlock').addClass('subscribe_success');
+                    form.addClass('subscribe_success');
                 } else {
-                    $('.subscribeBlock').addClass('subscribe_fail');
+                    form.addClass('subscribe_fail');
                 }
             }
         })
@@ -267,7 +267,7 @@ function initSharePopup() {
         //appendTo: '.wrapper',
         width: 500,
         draggable: true,
-        title: "Share this on:",
+        title: " ",
         collision: "fit",
         position: {my: "top center", at: "top center", of: window},
         open: function (event, ui) {
@@ -291,7 +291,7 @@ function initSubscribePopup() {
         //appendTo: '.wrapper',
         width: 500,
         draggable: true,
-        title: "Subscribe to our newsletter",
+        title: " ",
         collision: "fit",
         position: {my: "top center", at: "top center", of: window},
         open: function (event, ui) {
@@ -419,12 +419,12 @@ function initMask() {
 
 function initValidation(el, prompts) {
     $(el || '.validateMe').each(function (ind) {
-        var f = $(this);
+        var f = $(this), prompt = f.attr('data-prompts');
 
         f.validationEngine({
             //binded: true,
             scroll: false,
-            showPrompts: !!prompts,
+            showPrompts: prompt !== void 0 ? prompt : !!prompts,
             showArrow: false,
             addSuccessCssClassToField: 'success',
             addFailureCssClassToField: 'error',

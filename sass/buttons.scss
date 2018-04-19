@@ -390,14 +390,6 @@
   }
 }
 
-.btn_gray {
-  background: #f6f7f7;
-
-  &:hover {
-    filter: brightness(120%);
-  }
-}
-
 .gray_btn {
   @include transition_all(border-color .3s, background .3s);
   color: $clr_blue;

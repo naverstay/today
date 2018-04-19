@@ -752,10 +752,10 @@
 
 				// If we have a string, that means that we have an error, so add it to the error message.
 				if (typeof errorMsg == 'string') {
-					if(promptText != '') {
-						promptText += "<br/>";
-					}
-					promptText += errorMsg;
+					//if(promptText != '') {
+					//	promptText += "<br/>";
+					//}
+					promptText += '<span>' + errorMsg + '</span>';
 					options.isError = true;
 					field_errors++;
 				}

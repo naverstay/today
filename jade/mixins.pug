@@ -156,18 +156,26 @@ mixin footer()
     .hide
         #subscribe_popup
             .subscribe_form
-                form.validateMe.formParent.subscribeForm(action='#' data-prompts='true')
-                    .form_cell.formCell
-                        .input_w
-                            input.input_v1.forceValidation(placeholder='Enter your email' class='validate[required,custom[email]]' data-errormessage='Please enter valid e-mail')
+                .popup_logo_holder
+                    a.logo(href='#')
+                        img(src='i/logo_h.svg')
 
-                    .form_cell
-                        button.btn_v1.subscribe_btn.btn_violette_2 Subscribe
+                form.validateMe.formParent.subscribeForm(action='#' data-prompts='true')
+                    .success_hide
+                        p Get all crypto news 24/7 on your device
+
+                        .form_cell.formCell
+                            .input_w
+                                input.input_v5.forceValidation.text_center(placeholder='Enter your email' class='validate[required,custom[email]]' data-errormessage='Please enter valid e-mail')
+
+                        .form_cell
+                            button.btn_v2.subscribe_btn.btn_violette_2 SUBSCRIBE NOW
 
                     .subscribe_success_msg
+                        p Thank you for subscribing!
 
             .subscribe_form_footer
-                p Follow us on social
+                p or follow us with
 
                 ul.action_soc._brand
                     li

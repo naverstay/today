@@ -1,7 +1,7 @@
 include mixins.pug
 doctype html
 html(lang='ru')
-    +dev_head('Crypto главная')
+    +dev_head('Crypto категория')
 
     body.no_transition
         .wrapper
@@ -9,7 +9,7 @@ html(lang='ru')
                 .section_inner
                     +tag_holder('_slider', true)
 
-                    a.attention_block._warn(href='#')
+                    //-a.attention_block._warn(href='#')
                         .attention_caption Breaking news
                         p
                             span Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
@@ -17,7 +17,7 @@ html(lang='ru')
 
                     .content_holder
                         .content_block
-                            .category_filter._pool
+                            //-.category_filter._pool
                                 ul.filter_list
                                     li: a.filter_link._active(href='#') All articles
                                     li: a.filter_link(href='#') Coins
@@ -28,44 +28,44 @@ html(lang='ru')
                                 .news_col._third
                                     .article_block._tag
                                         .article_title.icon-shark
-                                            a.article_link(href='#') Piscina<br>de tiburones
+                                            a.article_link(href='#') Sharks Pool
 
-                                            p Crypto Space tiene que ver con ideas, así que encuentre opiniones que hagan reflexionar, blogs de expertos y entrevistas con grandes y buenos.
+                                            p Crypto space is all about ideas so find here thought-provoking opinions, experts blogs and interviews with the great and the good.
 
                                 +loop_while(7)
                                     .news_col._third
                                         .article_block._pool
                                             .article_img
-                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                    +action_block()
-                                                a.article_img_link(href='#'): img(src='i/range.jpg')
+                                                a.article_img_link(href='#'): img(src='i/bear_0.jpg')
 
                                             .article_title
-                                                a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
+                                                .article_action: .article_action_inner
+                                                    +action_block()
+                                                p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
                                                 ul.article_stat
                                                     li
-                                                        span.article_stat_val._stat_views 212
+                                                        a.article_stat_val(href='#') John Doe
                                                     li
-                                                        span.article_stat_val 2 minutes ago
-                                                    li._first
-                                                        a.article_stat_val(href='#') Ariel Deschapell
+                                                        span.article_stat_val._stat_time 2h
+                                                    li
+                                                        span.article_stat_val._stat_views 212
 
                                     .news_col._third
                                         .article_block._pool
                                             .article_img
-                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                    +action_block()
-                                                a.article_img_link(href='#'): img(src='i/range.jpg')
+                                                a.article_img_link(href='#'): img(src='i/bear_0.jpg')
 
                                             .article_title
-                                                a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
+                                                .article_action: .article_action_inner
+                                                    +action_block()
+                                                p: a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
                                                 ul.article_stat
                                                     li
-                                                        span.article_stat_val._stat_views 212
+                                                        a.article_stat_val(href='#') John Doe
                                                     li
-                                                        span.article_stat_val 2 minutes ago
-                                                    li._first
-                                                        a.article_stat_val(href='#') Ariel Deschapell
+                                                        span.article_stat_val._stat_time 2h
+                                                    li
+                                                        span.article_stat_val._stat_views 212
 
                         +aside_block()
 
