@@ -74,24 +74,33 @@
 
   &._footer_v2 {
     margin-top: 35px;
-    padding-top: 35px;
 
-    &:before {
-      content: '';
+    .section_inner {
+      position: relative;
+      z-index: 1;
+
+      &:first-child {
+        padding-top: 35px;
+      }
+    }
+
+    .footer_bg {
+      z-index: -1;
       position: absolute;
       top: 0;
-      right: 0;
-      left: 0;
-      height: 1px;
+      bottom: 0;
+      right: 16px;
+      left: 16px;
       background: $violette;
     }
 
     .footer_logo {
-      margin-left: -7px;
+      margin-left: 7px;
       width: 120px;
 
       @include respond-to-min($resp_step_2) {
-        margin-left: 10px;
+        margin-left: 20px;
+        margin-top: 7px;
         width: auto;
       }
 
@@ -118,21 +127,22 @@
     .footer_menu_holder {
       @extend %clearfix;
       padding-top: 0;
-      padding-bottom: 12px;
-      margin-left: 140px;
+      padding-bottom: 32px;
+      margin-left: 160px;
 
       @include respond-to-min($resp_step_2) {
-        margin-left: 210px;
+        //margin-left: 210px;
+        margin-left: 275px;
       }
 
       @include respond-to-min($resp_step_3) {
         margin-left: 328px;
-        padding-bottom: 32px;
+        //padding-bottom: 32px;
       }
 
       @include respond-to-min($resp_step_3) {
         margin-left: 375px;
-        padding-bottom: 32px;
+        //padding-bottom: 32px;
       }
     }
   }
@@ -154,17 +164,8 @@
 .copyright {
   float: left;
   padding: 11px;
-  color: #c0c0c0;
-  font: 10px/16px $RubikMed;
-
-  @include respond-to-min($resp_step_2) {
-    font-size: 11px;
-    padding: 12px;
-  }
-
-  @include respond-to-min($resp_step_4) {
-    padding: 15px;
-  }
+  color: #fff;
+  font: 14px/16px $RubikReg;
 }
 
 .footer_subscribe_link {
@@ -218,7 +219,7 @@
 .footer_follow_label {
   float: left;
   padding-left: 12px;
-  letter-spacing: .02em;
+  //letter-spacing: .02em;
 
   @include respond-to-min($resp_step_2) {
     padding-left: 18px;
@@ -284,111 +285,115 @@
   padding-right: .5%;
 
   p {
-    color: $violette;
-    font: 12px/16px $RubikReg;
+    color: #fff;
+    font: 14px/18px $RubikReg;
     margin-bottom: 10px;
 
     @include respond-to-min($resp_step_2) {
-      font-size: 13px;
-      margin-bottom: 15px;
+
+      + p {
+        margin-top: 20px;
+      }
     }
   }
 
   &.s_2 {
-    width: 26%;
+    width: 34%;
   }
 
   &.s_3 {
-    width: 33%;
+    width: 24%;
   }
 
   &.s_4 {
-    width: 40%;
+    width: 42%;
   }
 
   @include respond-to-min($resp_step_2) {
-    &.s_2 {
-      width: 27%;
-    }
+    //&.s_2 {
+    //  width: 34%;
+    //}
+    //
+    //&.s_3 {
+    //  width: 24%;
+    //}
 
-    &.s_3 {
-      width: 34%;
-    }
-
-    &.s_4 {
-      width: 37.7%;
-    }
+    //&.s_4 {
+    //  width: 37.7%;
+    //}
   }
 
   @include respond-to-min($resp_step_3) {
-    &.s_2 {
-      width: 25%;
-    }
+    //&.s_2 {
+    //  width: 25%;
+    //}
+    //
+    //&.s_3 {
+    //  width: 29.5%;
+    //}
 
-    &.s_3 {
-      width: 29.5%;
-    }
-
-    &.s_4 {
-      width: 41.3%;
-    }
+    //&.s_4 {
+    //  width: 41.3%;
+    //}
   }
 
   @include respond-to-min($resp_step_4) {
-    &.s_2 {
-      width: 24.5%;
-    }
-
-    &.s_3 {
-      width: 33%;
-    }
-
-    &.s_4 {
-      width: 37.3%;
-    }
+    //&.s_2 {
+    //  width: 24.5%;
+    //}
+    //
+    //&.s_3 {
+    //  width: 33%;
+    //}
+    //
+    //&.s_4 {
+    //  width: 37.3%;
+    //}
   }
 }
 
 .footer_col_menu {
   list-style: none;
   float: left;
-  min-width: 48%;
-  padding-top: 7px;
+  min-width: 50%;
+  padding-top: 5px;
 
   li {
     margin-bottom: 4px;
 
     @include respond-to-min($resp_step_2) {
-      margin-bottom: 7px;
+      margin-bottom: 9px;
     }
   }
 }
 
 .footer_follow_list {
+  @extend %clearfix;
+  margin-left: -8px;
   list-style: none;
 
   li {
     float: left;
-    padding-right: 12px;
+    padding-right: 6px;
     margin-bottom: 10px;
   }
 
   .action_sh {
     @include transition_all(color .3s, border-color .3s);
-    color: $violette;
-    border: 1px solid $violette;
+    color: #fff;
+    border: 1px solid transparent;
 
     &:hover {
-      color: #7835ff !important;
-      border-color: #7835ff;
+      color: #fff !important;
+      border-color: #fff;
     }
   }
 }
 
 .footer_col_link {
   text-decoration: none;
-  color: $violette;
-  font: 13px/16px $RubikReg;
+  color: #fff;
+  font: 14px/16px $RubikReg;
 }
 
 .footer_col_caption {
@@ -410,9 +415,9 @@ $footer_koef: 0px;
 
 .copyright_block {
   @extend %clearfix;
-  margin: 0 12px;
-  background: $violette;
-  padding: 6px (36px - $footer_koef) 4px (37px - $footer_koef);
+  background: #2c1f63;
+  //padding: 6px (36px - $footer_koef) 4px (37px - $footer_koef);
+  padding: 6px 8px 4px 7px;
 
   .copyright,
   .footer_link {
@@ -421,33 +426,33 @@ $footer_koef: 0px;
   }
 
   .footer_link {
-    font-size: 12px;
-    letter-spacing: .01em;
+    font-size: 14px;
+    //letter-spacing: .01em;
 
-    @include respond-to-min($resp_step_2) {
-      font-size: 13px;
-    }
+    //@include respond-to-min($resp_step_2) {
+    //  font-size: 13px;
+    //}
   }
 
-  .copyright {
-    font-size: 12px;
+  //.copyright {
+  //  font-size: 12px;
+  //
+  //  @include respond-to-min($resp_step_2) {
+  //    font-size: 14px;
+  //  }
+  //}
 
-    @include respond-to-min($resp_step_2) {
-      font-size: 14px;
-    }
-  }
-
-  @include respond-to-min($resp_step_2) {
-    padding: 6px (90px - $footer_koef) 4px (57px - $footer_koef);
-  }
-
-  @include respond-to-min($resp_step_3) {
-    padding: 2px (72px - $footer_koef) 2px (69px - $footer_koef);
-  }
-
-  @include respond-to-min($resp_step_4) {
-    padding: 2px (88px - $footer_koef) 2px (85px - $footer_koef);
-  }
+  //@include respond-to-min($resp_step_2) {
+  //  padding: 6px (90px - $footer_koef) 4px (57px - $footer_koef);
+  //}
+  //
+  //@include respond-to-min($resp_step_3) {
+  //  padding: 2px (72px - $footer_koef) 2px (69px - $footer_koef);
+  //}
+  //
+  //@include respond-to-min($resp_step_4) {
+  //  padding: 2px (88px - $footer_koef) 2px (85px - $footer_koef);
+  //}
 }
 
 .follow_form {

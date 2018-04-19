@@ -1,19 +1,19 @@
-%icon_pseudo {
-  &:after,
-  &:before { /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: $icomoon-font-name !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-}
+//%icon_pseudo {
+//  &:after,
+//  &:before { /* use !important to prevent issues with browser extensions that change fonts */
+//    font-family: $icomoon-font-name !important;
+//    speak: none;
+//    font-style: normal;
+//    font-weight: normal;
+//    font-variant: normal;
+//    text-transform: none;
+//    line-height: 1;
+//
+//    /* Better Font Rendering =========== */
+//    -webkit-font-smoothing: antialiased;
+//    -moz-osx-font-smoothing: grayscale;
+//  }
+//}
 
 .popup_box {
   background: #fff;
@@ -46,7 +46,7 @@
     margin-bottom: 15px;
     font: 14px/1.2 $RubikMed;
     color: $violette_dark;
-    letter-spacing: 0;
+    //letter-spacing: 0;
     padding-top: 5px;
   }
 
@@ -142,6 +142,136 @@
   text-align: center;
 }
 
+.sh_block {
+  position: relative;
+  background: #fff url(../i/space_ship.svg) no-repeat 95% 87%;
+  padding: 9px 14px 0;
+  border-radius: 5px;
+
+  .search_title {
+    opacity: 1;
+    padding: 9px 70px 22px 16px;
+  }
+
+  .action_soc {
+    @extend %clearfix;
+    margin-right: -30px;
+
+    li {
+      width: 50%;
+      float: left;
+      margin-bottom: 13px;
+      padding-left: 5px !important;
+    }
+  }
+
+  .action_sh {
+    background: none;
+    text-align: left;
+    color: #fff;
+    width: auto;
+
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+      width: 34px;
+      text-align: center;
+    }
+  }
+
+  .action_sh_text {
+    display: inline-block;
+    vertical-align: middle;
+    font: 14px/1 $RubikMed;
+    border-bottom: 1px solid #fff;
+    margin-left: 5px;
+  }
+}
+
+.sh_close_btn {
+  @extend %icon_pseudo;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+
+  &:before {
+    content: unicode($icon-close);
+    color: #c8c8ca;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.sh_title {
+  text-align: center;
+  font: 16px/19px $RubikBold;
+  ////letter-spacing: -.001em;
+}
+
+.subscribe_form {
+  @extend %clearfix;
+  padding: 10px 15px 30px;
+
+  .form_cell {
+    float: left;
+    width: 36%;
+
+    .input_v1 {
+      border-radius: 2px 0 0 2px;
+    }
+
+    .btn_v1 {
+      border-radius: 0 2px 2px 0;
+    }
+
+    &:first-child {
+      width: 64%;
+    }
+  }
+
+  .subscribe_success {
+    .form_cell {
+      display: none;
+    }
+  }
+}
+
+.subscribe_form_footer {
+  text-align: center;
+  background: #f6f7f7;
+  padding: 22px 5px 8px;
+
+  p {
+    font: 16px/19px $RubikBold;
+    margin-bottom: 5px;
+  }
+}
+
+.bonus_img {
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.bonus_caption {
+  text-align: center;
+  color: #000;
+  font: 30px/36px $RubikBlack;
+  padding: 40px 20px;
+}
+
+.bonus_controls {
+  text-align: center;
+  padding: 5px 20px 70px;
+}
+
 .dialog_v1 {
   position: fixed;
 
@@ -163,7 +293,7 @@
   &.dialog_v2 {
     padding: 0;
     border: 0;
-    border-radius: 5px;
+    border-radius: 2px;
 
     .ui-dialog-content {
       padding: 0;
@@ -210,27 +340,49 @@
     }
   }
 
-}
+  &.dialog_title_v2 {
 
-.bonus_img {
-  border-radius: 5px 5px 0 0;
-  overflow: hidden;
+    .ui-dialog-title {
+      width: 100%;
+      padding: 0 10%;
+    }
 
-  img {
-    display: block;
-    width: 100%;
+    .ui-dialog-titlebar {
+      @extend .sh_title;
+      border: none;
+      background: none;
+      z-index: 1;
+      padding: 24px 0 0;
+      border-radius: 2px 2px 0 0;
+    }
+
+    .ui-dialog-titlebar-close {
+      @extend %icon_pseudo;
+      background: none;
+      border: 0;
+      width: 24px;
+      height: 24px;
+      right: 5px;
+      top: 18px;
+      text-align: center;
+
+      &:before {
+        content: unicode($icon-close);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-indent: 0;
+        color: #c8c8ca;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      span {
+        display: none;
+      }
+    }
   }
-}
-
-.bonus_caption {
-  text-align: center;
-  color: #000;
-  font: 30px/36px $RubikBlack;
-  padding: 40px 20px;
-}
-
-.bonus_controls {
-  text-align: center;
-  padding: 5px 20px 70px;
 }
 

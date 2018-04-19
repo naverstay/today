@@ -10,7 +10,7 @@ html(lang='ru')
                     +tag_holder('_slider', true)
 
                     a.attention_block._warn(href='#')
-                        .attention_caption Breaking news
+                        .attention_caption Breaking
                         p
                             span Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
                             span.attention_link
@@ -20,178 +20,62 @@ html(lang='ru')
                             .news_row
                             .news_row
                                 .news_col
-                                    .article_block.story_block._main._stories
+                                    .article_block.story_block._main
                                         .article_img
-                                            ul.article_tags
-                                                li
-                                                    span.icon-crypto.article_tag._top
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                +action_block()
-                                            a.article_img_link(href='#'): img(src='i/ice_expl.jpg')
+                                            a.article_img_link(href='#'): img(src='i/vermont.jpg')
 
                                         .article_title
-                                            //-a.article_link.clr_violette(href='#') ICE Exploiting Blockchain to Expose Crypto Use in Drug Trafficking
-                                            a.article_link(href='#') Vermont City Pilots Land Registry Record With Blockchain
+                                            .article_action: .article_action_inner
+                                                +action_block()
+                                            p: a.article_link(href='#') Vermont City Pilots Land Registry Record With Blockchain
                                             ul.article_stat
                                                 li
-                                                    span.article_stat_val._stat_views 212
+                                                    a.article_stat_val(href='#') John Doe
                                                 li
-                                                    span.article_stat_val 2 minutes ago
+                                                    span.article_stat_val._stat_time 2h
+                                                li
+                                                    span.article_stat_val._stat_views 212
 
                                     .article_reviews_holder._stories
-                                        .top_story_caption News
+                                        .top_story_caption Latest News
 
                                         ul.article_reviews._article
-                                            li
-                                                .article_block._review._left
-                                                    .article_img
-                                                        a.article_img_link(href='#'): img(src='i/remote.jpg')
+                                            +loop_while(4)
+                                                li
+                                                    .article_block._review._left
+                                                        .article_img
+                                                            a.article_img_link(href='#'): img(src='i/bear.jpg')
 
-                                                    .article_title
-                                                        a.article_link._fz_18(href='#') Opera Browser Adds Cryptocurrency Miner Protection for Smartphones
-                                                    ul.article_stat._action
-                                                        li
-                                                            span.article_stat_val Jan 10, 2018 at 10:00
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        li._first
-                                                            span Ariel Deschapell
-                                                        +stat_action()
-
-                                            li
-                                                .article_block._review._left
-                                                    .article_img
-                                                        a.article_img_link(href='#'): img(src='i/remote.jpg')
-
-                                                    .article_title
-                                                        a.article_link(href='#') Lightning Network May Not Solve Bitcoin's Scaling 'Trilemma'
-                                                    ul.article_stat._action
-                                                        li
-                                                            span.article_stat_val Jan 10, 2018 at 10:00
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        li._first
-                                                            a.article_stat_val(href='#') Ariel Deschapell
-                                                        +stat_action()
-
-                                            li
-                                                .article_block._review._left
-                                                    .article_img
-                                                        a.article_img_link(href='#'): img(src='i/remote.jpg')
-
-                                                    .article_title
-                                                        a.article_link(href='#') 2018's Challenge: Promote Responsible Blockchain
-                                                    ul.article_stat._action
-                                                        li
-                                                            span.article_stat_val Jan 10, 2018 at 10:00
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        li._first
-                                                            a.article_stat_val(href='#') Ariel Deschapell
-                                                        +stat_action()
-
-                                            li
-                                                .article_block._review._left
-                                                    .article_img
-                                                        a.article_img_link(href='#'): img(src='i/remote.jpg')
-
-                                                    .article_title
-                                                        a.article_link(href='#') Bulgaria Joins 'International Operation' Against OneCoin
-                                                    ul.article_stat._action
-                                                        li
-                                                            span.article_stat_val Jan 10, 2018 at 10:00
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        li._first
-                                                            a.article_stat_val(href='#') Ariel Deschapell
-                                                        +stat_action()
-
-
-                                        //-ul.news_list
-                                            li
-                                                .news_item
-                                                    //-.news_date 2 min<br>ago
-                                                    a.news_name(href='#') New Bill in Colorado Encourages State to Adopt Blockchain
-                                                    ul.article_stat
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        li
-                                                            span 2 minutes ago
-
-                                            li
-                                                .news_item
-                                                    //-.news_date 1 hr<br>ago
-                                                    a.news_name(href='#') Ledger-to-Ledger? Hardware Wallet Integrates with Decentralized Exchange
-                                                    ul.article_stat
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        li
-                                                            span 2 minutes ago
-
-                                            li
-                                                .news_item
-                                                    //-.news_date 2 hr<br>ago
-                                                    a.news_name(href='#') TSMC Expects 'Strong' Crypto Mining Demand to Continue
-                                                    ul.article_stat
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        li
-                                                            span 2 minutes ago
-
-                                            li
-                                                .news_item
-                                                    //-.news_date 1 day<br>ago
-                                                    a.news_name(href='#') Ripple and Stellar Lead the Way as Crypto Market
-                                                    ul.article_stat
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        li
-                                                            span 2 minutes ago
-
-                                            li
-                                                .news_item
-                                                    //-.news_date 29 hr<br>ago
-                                                    a.news_name(href='#') Korean Regulator Investigating Staff Insider Trading of Cryptocurrencies
-                                                    ul.article_stat
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        li
-                                                            span 2 minutes ago
-
-                                            li
-                                                .news_item
-                                                    //-.news_date 1 day<br>ago
-                                                    a.news_name(href='#') San Francisco Blockchain Startups Partner on Decentralized Insurance
-                                                    ul.article_stat
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        li
-                                                            span 2 minutes ago
-
-                                            li
-                                                .news_item
-                                                    //-.news_date 29 hr<br>ago
-                                                    a.news_name(href='#') Tether Confirms Its Relationship With Auditor Has 'Dissolved'
-                                                    ul.article_stat
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        li
-                                                            span 2 minutes ago
+                                                        .article_title
+                                                            a.article_link._fz_18(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
+                                                        ul.article_stat._action
+                                                            li
+                                                                a.article_stat_val(href='#') John Doe
+                                                            li
+                                                                span.article_stat_val._stat_time 2h
+                                                            li
+                                                                span.article_stat_val._stat_views 212
+                                                            +stat_action()
 
                                 .news_col
                                     .article_block.story_block._top
                                         .article_img
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                +action_block()
-                                            a.article_img_link(href='#'): img(src='i/bitflyer.jpg')
+                                            a.article_img_link(href='#'): img(src='i/bitflyer2.jpg')
 
                                             .article_title
+                                                .article_action: .article_action_inner
+                                                    +action_block()
                                                 .top_story_caption Top Story
 
                                                 a.article_link(href='#') Cryptocurrency Exchange BitFlyer Launches New EU Branch
+
                                                 ul.article_stat
                                                     li
-                                                        a.article_theme(href='#') Read more…
+                                                        a.article_stat_val(href='#') John Doe
+                                                    li
+                                                        span.article_stat_val._stat_time 2h
+                                                    li
+                                                        span.article_stat_val._stat_views 212
 
                                     //-#subscribeTrigger
 
@@ -202,65 +86,77 @@ html(lang='ru')
                                             li
                                                 .article_block._review._left
                                                     .article_img
-                                                        a.article_img_link(href='#'): img(src='i/remote.jpg')
+                                                        ul.article_tags
+                                                            li
+                                                                a.icon-say.article_tag._wide._features(href='#')
+                                                                    span Features
+                                                        a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                                                     .article_title
-                                                        a.article_link._fz_18(href='#') Opera Browser Adds Cryptocurrency Miner Protection for Smartphones
+                                                        a.article_link._fz_18(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
                                                     ul.article_stat._action
                                                         li
-                                                            span.article_stat_val Jan 10, 2018 at 10:00
+                                                            a.article_stat_val(href='#') John Doe
+                                                        li
+                                                            span.article_stat_val._stat_time 2h
                                                         li
                                                             span.article_stat_val._stat_views 212
-                                                        li._first
-                                                            span Ariel Deschapell
                                                         +stat_action()
 
                                             li
                                                 .article_block._review._left
                                                     .article_img
-                                                        a.article_img_link(href='#'): img(src='i/remote.jpg')
+                                                        ul.article_tags
+                                                            li
+                                                                a.icon-say.article_tag._wide._pricewise(href='#')
+                                                                    span PRISEWISE
+                                                        a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                                                     .article_title
-                                                        a.article_link(href='#') Lightning Network May Not Solve Bitcoin's Scaling 'Trilemma'
+                                                        a.article_link._fz_18(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
                                                     ul.article_stat._action
                                                         li
-                                                            span.article_stat_val Jan 10, 2018 at 10:00
+                                                            a.article_stat_val(href='#') John Doe
+                                                        li
+                                                            span.article_stat_val._stat_time 2h
                                                         li
                                                             span.article_stat_val._stat_views 212
-                                                        li._first
-                                                            a.article_stat_val(href='#') Ariel Deschapell
                                                         +stat_action()
 
                                             li
                                                 .article_block._review._left
                                                     .article_img
-                                                        a.article_img_link(href='#'): img(src='i/remote.jpg')
+                                                        ul.article_tags
+                                                            li
+                                                                a.icon-say.article_tag._wide._wiki(href='#')
+                                                                    span WIKICOIN
+                                                        a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                                                     .article_title
-                                                        a.article_link(href='#') 2018's Challenge: Promote Responsible Blockchain
+                                                        a.article_link._fz_18(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
                                                     ul.article_stat._action
                                                         li
-                                                            span.article_stat_val Jan 10, 2018 at 10:00
+                                                            a.article_stat_val(href='#') John Doe
+                                                        li
+                                                            span.article_stat_val._stat_time 2h
                                                         li
                                                             span.article_stat_val._stat_views 212
-                                                        li._first
-                                                            a.article_stat_val(href='#') Ariel Deschapell
                                                         +stat_action()
 
                                             li
                                                 .article_block._review._left
                                                     .article_img
-                                                        a.article_img_link(href='#'): img(src='i/remote.jpg')
+                                                        a.article_img_link(href='#'): img(src='i/bear.jpg')
 
                                                     .article_title
-                                                        a.article_link(href='#') Bulgaria Joins 'International Operation' Against OneCoin
+                                                        a.article_link._fz_18(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
                                                     ul.article_stat._action
                                                         li
-                                                            span.article_stat_val Jan 10, 2018 at 10:00
+                                                            a.article_stat_val(href='#') John Doe
+                                                        li
+                                                            span.article_stat_val._stat_time 2h
                                                         li
                                                             span.article_stat_val._stat_views 212
-                                                        li._first
-                                                            a.article_stat_val(href='#') Ariel Deschapell
                                                         +stat_action()
 
                                 .news_col
@@ -268,365 +164,149 @@ html(lang='ru')
 
                                 .news_col
                                     a.btn_v1.more_btn.gray_btn(href='#') More stories
+
                             .news_row
                                 .news_col._wide
-                                    .article_group_title._features._bg
+                                    .article_group_title._features.icon-star
                                         a.article_group_link(href='#')
-                                            span Features
-                                        a.article_title_link(href='#'): span All featured
+                                            span.text_upper PRESS RELEASES
+                                        a.article_title_link(href='#'): span All Press Releases
+                                        a.article_title_link._more(href='#'): span Submit Press Release
 
-                                    ul.news_aggregator._features._bordered
-                                        li
-                                            .article_block
-                                                .article_img
-                                                    .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                        +action_block()
-                                                    a.article_img_link(href='#'): img(src='i/chinese.jpg')
+                                    ul.news_aggregator
+                                        +loop_while(3)
+                                            li
+                                                .article_block
+                                                    .article_img
+                                                        a.article_img_link(href='#'): img(src='i/bear_0.jpg')
 
-                                                .article_title
-                                                    a.article_link(href='#') Bitcoin Price Seeks Direction as Trading Range Narrows Trading Range Narrows
-                                                    ul.article_stat
-                                                        li
-                                                            span.article_stat_val Jan 10, 2018 at 10:00
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        li._first
-                                                            a.article_stat_val(href='#') Ariel Deschapell
-
-                                        li
-                                            .article_block
-                                                .article_img
-                                                    .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                        +action_block()
-                                                    a.article_img_link(href='#'): img(src='i/chinese.jpg')
-
-                                                .article_title
-                                                    a.article_link(href='#') Battle-Testing Lightning: Schools Start Contest to Secure Bitcoin’s Layer 2
-                                                    ul.article_stat
-                                                        li
-                                                            span.article_stat_val Jan 10, 2018 at 10:00
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        li._first
-                                                            a.article_stat_val(href='#') Ariel Deschapell
-
-                                        li
-                                            .article_block
-                                                .article_img
-                                                    .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                        +action_block()
-                                                    a.article_img_link(href='#'): img(src='i/chinese.jpg')
-
-                                                .article_title
-                                                    a.article_link(href='#') Battle-Testing Lightning: Schools Start Contest to Secure Bitcoin’s Layer 2
-                                                    ul.article_stat
-                                                        li
-                                                            span.article_stat_val Jan 10, 2018 at 10:00
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        li._first
-                                                            a.article_stat_val(href='#') Ariel Deschapell
-
-                                    .article_controls._features
-                                        a.btn_v1.more_btn.gray_btn(href='#') More features
+                                                    .article_title
+                                                        .article_action: .article_action_inner
+                                                            +action_block()
+                                                        a.article_link(href='#') Reddit No Longer Accepting Bitcoin Payments
+                                                        ul.article_stat
+                                                            li
+                                                                a.article_stat_val(href='#') John Doe
+                                                            li
+                                                                span.article_stat_val._stat_time 2h
+                                                            li
+                                                                span.article_stat_val._stat_views 212
 
                             .news_row._pool._bordered._show_2
                                 .news_col._wide
-                                    .article_group_title._pool
+                                    .article_group_title._pricewise.icon-splash
                                         a.article_group_link(href='#')
-                                            span Sharks pool
-                                        a.article_title_link(href='#') All #Sharks pool
-
-                                .news_col._third
-                                    .article_block._pool
-                                        .article_img
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                +action_block()
-                                            a.article_img_link(href='#'): img(src='i/range.jpg')
-
-                                        .article_title
-                                            a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
-                                            ul.article_stat
-                                                li
-                                                    span.article_stat_val._stat_views 212
-                                                li
-                                                    span.article_stat_val 2 minutes ago
-                                                li._first
-                                                    a.article_stat_val(href='#') Ariel Deschapell
-
-                                .news_col._third
-                                    .article_block._pool
-                                        .article_img
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                +action_block()
-                                            a.article_img_link(href='#'): img(src='i/range.jpg')
-
-                                        .article_title
-                                            a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
-                                            ul.article_stat
-                                                li
-                                                    span.article_stat_val._stat_views 212
-                                                li
-                                                    span.article_stat_val 2 minutes ago
-                                                li._first
-                                                    a.article_stat_val(href='#') Ariel Deschapell
-
-                                .news_col._third
-                                    .article_block._pool
-                                        .article_img
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                +action_block()
-                                            a.article_img_link(href='#'): img(src='i/range.jpg')
-
-                                        .article_title
-                                            a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
-                                            ul.article_stat
-                                                li
-                                                    span.article_stat_val._stat_views 212
-                                                li
-                                                    span.article_stat_val 2 minutes ago
-                                                li._first
-                                                    a.article_stat_val(href='#') Ariel Deschapell
-
-                            .article_controls._pool
-                                a.btn_v1.more_btn.gray_btn(href='#') More #Sharks pool
-
-                            .news_row._bordered._show_2._release
-                                .news_col._wide
-                                    .article_group_title._release
-                                        a.article_group_link(href='#')
-                                            span Press Release
-                                        a.article_title_link(href='#') All #Press Release
-                                        a.article_title_link._submit(href='new_release.html') Submit press release
-
-                                .news_col._third
-                                    .article_block
-                                        .article_img
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                +action_block()
-                                            a.article_img_link(href='#'): img(src='i/range.jpg')
-
-                                        .article_title
-                                            a.article_link(href='#') Goldman Sachs: Bitcoin Could Be Viable Mon…
-                                            ul.article_stat
-                                                li
-                                                    span.article_stat_val._stat_views 212
-                                                li
-                                                    span.article_stat_val 2 minutes ago
-                                                li._first
-                                                    a.article_stat_val(href='#') Ariel Deschapell
-                                .news_col._third
-                                    .article_block
-                                        .article_img
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                +action_block()
-                                            a.article_img_link(href='#'): img(src='i/range.jpg')
-
-                                        .article_title
-                                            a.article_link(href='#') China's Internet Finance Association Warns on …
-                                            ul.article_stat
-                                                li
-                                                    span.article_stat_val._stat_views 212
-                                                li
-                                                    span.article_stat_val 2 minutes ago
-                                                li._first
-                                                    a.article_stat_val(href='#') Ariel Deschapell
-                                .news_col._third
-                                    .article_block
-                                        .article_img
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                +action_block()
-                                            a.article_img_link(href='#'): img(src='i/range.jpg')
-
-                                        .article_title._video
-                                            a.article_link(href='#') Biosensor Analysis Tool - Human Behaviour Research Synchroniz…
-                                            ul.article_stat
-                                                li
-                                                    span.article_stat_val._stat_views 212
-                                                li
-                                                    span.article_stat_val 2 minutes ago
-                                                li._first
-                                                    a.article_stat_val(href='#') Ariel Deschapell
-
-
-                            .article_controls._release
-                                a.btn_v1.more_btn.gray_btn(href='#') More #Press Releases
-
-                            .news_row._bordered._pricewise._show_2
-                                .news_col._wide
-                                    .article_group_title._pricewise
-                                        a.article_group_link(href='#')
-                                            span Pricewise
+                                            span.text_upper pricewise
                                         a.article_title_link(href='#') All #Pricewise
 
                                 .news_col._third
-                                    .article_block
+                                    .article_block._pool
                                         .article_img
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                +action_block()
-                                            a.article_img_link(href='#'): img(src='i/range.jpg')
+                                            a.article_img_link(href='#'): img(src='i/bear_0.jpg')
 
                                         .article_title
-                                            a.article_link(href='#') Goldman Sachs: Bitcoin Could Be Viable Mon…
+                                            .article_action: .article_action_inner
+                                                +action_block()
+                                            a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
                                             ul.article_stat
                                                 li
-                                                    span.article_stat_val._stat_views 212
+                                                    a.article_stat_val(href='#') John Doe
                                                 li
-                                                    span.article_stat_val 2 minutes ago
-                                                li._first
-                                                    a.article_stat_val(href='#') Ariel Deschapell
+                                                    span.article_stat_val._stat_time 2h
+                                                li
+                                                    span.article_stat_val._stat_views 212
+
                                 .news_col._third
-                                    .article_block
+                                    .article_block._pool
                                         .article_img
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                +action_block()
-                                            a.article_img_link(href='#'): img(src='i/range.jpg')
+                                            a.article_img_link(href='#'): img(src='i/bear_0.jpg')
 
                                         .article_title
-                                            a.article_link(href='#') China's Internet Finance Association Warns on …
-                                            ul.article_stat
-                                                li
-                                                    span.article_stat_val._stat_views 212
-                                                li
-                                                    span.article_stat_val 2 minutes ago
-                                                li._first
-                                                    a.article_stat_val(href='#') Ariel Deschapell
-                                .news_col._third
-                                    .article_block
-                                        .article_img
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                            .article_action: .article_action_inner
                                                 +action_block()
-                                            a.article_img_link(href='#'): img(src='i/range.jpg')
-
-                                        .article_title._video
-                                            a.article_link(href='#') Biosensor Analysis Tool - Human Behaviour Research Synchroniz…
+                                            a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
                                             ul.article_stat
                                                 li
-                                                    span.article_stat_val._stat_views 212
+                                                    a.article_stat_val(href='#') John Doe
                                                 li
-                                                    span.article_stat_val 2 minutes ago
-                                                li._first
-                                                    a.article_stat_val(href='#') Ariel Deschapell
+                                                    span.article_stat_val._stat_time 2h
+                                                li
+                                                    span.article_stat_val._stat_views 212
 
+                                .news_col._third
+                                    .article_block._pool
+                                        .article_img
+                                            a.article_img_link(href='#'): img(src='i/bear_0.jpg')
 
-                            .article_controls._pricewise
-                                a.btn_v1.more_btn.gray_btn(href='#') More #Pricewise
+                                        .article_title
+                                            .article_action: .article_action_inner
+                                                +action_block()
+                                            a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
+                                            ul.article_stat
+                                                li
+                                                    a.article_stat_val(href='#') John Doe
+                                                li
+                                                    span.article_stat_val._stat_time 2h
+                                                li
+                                                    span.article_stat_val._stat_views 212
 
-                            .news_row._bordered._ai._show_2
+                            .news_row._pool._bordered._show_2
                                 .news_col._wide
-                                    .article_group_title._ai
+                                    .article_group_title._wiki.icon-star
                                         a.article_group_link(href='#')
-                                            span AI
-                                        a.article_title_link(href='#') All #AI
+                                            span.text_upper WIKICOIN
+                                        a.article_title_link(href='#') All #WikiCoin
 
                                 .news_col._third
-                                    .article_block
+                                    .article_block._pool
                                         .article_img
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                +action_block()
-                                            a.article_img_link(href='#'): img(src='i/range.jpg')
+                                            a.article_img_link(href='#'): img(src='i/bear_0.jpg')
 
                                         .article_title
-                                            a.article_link(href='#') Goldman Sachs: Bitcoin Could Be Viable Mon…
+                                            .article_action: .article_action_inner
+                                                +action_block()
+                                            a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
                                             ul.article_stat
                                                 li
-                                                    span.article_stat_val._stat_views 212
+                                                    a.article_stat_val(href='#') John Doe
                                                 li
-                                                    span.article_stat_val 2 minutes ago
-                                                li._first
-                                                    a.article_stat_val(href='#') Ariel Deschapell
+                                                    span.article_stat_val._stat_time 2h
+                                                li
+                                                    span.article_stat_val._stat_views 212
+
                                 .news_col._third
-                                    .article_block
+                                    .article_block._pool
                                         .article_img
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                +action_block()
-                                            a.article_img_link(href='#'): img(src='i/range.jpg')
+                                            a.article_img_link(href='#'): img(src='i/bear_0.jpg')
 
                                         .article_title
-                                            a.article_link(href='#') China's Internet Finance Association Warns on …
+                                            .article_action: .article_action_inner
+                                                +action_block()
+                                            a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
                                             ul.article_stat
                                                 li
-                                                    span.article_stat_val._stat_views 212
+                                                    a.article_stat_val(href='#') John Doe
                                                 li
-                                                    span.article_stat_val 2 minutes ago
-                                                li._first
-                                                    a.article_stat_val(href='#') Ariel Deschapell
-                                .news_col._third
-                                    .article_block
-                                        .article_img
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                +action_block()
-                                            a.article_img_link(href='#'): img(src='i/range.jpg')
-
-                                        .article_title._video
-                                            a.article_link(href='#') Biosensor Analysis Tool - Human Behaviour Research Synchroniz…
-                                            ul.article_stat
+                                                    span.article_stat_val._stat_time 2h
                                                 li
                                                     span.article_stat_val._stat_views 212
-                                                li
-                                                    span.article_stat_val 2 minutes ago
-                                                li._first
-                                                    a.article_stat_val(href='#') Ariel Deschapell
-
-                            .article_controls._ai
-                                a.btn_v1.more_btn.gray_btn(href='#') More #AI
-
-                            .news_row._bordered._analysis._show_2
-                                .news_col._wide
-                                    .article_group_title._analysis
-                                        a.article_group_link(href='#')
-                                            span Analysis
-                                        a.article_title_link(href='#') All  #Analysis
 
                                 .news_col._third
-                                    .article_block
+                                    .article_block._pool
                                         .article_img
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                +action_block()
-                                            a.article_img_link(href='#'): img(src='i/range.jpg')
+                                            a.article_img_link(href='#'): img(src='i/bear_0.jpg')
 
                                         .article_title
-                                            a.article_link(href='#') Goldman Sachs: Bitcoin Could Be Viable Mon…
-                                            ul.article_stat
-                                                li
-                                                    span.article_stat_val._stat_views 212
-                                                li
-                                                    span.article_stat_val 2 minutes ago
-                                                li._first
-                                                    a.article_stat_val(href='#') Ariel Deschapell
-                                .news_col._third
-                                    .article_block
-                                        .article_img
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                            .article_action: .article_action_inner
                                                 +action_block()
-                                            a.article_img_link(href='#'): img(src='i/range.jpg')
-
-                                        .article_title
-                                            a.article_link(href='#') China's Internet Finance Association Warns on …
+                                            a.article_link(href='#') Atomic Action: Will 2018 Be the Year of the Cros…
                                             ul.article_stat
                                                 li
-                                                    span.article_stat_val._stat_views 212
+                                                    a.article_stat_val(href='#') John Doe
                                                 li
-                                                    span.article_stat_val 2 minutes ago
-                                                li._first
-                                                    a.article_stat_val(href='#') Ariel Deschapell
-                                .news_col._third
-                                    .article_block
-                                        .article_img
-                                            .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                +action_block()
-                                            a.article_img_link(href='#'): img(src='i/range.jpg')
-
-                                        .article_title._video
-                                            a.article_link(href='#') Biosensor Analysis Tool - Human Behaviour Research Synchroniz…
-                                            ul.article_stat
+                                                    span.article_stat_val._stat_time 2h
                                                 li
                                                     span.article_stat_val._stat_views 212
-                                                li._fr
-                                                    span.article_stat_val 13:45
-
-                            .article_controls._analysis
-                                a.btn_v1.more_btn.gray_btn(href='#') More #Price analysis
 
                         +aside_block()
 
@@ -638,5 +318,3 @@ html(lang='ru')
             +footer()
 
         +scripts()
-
-

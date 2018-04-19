@@ -1,6 +1,6 @@
 var $wnd, $body, $header, $footer,
     $subscribeTrigger, $subscribeBlock, $goTop, $goTopHolder, didScroll, tagSlider,
-    $followPopup, followCountDown,
+    $followPopup, $bonusPopup, $sharePopup, $subscribePopup, followCountDown,
     lastScrollTop = 0, delta = 5,
     subscribe_spacer = 270;
 
@@ -181,6 +181,8 @@ $(window)
 
         initFollowPopup();
 
+        initSharePopup();
+
         initBonusPopup();
     })
     .on('scroll', function () {
@@ -254,7 +256,59 @@ function checkHeader() {
     }
 }
 
+function initSharePopup() {
+
+    $sharePopup = $('#sh_popup').dialog({
+        autoOpen: false,
+        modal: true,
+        closeOnEscape: true,
+        closeText: '',
+        dialogClass: 'dialog_v2 dialog_title_v2',
+        //appendTo: '.wrapper',
+        width: 500,
+        draggable: true,
+        title: "Share this on:",
+        collision: "fit",
+        position: {my: "top center", at: "top center", of: window},
+        open: function (event, ui) {
+            $body.addClass('modal_opened overlay_v2');
+        },
+        close: function (event, ui) {
+            $body.removeClass('modal_opened overlay_v2');
+        }
+    });
+}
+
+
 function initSubscribePopup() {
+
+    $subscribePopup = $('#subscribe_popup').dialog({
+        autoOpen: false,
+        modal: true,
+        closeOnEscape: true,
+        closeText: '',
+        dialogClass: 'dialog_v2 dialog_title_v2',
+        //appendTo: '.wrapper',
+        width: 500,
+        draggable: true,
+        title: "Subscribe to our newsletter",
+        collision: "fit",
+        position: {my: "top center", at: "top center", of: window},
+        open: function (event, ui) {
+            $body.addClass('modal_opened overlay_v2');
+        },
+        close: function (event, ui) {
+            $body.removeClass('modal_opened overlay_v2');
+        }
+    });
+
+    $('.openSubscribe').on('click', function () {
+        $subscribePopup.dialog('open');
+        return false;
+    });
+}
+
+/*function initSubscribePopup() {
     $('.openSubscribe').popup({
         backOpacity: 0.6,
         content: $('#popup_subscribe'),
@@ -262,7 +316,7 @@ function initSubscribePopup() {
             initValidation('.validatePopup', 1);
         }
     });
-}
+}*/
 
 function initFollowPopup() {
 
@@ -290,8 +344,8 @@ function initFollowPopup() {
 
 function initBonusPopup() {
 
-    $followPopup = $('#bonus_popup').dialog({
-        autoOpen: true,
+    $bonusPopup = $('#bonus_popup').dialog({
+        autoOpen: false,
         modal: true,
         closeOnEscape: true,
         closeText: '',
@@ -316,7 +370,7 @@ function startFollowCountDown() {
     followCountDown = setInterval(function () {
         time--;
 
-        $('.followCounter').text(plural(time, 'second','seconds','seconds'));
+        $('.followCounter').text(plural(time, 'second', 'seconds', 'seconds'));
 
         if (!time) {
             clearInterval(followCountDown);
@@ -349,7 +403,7 @@ function initTagSlider() {
 }
 
 function plural(n, str1, str2, str5) {
-	return n + ' ' + ((((n % 10) == 1) && ((n % 100) != 11)) ? (str1) : (((((n % 10) >= 2) && ((n % 10) <= 4)) && (((n % 100) < 10) || ((n % 100) >= 20))) ? (str2) : (str5)))
+    return n + ' ' + ((((n % 10) == 1) && ((n % 100) != 11)) ? (str1) : (((((n % 10) >= 2) && ((n % 10) <= 4)) && (((n % 100) < 10) || ((n % 100) >= 20))) ? (str2) : (str5)))
 }
 
 function isTouch() {

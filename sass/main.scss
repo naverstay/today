@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font: 15px/1.2 $cross_font_Georgia;
+  font: 14px/1.2 $Roboto;
   color: $default_t_color;
   background: #fff;
   min-width: $body_width;
@@ -53,7 +53,7 @@ a {
   margin: 0 auto;
 
   @include respond-to-min($resp_step_2) {
-    padding-top: 88px;
+    padding-top: 92px;
   }
 }
 
@@ -168,7 +168,7 @@ a {
       .article_link {
         font-size: 16px;
         line-height: 1.5;
-        letter-spacing: .035em;
+        //letter-spacing: .035em;
       }
 
       .article_stat {
@@ -205,7 +205,7 @@ a {
       .article_link {
         font-size: 16px;
         line-height: 1.5;
-        letter-spacing: .035em;
+        //letter-spacing: .035em;
       }
 
       .article_stat {
@@ -238,9 +238,8 @@ a {
 .news_aggregator {
   @extend %global_flex_block_row_wrap_flex-start;
   list-style: none;
-  padding-right: 16px;
+  margin-left: -30px;
   position: relative;
-  z-index: 1;
 
   &:before {
     //right: 32px;
@@ -277,8 +276,7 @@ a {
   > li {
     float: left;
     width: 50%;
-    margin-bottom: 14px;
-    padding-left: 16px;
+    padding-left: 30px;
 
     @include respond-to-max($resp_step_2) {
       &:nth-child(n+3) {
@@ -293,7 +291,7 @@ a {
 
   .article_link {
     font: 16px $RubikMed;
-    letter-spacing: .005em;
+    //letter-spacing: .005em;
   }
 
   @include respond-to-min($resp_step_3) {

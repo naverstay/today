@@ -6,11 +6,11 @@
   position: relative;
   display: block;
   border-radius: 100%;
-  width: 48px;
-  height: 48px;
-  line-height: 48px;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
   text-align: center;
-  font-size: 18px;
+  font-size: 14px;
   color: $violette;
   background: #f7f8f8;
   border: 2px solid #f7f8f8;
@@ -152,10 +152,10 @@
       @include transition_all(transform .3s, top .3s, background .3s);
       content: '';
       position: absolute;
-      left: 15px;
+      left: 12px;
       width: 14px;
       height: 2px;
-      top: 22px;
+      top: 17px;
       background: $violette;
     }
 
@@ -205,8 +205,8 @@
 .user_menu {
   list-style: none;
   float: right;
-  min-width: 280px;
-  padding-top: 2px;
+  min-width: 270px;
+  padding-top: 8px;
   margin-right: -4px;
 
   li {
@@ -215,9 +215,7 @@
   }
 
   @include respond-to-min($resp_step_2) {
-    padding-top: 5px;
-    padding-left: 50px;
-    min-width: 295px;
+    padding-left: 40px;
   }
 
   @include respond-to-min($resp_step_4) {
@@ -239,5 +237,5 @@
 }
 
 .currency_val {
-  font: 13px $RubikMed;
+  color: #000;
 }

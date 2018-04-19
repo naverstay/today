@@ -75,7 +75,7 @@
 
     p {
       font: 18px/24px $RubikBold;
-      letter-spacing: .025em;
+      //letter-spacing: .025em;
     }
   }
 
@@ -94,7 +94,7 @@
   color: #fff;
   padding: 0 36px;
   font: 28px/32px $RubikBlack;
-  letter-spacing: .025em;
+  //letter-spacing: .025em;
 
   .subscribe_fail &,
   .subscribe_success & {
@@ -231,7 +231,7 @@
   width: 48px;
   text-align: center;
   font-size: 18px;
-  line-height: 50px;
+  line-height: 40px;
   padding-top: 2px;
   background: none;
   color: #fff;
@@ -271,7 +271,7 @@
   .main_menu {
     opacity: 1;
     float: left;
-    padding-top: 4px;
+    padding-top: 2px;
     padding-left: 0;
     overflow: visible;
   }
@@ -288,6 +288,7 @@
   .menu_link {
     font-size: 20px;
     text-decoration: none;
+    font-weight: 400;
 
     span {
       position: relative;
@@ -430,8 +431,8 @@
   text-decoration: underline;
   color: #fff;
   font: 24px $RubikMed;
-  //letter-spacing: -.031em;
-  letter-spacing: .02em;
+  ////letter-spacing: -.031em;
+  //letter-spacing: .02em;
 }
 
 .menu_footer {
@@ -531,7 +532,7 @@
   p {
     color: #f7f8f8;
     font: 16px/1.3 $RubikBold;
-    letter-spacing: -.021em;
+    //letter-spacing: -.021em;
   }
 
   &._success {
@@ -561,7 +562,7 @@
 .footer_msg_title {
   font: 20px/2 $RubikBlack;
   color: #fff;
-  letter-spacing: .017em;
+  //letter-spacing: .017em;
   margin-bottom: 20px;
 
   span {
@@ -580,7 +581,7 @@
   color: $violette;
   font: 16px $RubikBold;
   text-decoration: underline;
-  letter-spacing: -.017em;
+  //letter-spacing: -.017em;
 }
 
 .footer_action {
@@ -590,7 +591,7 @@
 
   p {
     font: 20px/1.2 $RubikBlack;
-    letter-spacing: .017em;
+    //letter-spacing: .017em;
     margin-bottom: 16px;
   }
 
@@ -623,7 +624,7 @@
 
   span {
     font: 13px $RubikBold;
-    letter-spacing: -.017em;
+    //letter-spacing: -.017em;
     margin-top: 12px;
     display: inline-block;
     vertical-align: top;

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'crypto_icons';
-  src:  url('fonts/crypto_icons.eot?qe2icy');
-  src:  url('fonts/crypto_icons.eot?qe2icy#iefix') format('embedded-opentype'),
-    url('fonts/crypto_icons.ttf?qe2icy') format('truetype'),
-    url('fonts/crypto_icons.woff?qe2icy') format('woff'),
-    url('fonts/crypto_icons.svg?qe2icy#crypto_icons') format('svg');
+  src:  url('fonts/crypto_icons.eot?swavzm');
+  src:  url('fonts/crypto_icons.eot?swavzm#iefix') format('embedded-opentype'),
+    url('fonts/crypto_icons.ttf?swavzm') format('truetype'),
+    url('fonts/crypto_icons.woff?swavzm') format('woff'),
+    url('fonts/crypto_icons.svg?swavzm#crypto_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -42,6 +42,36 @@
 .icon-chevron-left:before {
   content: "\e926";
 }
+.icon-flash_circle:before {
+  content: "\e93b";
+}
+.icon-share-alt:before {
+  content: "\e939";
+}
+.icon-envelope:before {
+  content: "\e93a";
+}
+.icon-attach:before {
+  content: "\e936";
+}
+.icon-quote_r:before {
+  content: "\e937";
+}
+.icon-quote_l:before {
+  content: "\e938";
+}
+.icon-hash:before {
+  content: "\e935";
+}
+.icon-check_2:before {
+  content: "\e934";
+}
+.icon-eye_dot:before {
+  content: "\e933";
+}
+.icon-triangle_r:before {
+  content: "\e932";
+}
 .icon-ai:before {
   content: "\e92f";
 }
@@ -54,10 +84,10 @@
 .icon-chevron_l_thin:before {
   content: "\e92c";
 }
-.icon-desc:before {
+.icon-asc:before {
   content: "\e92d";
 }
-.icon-asc:before {
+.icon-desc:before {
   content: "\e92e";
 }
 .icon-bonfire:before {
@@ -149,9 +179,6 @@
 }
 .icon-ufo:before {
   content: "\e90e";
-}
-.icon-share-alt:before {
-  content: "\e907";
 }
 .icon-eye:before {
   content: "\e906";

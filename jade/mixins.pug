@@ -1,5 +1,10 @@
 - var prod = true;
 - var prod = false;
+- var link_fb = 'https://www.facebook.com/CryptoComes-1537974916268413/';
+- var link_tg = 'https://t.me/cryptocomes';
+- var link_tw = 'https://twitter.com/CryptoComes';
+- var link_rss = 'https://cryptocomes.com/rss_feed';
+- var link_youtube = 'https://www.youtube.com/channel/UCXuvBkbsGkVr4DE0LUbfbaQ';
 
 mixin dev_head(page_title)
     head
@@ -37,13 +42,14 @@ mixin action_list()
 mixin footer()
     .footer._footer_v2
         .section_inner.clearfix
+            .footer_bg
             .footer_logo
                 a.logo(href='index.html')
-                    img(src= 'i/footer_logo.svg')
+                    img(src= 'i/footer_logo_w.svg')
 
             .footer_menu_holder
                 .footer_col.s_2
-                    .footer_col_caption Categories
+                    //-.footer_col_caption Categories
 
                     ul.footer_col_menu
                         li: a.footer_col_link(href='#'): span News
@@ -54,23 +60,25 @@ mixin footer()
                         li: a.footer_col_link(href='#'): span CryptoTips
                         li: a.footer_col_link(href='#'): span ICOWatch
                         li: a.footer_col_link(href='#'): span WikiCoin
-                        li: a.footer_col_link(href='#'): span PriceIndex
+                        li: a.footer_col_link(href='#'): span AI
 
                 .footer_col.s_3
-                    .footer_col_caption Sections
+                    //-.footer_col_caption Sections
 
                     ul.footer_col_menu
-                        li: a.footer_col_link(href='#'): span Advertise
-                        li: a.footer_col_link(href='#'): span Partnership
-                        li: a.footer_col_link(href='#'): span Cryptofeeds
-                    ul.footer_col_menu
+                        li: a.footer_col_link(href='#'): span CryptoNews Feeds
+                        li: a.footer_col_link(href='#'): span Price Index
+                        li: a.footer_col_link(href='#'): span Advertise with Us
                         li: a.footer_col_link(href='#'): span About CryptoComes
-                        li: a.footer_col_link(href='#'): span Contacts
 
                 .footer_col.s_4
-                    .footer_col_caption Follow us
-                    p To get hot news and stories
-                    .follow_form
+                    //-.footer_col_caption Follow us
+                    p Follow us and get all crypto news 24/7
+
+                    p
+                        a.btn_violette_4.btn_v2.subscribe_btn.openSubscribe._no_icon(href='#'): span SUBSCRIBE TO NEWSLETTER
+
+                    //-.follow_form
                         form(action='#')
                             .follow_cell
                                 button.btn_v4.subscr_btn()
@@ -80,17 +88,20 @@ mixin footer()
                                     input.input_v4(placeholder='Enter your email')
 
                     ul.footer_follow_list
-                        li: a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
                         li: a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
-                        li: a.action_sh._tg(href='#')
+                        li: a.action_sh._tg(href= link_tg)
+                        li: a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+                        li: a.action_sh._y(href= link_youtube data-network="youtube" class='st-custom-button')
+                        li: a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
+                        li: a.action_sh._rss(href='#')
 
         .section_inner.clearfix: .copyright_block
-            .copyright © CryptoComes 2017 - 2018. All rights reserved
+            .copyright ©2018 CryptoComes. All rights reserved
             ul.footer_menu
                 li: a.footer_link(href='#') Terms and conditions
-                li: a.footer_link(href='#') Privacy Policy
+                //-li: a.footer_link(href='#') Privacy Policy
 
-        .go_top_holder.goTopHolder
+        //-.go_top_holder.goTopHolder
             .section_inner
                 a.go_top.goTop(href='#')
 
@@ -143,6 +154,52 @@ mixin footer()
                 a.go_top.goTop(href='#')
 
     .hide
+        #subscribe_popup
+            .subscribe_form
+                form.validateMe.formParent.subscribeForm(action='#' data-prompts='true')
+                    .form_cell.formCell
+                        .input_w
+                            input.input_v1.forceValidation(placeholder='Enter your email' class='validate[required,custom[email]]' data-errormessage='Please enter valid e-mail')
+
+                    .form_cell
+                        button.btn_v1.subscribe_btn.btn_violette_2 Subscribe
+
+                    .subscribe_success_msg
+
+            .subscribe_form_footer
+                p Follow us on social
+
+                ul.action_soc._brand
+                    li
+                        a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
+                    li
+                        a.action_sh._tg(href= link_tg)
+                    li
+                        a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+                    li
+                        a.action_sh._y(href= link_youtube data-network="facebook" class='st-custom-button')
+                    li
+                        a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
+
+        #sh_popup
+            .sh_block
+                .action_block
+                    ul.action_soc._brand
+                        li
+                            a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+                                span Facebook
+                        li
+                            a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
+                                span Twitter
+                        li
+                            a.action_sh._l(href='#' data-network="linkedin" class='st-custom-button')
+                                span LinkedIn
+                        li
+                            a.action_sh._tg(href='https://t.me/cryptocomes')
+                                span Telegram
+                        li
+                            a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
+                                span Reddit
         #bonus_popup
             .bonus_img
                 img(src='i/retweet.jpg')
@@ -225,7 +282,141 @@ mixin action_block(calendar)
               a.article_calendar_link(href='#') Add
 
 mixin aside_block(calendar, release)
-    - if (release)
+    .aside_block
+        .offer_block
+            p Have something interesting
+            p
+                a.btn_v2.btn_violette_2.offer_btn(href='#')
+                    span SubMit A PRESS RELEASE
+                    span.btn_icon.icon-rocket
+
+        .aside_info_box
+            .aside_box_caption
+                span.aside_caption_icon._features
+                .aside_caption_link FEATURED
+
+            ul.recent_news_list
+                li
+                    a.promo_box(href='#')
+                        img(src='i/promo_1.jpg')
+                    p
+                        a.promo_link(href='#') How to Make Your Native<br> Advertising Most Effective with CryptoComes
+                li
+                    a.promo_box(href='#')
+                        img(src='i/promo_2.jpg')
+                    p
+                        a.promo_link(href='#') How to Make Your Native<br> Advertising Most Effective with CryptoComes
+
+        .aside_info_box
+            .aside_box_caption
+                span.aside_caption_icon._calendar
+                .aside_caption_link Events
+
+            ul.recent_news_list
+                li
+                    .recent_news
+                        .article_date._news 21 MARCH — 24 MARCH
+                        p: a.article_link(href='#') EOS Bounces Back Despite John Oliver Slam, Up 35 Percent Week
+                        ul.article_stat
+                            li
+                                span.article_stat_val Zurich Switzerland
+                            li
+                                span.article_stat_val._stat_views 212
+
+                            li._fr
+                                a.article_sh_link(href='#')
+                                    span.icon-share-alt
+
+                li
+                    .recent_news
+                        .article_date._news 21 MARCH
+                        p: a.article_link(href='#') EOS Bounces Back Despite John Oliver Slam, Up 35 Percent Week
+                        ul.article_stat
+                            li
+                                span.article_stat_val Zurich Switzerland
+                            li
+                                span.article_stat_val._stat_views 212
+
+                            li._fr
+                                a.article_sh_link(href='#')
+                                    span.icon-share-alt
+
+                li
+                    a.recent_news_link(href='#') Show all
+
+        .aside_subscribe
+            p Follow us and get all<br>crypto news 24/7
+
+            p
+                a.btn_violette_4.btn_v2.subscribe_btn.openSubscribe._no_icon(href='#'): span SUBSCRIBE TO NEWSLETTER
+
+            ul.footer_follow_list
+                li: a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
+                li: a.action_sh._tg(href= link_tg)
+                li: a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+                li: a.action_sh._y(href= link_youtube data-network="youtube" class='st-custom-button')
+                li: a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
+                li: a.action_sh._rss(href='#')
+
+        .aside_info_box
+            .aside_box_caption
+                span.aside_caption_icon._quote
+                .aside_caption_link HOT STORIES
+
+            ul.recent_news_list
+                li
+                    .recent_news
+                        a.article_link(href='#') South Korean Regulator Fines Crypto Exchanges over Privacy Failures
+                        ul.article_stat._action
+                            li
+                                a.article_stat_val(href='#') John Doe
+                            li
+                                span.article_stat_val._stat_time 2h
+                            li
+                                span.article_stat_val._stat_views 212
+                            +stat_action()
+
+                li
+                    .recent_news
+                        a.article_link(href='#') Amazon User Orders Bitcoin Miner, Gets 'Boss Baby' DVD Instead
+                        ul.article_stat._action
+                            li
+                                a.article_stat_val(href='#') John Doe
+                            li
+                                span.article_stat_val._stat_time 2h
+                            li
+                                span.article_stat_val._stat_views 212
+                            +stat_action()
+
+                li
+                    .recent_news
+                        a.article_link(href='#') Payment Processor Stripe to End Support for Bitcoin
+                        ul.article_stat._action
+                            li
+                                a.article_stat_val(href='#') John Doe
+                            li
+                                span.article_stat_val._stat_time 2h
+                            li
+                                span.article_stat_val._stat_views 212
+                            +stat_action()
+
+                li
+                    .recent_news
+                        a.article_link(href='#') Just Because It's Bad for Your Coin Doesn't Mean It's FUD
+                        ul.article_stat._action
+                            li
+                                a.article_stat_val(href='#') John Doe
+                            li
+                                span.article_stat_val._stat_time 2h
+                            li
+                                span.article_stat_val._stat_views 212
+                            +stat_action()
+
+                li
+                    a.recent_news_link(href='#') Show all
+
+
+    //- if (release)
         .aside_block
             a.btn_v2.submit_release_btn.btn_violette_3(href='new_release.html') Submit press release
             .aside_info_box
@@ -279,7 +470,7 @@ mixin aside_block(calendar, release)
                                     a.article_stat_val(href='#') Ariel Deschapell
 
 
-    - else
+    //- else
         .aside_block
             .aside_info_box
                 .aside_box_caption
@@ -589,76 +780,91 @@ mixin top_info()
             //-.select_overlay
         .currency_info
             .currency_info_table
-                .currency_info_cell
-                    p
-                        span BCH
-                        a.trend._up(href='#') 2%
-                        //span.clr_green (+10.82%)
-                    p
-                        span.currency_val 3236.51
-                //-.currency_info_cell
-                    .currency_info_chart
-                        img(src='i/chart_btc.png')
+                +loop_while(3)
+                    .currency_info_cell
+                        p
+                            a.currency_link(href='#'): b BTC
+                            a.trend._down(href='#') -8.82%
+                        p
+                            span.currency_val 2636.79
+                    .currency_info_cell
+                        p
+                            a.currency_link(href='#'): b BTC
+                            a.trend._up(href='#') +8.82%
+                        p
+                            span.currency_val 2636.79
 
-                .currency_info_cell
-                    p
-                        span BTC
-                        a.trend(href='#') 0%
-                        //span.clr_red_2 (-81.82%)
-                    p
-                        span.currency_val 2636.79
-                //-.currency_info_cell
-                    .currency_info_chart
-                        img(src='i/chart_bch.png')
+                //-.hide
+                    .currency_info_cell
+                        p
+                            span BCH
+                            a.trend._up(href='#') 2%
+                            //span.clr_green (+10.82%)
+                        p
+                            span.currency_val 3236.51
+                    //-.currency_info_cell
+                        .currency_info_chart
+                            img(src='i/chart_btc.png')
 
-                .currency_info_cell
-                    p
-                        span ETH
-                        a.trend._up(href='#') 1%
-                        //span.clr_red_2 (-83.82%)
-                    p
-                        span.currency_val 2636.79
-                //-.currency_info_cell
-                    .currency_info_chart
-                        img(src='i/chart_btc.png')
+                    .currency_info_cell
+                        p
+                            span BTC
+                            a.trend(href='#') 0%
+                            //span.clr_red_2 (-81.82%)
+                        p
+                            span.currency_val 2636.79
+                    //-.currency_info_cell
+                        .currency_info_chart
+                            img(src='i/chart_bch.png')
 
-                .currency_info_cell
-                    p
-                        span LTC
-                        a.trend._down(href='#') -3%
-                        //span.clr_green (+10.82%)
-                    p
-                        span.currency_val 3236.51
-                //-.currency_info_cell
-                    .currency_info_chart
-                        img(src='i/chart_bch.png')
+                    .currency_info_cell
+                        p
+                            span ETH
+                            a.trend._up(href='#') 1%
+                            //span.clr_red_2 (-83.82%)
+                        p
+                            span.currency_val 2636.79
+                    //-.currency_info_cell
+                        .currency_info_chart
+                            img(src='i/chart_btc.png')
 
-                .currency_info_cell
-                    p
-                        span XRP
-                        a.trend._down(href='#') -3%
-                        //span.clr_green (+10.82%)
-                    p
-                        span.currency_val 33236.51
+                    .currency_info_cell
+                        p
+                            span LTC
+                            a.trend._down(href='#') -3%
+                            //span.clr_green (+10.82%)
+                        p
+                            span.currency_val 3236.51
+                    //-.currency_info_cell
+                        .currency_info_chart
+                            img(src='i/chart_bch.png')
 
-                .currency_info_cell
-                    p
-                        span ADA
-                        a.trend._down(href='#') -10%
-                        //span.clr_green (+10.82%)
-                    p
-                        span.currency_val 33236.51
+                    .currency_info_cell
+                        p
+                            span XRP
+                            a.trend._down(href='#') -3%
+                            //span.clr_green (+10.82%)
+                        p
+                            span.currency_val 33236.51
 
-                .currency_info_cell
-                    p
-                        span NEO
-                        a.trend._down(href='#') -6%
-                        //span.clr_green (+10.82%)
-                    p
-                        span.currency_val 33236.51
-                //-.currency_info_cell
-                    .currency_info_chart
-                        img(src='i/chart_eth.png')
+                    .currency_info_cell
+                        p
+                            span ADA
+                            a.trend._down(href='#') -10%
+                            //span.clr_green (+10.82%)
+                        p
+                            span.currency_val 33236.51
+
+                    .currency_info_cell
+                        p
+                            span NEO
+                            a.trend._down(href='#') -6%
+                            //span.clr_green (+10.82%)
+                        p
+                            span.currency_val 33236.51
+                    //-.currency_info_cell
+                        .currency_info_chart
+                            img(src='i/chart_eth.png')
 
 mixin main_menu(subscribe)
     - if (subscribe)
@@ -896,8 +1102,9 @@ mixin header()
                 li
                     a.search_btn.searchBtn(href='#')
                 li
-                    a.head_subscribe_btn.btn_v2.btn_violette.openSubscribe(href='#')
+                    a.head_subscribe_btn.btn_v2.btn_gray_3.openSubscribe(href='#')
                         span Subscribe
+                        span.icon-envelope.btn_icon
 
 mixin widget_history()
     | <script type="text/javascript">
@@ -985,7 +1192,7 @@ mixin scripts(share, mask)
         script(src='js/main.min.js?t=' + time)
     - else
         script(src='js/jquery1.10.js?t=' + time)
-        script(src='//code.jquery.com/ui/1.12.1/jquery-ui.js')
+        script(src='js/jquery-ui.js')
         script(src='js/jquery.popup.min.js?t=' + time)
         script(src='js/jquery.inputmask.bundle.js?t=' + time)
         script(src='js/auto-complete.js?t=' + time)
@@ -994,5 +1201,7 @@ mixin scripts(share, mask)
         script(src='js/swiper.min.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
+
+
 
 

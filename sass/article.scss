@@ -97,7 +97,7 @@
   padding-bottom: 27px;
   //padding: 20px 20px 13px 16px;
   margin-bottom: 28px;
-  letter-spacing: .025em;
+  //letter-spacing: .025em;
   border-bottom: 4px solid #000;
 
   &._no_title {
@@ -132,7 +132,7 @@
   margin: 31px -16px 31px 20px;
 
   .subscribe_btn {
-    letter-spacing: .025em;
+    //letter-spacing: .025em;
   }
 
   &:before {
@@ -170,7 +170,7 @@
 .tag_link {
   @extend %firm_color;
   font: 13px/22px $RubikMed;
-  letter-spacing: -.017em;
+  //letter-spacing: -.017em;
 
   .article_tag_list._tags_2 & {
     display: block;
@@ -197,7 +197,7 @@
   font: 14px/34px $RubikReg;
 
   > span {
-    letter-spacing: .018em;
+    //letter-spacing: .018em;
   }
 }
 
@@ -472,6 +472,36 @@
     }
   }
 
+  &._rss {
+    &:before {
+      content: unicode($icon-rss);
+    }
+
+    ._action &,
+    ._brand & {
+      background: #fa500e;
+
+      &:hover {
+        background: #ff6011;
+      }
+    }
+  }
+
+  &._y {
+    &:before {
+      content: unicode($icon-youtube);
+    }
+
+    ._action &,
+    ._brand & {
+      background: #d44132;
+
+      &:hover {
+        background: #f74335;
+      }
+    }
+  }
+
   @each $cls, $color in $firm-colors {
     .#{$cls} & {
       color: $color;
@@ -569,7 +599,7 @@
     p {
       @extend %firm_color;
       font: 20px/28px $RubikBold;
-      letter-spacing: .012em;
+      //letter-spacing: .012em;
 
       &:first-of-type {
         &:before {
@@ -609,7 +639,7 @@
       opacity: .4;
       font-size: 13px;
       line-height: 22px;
-      letter-spacing: .035em;
+      //letter-spacing: .035em;
       font-style: normal;
 
       @include respond-to-min($resp_step_2) {
@@ -628,7 +658,7 @@
 
   h1 {
     font: 28px $RubikBold;
-    letter-spacing: .02em;
+    //letter-spacing: .02em;
     margin-bottom: 25px;
 
     @include respond-to-min($resp_step_2) {
@@ -646,7 +676,7 @@
 
   h2 {
     font: 26px $RubikMed;
-    letter-spacing: .025em;
+    //letter-spacing: .025em;
     margin-bottom: 22px;
 
     @include respond-to-min($resp_step_2) {
@@ -659,14 +689,14 @@
 
     @include respond-to-min($resp_step_4) {
       font-size: 40px;
-      letter-spacing: 0;
+      //letter-spacing: 0;
       margin-bottom: 30px;
     }
   }
 
   h3 {
     font: 22px $RubikBold;
-    letter-spacing: .015em;
+    //letter-spacing: .015em;
     margin-bottom: 20px;
 
     @include respond-to-min($resp_step_2) {
@@ -685,7 +715,7 @@
 
   h4 {
     font: 22px $RubikMed;
-    letter-spacing: -.035em;
+    //letter-spacing: -.035em;
     margin-bottom: 20px;
 
     @include respond-to-min($resp_step_2) {
@@ -694,7 +724,7 @@
 
     @include respond-to-min($resp_step_3) {
       font-size: 26px;
-      letter-spacing: 0;
+      //letter-spacing: 0;
     }
 
     @include respond-to-min($resp_step_4) {
@@ -705,12 +735,12 @@
 
   h5 {
     font: 20px/1.4 $RubikMed;
-    letter-spacing: .015em;
+    //letter-spacing: .015em;
     margin-bottom: 16px;
 
     @include respond-to-min($resp_step_3) {
       font-size: 22px;
-      letter-spacing: 0;
+      //letter-spacing: 0;
     }
 
     @include respond-to-min($resp_step_4) {
@@ -720,7 +750,7 @@
 
   h6 {
     font: 18px $RubikBold;
-    letter-spacing: 0.01em;
+    //letter-spacing: 0.01em;
     margin-bottom: 16px;
 
     @include respond-to-min($resp_step_3) {
@@ -728,7 +758,7 @@
     }
 
     @include respond-to-min($resp_step_4) {
-      letter-spacing: 0.02em;
+      //letter-spacing: 0.02em;
     }
   }
 
@@ -740,7 +770,7 @@
     margin-bottom: 1em;
     font-size: 20px;
     line-height: 1.3;
-    letter-spacing: .022em;
+    //letter-spacing: .022em;
   }
 
   img {
@@ -771,7 +801,7 @@
       padding-left: 40px;
       margin-bottom: 22px;
       line-height: 1.6;
-      letter-spacing: .05em;
+      //letter-spacing: .05em;
 
       &:before {
         @extend %firm_bg_color;
@@ -886,7 +916,7 @@
 .leave_comment_tip {
   line-height: 18px;
   font-size: 14px;
-  letter-spacing: .01em;
+  //letter-spacing: .01em;
   color: #999;
   margin-bottom: 20px;
 }
@@ -929,5 +959,24 @@
     float: left;
     font-weight: bold;
     padding-right: 15px;
+  }
+}
+
+.offer_block {
+  background: #f6f7f7;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  padding: 15px 20px 20px;
+  text-align: center;
+  font: 16px/19px $RubikMed;
+
+  p {
+    + p {
+      margin-top: 15px;
+    }
+  }
+
+  &._mb_20 {
+    margin-bottom: 20px;
   }
 }

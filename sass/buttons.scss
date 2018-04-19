@@ -9,13 +9,19 @@
     cursor: pointer;
     display: block;
     text-align: center;
-    font: 13px/18px $RubikMed;
+    font: 14px/18px $RubikMed;
     padding: 15px;
 
-    &:before {
-      content: unicode($icon-triangle);
-      margin: 0 12px 0 -12px;
-      font-size: 9px;
+    .news_col > & {
+      margin-bottom: 20px;
+    }
+
+    &:after {
+      content: unicode($icon-triangle_r);
+      margin-left: 10px;
+      margin-right: -18px;
+      font-size: 11px;
+      color: #ddd;
     }
 
     &:hover {
@@ -26,7 +32,7 @@
   &.subscribe_btn {
     display: inline-block;
     vertical-align: top;
-    letter-spacing: .05em;
+    //letter-spacing: .05em;
     font: 20px/24px $RubikBlack;
     padding: 12px 14px;
 
@@ -40,14 +46,33 @@
 .btn_v2 {
   height: 40px;
 
+  &.offer_btn {
+    display: block;
+    text-align: center;
+    font: 14px/20px $RubikBold;
+    padding: 8px 5px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    height: auto;
+    min-height: 40px;
+
+    .btn_icon {
+      font-size: 16px;
+      padding-left: 7px;
+      vertical-align: -2px;
+    }
+  }
+
   &.subscribe_btn {
     @extend %icon_pseudo;
     display: inline-block;
     vertical-align: top;
     padding: 10px 26px;
-    font: 15px/18px $RubikReg;
+    font: 14px/16px $RubikBold;
     color: #fff;
     border-radius: 2px;
+    height: auto;
+    min-height: 40px;
 
     span {
       display: inline-block;
@@ -55,18 +80,49 @@
     }
 
     &:after {
-      content: unicode($icon-tw);
       font-size: 20px;
       display: inline-block;
       vertical-align: middle;
       padding-left: 15px;
     }
 
+    &._no_icon {
+      padding: 10px 14px;
+    }
+
+    &._fb {
+      background: #385184;
+
+      &:after {
+        content: unicode($icon-fb);
+      }
+
+      &:hover {
+        background: #43619e;
+      }
+    }
+
     &._tw {
       background: #1da1f2;
 
+      &:after {
+        content: unicode($icon-tw);
+      }
+
       &:hover {
         background: #23c1ff;
+      }
+    }
+
+    &._tg {
+      background: #08c;
+
+      &:after {
+        content: unicode($icon-tg);
+      }
+
+      &:hover {
+        background: #00a3f5;
       }
     }
   }
@@ -95,13 +151,24 @@
   &.head_subscribe_btn {
     display: block;
     border-radius: 20px;
-    padding: 10px 29px;
-    margin: 4px 8px;
-    font: 16px/20px $RubikBlack;
+    padding: 9px 15px;
+    font: 14px/20px $RubikBold;
+    text-transform: uppercase;
 
     span {
       position: relative;
       z-index: 1;
+    }
+
+    .btn_icon {
+      padding-left: 8px;
+      font-size: 18px;
+      display: inline-block;
+      vertical-align: -2px;
+    }
+
+    @include respond-to-min($resp_step_2) {
+      padding: 9px 29px;
     }
   }
 
@@ -170,7 +237,7 @@
     text-align: center;
     font: 14px/24px $RubikBold;
     color: #fff;
-    letter-spacing: .015em;
+    //letter-spacing: .015em;
     background: $violette;
 
     &:hover {
@@ -240,7 +307,7 @@
     text-align: center;
     font: 20px/42px $RubikMed;
     color: #fff;
-    letter-spacing: .015em;
+    //letter-spacing: .015em;
 
     &._tg {
       background: #139bd0;
@@ -285,18 +352,6 @@
   color: #fff;
 }
 
-.gray_btn {
-  @include transition_all(border-color .3s, background .3s);
-  color: $violette;
-  background: #f7f8f8;
-  border: 2px solid #f7f8f8;
-
-  &:hover {
-    border-color: $violette;
-    background: #fff;
-  }
-}
-
 .btn_white {
   @include transition_all(background .3s);
   color: $violette;
@@ -309,7 +364,7 @@
 
 .btn_violette {
   position: relative;
-  background: url(../i/firm_bg_violette.jpg) no-repeat 0 50%;
+  background: $violette;
   color: #fff;
 
   &:before {
@@ -338,6 +393,26 @@
   }
 }
 
+.btn_gray {
+  background: #f6f7f7;
+
+  &:hover {
+    filter: brightness(120%);
+  }
+}
+
+.gray_btn {
+  @include transition_all(border-color .3s, background .3s);
+  color: $clr_blue;
+  background: #fff;
+  border: 2px solid #f7f8f8;
+
+  &:hover {
+    border-color: $violette;
+    background: #fff;
+  }
+}
+
 .gray_btn_2 {
   @include transition_all(background .3s, color .3s);
   border: 2px solid rgba(0, 0, 0, .1);
@@ -347,6 +422,18 @@
   &:hover {
     background: $violette;
     color: #fff;
+  }
+}
+
+.btn_gray_3 {
+  @include transition_all(border-color .3s, background .3s);
+  color: $violette;
+  background: #f7f8f8;
+  border: 2px solid #f7f8f8;
+
+  &:hover {
+    border-color: $violette;
+    background: #fff;
   }
 }
 
@@ -369,6 +456,16 @@
 
   &:hover {
     background: darken($violette, 10%);
+  }
+}
+
+.btn_violette_4 {
+  @include transition_all(background .3s, color .3s);
+  background: #2c1f63;
+  color: #fff;
+
+  &:hover {
+    background: darken(#2c1f63, 10%);
   }
 }
 

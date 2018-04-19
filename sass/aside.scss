@@ -1,8 +1,9 @@
 //*************************** aside
 
 .aside_info_box {
+  border-radius: 2px;
   background: #f7f8f8;
-  padding: 28px 16px 12px;
+  padding: 15px 20px 12px;
   margin-bottom: 14px;
 
   @include respond-to-min($resp_step_3) {
@@ -19,7 +20,8 @@
   color: $violette;
   margin-bottom: 16px;
   position: relative;
-  padding-left: 30px;
+  padding-left: 25px;
+  text-transform: uppercase;
 
   @include respond-to-min($resp_step_3) {
     margin-bottom: 20px;
@@ -52,7 +54,7 @@
     }
   }
 
-  &._qoute {
+  &._quote {
     &:before {
       content: unicode($icon-quote);
     }
@@ -87,6 +89,12 @@
       content: unicode($icon-calendar);
     }
   }
+
+  &._features {
+    &:before {
+      content: unicode($icon-flash_circle);
+    }
+  }
 }
 
 .recent_news_link {
@@ -98,14 +106,45 @@
   }
 }
 
+.promo_box {
+  display: block;
+  margin-bottom: 10px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.promo_link {
+  color: #000;
+  font: 14px/18px $RubikMed;
+}
+
 .recent_news_list {
   list-style: none;
 
   > li {
-    margin-bottom: 22px;
+    position: relative;
+    padding-top: 30px;
+    margin-bottom: 10px;
 
-    @include respond-to-min($resp_step_3) {
-      margin-bottom: 28px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 9px;
+      right: 0;
+      left: 0;
+      height: 1px;
+      background: #eee;
+    }
+
+    &:first-child {
+      padding-top: 0;
+
+      &:before {
+        display: none;
+      }
     }
   }
 
@@ -115,17 +154,16 @@
 }
 
 .recent_news {
-
   .article_link {
-    font: 14px/1.1 $RubikMed;
+    font: 14px/18px $RubikMed;
 
     &:hover {
       color: $violette;
     }
 
     @include respond-to-min($resp_step_3) {
-      font-size: 16px;
-      line-height: 1.2;
+      //font-size: 16px;
+      //line-height: 1.2;
     }
 
     &._fz_16 {
@@ -201,24 +239,19 @@
 }
 
 .aside_subscribe {
-  padding: 40px 24px 22px;
-  margin-bottom: 14px;
+  padding: 20px 24px 1px;
+  margin-bottom: 20px;
   text-align: center;
   color: #fff;
-  background: url(../i/subscribe_bg.jpg) no-repeat 50% 50%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: $violette;
 
   p {
     margin-bottom: 10px;
-    font: 18px/1.25 $RubikBlack;
+    font: 16px/21px $RubikMed;
   }
 
-  .action_list {
-    margin: 0 auto;
-    max-width: 200px;
+  .footer_follow_list {
+    margin-right: -18px;
   }
 
   .action_link {
@@ -243,13 +276,6 @@
   }
 
   @include respond-to-min($resp_step_2) {
-    padding-top: 55px;
-    padding-bottom: 18px;
-
-    p {
-      font-size: 24px;
-      margin-bottom: 18px;
-    }
 
     .btn_v3.subscribe_btn {
       height: 46px;
@@ -263,18 +289,7 @@
     }
   }
 
-  @include respond-to-min($resp_step_3) {
-    padding: 42px 50px 28px;
-  }
-
   @include respond-to-min($resp_step_4) {
-    padding: 55px 50px 24px;
-    margin-bottom: 16px;
-
-    p {
-      font-size: 30px;
-      margin-bottom: 22px;
-    }
 
     .btn_v3.subscribe_btn {
       margin-bottom: 48px;

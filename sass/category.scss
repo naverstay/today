@@ -23,7 +23,7 @@
     color: #fff;
     margin-bottom: 12px;
     font: 24px/26px $RubikBlack;
-    letter-spacing: .025em;
+    //letter-spacing: .025em;
 
     &:before {
       content: '#';
@@ -49,7 +49,7 @@
   border-radius: 14px;
   color: #fff;
   font: 12px/18px $RubikBlack;
-  letter-spacing: .015em;
+  //letter-spacing: .015em;
   padding: 7px 14px 3px 35px;
   margin-top: -14px;
   margin-bottom: 10px;
@@ -82,7 +82,7 @@
     font: 14px/1.6 $RubikBlack;
     color: #000;
     margin-top: 5px;
-    letter-spacing: -.05em;
+    //letter-spacing: -.05em;
   }
 
   @each $cls, $color in $firm-colors {

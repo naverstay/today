@@ -1,18 +1,16 @@
 .attention_block {
   @extend %icon_pseudo;
   padding: 16px 12px 14px 27px;
-  margin: 14px 14px 12px;
-  background: #f7f6ef;
-  font: 13px $RubikMed;
-  letter-spacing: -.038em;
+  margin: 14px 14px 20px;
+  background: #f6f7f7;
+  font: 14px/18px $RubikReg;
+  //letter-spacing: -.038em;
   position: relative;
   z-index: 1;
   display: block;
 
   p {
     @include transition_all(color .3s);
-    font-size: 15px;
-    line-height: 1.1;
   }
 
   &:hover p {
@@ -35,6 +33,7 @@
       line-height: 28px;
       background: #ff0a24;
       padding-left: 2px;
+      border-radius: 2px 0 0 2px;
       color: #fff;
     }
   }
@@ -45,13 +44,15 @@
 }
 
 .attention_caption {
+  border-radius: 0 2px 2px 0;
   color: #fff;
   height: 28px;
-  font: 14px/28px $RubikBlack;
-  letter-spacing: .01em;
+  font: 14px/28px $RubikBold;
+  text-transform: uppercase;
+  //letter-spacing: .01em;
   padding-right: 13px;
   float: left;
-  margin: -6px 27px 0 -11px;
+  margin: -5px 15px 0 -11px;
 
   + p {
     max-width: 100%;
@@ -72,11 +73,11 @@
 .attention_link {
   @extend %icon_pseudo;
   color: #ff0a24;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1;
   display: inline-block;
   vertical-align: middle;
-  margin: -2px 0 -4px 35px;
+  margin: -6px 0 -4px 15px;
 
   &:before {
     content: unicode($icon-arrow-right);
@@ -109,10 +110,11 @@
 
 .top_story_caption {
   @extend %firm_color;
-  font: 13px $RubikBlack;
+  font: 14px $RubikBold;
+  text-transform: uppercase;
   margin-top: 11px;
-  margin-bottom: 20px;
-  letter-spacing: .013em;
+  margin-bottom: 12px;
+  //letter-spacing: .013em;
   position: relative;
   z-index: 1;
 
@@ -219,7 +221,7 @@
   }
 
   .article_link {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   @include respond-to-min($resp_step_2) {
@@ -535,7 +537,7 @@
 .article_block {
   position: relative;
   //margin-right: -16px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   min-height: 100%;
 
   .content_block & {
@@ -552,7 +554,7 @@
 
   &._main {
     min-height: 0;
-    margin-bottom: 25px;
+    //margin-bottom: 25px;
   }
 
   &._top {
@@ -607,7 +609,7 @@
     p {
       font: 14px/24px $RubikMed;
       color: #fff;
-      letter-spacing: 0;
+      //letter-spacing: 0;
     }
 
     ._bordered & {
@@ -677,7 +679,7 @@
     p {
       font: 14px/24px $RubikMed;
       color: #fff;
-      letter-spacing: 0;
+      //letter-spacing: 0;
     }
 
     ._bordered & {
@@ -725,45 +727,46 @@
     }
 
     .article_stat {
-      padding-top: 5px;
-      clear: both;
+      //padding-top: 5px;
+      //clear: both;
     }
 
     .article_img {
       float: right;
-      width: 88px;
+      width: 130px;
       margin-top: 4px;
+      margin-right: 10px;
       margin-bottom: 10px;
 
       + .article_title {
-        margin-right: 100px;
+        margin-right: 140px;
 
-        @include respond-to-min($resp_step_2) {
-          margin-right: 144px;
-        }
-
-        @include respond-to-min($resp_step_3) {
-          margin-right: 180px;
-        }
-
-        @include respond-to-min($resp_step_4) {
-          margin-right: 200px;
-        }
+        //@include respond-to-min($resp_step_2) {
+        //  margin-right: 144px;
+        //}
+        //
+        //@include respond-to-min($resp_step_3) {
+        //  margin-right: 180px;
+        //}
+        //
+        //@include respond-to-min($resp_step_4) {
+        //  margin-right: 200px;
+        //}
 
         .article_link {
           font-size: 16px;
-          letter-spacing: 0;
+          //letter-spacing: 0;
           line-height: 1.35;
 
           @include respond-to-min($resp_step_2) {
-            font-size: 18px;
+            //font-size: 18px;
             line-height: 1.15;
           }
 
           &._fz_18 {
             @include respond-to-min($resp_step_2) {
-              font-size: 18px;
-              line-height: 1.15;
+              //font-size: 18px;
+              //line-height: 1.15;
             }
             @include respond-to-min($resp_step_3) {
               //font-size: 20px;
@@ -788,15 +791,16 @@
     &._left {
       .article_img {
         float: left;
-        width: 88px !important;
+        width: 130px !important;
+        margin-right: 10px;
 
         + .article_title {
           margin-right: 0 !important;
-          margin-left: 100px;
+          margin-left: 140px;
 
-          @include respond-to-min($resp_step_2) {
-            margin-left: 105px;
-          }
+          //@include respond-to-min($resp_step_2) {
+          //  margin-left: 140px;
+          //}
 
           //
           //@include respond-to-min($resp_step_3) {
@@ -814,7 +818,7 @@
   > p {
     font-size: 17px;
     line-height: 22px;
-    letter-spacing: .021em;
+    //letter-spacing: .021em;
     margin-top: 21px;
     padding-right: 16px;
 
@@ -832,8 +836,8 @@
   }
 
   ._bordered & {
-    @extend %global_flex_block_column_nowrap_flex-start_stretch;
-    border-top: 8px solid;
+    //@extend %global_flex_block_column_nowrap_flex-start_stretch;
+    //border-top: 8px solid;
     //margin-bottom: 6px;
 
     .article_title {
@@ -851,7 +855,7 @@
 
       @include respond-to-min($resp_step_3) {
         font-size: 18px;
-        letter-spacing: -.007em;
+        //letter-spacing: -.007em;
       }
     }
   }
@@ -881,6 +885,10 @@
   display: block;
   position: relative;
   z-index: 1;
+
+  img {
+    border-radius: 2px;
+  }
 }
 
 .article_img {
@@ -898,41 +906,7 @@
   }
 
   ._main & {
-    padding-right: 25px;
-    padding-top: 14px;
 
-    @include respond-to-min($resp_step_2) {
-      padding-right: 30px;
-    }
-
-    @include respond-to-min($resp_step_3) {
-      padding-right: 40px;
-    }
-
-    @include respond-to-min($resp_step_4) {
-      padding-right: 50px;
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 16px;
-    }
-
-    &:after {
-      content: unicode($icon-ufo);
-      font-size: 280px;
-      line-height: 1;
-      position: absolute;
-      bottom: 0;
-      height: 187px;
-      width: 145px;
-      right: 0;
-      overflow: hidden;
-    }
   }
 
   ._article & {
@@ -945,7 +919,7 @@
     padding-left: 10px;
 
     @include respond-to-min($resp_step_2) {
-      padding-bottom: 12px;
+      padding-bottom: 5px;
     }
 
     @include respond-to-min($resp_step_3) {
@@ -993,6 +967,36 @@
   }
 }
 
+.article_date {
+  @extend %icon_pseudo;
+  position: relative;
+  margin-bottom: 12px;
+  display: inline-block;
+  vertical-align: top;
+  color: #fff;
+  font: 10px/12px $RubikBold;
+  padding: 6px 8px;
+  border-radius: 2px;
+
+  //&:before {
+  //  content: unicode($icon-calendar);
+  //  position: absolute;
+  //  left: 7px;
+  //  top: 4px;
+  //  font-size: 14px;
+  //}
+
+  &._mt_5 {
+    margin-top: 5px;
+  }
+
+  @each $cls, $color in $firm-colors {
+    &.#{$cls} {
+      background: $color;
+    }
+  }
+}
+
 .article_title {
   z-index: 1;
   position: relative;
@@ -1009,37 +1013,37 @@
     //right: 88px;
     //max-height: 100%;
     padding: 12px 10px 34px 0;
-    margin: -65px 90px 0 0;
+    margin: -80px 30px 0 0;
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 18px;
-      bottom: 34px;
-      width: 8px;
-      left: 100%;
-      background: $violette;
-    }
+    //&:after {
+    //  content: '';
+    //  position: absolute;
+    //  top: 18px;
+    //  bottom: 34px;
+    //  width: 8px;
+    //  left: 100%;
+    //  background: $violette;
+    //}
 
-    &:before {
-      content: unicode($icon-ufo);
-      position: absolute;
-      right: 2px;
-      bottom: -20px;
-      font-size: 112px;
-      line-height: 1;
-      width: 90px;
-      overflow: hidden;
-      pointer-events: none;
-
-      @include respond-to-min($resp_step_2) {
-        bottom: -30px;
-      }
-
-      @include respond-to-min($resp_step_3) {
-        bottom: -20px;
-      }
-    }
+    //&:before {
+    //  content: unicode($icon-ufo);
+    //  position: absolute;
+    //  right: 2px;
+    //  bottom: -20px;
+    //  font-size: 112px;
+    //  line-height: 1;
+    //  width: 90px;
+    //  overflow: hidden;
+    //  pointer-events: none;
+    //
+    //  @include respond-to-min($resp_step_2) {
+    //    bottom: -30px;
+    //  }
+    //
+    //  @include respond-to-min($resp_step_3) {
+    //    bottom: -20px;
+    //  }
+    //}
 
     .article_link {
       overflow: hidden;
@@ -1048,9 +1052,10 @@
       max-height: 6.5em;
       font-size: 20px;
       line-height: 1.3;
+      margin-bottom: 5px;
 
       @include respond-to-min($resp_step_2) {
-        min-height: 105px;
+        //min-height: 105px;
       }
 
       @include respond-to-min($resp_step_3) {
@@ -1069,21 +1074,21 @@
     @include respond-to-min($resp_step_2) {
       //right: 110px;
       //padding: 20px 14px 46px 14px;
-      margin: -92px 100px 0 0;
+      //margin: -92px 100px 0 0;
       padding: 12px 14px 22px 0;
     }
 
     @include respond-to-min($resp_step_3) {
       //right: 136px;
       //padding: 20px 14px 36px 14px;
-      margin: -110px 163px 0 0;
+      //margin: -110px 163px 0 0;
       padding: 12px 14px 36px 0;
     }
 
     @include respond-to-min($resp_step_4) {
       //right: 160px;
       //padding: 20px 14px 39px 19px;
-      margin: -125px 155px 0 0;
+      //margin: -125px 155px 0 0;
       padding-top: 18px;
       padding-bottom: 55px;
     }
@@ -1115,8 +1120,8 @@
 
   ._main &,
   ._top & {
-    font-family: $RubikBlack;
-    letter-spacing: -.01em;
+    //font-family: $RubikBlack;
+    //letter-spacing: -.01em;
     color: #000;
   }
 
@@ -1140,18 +1145,18 @@
 
   ._video & {
     //font: 16px/1.4 $RubikBold;
-    letter-spacing: -.015em;
+    //letter-spacing: -.015em;
   }
 
   ._article & {
     color: #000 !important;
-    letter-spacing: .045em;
+    //letter-spacing: .045em;
   }
 
   ._event & {
     color: #000 !important;
     font-weight: 700;
-    letter-spacing: .025em;
+    //letter-spacing: .025em;
   }
 }
 
@@ -1168,27 +1173,20 @@
   }
 }
 
+.article_sh_link {
+  text-decoration: none;
+  color: #cacacc;
+}
+
 .article_stat {
   @extend %clearfix;
   list-style: none;
-  padding-top: 11px;
-  color: rgba(0, 0, 0, .4);
-  font: 11px/1.5 $RubikReg;
+  padding-top: 15px;
+  color: #bbb;
+  font: 12px/14px $RubikReg;
 
   li {
     float: left;
-
-    &:before {
-      content: '\007C';
-      padding: 0 7px;
-    }
-
-    &._first,
-    &:first-child {
-      &:before {
-        display: none;
-      }
-    }
 
     &._first {
       clear: left;
@@ -1196,19 +1194,16 @@
 
     &._fr {
       float: right;
-
-      &:before {
-        display: none;
-      }
     }
 
     &.stat_action {
       @include transition_all(opacity .3s);
       opacity: 0;
       position: absolute;
-      top: 5px;
-      right: 0;
+      top: 15px;
+      right: -8px;
 
+      .recent_news:hover &,
       .article_block:hover & {
         opacity: 1;
       }
@@ -1269,13 +1264,13 @@
   display: inline-block;
   vertical-align: top;
   margin-left: 10px;
-  font-size: 14px;
+  font-size: 18px;
 
-  &._w {
+  &._f {
     color: #385184;
 
     &:before {
-      content: unicode($icon-tw);
+      content: unicode($icon-fb);
     }
 
     &:hover {
@@ -1283,11 +1278,11 @@
     }
   }
 
-  &._f {
+  &._w {
     color: #1da1f2;
 
     &:before {
-      content: unicode($icon-fb);
+      content: unicode($icon-tw);
     }
 
     &:hover {
@@ -1301,27 +1296,45 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
+  color: #bbb;
 
-  &._stat_views {
-    padding-left: 20px;
+  &._stat_time {
+    padding-left: 21px;
+    font-size: 10px;
 
     &:before {
+      content: unicode($icon-clock);
       position: absolute;
-      top: -1px;
-      left: 0;
-      content: unicode($icon-eye);
-      font-size: 15px;
-      line-height: 1.2;
+      top: 50%;
+      left: 7px;
+      margin-top: -.5em;
+      line-height: 1;
+      color: #dadada;
     }
   }
 
-  @at-root a#{&} {
-    @include transition_all(color .3s);
-    @extend %firm_color;
+  &._stat_views {
+    padding-left: 26px;
+    font-size: 10px;
 
-    &:hover {
-      text-decoration: underline;
+    &:before {
+      content: unicode($icon-eye_dot);
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      margin-top: -.5em;
+      font-size: 1.3em;
+      line-height: 1;
+      color: #dadada;
     }
+  }
+}
+
+a.article_stat_val {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
   }
 }
 
@@ -1346,20 +1359,34 @@
     right: 78px;
     bottom: 91px;
   }
+
+  .article_title & {
+    top: auto;
+    left: auto;
+    bottom: 20px;
+    right: 12px;
+
+    .article_action_btn {
+      position: relative;
+      margin: 0;
+      background: #ddd;
+    }
+  }
 }
 
 .article_action_btn {
   @include transition_all(background .3s);
   @extend %icon_pseudo;
   position: absolute;
+  display: block;
   top: 0;
   left: 0;
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   border-radius: 100%;
   text-align: center;
   font-size: 14px;
-  line-height: 30px;
+  line-height: 26px;
   background: rgba(0, 0, 0, .4);
 
   &:before {
@@ -1411,12 +1438,7 @@
 }
 
 .article_action_block {
-  position: absolute;
-  top: 0;
-  left: 0;
-  float: left;
-  margin-top: 16px;
-  margin-left: 31px;
+  position: relative;
 
   //&._opened {
   //  z-index: 1000;
@@ -1585,8 +1607,7 @@
   list-style: none;
 
   &._brand {
-    float: left;
-    padding-left: 30px;
+    text-align: center;
 
     li {
       display: inline-block;
@@ -1601,8 +1622,18 @@
   position: absolute;
   z-index: 2;
   list-style: none;
-  bottom: 14px;
-  left: 16px;
+  bottom: 0;
+  left: 0;
+
+  &._head {
+    top: 0;
+    bottom: auto;
+
+    .article_tag {
+      border-radius: 2px 0 2px 0;
+      padding-left: 10px;
+    }
+  }
 
   li {
     float: left;
@@ -1612,27 +1643,34 @@
 
 .article_tag {
   position: relative;
-  min-width: 28px;
-  height: 28px;
-  line-height: 26px;
+  min-width: 24px;
+  height: 24px;
+  line-height: 22px;
   display: inline-block;
   vertical-align: top;
-  border-radius: 14px;
+  border-radius: 0 2px 0 2px;
   color: #fff !important;
 
   span {
     display: inline-block;
     vertical-align: top;
-    padding: 5px 14px 5px 4px;
-    font: 12px/18px $RubikBlack;
-    letter-spacing: .015em;
+    padding: 5px 10px 5px 1px;
+    font: 10px/14px $RubikBold;
+    //letter-spacing: .015em;
+    text-transform: uppercase;
+  }
+
+  &._top {
+    span {
+      padding: 5px 15px;
+    }
   }
 
   &:before {
-    font-size: 18px;
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
     //border-radius: inherit;
     display: inline-block;
     vertical-align: top;
@@ -1665,20 +1703,51 @@
   @include transition_all(color .3s);
   @extend %icon_pseudo;
   float: right;
-  padding-right: 33px;
+  padding-right: 22px;
   position: relative;
   z-index: 2;
-  font: 13px/24px $RubikMed;
-  color: #c0c0c0;
-  letter-spacing: .02em;
+  font: 14px/24px $RubikMed;
+  color: #bbb;
+  //letter-spacing: .02em;
 
   &:before {
+    @extend %firm_color;
     @include transition_all(color .3s);
     content: unicode($icon-arrow-right);
     position: absolute;
-    right: -6px;
+    right: -8px;
+    top: 0;
     font-size: 18px;
     line-height: 24px;
+  }
+
+  &._more {
+    &:after,
+    &:before {
+      @extend %firm_bg_color;
+      content: '';
+      position: absolute;
+      top: 50%;
+      border-radius: 1px;
+    }
+
+    &:before {
+      right: 0;
+      width: 14px;
+      height: 2px;
+      margin: -1px 0 0;
+    }
+
+    &:after {
+      right: 6px;
+      height: 14px;
+      width: 2px;
+      margin: -7px 0 0;
+    }
+  }
+
+  + .article_title_link {
+    margin-right: 22px;
   }
 
   &._submit {
@@ -1720,17 +1789,31 @@
 
 .article_group_title {
   position: relative;
-  color: #fff;
-  font: 20px $RubikMed;
-  letter-spacing: .005em;
+  color: #000;
+  font: 18px/24px $RubikMed;
+  //letter-spacing: .005em;
   padding: 9px 16px 9px 0;
-  margin: 0 0 12px;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  margin: 5px 0 12px;
+
+  &:before {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 16px;
+    color: #fff;
+  }
+
+  @each $cls, $color in $firm-colors {
+    &.#{$cls} {
+      &:before {
+        background: $color;
+      }
+    }
+  }
 
   @include respond-to-min($resp_step_2) {
     margin-bottom: 16px;
@@ -1743,28 +1826,26 @@
 
   &._bg {
     background: none;
-    margin-top: 45px;
+    margin-top: 25px;
     padding: 9px 36px 9px 0;
 
-    &:after {
-      content: '';
-      position: absolute;
-      height: 118px;
-      top: -20px;
-      right: 0;
-      left: 0;
-      z-index: 1;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-    }
+    //&:after {
+    //  content: '';
+    //  position: absolute;
+    //  height: 118px;
+    //  top: -20px;
+    //  right: 0;
+    //  left: 0;
+    //  z-index: 1;
+    //  -webkit-background-size: cover;
+    //  -moz-background-size: cover;
+    //  -o-background-size: cover;
+    //  background-size: cover;
+    //  background-repeat: no-repeat;
+    //  background-position: 50% 50%;
+    //}
 
     .article_group_link {
-      padding-left: 68px;
-      color: #fff;
 
       &:before {
         left: 21px;
@@ -1785,17 +1866,17 @@
     }
   }
 
-  &._news {
-    &:after {
-      background-image: url(../i/stories_bg.svg);
-    }
-  }
-
-  &._features {
-    &:after {
-      background-image: url(../i/features_bg.svg);
-    }
-  }
+  //&._news {
+  //  &:after {
+  //    background-image: url(../i/stories_bg.svg);
+  //  }
+  //}
+  //
+  //&._features {
+  //  &:after {
+  //    background-image: url(../i/features_bg.svg);
+  //  }
+  //}
 }
 
 .article_group_link {
@@ -1808,39 +1889,39 @@
   padding-left: 44px;
   color: #000;
 
-  &:before {
-    position: absolute;
-    z-index: 2;
-    top: -4px;
-    left: 2px;
-    border-radius: 100%;
-    color: #fff;
-    height: 32px;
-    width: 32px;
-    font-size: 18px;
-    line-height: 32px;
-    text-align: center;
-  }
+  //&:before {
+  //  position: absolute;
+  //  z-index: 2;
+  //  top: -4px;
+  //  left: 2px;
+  //  border-radius: 100%;
+  //  color: #fff;
+  //  height: 32px;
+  //  width: 32px;
+  //  font-size: 18px;
+  //  line-height: 32px;
+  //  text-align: center;
+  //}
 
   &:hover {
     @extend %firm_color;
   }
 
-  @each $cls, $color in $firm-colors {
-    .#{$cls} & {
-      &:before {
-        background: $color;
-      }
-    }
-  }
+  //@each $cls, $color in $firm-colors {
+  //  .#{$cls} & {
+  //    &:before {
+  //      background: $color;
+  //    }
+  //  }
+  //}
 
-  @each $cls, $content in $firm-icons {
-    .#{$cls} & {
-      &:before {
-        content: $content;
-      }
-    }
-  }
+  //@each $cls, $content in $firm-icons {
+  //  .#{$cls} & {
+  //    &:before {
+  //      content: $content;
+  //    }
+  //  }
+  //}
 }
 
 .news_list {
@@ -1906,7 +1987,7 @@
 
   ._related & {
     font-size: 16px;
-    letter-spacing: .01em;
+    //letter-spacing: .01em;
   }
 
   @at-root a#{&} {
@@ -1925,7 +2006,7 @@
   @include respond-to-min($resp_step_3) {
     font-size: 22px;
     //line-height: 1.2;
-    //letter-spacing: -.015em;
+    ////letter-spacing: -.015em;
   }
 
   @include respond-to-min($resp_step_4) {
