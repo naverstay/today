@@ -345,7 +345,6 @@
     }
 
     @include respond-to-min($resp_step_3) {
-      padding-left: 15px;
 
       .article_stat {
         padding-top: 6px;
@@ -390,11 +389,11 @@
         }
 
         @include respond-to-min($resp_step_3) {
-          padding: 27px 30px 35px;
+          //padding: 27px 30px 35px;
         }
 
         @include respond-to-min($resp_step_4) {
-          padding: 24px 32px 36px;
+          //padding: 24px 32px 36px;
         }
       }
 
