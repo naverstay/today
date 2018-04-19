@@ -26,7 +26,7 @@
       position: absolute;
       top: 50%;
       margin-top: -13px;
-      left: -12px;
+      left: -14px;
       width: 28px;
       height: 28px;
       font-size: 18px;
@@ -52,7 +52,7 @@
   //letter-spacing: .01em;
   padding-right: 13px;
   float: left;
-  margin: -5px 15px 0 -11px;
+  margin: -5px 15px 0 -13px;
 
   + p {
     max-width: 100%;
@@ -105,7 +105,7 @@
 }
 
 .article_reviews_holder {
-  padding-left: 8px;
+  //padding-left: 8px;
 }
 
 .top_story_caption {
@@ -557,6 +557,22 @@
     //margin-bottom: 25px;
   }
 
+  ._bordered .news_col & {
+    display: flex;
+    flex-flow: column;
+    min-height: calc(100% - 15px);
+
+    .article_title {
+      flex: 1 0 auto;
+      display: flex;
+      flex-flow: column;
+    }
+
+    p {
+      flex: 1 0 auto;
+    }
+  }
+
   &._top {
     margin-bottom: 0;
     min-height: 0;
@@ -736,7 +752,7 @@
       width: 130px;
       margin-top: 4px;
       margin-right: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
 
       + .article_title {
         margin-right: 140px;
@@ -842,10 +858,10 @@
 
     .article_title {
       @include flex(1 0 auto);
-      padding-bottom: 15px;
+      //padding-bottom: 15px;
 
       @include respond-to-min($resp_step_3) {
-        padding: 21px 16px 23px 30px;
+        //padding: 21px 16px 23px 30px;
       }
     }
 
@@ -916,7 +932,6 @@
 
   ._top & {
     padding-bottom: 3px;
-    padding-left: 10px;
 
     @include respond-to-min($resp_step_2) {
       padding-bottom: 5px;
@@ -1300,7 +1315,6 @@
 
   &._stat_time {
     padding-left: 21px;
-    font-size: 10px;
 
     &:before {
       content: unicode($icon-clock);
@@ -1315,7 +1329,6 @@
 
   &._stat_views {
     padding-left: 26px;
-    font-size: 10px;
 
     &:before {
       content: unicode($icon-eye_dot);
@@ -2018,3 +2031,6 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
+
+
+

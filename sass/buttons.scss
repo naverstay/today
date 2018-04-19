@@ -10,7 +10,8 @@
     display: block;
     text-align: center;
     font: 14px/18px $RubikMed;
-    padding: 15px;
+    padding: 13px;
+    border-radius: 2px;
 
     .news_col > & {
       margin-bottom: 20px;
@@ -165,10 +166,6 @@
       font-size: 18px;
       display: inline-block;
       vertical-align: -2px;
-    }
-
-    @include respond-to-min($resp_step_2) {
-      padding: 9px 29px;
     }
   }
 
@@ -408,8 +405,7 @@
   border: 2px solid #f7f8f8;
 
   &:hover {
-    border-color: $violette;
-    background: #fff;
+    border: 2px solid #e5e6e6;
   }
 }
 
@@ -444,8 +440,8 @@
   color: #fff;
 
   &:hover {
-    background: #fff;
-    color: $violette;
+    //filter: brightness(120%);
+    background: #4634aa;
   }
 }
 

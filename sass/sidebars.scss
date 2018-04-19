@@ -158,10 +158,6 @@
   padding-top: 28px;
   z-index: 2;
   background: #fff;
-
-  @include respond-to-min($resp_step_2) {
-    padding-top: 25px;
-  }
 }
 
 .search_form {
@@ -262,11 +258,7 @@
   position: relative;
   margin-bottom: 14px;
   padding: 10px 12px;
-  background: $violette url(../i/stories_bg.svg) no-repeat 0 50%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: $violette;
 
   .main_menu {
     opacity: 1;
@@ -281,7 +273,7 @@
     padding: 0 15px;
 
     @include respond-to-min($resp_step_2) {
-      padding: 0 21px;
+      //padding: 0 21px;
     }
   }
 
@@ -300,8 +292,8 @@
       @include transform_translate(0, 0);
       content: '';
       position: absolute;
-      top: -14px;
-      bottom: -12px;
+      top: -16px;
+      bottom: -124px;
       right: -21px;
       left: -21px;
       //background: $violette_dark;
@@ -694,5 +686,3 @@
     padding-left: 50px;
   }
 }
-
-
