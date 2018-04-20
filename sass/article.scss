@@ -873,7 +873,18 @@
   padding: 20px;
   margin-top: 40px;
   margin-bottom: 45px;
-  background: #f7f8f8;
+  background: #f1f4ff;
+  position: relative;
+
+  .article_action {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .article_action_btn {
+    position: relative;
+    margin: 0;
+  }
 
   .article_img {
     float: left;
@@ -1191,3 +1202,4 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f7f7', endColorstr='#ffffff', GradientType=0);
   }
 }
+

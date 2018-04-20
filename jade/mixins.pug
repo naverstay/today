@@ -264,6 +264,26 @@ mixin action_block(calendar)
         a.article_action_btn.actionBtn(href='#')
         .action_block
             a.action_block_close.actionBtn(href='#')
+            .action_block_caption Share this on:
+            ul.action_soc._brand
+                li
+                    a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+                        span Facebook
+                li
+                    a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
+                        span Twitter
+                li
+                    a.action_sh._l(href='#' data-network="linkedin" class='st-custom-button')
+                        span LinkedIn
+                li
+                    a.action_sh._tg(href='https://t.me/cryptocomes')
+                        span Telegram
+                li
+                    a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
+                        span Reddit
+
+        //-.action_block
+            a.action_block_close.actionBtn(href='#')
             .action_block_title Share it
             ul.action_block_list
                 li: a.action_soc.icon-fb(href='#' data-network="facebook" class='st-custom-button')
