@@ -787,18 +787,18 @@ mixin top_info()
                 option &#8381;
                 option &#163;
             .select_arrow
-            //-.select_overlay
+
         .currency_info
             .currency_info_table
                 +loop_while(3)
-                    a.currency_info_cell(href='#')
+                    a.currency_info_cell.swiper-slide(href='#')
                         p
                             span.currency_link: b BTC
                             span.trend._down -8.82%
                         p
                             span.currency_val 2636.79
 
-                    a.currency_info_cell(href='#')
+                    a.currency_info_cell.swiper-slide(href='#')
                         p
                             span.currency_link: b BTC
                             span.trend._up +8.82%
@@ -1217,10 +1217,5 @@ mixin scripts(share, mask)
         script(src='js/swiper.min.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
-
-
-
-
-
 
 
