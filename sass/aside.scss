@@ -5,10 +5,6 @@
   background: #f7f8f8;
   padding: 15px 20px 12px;
   margin-bottom: 15px;
-
-  @include respond-to-min($resp_step_3) {
-    padding: 30px 30px 12px;
-  }
 }
 
 .aside_box_caption {
@@ -235,6 +231,7 @@
 }
 
 .aside_subscribe {
+  border-radius: 2px;
   padding: 20px 24px 1px;
   margin-bottom: 20px;
   text-align: center;
@@ -248,6 +245,14 @@
 
   .footer_follow_list {
     margin-right: -18px;
+    text-align: center;
+    font-size: 0;
+
+    li {
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+    }
   }
 
   .action_link {

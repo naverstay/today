@@ -215,9 +215,8 @@
   }
 
   .article_tags {
-    margin-left: 25px;
-    //margin-left: 48px;
-    margin-bottom: 10px;
+    margin-left: 32px;
+    margin-bottom: 12px;
   }
 
   .article_link {
@@ -425,7 +424,7 @@
     @extend %icon_pseudo;
     @extend %firm_border_color;
     font-weight: 500;
-    max-width: 610px;
+    max-width: 624px;
     margin: 0 auto 34px;
 
     &:before {
@@ -542,6 +541,15 @@
   //margin-right: -16px;
   margin-bottom: 15px;
   min-height: 100%;
+  border-radius: 2px;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  .article_reviews & {
+    display: block;
+  }
 
   .content_block & {
     //margin-right: -3px;
@@ -566,9 +574,10 @@
     min-height: calc(100% - 15px);
 
     .article_title {
-      flex: 1 0 auto;
-      display: flex;
-      flex-flow: column;
+      border-radius: 2px;
+      //flex: 1 0 auto;
+      //display: flex;
+      //flex-flow: column;
     }
 
     p {
@@ -869,7 +878,7 @@
     }
 
     .article_link {
-      color: #000;
+      //color: #000;
       font-size: 16px;
 
       @include respond-to-min($resp_step_3) {
@@ -906,7 +915,11 @@
   z-index: 1;
 
   img {
-    border-radius: 2px;
+    border-radius: 2px 2px 0 0;
+
+    .article_reviews & {
+      border-radius: 2px;
+    }
   }
 }
 
@@ -1018,50 +1031,24 @@
 .article_title {
   z-index: 1;
   position: relative;
+  flex: 1 0 auto;
+  display: flex;
+  flex-flow: column;
   //padding: 17px 16px 20px 20px;
   padding: 15px 16px 25px 20px;
   background: #f7f8f8;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+
+  p {
+    flex: 1 0 auto;
+  }
 
   ._top & {
     @extend %icon_pseudo;
     background: #fff;
-    //position: absolute;
-    //bottom: 0;
-    //left: 0;
-    //right: 88px;
-    //max-height: 100%;
     padding: 12px 10px 34px 0;
     margin: -80px 30px 0 0;
-
-    //&:after {
-    //  content: '';
-    //  position: absolute;
-    //  top: 18px;
-    //  bottom: 34px;
-    //  width: 8px;
-    //  left: 100%;
-    //  background: $violette;
-    //}
-
-    //&:before {
-    //  content: unicode($icon-ufo);
-    //  position: absolute;
-    //  right: 2px;
-    //  bottom: -20px;
-    //  font-size: 112px;
-    //  line-height: 1;
-    //  width: 90px;
-    //  overflow: hidden;
-    //  pointer-events: none;
-    //
-    //  @include respond-to-min($resp_step_2) {
-    //    bottom: -30px;
-    //  }
-    //
-    //  @include respond-to-min($resp_step_3) {
-    //    bottom: -20px;
-    //  }
-    //}
 
     .article_link {
       overflow: hidden;
@@ -1082,10 +1069,6 @@
 
       @include respond-to-min($resp_step_4) {
         font-size: 26px;
-      }
-
-      &:hover {
-        color: $red;
       }
     }
 
@@ -1133,14 +1116,17 @@
   font: 22px $RubikMed;
   text-decoration: none;
   color: #000;
+  //@extend %firm_color;
 
-  @extend %firm_color;
+  &:hover {
+    color: $violette;
+  }
 
   ._main &,
   ._top & {
     //font-family: $RubikBlack;
     //letter-spacing: -.01em;
-    color: #000;
+    //color: #000;
     font-weight: 700;
   }
 
@@ -1168,7 +1154,7 @@
   }
 
   ._article & {
-    color: #000 !important;
+    //color: #000 !important;
     //letter-spacing: .045em;
   }
 
@@ -1263,13 +1249,13 @@
       padding-top: 10px;
     }
 
-    @include respond-to-min($resp_step_3) {
-      margin-bottom: 30px;
-    }
-
-    @include respond-to-min($resp_step_4) {
-      margin-bottom: 35px;
-    }
+    //@include respond-to-min($resp_step_3) {
+    //  margin-bottom: 30px;
+    //}
+    //
+    //@include respond-to-min($resp_step_4) {
+    //  margin-bottom: 35px;
+    //}
   }
 
   ._top & {
@@ -1394,7 +1380,7 @@ a.article_stat_val {
     top: auto;
     left: auto;
     bottom: 20px;
-    right: 12px;
+    right: 20px;
 
     .article_action_btn {
       position: relative;
@@ -1682,10 +1668,14 @@ a.article_stat_val {
   span {
     display: inline-block;
     vertical-align: top;
-    padding: 8px 10px 8px 6px;
+    padding: 8px 10px 8px 4px;
     font: 12px/14px $RubikBold;
     //letter-spacing: .015em;
     text-transform: uppercase;
+  }
+
+  .article_main_photo & {
+    border-radius: 2px;
   }
 
   &._top {
@@ -2042,7 +2032,6 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
-
 
 
 
