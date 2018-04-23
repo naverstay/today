@@ -805,6 +805,54 @@
     }
   }
 
+  > ol {
+    &[class=""],
+    &:not([class]) {
+      list-style: none;
+      margin-bottom: 25px;
+      padding-left: 35px;
+      padding-top: 12px;
+      counter-reset: ordered_list;
+
+      li {
+        position: relative;
+        padding-left: 56px;
+        margin-bottom: 15px;
+        font: 14px/18px $RubikReg;
+
+        &:before {
+          counter-increment: ordered_list;
+          content: counter(ordered_list) ".";
+          position: absolute;
+          top: 5px;
+          left: 16px;
+        }
+
+        ul {
+          &[class=""],
+          &:not([class]) {
+            counter-reset: ordered_list_2;
+            list-style: none;
+            margin-bottom: 25px;
+            padding-top: 10px;
+
+            li {
+              padding-left: 42px;
+
+              &:before {
+                counter-increment: ordered_list_2;
+                content: counter(ordered_list_2) ".";
+                position: absolute;
+                top: 5px;
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   > ul {
     &[class=""],
     &:not([class]) {

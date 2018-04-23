@@ -811,14 +811,14 @@ mixin top_info()
         .currency_info
             .currency_info_table
                 +loop_while(3)
-                    a.currency_info_cell.swiper-slide(href='#')
+                    .swiper-slide: a.currency_info_cell(href='#')
                         p
                             span.currency_link: b BTC
                             span.trend._down -8.82%
                         p
                             span.currency_val 2636.79
 
-                    a.currency_info_cell.swiper-slide(href='#')
+                    .swiper-slide: a.currency_info_cell(href='#')
                         p
                             span.currency_link: b BTC
                             span.trend._up +8.82%
