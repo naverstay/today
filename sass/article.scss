@@ -814,6 +814,10 @@
       padding-top: 12px;
       counter-reset: ordered_list;
 
+      p {
+        margin-bottom: 25px;
+      }
+
       li {
         position: relative;
         padding-left: 56px;
@@ -828,7 +832,7 @@
           left: 16px;
         }
 
-        ul {
+        ol {
           &[class=""],
           &:not([class]) {
             counter-reset: ordered_list_2;
@@ -841,7 +845,7 @@
 
               &:before {
                 counter-increment: ordered_list_2;
-                content: counter(ordered_list_2) ".";
+                content: counter(ordered_list) "." counter(ordered_list_2) ".";
                 position: absolute;
                 top: 5px;
                 left: 0;
