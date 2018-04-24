@@ -1517,6 +1517,7 @@ a.article_stat_val {
   padding: 26px 15px 10px;
   margin-left: 14px;
   background: #fff;
+  border-radius: 0 2px 2px 2px;
   box-shadow: 6px 12px 14px 0 rgba(37, 16, 80, .1), 0 0 2px rgba(0, 0, 0, 0.15);
 
   .action_soc._brand {
@@ -1574,6 +1575,7 @@ a.article_stat_val {
   ._top & {
     left: auto;
     right: 12px;
+    border-radius: 2px 0 2px 2px;
 
     &:after {
       left: auto;
