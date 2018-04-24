@@ -220,6 +220,29 @@
   }
 }
 
+.subscribe_img {
+  border-radius: 2px 2px 0 0;
+  overflow: hidden;
+  margin-bottom: 30px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.subscribe_caption {
+  font: 20px/23px $RubikBold;
+  margin: 0 -30px 17px;
+}
+
+.subscribe_stat {
+  text-align: center;
+  font: 12px/14px $RubikReg;
+  color: #bdbdbd;
+  margin-bottom: 30px;
+}
+
 .subscribe_form {
   @extend %clearfix;
   text-align: center;
@@ -239,6 +262,37 @@
 
     .input_v1 {
       border-radius: 2px 0 0 2px;
+    }
+  }
+
+  &._hot {
+    .subscribe_success_msg {
+      p {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    .subscribe_success_msg {
+      height: 240px;
+
+      &:before {
+        width: 60px;
+        height: 60px;
+        font-size: 54px;
+        bottom: 112px;
+        margin-left: -25px;
+      }
+
+      &:after {
+        width: 185px;
+        height: 100px;
+        margin-left: -94px;
+      }
+    }
+
+    .form_cell {
+      margin-bottom: 30px;
     }
   }
 

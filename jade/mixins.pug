@@ -70,6 +70,8 @@ mixin footer()
                         li: a.footer_col_link(href='#'): span Price Index
                         li: a.footer_col_link(href='#'): span Advertise with Us
                         li: a.footer_col_link(href='#'): span About CryptoComes
+                        li: a.footer_col_link.compilationBtn(href='#'): span subscribe 1
+                        li: a.footer_col_link.hotEmailBtn(href='#'): span subscribe 2
 
                 .footer_col.s_4
                     //-.footer_col_caption Follow us
@@ -208,6 +210,44 @@ mixin footer()
                         li
                             a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
                                 span Reddit
+
+        #compilation_popup
+            .subscribe_img
+                img(src='i/compilation_popup.jpg')
+
+            .subscribe_form._hot
+                form.validateMe.formParent.subscribeForm(action='#' data-prompts='true')
+                    .success_hide
+                        .subscribe_caption Не пропусти самое важное<br>в крипте. Подборка лучшего
+                        .subscribe_stat 3800 enthusiasts subsribed already
+                        .form_cell.formCell
+                            .input_w
+                                input.input_v5.forceValidation(placeholder='Enter your email' class='validate[required,custom[email]]' data-errormessage='Please enter valid e-mail')
+
+                        .form_cell
+                            button.btn_v2.subscribe_btn.btn_violette_2 Subscribe TO NEWSLETTER
+
+                    .subscribe_success_msg
+                        p Thank you for subscribing!
+
+        #hotmail_popup
+            .subscribe_img
+                img(src='i/inbox_popup.jpg')
+            .subscribe_form._hot
+                form.validateMe.formParent.subscribeForm(action='#' data-prompts='true')
+                    .success_hide
+                        .subscribe_caption Получи в свой inbox самые горячие криптоновости
+                        .subscribe_stat 3800 enthusiasts subsribed already
+                        .form_cell.formCell
+                            .input_w
+                                input.input_v5.forceValidation(placeholder='Enter your email' class='validate[required,custom[email]]' data-errormessage='Please enter valid e-mail')
+
+                        .form_cell
+                            button.btn_v2.subscribe_btn.btn_violette_2 Subscribe TO OUR HOTTEST
+
+                    .subscribe_success_msg
+                        p Thank you for subscribing!
+
         #bonus_popup
             .bonus_img
                 img(src='i/retweet.jpg')

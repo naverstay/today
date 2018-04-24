@@ -1084,6 +1084,10 @@
       //padding: 20px 14px 36px 14px;
       //margin: -110px 163px 0 0;
       padding: 12px 14px 36px 0;
+
+      .article_action {
+        margin-bottom: 14px;
+      }
     }
 
     @include respond-to-min($resp_step_4) {
@@ -1092,6 +1096,10 @@
       //margin: -125px 155px 0 0;
       padding-top: 18px;
       padding-bottom: 55px;
+
+      .article_action {
+        margin-bottom: 32px;
+      }
     }
   }
 
@@ -1509,7 +1517,7 @@ a.article_stat_val {
   padding: 26px 15px 10px;
   margin-left: 14px;
   background: #fff;
-  box-shadow: 6px 12px 14px 0 rgba(37, 16, 80, .1), 0 -2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 6px 12px 14px 0 rgba(37, 16, 80, .1), 0 0 2px rgba(0, 0, 0, 0.15);
 
   .action_soc._brand {
     width: 100%;
@@ -1750,19 +1758,20 @@ a.article_stat_val {
   }
 
   ._review & {
-    height: 25px;
-    font-size: 14px;
+    height: 19px;
+    font-size: 8px;
 
     span {
-      font-size: 10px;
-      padding: 6px 8px 5px 2px;
+      font-size: 8px;
+      padding: 3px 4px 2px 1px;
     }
 
     &:before {
-      font-size: 14px;
-      width: 25px;
-      height: 25px;
-      line-height: 25px;
+      font-size: 12px;
+      width: 18px;
+      height: 19px;
+      padding-left: 3px;
+      line-height: 19px;
     }
   }
 

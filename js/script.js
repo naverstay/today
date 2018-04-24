@@ -1,6 +1,7 @@
 var $wnd, $body, $header, $footer,
     $subscribeTrigger, $subscribeBlock, $goTop, $goTopHolder, didScroll, tagSlider,
-    $followPopup, $bonusPopup, $sharePopup, $subscribePopup, followCountDown,
+    $followPopup, $compilationPopup, $hotEmailPopup,
+    $bonusPopup, $sharePopup, $subscribePopup, followCountDown,
     lastScrollTop = 0, delta = 5,
     subscribe_spacer = 270;
 
@@ -184,6 +185,10 @@ $(window)
         initSharePopup();
 
         initBonusPopup();
+
+        initCompilationPopup();
+
+        initHotEmailBtn();
     })
     .on('scroll', function () {
         var scrtop = getScrollTop(),
@@ -361,6 +366,60 @@ function initBonusPopup() {
         close: function (event, ui) {
             $body.removeClass('modal_opened overlay_v2');
         }
+    });
+}
+
+function initCompilationPopup() {
+
+    $compilationPopup = $('#compilation_popup').dialog({
+        autoOpen: false,
+        modal: true,
+        closeOnEscape: true,
+        closeText: '',
+        dialogClass: 'dialog_v2 dialog_title_v1',
+        //appendTo: '.wrapper',
+        width: 500,
+        draggable: true,
+        collision: "fit",
+        position: {my: "top center", at: "top center", of: window},
+        open: function (event, ui) {
+            $body.addClass('modal_opened overlay_v2');
+        },
+        close: function (event, ui) {
+            $body.removeClass('modal_opened overlay_v2');
+        }
+    });
+
+    $('body').delegate('.compilationBtn', 'click', function () {
+        $compilationPopup.dialog('open');
+        return false;
+    });
+}
+
+function initHotEmailBtn() {
+
+    $hotEmailPopup = $('#hotmail_popup').dialog({
+        autoOpen: false,
+        modal: true,
+        closeOnEscape: true,
+        closeText: '',
+        dialogClass: 'dialog_v2 dialog_title_v1',
+        //appendTo: '.wrapper',
+        width: 500,
+        draggable: true,
+        collision: "fit",
+        position: {my: "top center", at: "top center", of: window},
+        open: function (event, ui) {
+            $body.addClass('modal_opened overlay_v2');
+        },
+        close: function (event, ui) {
+            $body.removeClass('modal_opened overlay_v2');
+        }
+    });
+
+    $('body').delegate('.hotEmailBtn', 'click', function () {
+        $hotEmailPopup.dialog('open');
+        return false;
     });
 }
 
