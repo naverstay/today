@@ -1,0 +1,65 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto 404')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +tag_holder('_slider', true)
+
+                    .content_holder
+                        .content_block
+
+                            .news_row._news._bordered._tags_mode
+                                .news_col._third
+                                    .article_block._tag
+                                        .article_title.icon-404
+                                            p Houston, we have a problem!<br><br>  We couldn't find the page you're looking for.
+
+                                +loop_while(7)
+                                    .news_col._third
+                                        .article_block._pool
+                                            .article_img
+                                                a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
+
+                                            .article_title
+                                                .article_action: .article_action_inner
+                                                    +action_block()
+                                                p: a.article_link(href='article.html') Reddit No Longer Accepting Bitcoin Payments
+                                                ul.article_stat
+                                                    li
+                                                        a.article_stat_val(href='#') John Doe
+                                                    li
+                                                        span.article_stat_val._stat_time 2h
+                                                    li
+                                                        span.article_stat_val._stat_views 212
+
+                                    .news_col._third
+                                        .article_block._pool
+                                            .article_img
+                                                a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
+
+                                            .article_title
+                                                .article_action: .article_action_inner
+                                                    +action_block()
+                                                p: a.article_link(href='article.html') Reddit No Longer Accepting Bitcoin Payments
+                                                ul.article_stat
+                                                    li
+                                                        a.article_stat_val(href='#') John Doe
+                                                    li
+                                                        span.article_stat_val._stat_time 2h
+                                                    li
+                                                        span.article_stat_val._stat_views 212
+
+                        +aside_block()
+
+            .nav_holder
+                //-+main_menu()
+                +search()
+
+            +header()
+            +footer()
+
+        +scripts()
