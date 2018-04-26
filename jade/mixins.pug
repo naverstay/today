@@ -72,6 +72,8 @@ mixin footer()
                         li: a.footer_col_link(href='#'): span About CryptoComes
                         li: a.footer_col_link.compilationBtn(href='#'): span subscribe 1
                         li: a.footer_col_link.hotEmailBtn(href='#'): span subscribe 2
+                        li: a.footer_col_link.contestBtnTw(href='#'): span contest 1
+                        li: a.footer_col_link.contestBtnFb(href='#'): span contest 2
 
                 .footer_col.s_4
                     //-.footer_col_caption Follow us
@@ -248,12 +250,38 @@ mixin footer()
                     .subscribe_success_msg
                         p Thank you for subscribing!
 
+        #hotmail_popup
+            .subscribe_img
+                img(src='i/inbox_popup.jpg')
+            .subscribe_form._hot
+                form.validateMe.formParent.subscribeForm(action='#' data-prompts='true')
+                    .success_hide
+                        .subscribe_caption Получи в свой inbox самые горячие криптоновости
+                        .subscribe_stat 3800 enthusiasts subsribed already
+                        .form_cell.formCell
+                            .input_w
+                                input.input_v5.forceValidation(placeholder='Enter your email' class='validate[required,custom[email]]' data-errormessage='Please enter valid e-mail')
+
+                        .form_cell
+                            button.btn_v2.subscribe_btn.btn_violette_2 Subscribe TO OUR HOTTEST
+
+                    .subscribe_success_msg
+                        p Thank you for subscribing!
+
         #bonus_popup
             .bonus_img
                 img(src='i/retweet.jpg')
             .bonus_caption CryptoComes Twitter GIVEAWAY!<br>Follow and RT to win 💰$100💰
             .bonus_controls
                 a.btn_v2.subscribe_btn._tw(href='#')
+                    span PARTICIPATE HERE
+
+        #contest_fb_popup
+            .bonus_img
+                img(src='i/fb_popup.jpg')
+            .bonus_caption CryptoComes GIVEAWAY!<br>Like the Facebook page and make a comment to win 💰$100💰
+            .bonus_controls
+                a.btn_v2.subscribe_btn._fb(href='#')
                     span PARTICIPATE HERE
 
         #follow_popup
