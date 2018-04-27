@@ -78,6 +78,7 @@
   float: right;
   list-style: none;
   margin: 0;
+  padding-right: 28px;
   padding-top: 2px;
   font: 13px $RubikMed;
 
@@ -171,7 +172,7 @@
   color: #999;
   display: inline-block;
   font: 13px/15px $RubikReg;
-  margin-left: 5px;
+  margin-left: 8px;
 
   &:hover {
     text-decoration: none;
