@@ -33,6 +33,7 @@ html(lang='ru')
                                     dd
                                         span(data-stat=1).clr_green +8.29%
                                         span(data-stat=2).clr_green +18.29%
+                                        a.buy_link(href='#') buy
 
                                     dt
                                         a.stat_item(href='#')
@@ -41,6 +42,7 @@ html(lang='ru')
                                     dd
                                         span(data-stat=1).clr_green +6.12%
                                         span(data-stat=2).clr_green +16.12%
+                                        a.buy_link(href='#') buy
 
                                     dt
                                         a.stat_item(href='#')
@@ -49,6 +51,7 @@ html(lang='ru')
                                     dd
                                         span(data-stat=1).clr_green +8.29%
                                         span(data-stat=2).clr_green +18.29%
+                                        a.buy_link(href='#') buy
 
                                     dt
                                         a.stat_item(href='#')
@@ -57,6 +60,7 @@ html(lang='ru')
                                     dd
                                         span(data-stat=1).clr_green +6.12%
                                         span(data-stat=2).clr_green +16.12%
+                                        a.buy_link(href='#') buy
 
                                     dt
                                         a.stat_item(href='#')
@@ -65,6 +69,7 @@ html(lang='ru')
                                     dd
                                         span(data-stat=1).clr_green +8.29%
                                         span(data-stat=2).clr_green +18.29%
+                                        a.buy_link(href='#') buy
 
                                     dt
                                         a.stat_item(href='#')
@@ -73,6 +78,7 @@ html(lang='ru')
                                     dd
                                         span(data-stat=1).clr_green +6.12%
                                         span(data-stat=2).clr_green +16.12%
+                                        a.buy_link(href='#') buy
 
                                     dt
                                         a.stat_item(href='#')
@@ -81,6 +87,7 @@ html(lang='ru')
                                     dd
                                         span(data-stat=1).clr_green +8.29%
                                         span(data-stat=2).clr_green +18.29%
+                                        a.buy_link(href='#') buy
 
                                     dt
                                         a.stat_item(href='#')
@@ -89,6 +96,7 @@ html(lang='ru')
                                     dd
                                         span(data-stat=1).clr_green +6.12%
                                         span(data-stat=2).clr_green +16.12%
+                                        a.buy_link(href='#') buy
 
                                     dt
                                         a.stat_item(href='#')
@@ -97,6 +105,7 @@ html(lang='ru')
                                     dd
                                         span(data-stat=1).clr_green +8.29%
                                         span(data-stat=2).clr_green +18.29%
+                                        a.buy_link(href='#') buy
 
                                     dt
                                         a.stat_item(href='#')
@@ -105,6 +114,7 @@ html(lang='ru')
                                     dd
                                         span(data-stat=1).clr_green +6.12%
                                         span(data-stat=2).clr_green +16.12%
+                                        a.buy_link(href='#') buy
 
                                 p
                                     a.stat_item._more(href='#') More coins
@@ -114,7 +124,11 @@ html(lang='ru')
 
                         .widget_block
                             .widget_wrapper
-                                .stat_caption Bitcoin Price Index
+                                .stat_caption
+                                    span Bitcoin Price Index
+                                    a.btn_v2.btn_gray_3.buy_btn(href='#')
+                                        span BUY BITCOIN
+                                        span.btn_icon.icon-arrow-right
 
                                 .stat_widget_holder
                                     +widget_summary()
@@ -140,62 +154,69 @@ html(lang='ru')
                             .news_row._bordered._col_3_wide
                                 +loop_while(2)
                                     .news_col._pricewise
-                                        .article_block
+                                        .article_block._features
                                             .article_img
                                                 ul.article_tags
                                                     li
-                                                        span.icon-say.article_tag._pricewise
-                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                    +action_block()
-                                                a.article_img_link(href='article.html'): img(src='i/range.jpg')
+                                                        a.icon-say.article_tag._wide._features(href='#')
+                                                            span Features
+                                                a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
 
                                             .article_title
-                                                a.article_link(href='article.html') Bitcoin Price Seeks Direction as Trading Range Narrows
+                                                .article_action: .article_action_inner
+                                                    +action_block()
+                                                p: a.article_link(href='article.html') Atomic Action: Will 2018 Be the Year of the Cros…
+
                                                 ul.article_stat
                                                     li
-                                                        span.article_stat_val Jan 10, 2018 at 10:00
+                                                        a.article_stat_val(href='#') John Doe
+                                                    li
+                                                        span.article_stat_val._stat_time 2h
                                                     li
                                                         span.article_stat_val._stat_views 212
-                                                    li._first
-                                                        span.article_stat_val Ariel Deschapell
+
                                     .news_col._pool
-                                        .article_block
+                                        .article_block._features
                                             .article_img
                                                 ul.article_tags
                                                     li
-                                                        span.icon-crown.article_tag._pool
-                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                    +action_block()
-                                                a.article_img_link(href='article.html'): img(src='i/range.jpg')
+                                                        a.icon-say.article_tag._wide._features(href='#')
+                                                            span Features
+                                                a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
 
                                             .article_title
-                                                a.article_link(href='article.html') Chinese Finance Association Cautions on Overseas ICOs
+                                                .article_action: .article_action_inner
+                                                    +action_block()
+                                                p: a.article_link(href='article.html') Atomic Action: Will 2018 Be the Year of the Cros…
+
                                                 ul.article_stat
                                                     li
-                                                        span.article_stat_val Jan 10, 2018 at 10:00
+                                                        a.article_stat_val(href='#') John Doe
+                                                    li
+                                                        span.article_stat_val._stat_time 2h
                                                     li
                                                         span.article_stat_val._stat_views 212
-                                                    li._first
-                                                        span.article_stat_val Ariel Deschapell
                                     .news_col._analysis
-                                        .article_block
+                                        .article_block._features
                                             .article_img
                                                 ul.article_tags
                                                     li
-                                                        span.icon-splash.article_tag._analysis
-                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
-                                                    +action_block()
-                                                a.article_img_link(href='article.html'): img(src='i/range.jpg')
+                                                        a.icon-say.article_tag._wide._features(href='#')
+                                                            span Features
+                                                a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
 
                                             .article_title
-                                                a.article_link(href='article.html') Bitcoin Price Seeks Direction as Trading Range Narrows
+                                                .article_action: .article_action_inner
+                                                    +action_block()
+                                                p: a.article_link(href='article.html') Atomic Action: Will 2018 Be the Year of the Cros…
+
                                                 ul.article_stat
                                                     li
-                                                        span.article_stat_val Jan 10, 2018 at 10:00
+                                                        a.article_stat_val(href='#') John Doe
+                                                    li
+                                                        span.article_stat_val._stat_time 2h
                                                     li
                                                         span.article_stat_val._stat_views 212
-                                                    li._first
-                                                        span.article_stat_val Ariel Deschapell
 
                             .news_row
                                 .news_col._wide

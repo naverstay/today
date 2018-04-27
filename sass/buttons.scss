@@ -190,6 +190,28 @@
     }
   }
 
+  &.buy_btn {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 30px;
+    border-radius: 20px;
+    padding: 9px 15px;
+    font: 14px/20px $RubikBold;
+    text-transform: uppercase;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn_icon {
+      padding-left: 8px;
+      font-size: 18px;
+      display: inline-block;
+      vertical-align: -2px;
+    }
+  }
+
   &.release_btn {
     @extend %firm_color;
     display: block;

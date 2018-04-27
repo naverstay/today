@@ -142,7 +142,7 @@
   dd {
     float: right;
     font: 11px/14px $RubikReg;
-    padding-top: 6px;
+    //padding-top: 6px;
 
     span {
       display: none;
@@ -152,7 +152,7 @@
   &[data-stat='1'] {
     dd {
       span[data-stat='1'] {
-        display: block;
+        display: inline-block;
       }
     }
   }
@@ -160,9 +160,21 @@
   &[data-stat='2'] {
     dd {
       span[data-stat='2'] {
-        display: block;
+        display: inline-block;
       }
     }
+  }
+}
+
+.buy_link {
+  text-decoration: underline;
+  color: #999;
+  display: inline-block;
+  font: 13px/15px $RubikReg;
+  margin-left: 5px;
+
+  &:hover {
+    text-decoration: none;
   }
 }
 
