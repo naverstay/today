@@ -79,9 +79,12 @@
   float: right;
   list-style: none;
   margin: 0;
-  padding-right: 28px;
-  padding-top: 2px;
+  padding-top: 3px;
   font: 13px $RubikMed;
+
+  &._buy {
+    padding-right: 28px;
+  }
 
   li {
     float: left;
