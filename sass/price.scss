@@ -51,6 +51,7 @@
 }
 
 .stat_label {
+  padding-right: 20px;
   float: left;
   font: 26px/40px $RubikMed;
   margin-bottom: 16px;
@@ -392,10 +393,15 @@
         font-weight: 400;
         font-size: 20px;
         padding: 6px 24px;
+
+        &:hover {
+          background: $violette;
+        }
       }
 
       .cTypeTabActive {
         background: $violette;
+        cursor: default;
       }
     }
 
@@ -478,8 +484,8 @@
     input.priceInput {
       border-width: 2px 0 2px 2px;
       height: 32px;
-      border-radius: 1px;
       font-size: 14px;
+      border-radius: 2px 0 0 2px !important;
       border-color: rgba(0, 0, 0, .1);
     }
 
@@ -498,6 +504,7 @@
     height: 32px;
     font: 13px/30px $RubikMed;
     border-width: 2px;
+    border-radius: 0 2px 2px 0;
     border-color: rgba(0, 0, 0, .1);
 
     + div {
@@ -566,6 +573,7 @@
     margin: 0 0 10px 6px;
     padding: 2px 5px;
 
+    &:hover,
     &.active {
       border-color: $violette !important;
     }
