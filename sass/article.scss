@@ -1165,6 +1165,13 @@
   padding-left: 12px;
   padding-top: 14px;
   position: relative;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+
+  .widget_block & {
+    padding-top: 0;
+  }
 
   li {
     @extend %icon_pseudo;

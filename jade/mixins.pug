@@ -327,6 +327,13 @@ mixin footer()
     |   fjs.parentNode.insertBefore(js, fjs);
     | }(document, 'script', 'facebook-jssdk'));</script>
 
+mixin how_to(active)
+    ul.how_to_list
+        li: a.how_to_link(class= (active ===1? '_active' : ((active ===0? '_active' : ''))) href='#') What is Bitcoin
+        li: a.how_to_link(class= (active ===2? '_active' : ((active ===0? '_active' : ''))) href='#') How to trade Bitcoin
+        li: a.how_to_link(class= (active ===3? '_active' : ((active ===0? '_active' : ''))) href='#') How to store Bitcoin
+        li: a.how_to_link(class= (active ===4? '_active' : ((active ===0? '_active' : ''))) href='#') How to mine Bitcoin
+
 mixin action_block(calendar)
     .article_action_block.articleActionBlock(class= calendar ? '_calendar' : '')
         a.article_action_btn.actionBtn(href='#')

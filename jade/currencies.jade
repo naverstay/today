@@ -1,0 +1,78 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto currencies')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +tag_holder('_slider', true)
+
+                    .widget_holder
+                        .widget_aside
+                            .stat_holder
+                                .manual_title
+                                    span.clr_violette.icon-flag
+                                    span.clr_violette._fw_b CRYPTOCOINS MANUAL
+
+                                .manual_search
+                                    form(action='#')
+                                        .input_w
+                                            input.input_v3(placeholder='Start typing coin to filter')
+
+                                ul.manual_list
+                                    li
+                                        a.manual_link.manualLink(href='#')
+                                            span Bitcoin manual
+                                            span.manual_currency BTC
+
+                                        +how_to(1)
+                                    li
+                                        a.manual_link.manualLink(href='#')
+                                            span Ethereum manual
+                                            span.manual_currency ETH
+
+                                        +how_to(1)
+                                    li
+                                        a.manual_link.manualLink(href='#')
+                                            span Ethereum manual
+                                            span.manual_currency ETH
+
+                                        +how_to(1)
+
+                                p
+                                    a.stat_item._more(href='#') More coins
+
+                        .widget_block
+                            .news_row._bordered._show_2
+                                +loop_while(6)
+                                    .news_col._third
+                                        .article_block._pool
+                                            .article_img
+                                                a.article_img_link(href='currency_info.html'): img(src='i/bear_0.jpg')
+
+                                            .article_title
+                                                .article_action: .article_action_inner
+                                                    +action_block()
+
+                                                p: a.article_link(href='article.html') Bitcoin (BTC) manual
+
+                                                +how_to(0)
+
+                                                ul.article_stat
+                                                    li
+                                                        a.article_stat_val(href='#') John Doe
+                                                    li
+                                                        span.article_stat_val._stat_time 2h
+                                                    li
+                                                        span.article_stat_val._stat_views 212
+
+            .nav_holder
+                +main_menu(true)
+                +search()
+
+            +header()
+            +footer()
+
+        +scripts(true)

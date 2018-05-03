@@ -196,7 +196,7 @@
       right: 0;
       bottom: 0;
       left: 20px;
-      background: #fff;
+      background: #edf1fb;
       background: -moz-radial-gradient(center, ellipse cover, #fff 0%, #edf1fb 100%);
       background: -webkit-radial-gradient(center, ellipse cover, #fff 0%, #edf1fb 100%);
       background: radial-gradient(ellipse at center, #fff 0%, #edf1fb 100%);
@@ -941,6 +941,27 @@
   position: relative;
   //overflow: hidden;
 
+  .news_col & {
+    .article_img_link {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      padding-bottom: 62.5%;
+      background: #edf1fb;
+      background: -moz-radial-gradient(center, ellipse cover, #fff 0%, #edf1fb 100%);
+      background: -webkit-radial-gradient(center, ellipse cover, #fff 0%, #edf1fb 100%);
+      background: radial-gradient(ellipse at center, #fff 0%, #edf1fb 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#edf1fb', GradientType=1);
+    }
+  }
+
   img {
     display: block;
     max-width: 100%;
@@ -1209,6 +1230,91 @@
 .article_sh_link {
   text-decoration: none;
   color: #cacacc;
+}
+
+.how_to_list {
+  padding-top: 12px;
+  padding-left: 15px;
+  list-style: none;
+
+  .manual_list & {
+    display: none;
+  }
+
+  .manual_list ._opened & {
+    display: block;
+  }
+
+  > li {
+    @extend %icon_pseudo;
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 8px;
+
+    &:before {
+      content: unicode($icon-triangle_r);
+      position: absolute;
+      top: 4px;
+      left: 0;
+      color: #bbb;
+      font-size: 7px;
+    }
+  }
+}
+
+.how_to_link {
+  color: #bbb;
+  font: 12px/15px $RubikReg;
+
+  &._active {
+    cursor: default;
+    color: #000;
+  }
+}
+
+.manual_search {
+  padding: 17px 0;
+
+  .input_v3 {
+    font-family: $RubikReg;
+    font-size: 14px;
+  }
+}
+
+.manual_list {
+  list-style: none;
+  padding-left: 5px;
+
+  > li {
+    margin-bottom: 18px;
+  }
+}
+
+.manual_link {
+  font: 14px/20px $RubikMed;
+  color: #bbb;
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  ._opened & {
+    color: #000;
+  }
+}
+
+.manual_currency {
+  border-radius: 2px;
+  background: #bbb;
+  color: #fff;
+  margin-left: 8px;
+  padding: 0 5px;
+  font-weight: 400;
+
+  ._opened & {
+    background: $violette;
+  }
 }
 
 .article_stat {
@@ -2129,3 +2235,4 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
+

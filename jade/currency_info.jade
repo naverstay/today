@@ -1,0 +1,93 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto currency info')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +tag_holder('_slider', true)
+
+                    .widget_holder
+                        .widget_aside
+                            .stat_holder
+                                .manual_title
+                                    span.clr_violette.icon-flag
+                                    span.clr_violette._fw_b CRYPTOCOINS MANUAL
+
+                                .manual_search
+                                    form(action='#')
+                                        .input_w
+                                            input.input_v3(placeholder='Start typing coin to filter')
+
+                                ul.manual_list
+                                    li
+                                        a.manual_link.manualLink(href='#')
+                                            span Bitcoin manual
+                                            span.manual_currency BTC
+
+                                        +how_to(1)
+                                    li
+                                        a.manual_link.manualLink(href='#')
+                                            span Ethereum manual
+                                            span.manual_currency ETH
+
+                                        +how_to(1)
+                                    li
+                                        a.manual_link.manualLink(href='#')
+                                            span Ethereum manual
+                                            span.manual_currency ETH
+
+                                        +how_to(1)
+
+                                p
+                                    a.stat_item._more(href='#') More coins
+
+                        .widget_block
+                            ul.bread_crumbs
+                                li: a.crumb_link(href='#') Cryptocomes
+                                li: a.crumb_link(href='#') Cryptocoins manual
+                                li: a.crumb_link(href='#') Bitcoin manual
+
+                            .article_block.story_block._article._news
+                                .article_main_photo
+                                    .article_heading
+                                        a.article_link(href='article.html') What is bitcoin (BTC)
+
+                                    ul.article_stat._mod_1
+                                        li
+                                            a.article_stat_val(href='#') John Doe
+                                        li
+                                            span.article_stat_val._stat_time 2h
+                                        li
+                                            span.article_stat_val._stat_views 212
+
+                                    .article_img
+                                        .article_img_link: img(src='i/wtf_btc.jpg' width=576 height=360)
+
+                                .article_info_holder
+                                    .article_preview iGaming platform provider Cash Bet has partnered with Arsenal Football Club in a deal that will promote the firm's new crypto token.
+
+                                    .article_info
+                                        +article_share('_action', true)
+
+                                    .article_text
+                                        .article_contents Contents
+
+                                        ul.contents_list
+                                            li: a.contents_link(href='#') Bitcoinization of space
+                                            li: a.contents_link(href='#') Cryptocurrencies running away from Earth
+                                            li: a.contents_link(href='#') Internet 2.0
+                                            li: a.contents_link(href='#') States are going there, too
+
+                                        p When President Trump delivers his first State of the Union address on Tuesday at 9 p.m. ET, his most fervent supporters are anxious that he will squander the most high-profile moment of his presidency with a soft speech that bends more to the predilections of the political establishment in Washington and less to the populist army that sent him there to #[a(href='#') drain the swamp].
+
+            .nav_holder
+                +main_menu(true)
+                +search()
+
+            +header()
+            +footer()
+
+        +scripts(true)
