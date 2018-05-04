@@ -1233,9 +1233,15 @@
 }
 
 .how_to_list {
+  flex: 1 0 auto;
   padding-top: 12px;
   padding-left: 15px;
   list-style: none;
+
+  + p {
+    order: -1;
+    flex: 0 !important;
+  }
 
   .manual_list & {
     display: none;
@@ -2235,4 +2241,3 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
-
