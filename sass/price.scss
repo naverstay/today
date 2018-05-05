@@ -235,38 +235,22 @@
   }
 
   &._more {
+    @extend %icon_pseudo;
     position: relative;
     display: inline-block;
     vertical-align: top;
     padding-left: 24px;
 
-    &:after,
     &:before {
-      @include transition_all(background .3s);
-      content: '';
+      //@include transition_all(color .3s);
+      content: unicode($icon-plus);
       position: absolute;
       top: 50%;
-      left: 8px;
-      background: #999;
-    }
-
-    &:before {
-      width: 12px;
-      height: 2px;
-      margin: -1px 0 0 -6px;
-    }
-
-    &:after {
-      width: 2px;
-      height: 12px;
-      margin: -6px 0 0 -1px;
-    }
-
-    &:hover {
-      &:after,
-      &:before {
-        background: #000;
-      }
+      left: 4px;
+      font-size: 14px;
+      width: 14px;
+      height: 14px;
+      margin-top: -7px;
     }
   }
 }

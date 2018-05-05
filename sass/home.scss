@@ -948,6 +948,7 @@
       bottom: 0;
       left: 0;
       right: 0;
+      overflow: hidden;
     }
 
     &:after {
@@ -1260,7 +1261,7 @@
     &:before {
       content: unicode($icon-triangle_r);
       position: absolute;
-      top: 4px;
+      top: 6px;
       left: 0;
       color: #bbb;
       font-size: 7px;
@@ -1269,8 +1270,14 @@
 }
 
 .how_to_link {
+  @include transition_all(color .3s);
   color: #bbb;
   font: 12px/15px $RubikReg;
+
+  &:hover {
+    color: #000;
+    text-decoration: underline;
+  }
 
   &._active {
     cursor: default;
@@ -1284,6 +1291,7 @@
   .input_v3 {
     font-family: $RubikReg;
     font-size: 14px;
+    background: #fff;
   }
 }
 
@@ -1297,8 +1305,9 @@
 }
 
 .manual_link {
+  @include transition_all(color .3s);
   font: 14px/20px $RubikMed;
-  color: #bbb;
+  color: #999;
 
   span {
     display: inline-block;
@@ -1308,11 +1317,20 @@
   ._opened & {
     color: #000;
   }
+
+  &:hover {
+    color: #000;
+
+    .manual_currency {
+      background: $violette;
+    }
+  }
 }
 
 .manual_currency {
+  @include transition_all(background .3s);
   border-radius: 2px;
-  background: #bbb;
+  background: #999;
   color: #fff;
   margin-left: 8px;
   padding: 0 5px;
@@ -2241,3 +2259,4 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
+

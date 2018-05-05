@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'crypto_icons';
-  src: url('#{$icomoon-font-path}/crypto_icons.eot?uq5a27');
-  src: url('#{$icomoon-font-path}/crypto_icons.eot?uq5a27#iefix') format('embedded-opentype'),
-  url('#{$icomoon-font-path}/crypto_icons.ttf?uq5a27') format('truetype'),
-  url('#{$icomoon-font-path}/crypto_icons.woff?uq5a27') format('woff'),
-  url('#{$icomoon-font-path}/crypto_icons.svg?uq5a27#crypto_icons') format('svg');
+  src: url('#{$icomoon-font-path}/crypto_icons.eot?ic3y1m');
+  src: url('#{$icomoon-font-path}/crypto_icons.eot?ic3y1m#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/crypto_icons.ttf?ic3y1m') format('truetype'),
+  url('#{$icomoon-font-path}/crypto_icons.woff?ic3y1m') format('woff'),
+  url('#{$icomoon-font-path}/crypto_icons.svg?ic3y1m#crypto_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -31,6 +31,12 @@
 
 @function unicode($str) {
   @return unquote("\"") + $str + unquote("\"");
+}
+
+.icon-plus {
+  &:before {
+    content: unicode($icon-plus);
+  }
 }
 
 .icon-flag {

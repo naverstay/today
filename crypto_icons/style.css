@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'crypto_icons';
-  src:  url('fonts/crypto_icons.eot?uq5a27');
-  src:  url('fonts/crypto_icons.eot?uq5a27#iefix') format('embedded-opentype'),
-    url('fonts/crypto_icons.ttf?uq5a27') format('truetype'),
-    url('fonts/crypto_icons.woff?uq5a27') format('woff'),
-    url('fonts/crypto_icons.svg?uq5a27#crypto_icons') format('svg');
+  src:  url('fonts/crypto_icons.eot?ic3y1m');
+  src:  url('fonts/crypto_icons.eot?ic3y1m#iefix') format('embedded-opentype'),
+    url('fonts/crypto_icons.ttf?ic3y1m') format('truetype'),
+    url('fonts/crypto_icons.woff?ic3y1m') format('woff'),
+    url('fonts/crypto_icons.svg?ic3y1m#crypto_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-plus:before {
+  content: "\e93d";
+}
 .icon-flag:before {
   content: "\e93c";
 }
