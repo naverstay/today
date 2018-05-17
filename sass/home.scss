@@ -1261,7 +1261,7 @@
     &:before {
       content: unicode($icon-triangle_r);
       position: absolute;
-      top: 6px;
+      top: 5px;
       left: 0;
       color: #bbb;
       font-size: 7px;
@@ -1279,17 +1279,17 @@
 
 .how_to_link {
   @include transition_all(color .3s);
-  color: #bbb;
+  color: #000;
   font: 12px/15px $RubikReg;
 
   &:hover {
-    color: #000;
+    color: $violette;
     text-decoration: underline;
   }
 
   &._active {
     cursor: default;
-    color: #000;
+    color: $violette;
   }
 
   .widget_aside & {
