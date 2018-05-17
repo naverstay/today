@@ -89,11 +89,12 @@
     display: inline-block;
     vertical-align: top;
     padding: 10px 26px;
-    font: 14px/18px $RubikBold;
+    font: 12px/18px $RubikBold;
     color: #fff;
     border-radius: 2px;
     height: auto;
     min-height: 40px;
+    letter-spacing: .035em;
     text-transform: uppercase;
 
     span {
@@ -109,7 +110,7 @@
     }
 
     &._no_icon {
-      padding: 10px 14px;
+      padding: 10px 12px;
     }
 
     &._fb {
@@ -173,7 +174,7 @@
   &.head_subscribe_btn {
     display: block;
     border-radius: 20px;
-    padding: 9px 15px;
+    padding: 9px 26px;
     font: 14px/20px $RubikBold;
     text-transform: uppercase;
 

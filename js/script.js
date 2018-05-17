@@ -174,7 +174,7 @@ $(function ($) {
 
     initMask();
 
-    initTagSlider();
+    //initTagSlider();
 });
 
 $(window)

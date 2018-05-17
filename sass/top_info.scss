@@ -1,17 +1,17 @@
 .top_info {
-  padding: 7px 8px 4px 25px;
+  padding: 0 8px 4px 15px;
   display: inline-block;
   vertical-align: middle;
   text-align: left;
 
   @include respond-to-min($resp_step_2) {
     //padding: 18px 30px 4px 0;
-    padding-top: 10px;
+    padding-top: 3px;
   }
 
   @include respond-to-min($resp_step_3) {
     padding-right: 35px;
-    padding-top: 12px;
+    padding-top: 5px;
     min-width: 63%;
   }
 }
@@ -20,6 +20,7 @@
   position: relative;
   float: left;
   width: 40px;
+  margin-top: 9px;
 }
 
 .currency_info {
@@ -29,7 +30,7 @@
   font-family: $RubikReg;
 
   @include respond-to-min($resp_step_3) {
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: -55px;
   }
 }
@@ -42,23 +43,26 @@
   .swiper-slide {
     display: table-cell;
     vertical-align: top;
-    padding-left: 15px;
-    padding-top: 5px;
+    //padding-left: 15px;
+    //padding-top: 5px;
+    padding: 3px 16px 0 17px;
     width: auto;
     height: auto;
+    border-left: 1px solid #f6f7f7;
 
     &:first-child {
+      border-left: 0;
       padding-left: 10px;
     }
 
     @include respond-to-max($resp_step_2) {
-      &:nth-child(n+6) {
+      &:nth-child(n+8) {
         display: none;
       }
     }
 
     @include respond-to-min($resp_step_2) {
-      padding-left: 39px;
+      //padding-left: 20px;
 
       &:first-child {
         padding-left: 10px;
@@ -66,7 +70,8 @@
     }
 
     @include respond-to-min($resp_step_3) {
-      padding-left: 57px;
+      padding-left: 28px;
+      padding-right: 28px;
 
       &:first-child {
         padding-left: 5px;
@@ -74,7 +79,8 @@
     }
 
     @include respond-to-min($resp_step_4) {
-      padding-left: 75px;
+      padding-left: 37px;
+      padding-right: 37px;
 
       &:first-child {
         padding-left: 0;
@@ -126,7 +132,7 @@
     @extend %icon_pseudo;
     position: relative;
     white-space: nowrap;
-    padding: 0 0 0 5px;
+    //padding: 0 0 0 5px;
     color: #828282;
     text-decoration: none;
 
@@ -171,7 +177,7 @@
 
   p {
     + p {
-      margin-top: 3px;
+      margin-top: 2px;
 
       @include respond-to-min($resp_step_2) {
         //margin-top: 7px;
@@ -185,9 +191,9 @@
   display: block;
   width: 48px;
   height: 48px;
-  padding-left: 6px;
+  padding-left: 10px;
   border-radius: 2px;
-  margin: -6px 0 -8px -3px;
+  margin: -6px 0 -8px 0;
   font: 27px $RubikMed;
   color: $violette;
   position: relative;
@@ -197,9 +203,10 @@
   + .select_arrow {
     color: $violette;
     top: 14px;
+    right: 1px;
 
     @include respond-to-max($resp_step_2) {
-      right: 10px;
+      //right: 10px;
       font-size: 8px;
     }
   }

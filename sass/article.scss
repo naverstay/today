@@ -361,6 +361,17 @@
     color: #fff !important;
   }
 
+  .footer_col & {
+    width: 32px;
+    height: 22px;
+    line-height: 22px;
+
+    &:before {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+
   &._r {
     width: 28px;
     height: 28px;
