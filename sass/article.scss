@@ -21,6 +21,39 @@
   }
 }
 
+.speakers_list {
+  list-style: none;
+  padding: 27px 0 20px 55px;
+
+  li {
+    @extend %icon_pseudo;
+    position: relative;
+    padding-left: 48px;
+    margin-bottom: 20px;
+
+    &:before {
+      content: unicode($icon-person);
+      position: absolute;
+      top: -1px;
+      left: 0;
+      color: $violette;
+      font-size: 26px;
+    }
+  }
+}
+
+.speaker_link {
+  font: 20px/28px $RubikReg;
+}
+
+a.speaker_link {
+  color: #415cba;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .article_info {
   margin-left: 12px;
   padding-left: 8px;
@@ -672,6 +705,10 @@
     &:not([class]) {
       margin-top: 1em;
     }
+
+    &._no_margin {
+      margin: 0;
+    }
   }
 
   > h1 {
@@ -837,14 +874,15 @@
         position: relative;
         padding-left: 56px;
         margin-bottom: 15px;
-        font: 14px/18px $RubikReg;
+        font: 20px/1.2 $RubikReg;
 
         &:before {
           counter-increment: ordered_list;
           content: counter(ordered_list) ".";
           position: absolute;
-          top: 5px;
+          top: 4px;
           left: 16px;
+          font-size: 20px;
         }
 
         ol {
@@ -861,8 +899,6 @@
               &:before {
                 counter-increment: ordered_list_2;
                 content: counter(ordered_list) "." counter(ordered_list_2) ".";
-                position: absolute;
-                top: 5px;
                 left: 0;
               }
             }
@@ -1173,8 +1209,9 @@
 .bread_crumbs {
   @extend %clearfix;
   list-style: none;
-  padding-left: 12px;
-  padding-top: 14px;
+  //padding-left: 12px;
+  //padding-top: 14px;
+  padding: 2px 12px 8px;
   position: relative;
   width: 100%;
   display: inline-block;
@@ -1311,3 +1348,6 @@
     }
   }
 }
+
+
+

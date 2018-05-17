@@ -420,10 +420,6 @@
   &._op {
     opacity: .3;
   }
-
-  @include respond-to-min($resp_step_3) {
-
-  }
 }
 
 a.footer_col_caption {
