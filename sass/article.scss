@@ -648,6 +648,7 @@ a.speaker_link {
 }
 
 .article_text {
+  font: 20px/1.3 $RubikReg;
 
   blockquote {
     position: relative;
@@ -1203,6 +1204,74 @@ a.speaker_link {
 
   &._mb_20 {
     margin-bottom: 20px;
+  }
+
+  &.retweet_block {
+    border: 1px solid #85deff;
+    text-align: left;
+    background: #fff;
+    padding-top: 11px;
+
+    .aside_caption_icon,
+    .aside_caption_link {
+      color: #85deff;
+    }
+  }
+}
+
+.retweet_list {
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 13px;
+    border-top: 1px solid #85deff;
+
+    &:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.retweet_author {
+  color: #828282;
+  margin-bottom: 10px;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.retweet_unit {
+  position: relative;
+  min-height: 50px;
+  padding-left: 54px;
+  font: 12px $RubikReg;
+
+  p {
+    color: #000;
+    margin-right: -3px;
+  }
+}
+
+.retweet_img {
+  position: absolute;
+  top: 0;
+  left: -5px;
+
+  img {
+    width: 42px;
+    display: block;
   }
 }
 

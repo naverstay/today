@@ -438,6 +438,31 @@ mixin action_block(calendar)
 
 mixin aside_block(calendar, release)
     .aside_block
+        .offer_block.retweet_block
+            .aside_box_caption
+                span.aside_caption_icon._retweet
+                .aside_caption_link CRYPTOTWEETS
+
+            ul.retweet_list
+                li
+                    .retweet_unit
+                        .retweet_img
+                            img(src='i/belousov.png')
+                        .retweet_author #[a(href='#') @sbeloussov] 6 ч.
+                        p A measure of how much ideas about thinking (except Popper's) had deteriorated in 300 years?
+                li
+                    .retweet_unit
+                        .retweet_img
+                            img(src='i/belousov.png')
+                        .retweet_author #[a(href='#') @sbeloussov] 6 ч.
+                        p Excited to announce that registration for Acumatica Summit 2019 is now live! Join us in Houston
+                li
+                    .retweet_unit
+                        .retweet_img
+                            img(src='i/belousov.png')
+                        .retweet_author #[a(href='#') @sbeloussov] 6 ч.
+                        p Nice example of interoperability of quantum information. Is this a universal feature of quantum information, as it is 'classical'?
+
         .offer_block
             p Have something interesting
             p
@@ -1385,5 +1410,7 @@ mixin scripts(share, mask)
         //-script(src='js/swiper.min.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
+
+
 
 

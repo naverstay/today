@@ -10,39 +10,22 @@ html(lang='ru')
                     +tag_holder('_slider', true)
 
                     .widget_holder
-                        .widget_aside
+                        .widget_aside.fixMe(data-sticky-class='_stuck' data-sticky-offset=24)
                             .stat_holder
                                 .manual_title
                                     span.clr_violette.icon-flag
-                                    span.clr_violette._fw_b CRYPTOCOINS MANUAL
-
-                                .manual_search
-                                    form(action='#')
-                                        .input_w
-                                            input.input_v3(placeholder='Start typing coin to filter')
+                                    span.clr_violette._fw_b COINS GUIDE
 
                                 ul.manual_list
-                                    li
+                                    li._opened
                                         a.manual_link.manualLink(href='#')
                                             span Bitcoin manual
                                             span.manual_currency BTC
 
                                         +how_to(1)
-                                    li
-                                        a.manual_link.manualLink(href='#')
-                                            span Ethereum manual
-                                            span.manual_currency ETH
-
-                                        +how_to(1)
-                                    li
-                                        a.manual_link.manualLink(href='#')
-                                            span Ethereum manual
-                                            span.manual_currency ETH
-
-                                        +how_to(1)
 
                                 p
-                                    a.stat_item._more(href='#') More coins
+                                    a.stat_item._back(href='#'): span Back to all coins
 
                         .widget_block
                             ul.bread_crumbs

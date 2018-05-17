@@ -87,6 +87,12 @@
       content: unicode($icon-flash_circle);
     }
   }
+
+  &._retweet {
+    &:before {
+      content: unicode($icon-tw);
+    }
+  }
 }
 
 .recent_news_link {

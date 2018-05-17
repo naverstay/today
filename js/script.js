@@ -123,7 +123,7 @@ $(function ($) {
             var stck = $(this);
 
             stck.stick_in_parent({
-                //offset_top: (stck.attr('data-sticky-offset') || 0) * 1,
+                offset_top: (stck.attr('data-sticky-offset') || 0) * 1,
                 sticky_class: stck.attr('data-sticky-class') || ''
             });
         });

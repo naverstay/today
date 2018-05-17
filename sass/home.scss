@@ -1267,6 +1267,14 @@
       font-size: 7px;
     }
   }
+
+  .widget_aside & {
+    padding-top: 15px;
+
+    > li {
+      margin-bottom: 14px;
+    }
+  }
 }
 
 .how_to_link {
@@ -1283,10 +1291,14 @@
     cursor: default;
     color: #000;
   }
+
+  .widget_aside & {
+    font-size: 14px;
+  }
 }
 
 .manual_search {
-  padding: 17px 0;
+  padding: 17px 0 12px;
 
   .input_v3 {
     font-family: $RubikReg;
@@ -1297,10 +1309,11 @@
 
 .manual_list {
   list-style: none;
-  padding-left: 5px;
+  margin-bottom: 20px;
 
   > li {
-    margin-bottom: 18px;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
   }
 }
 
@@ -2259,4 +2272,9 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
+
+
+
+
+
 
