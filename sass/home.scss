@@ -1412,6 +1412,10 @@
     padding-top: 5px;
   }
 
+  &._author {
+    line-height: 40px;
+  }
+
   &._mod_1 {
     margin-bottom: 20px;
     padding-top: 7px;
@@ -1473,6 +1477,17 @@
     &:hover {
       color: #23c1ff;
     }
+  }
+}
+
+.article_author_img {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+
+  img {
+    display: block;
+    max-width: 100%;
   }
 }
 
@@ -2272,9 +2287,5 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
-
-
-
-
 
 
