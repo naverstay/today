@@ -77,10 +77,10 @@ mixin footer()
 
                 .footer_col.s_4
                     p: a.footer_col_caption(href='#') Interviews
-                    p: a.footer_col_link(href='#'): span ICO Watch
+                    p: a.footer_col_caption(href='#'): span ICO Watch
 
                 .footer_col.s_5
-                    .footer_col_caption._op Market analysis
+                    p: .footer_col_caption._op Market analysis
 
                     ul.footer_col_menu
                         li: a.footer_col_link(href='#'): span Price prediction
@@ -100,7 +100,7 @@ mixin footer()
                         li: a.footer_col_link(href='#'): span CryptoTips
 
                 .footer_col.s_7
-                    .footer_col_caption._op Industry
+                    p: .footer_col_caption._op Industry
 
                     ul.footer_col_menu
                         li: a.footer_col_link(href='#'): span Press-releases
@@ -1410,5 +1410,10 @@ mixin scripts(share, mask)
         //-script(src='js/swiper.min.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
+
+
+
+
+
 
 

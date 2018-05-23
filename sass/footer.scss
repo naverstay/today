@@ -300,11 +300,12 @@
         line-height: 40px;
         float: left;
         padding-right: 20px;
-        min-width: 30%;
+        //min-width: 30%;
       }
 
       .footer_follow_list {
-        float: right;
+        padding-top: 10px;
+        float: left;
       }
     }
   }

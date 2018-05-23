@@ -930,6 +930,10 @@
   img {
     border-radius: 2px 2px 0 0;
 
+    ._article & {
+      border-radius: 0;
+    }
+
     .article_reviews & {
       border-radius: 2px;
     }
@@ -1940,6 +1944,8 @@ a.article_stat_val {
 
   ._review & {
     height: 19px;
+    line-height: 19px;
+    vertical-align: -2px;
     font-size: 8px;
 
     span {
@@ -2287,5 +2293,4 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
-
 
