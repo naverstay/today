@@ -599,7 +599,7 @@
     }
 
     p {
-      flex: 1 0 auto;
+      flex: none;
     }
   }
 
@@ -1285,7 +1285,8 @@
   @include transition_all(color .3s);
   color: #000;
   font: 12px/15px $RubikReg;
-
+  cursor: pointer;
+  
   &:hover {
     color: $violette;
     text-decoration: underline;
@@ -2293,4 +2294,7 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
+
+
+
 
