@@ -625,7 +625,7 @@
       @extend %icon_pseudo;
       @extend %firm_bg_color;
       height: 100%;
-      padding: 90px 10px 30px 33px;
+      padding: 90px 33px 30px 33px;
 
       &:before {
         color: #fff;
@@ -704,7 +704,7 @@
     .article_title {
       @extend %firm_bg_color;
       height: 100%;
-      padding: 90px 10px 30px 33px !important;
+      padding: 90px 33px 30px 33px !important;
 
       &:before {
         content: '#';
@@ -2294,7 +2294,5 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
-
-
 
 
