@@ -1325,7 +1325,7 @@
 .manual_link {
   @include transition_all(color .3s);
   font: 14px/20px $RubikMed;
-  color: #999;
+  color: #000;
 
   span {
     display: inline-block;
@@ -1333,11 +1333,11 @@
   }
 
   ._opened & {
-    color: #000;
+    color: $violette;
   }
 
   &:hover {
-    color: #000;
+    color: $violette;
 
     .manual_currency {
       background: $violette;
@@ -2294,5 +2294,7 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
+
+
 
 
