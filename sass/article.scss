@@ -876,7 +876,7 @@ a.speaker_link {
         position: relative;
         padding-left: 56px;
         margin-bottom: 15px;
-        font: 20px/1.2 $RubikReg;
+        font: 20px/1.3 $RubikReg;
 
         &:before {
           counter-increment: ordered_list;
@@ -926,7 +926,7 @@ a.speaker_link {
         position: relative;
         padding-left: 56px;
         margin-bottom: 15px;
-        font: 14px/18px $RubikReg;
+        font: 20px/1.3 $RubikReg;
 
         &:before {
           content: '';
