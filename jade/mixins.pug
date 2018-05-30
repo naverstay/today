@@ -495,7 +495,9 @@ mixin aside_block(calendar, release)
             ul.recent_news_list
                 li
                     .recent_news
-                        .article_date._news 21 MARCH — 24 MARCH
+                        .article_date._news
+                            span.promoted_icon.icon-btc_circle
+                            span 21 MARCH, PROMOTED
                         p: a.article_link(href='article.html') EOS Bounces Back Despite John Oliver Slam, Up 35 Percent Week
                         ul.article_stat
                             li
@@ -1411,4 +1413,4 @@ mixin scripts(share, mask)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
 
-
+        

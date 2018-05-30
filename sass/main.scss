@@ -98,6 +98,36 @@ a {
   @include respond-to-min($resp_step_2) {
     //margin-left: -28px;
   }
+
+  &._line {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 32px;
+      height: 1px;
+      background: #eee;
+    }
+
+    .news_col .article_block {
+      padding-top: 20px;
+      
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        left: 0;
+        height: 1px;
+        background: #eee;
+        display: block;
+      }
+    }
+
+  }
 }
 
 .news_col {
@@ -115,6 +145,10 @@ a {
     @include respond-to-min($resp_step_3) {
       margin-bottom: 18px;
     }
+  }
+
+  ._line & {
+    margin-bottom: 8px;
   }
 
   .search_body & {

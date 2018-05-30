@@ -425,6 +425,14 @@ a.speaker_link {
       content: unicode($icon-fb);
     }
 
+    ._brand_2 & {
+      color: #385184;
+
+      &:hover {
+        color: #43619e !important;
+      }
+    }
+
     ._action &,
     ._brand & {
       background: #385184;
@@ -440,6 +448,14 @@ a.speaker_link {
       content: unicode($icon-tw);
     }
 
+    ._brand_2 & {
+      color: #1da1f2;
+
+      &:hover {
+        color: #23c1ff !important;
+      }
+    }
+
     ._action &,
     ._brand & {
       background: #1da1f2;
@@ -450,9 +466,40 @@ a.speaker_link {
     }
   }
 
+  &._st {
+    &:before {
+      content: unicode($icon-stm);
+    }
+
+    ._brand_2 & {
+      color: #69c;
+
+      &:hover {
+        color: #6daaec !important;
+      }
+    }
+
+    ._action &,
+    ._brand & {
+      background: #69c;
+
+      &:hover {
+        background: #6daaec;
+      }
+    }
+  }
+
   &._g {
     &:before {
       content: unicode($icon-gp);
+    }
+
+    ._brand_2 & {
+      color: #d44132;
+
+      &:hover {
+        color: #fe4e3c !important;
+      }
     }
 
     ._action &,
@@ -468,6 +515,14 @@ a.speaker_link {
   &._l {
     &:before {
       content: unicode($icon-in);
+    }
+
+    ._brand_2 & {
+      color: #007bb6;
+
+      &:hover {
+        color: #0094da !important;
+      }
     }
 
     ._action &,
@@ -518,6 +573,14 @@ a.speaker_link {
       content: unicode($icon-tg);
     }
 
+    ._brand_2 & {
+      color: #08c;
+
+      &:hover {
+        color: #00a3f5 !important;
+      }
+    }
+
     ._action &,
     ._brand & {
       background: #08c;
@@ -531,6 +594,14 @@ a.speaker_link {
   &._rd {
     &:before {
       content: unicode($icon-rd);
+    }
+
+    ._brand_2 & {
+      color: #fa500e;
+
+      &:hover {
+        color: #ff6011 !important;
+      }
     }
 
     ._action &,
@@ -548,6 +619,14 @@ a.speaker_link {
       content: unicode($icon-rss);
     }
 
+    ._brand_2 & {
+      color: #433099;
+
+      &:hover {
+        color: #433099 !important;
+      }
+    }
+
     ._action &,
     ._brand & {
       background: #fa500e;
@@ -563,6 +642,14 @@ a.speaker_link {
       content: unicode($icon-youtube);
     }
 
+    ._brand_2 & {
+      color: #d44132;
+
+      &:hover {
+        color: #f74335 !important;
+      }
+    }
+
     ._action &,
     ._brand & {
       background: #d44132;
@@ -573,8 +660,54 @@ a.speaker_link {
     }
   }
 
+  &._gh {
+    &:before {
+      content: unicode($icon-github);
+    }
+
+    ._brand_2 & {
+      color: #000;
+
+      &:hover {
+        color: #040404 !important;
+      }
+    }
+
+    ._action &,
+    ._brand & {
+      background: #000;
+
+      &:hover {
+        background: #040404;
+      }
+    }
+  }
+
+  &._m {
+    &:before {
+      content: unicode($icon-medium);
+    }
+
+    ._brand_2 & {
+      color: #00c860;
+
+      &:hover {
+        color: #00e866 !important;
+      }
+    }
+
+    ._action &,
+    ._brand & {
+      background: #00c860;
+
+      &:hover {
+        background: #00e866;
+      }
+    }
+  }
+
   @each $cls, $color in $firm-colors {
-    .#{$cls} & {
+    .#{$cls} > & {
       color: $color;
 
       &._active,
@@ -591,6 +724,10 @@ a.speaker_link {
     //font-size: 22px;
     //line-height: 40px;
     color: #fff;
+  }
+
+  ._brand_2 & {
+    border: 1px solid #ddd;
   }
 
   &._more {
@@ -1187,6 +1324,45 @@ a.speaker_link {
     margin-left: 160px;
     margin-bottom: 15px;
   }
+
+  ._mt_16 {
+    margin-top: 16px;
+  }
+
+  ._mt_32 {
+    margin-top: 32px;
+  }
+
+  .action_soc {
+    width: 100%;
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: -22px;
+
+    li {
+      float: left;
+      width: 50%;
+      padding-right: 20px;
+      margin-bottom: 11px;
+    }
+
+    .action_sh {
+      span {
+        position: absolute;
+        left: 100%;
+        margin-left: 12px;
+        top: 4px;
+        color: #415cba;
+        font: 20px/26px $RubikReg;
+      }
+
+      &:hover {
+        span {
+          border-bottom-color: #415cba;
+        }
+      }
+    }
+  }
 }
 
 .offer_block {
@@ -1418,6 +1594,3 @@ a.speaker_link {
     }
   }
 }
-
-
-

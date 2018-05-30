@@ -1,0 +1,71 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto пресс-релиз')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +tag_holder('_slider', true)
+
+                    .content_holder
+                        .content_block
+                            .news_row._bordered._tags_mode._release
+                                .news_col._third
+                                    .article_block._tag._no_icon
+                                        .article_title.icon-crown
+                                            a.article_link(href='article.html') Press Releases
+
+                                            p Crypto space is all about ideas so find here thought-provoking  pinions, experts blogs.
+
+                                            p
+                                                a.btn_v2.release_btn(href='new_release.html'): span Submit Press Release
+
+                                +loop_while(4)
+                                    .news_col._third
+                                        .article_block
+                                            .article_img
+                                                ul.article_tags
+                                                    li
+                                                        a.article_tag._wide._promoted.icon-btc_circle(href='#')
+                                                            span PROMOTED
+                                                a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
+
+                                            .article_title
+                                                .article_action: .article_action_inner
+                                                    +action_block()
+                                                p: a.article_link(href='article.html') Reddit No Longer Accepting Bitcoin Payments
+                                                ul.article_stat
+                                                    li
+                                                        a.article_stat_val(href='#') John Doe
+                                                    li
+                                                        span.article_stat_val._stat_time 2h
+                                                    li
+                                                        span.article_stat_val._stat_views 212
+                            
+                            .news_row._bordered._release._line
+                                +loop_while(12)
+                                    .news_col._third
+                                        .article_block._review._left
+                                            .article_title
+                                                p: a.article_link._fz_18(href='#') Blockchain & Bitcoin Conference Finland 
+                                            ul.article_stat._action
+                                                li
+                                                    a.article_stat_val(href='#') Coca-Cola
+                                                li
+                                                    span.article_stat_val._stat_time 2h
+                                                li
+                                                    span.article_stat_val._stat_views 212
+                                                
+                                    
+                        +aside_block(false, true)
+
+            .nav_holder
+                //-+main_menu()
+                +search()
+
+            +header()
+            +footer()
+
+        +scripts()

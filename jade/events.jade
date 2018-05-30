@@ -114,6 +114,25 @@ html(lang='ru')
                                                         span.article_stat_val Zurich Switzerland
                                                     li
                                                         span.article_stat_val._stat_views 212
+                                +loop_while(3)
+                                    .news_col._third
+                                        .article_block._archived
+                                            .article_img
+                                                ul.article_tags
+                                                    li
+                                                        a.icon-calendar.article_tag._wide._archived(href='#')
+                                                            span 24 MARCH, ARCHIVED
+                                                a.article_img_link(href='event.html'): img(src='i/bear.jpg')
+
+                                            .article_title
+                                                .article_action: .article_action_inner.fixMe(data-sticky-class='_stuck')
+                                                    +action_block()
+                                                p: a.article_link(href='event.html') Reddit No Longer Accepting Bitcoin Payments
+                                                ul.article_stat
+                                                    li
+                                                        span.article_stat_val Zurich Switzerland
+                                                    li
+                                                        span.article_stat_val._stat_views 212
 
                             .news_row
                                 .news_col._wide

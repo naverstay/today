@@ -100,7 +100,8 @@ $firm-colors: (
         _ai: $color_ai,
         _event: $color_event,
         _voice: $color_voice,
-        _stairs: $color_stairs
+        _stairs: $color_stairs,
+        _promoted: $pink
 );
 
 $firm-icons: (
@@ -119,7 +120,8 @@ $firm-icons: (
         _ai: $icon-ai,
         _event: $icon-say,
         _voice: $icon-voice,
-        _stairs: $icon-stairs
+        _stairs: $icon-stairs,
+        _promoted: $icon-btc_circle
 );
 
 @mixin opacity($val : 1, $important : 0) {
