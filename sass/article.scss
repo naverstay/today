@@ -1201,19 +1201,21 @@ a.speaker_link {
 .new_release_holder {
   margin: 0 auto;
   max-width: 688px;
-  padding-top: 34px;
 
+  .bread_crumbs {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .article_text._mr_-50 {
+    margin-right: -50px;
+  }
+  
   h2 {
-    font: 38px $RubikBold;
-    margin-bottom: 25px;
+    font: 32px $RubikBold;
+    margin-bottom: 40px;
   }
-
-  p {
-    font-size: 20px;
-    line-height: 1.4;
-    margin-bottom: 28px;
-  }
-
+  
   @include respond-to-min($resp_step_2) {
     max-width: 760px;
   }
@@ -1226,9 +1228,17 @@ a.speaker_link {
   padding: 43px 0 8px;
 }
 
+.new_release_form_caption {
+  color: #828282;
+  font: 25px $RubikReg;
+  margin-bottom: 20px;
+}
+
 .new_release_form {
-  margin: 0 auto;
-  max-width: 688px;
+  margin: 40px -40px 0;
+  padding: 40px 40px 12px;
+  background: #f8f8f8;
+  //max-width: 688px;
 
   .form_cell {
     margin-bottom: 28px;
@@ -1240,23 +1250,23 @@ a.speaker_link {
 
   .form_group {
     @extend %clearfix;
-    margin-left: -32px;
+    margin-left: -60px;
 
     .form_cell {
       width: 50%;
-      padding-left: 32px;
+      padding-left: 60px;
       float: left;
-    }
-  }
 
-  @include respond-to-min($resp_step_2) {
-    max-width: 760px;
+      &._fr {
+        float: right;
+      }
+    }
   }
 }
 
 .release_summary {
-  margin-top: 10px;
-  border-top: 1px solid #f8f8f8;
+  @extend %clearfix;
+  margin-left: -32px;
   padding: 28px 0;
 
   p {
@@ -1267,6 +1277,12 @@ a.speaker_link {
   ._hash {
     color: #c0c0c0;
     font: 9px $RubikMed;
+  }
+
+  .form_cell {
+    float: left;
+    margin-bottom: 20px;
+    padding-left: 32px;
   }
 }
 

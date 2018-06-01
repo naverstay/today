@@ -107,6 +107,7 @@
   display: block;
   height: 40px;
   width: 100%;
+  background: #fff;
   color: #000;
   border: 1px solid rgba(0, 0, 0, .1);
   border-radius: 2px;
@@ -133,6 +134,10 @@
 
 textarea.input_v3 {
   height: 240px;
+}
+
+textarea.input_v3._h_120 {
+  height: 120px;
 }
 
 .input_v4 {
@@ -237,10 +242,14 @@ textarea.input_v3 {
 .label_v2 {
   //letter-spacing: .02em;
   color: #000;
-  font: 14px $RubikMed;
+  font: 20px $RubikMed;
   display: inline-block;
   vertical-align: top;
-  margin-bottom: 7px;
+
+  ._required {
+    color: #828282;
+    font-family: $RubikReg;
+  }
 }
 
 .msg_block {
@@ -306,5 +315,56 @@ textarea.input_v3 {
 
   &:hover {
     text-decoration: none;
+  }
+}
+
+.checkbox_v1 {
+
+  .check_text {
+    @extend %icon_pseudo;
+    position: relative;
+    display: block;
+    padding-left: 38px;
+    font: 20px/26px $RubikReg;
+    color: #000;
+    margin-right: -10px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 2px;
+      font-size: 14px;
+      line-height: 20px !important;
+      text-align: center;
+      border: 1px solid #ddd;
+      color: #bdbdbd;
+    }
+  }
+
+  .hide:checked ~ .check_text {
+    @extend %icon_pseudo;
+    position: relative;
+    display: block;
+    padding-left: 30px;
+
+    &:before {
+      content: unicode($icon-check_2);
+    }
+  }
+}
+
+.form_upload_block {
+  font-size: 15px;
+  padding: 6px 12px 0 38px;
+  
+  p {
+    
+    &:first-child {
+      margin-top: 14px;
+    }
   }
 }

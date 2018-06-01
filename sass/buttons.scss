@@ -161,7 +161,7 @@
   &.create_release_btn {
     float: right;
     display: block;
-    padding: 9px 21px;
+    padding: 9px 19px;
     border-radius: 2px;
     font: 16px/20px $RubikBold;
 
@@ -235,13 +235,12 @@
     cursor: pointer;
     display: inline-block;
     vertical-align: top;
-    padding: 10px 21px;
-    margin-bottom: 17px;
-    margin-top: 13px;
-    font: 14px/20px $RubikBold;
-    background: #fff;
+    padding: 10px 18px;
+    margin: 7px 0;
+    font: 14px/18px $RubikBold;
     text-align: center;
     border-radius: 2px;
+    letter-spacing: .07em;
 
     span {
       position: relative;

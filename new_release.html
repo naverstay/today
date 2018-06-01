@@ -83,83 +83,215 @@
                 </div><a class="menu_link" href="#"><span>Industry</span></a>
               </li>
             </ul>
-          </div><a class="attention_block _warn" href="#">
-            <div class="attention_caption">Breaking news</div>
-            <p><span>Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'</span><span class="attention_link"></span></p></a>
-          <div class="new_release_holder">
-            <h2>Submit a Press Release</h2>
-            <p>Share your press release with our readers. It will appear at the top of the Home Page in Press releases section. Readers are also able to access Press Releases in our catalog. We publish Press releases only after the payment has been cleared and an editor reviewed the text.</p>
-            <p>Press releases for inappropriate or fraudulent products and services will not be published. Cointelegraph has a right to refuse to publish your press release offering you a refund.</p>
           </div>
-        </div>
-        <div class="release_form_holder">
-          <div class="section_inner">
-            <div class="new_release_form">
-              <form action="#">
+          <div class="new_release_holder">
+            <ul class="bread_crumbs">
+              <li><a class="crumb_link" href="#">Cryptocomes</a></li>
+              <li><a class="crumb_link" href="#">Press Releases</a></li>
+            </ul>
+            <h2>Share your press release with our readers</h2>
+            <div class="article_text">
+              <p>Мы предлагаем две опции для публикации вашего пресс-релиза</p>
+              <ul>
+                <li>Стандартное бесплатное размещение</li>
+                <li>Премиум размещение за $200, дающее максимальный охват и дополнительные опции для продвижения</li>
+              </ul>
+            </div>
+            <form action="#">
+              <div class="new_release_form">
+                <div class="new_release_form_caption">1. Press release content</div>
                 <div class="form_cell">
-                  <label class="label_v2" for="release_title">Title</label>
+                  <label class="label_v2" for="release_title"> <span>Title</span><span class="_required">&nbsp;*</span></label>
                   <div class="input_w">
                     <input class="input_v3" id="release_title">
                   </div>
                 </div>
                 <div class="form_cell">
-                  <label class="label_v2" for="release_content">Content</label>
+                  <label class="label_v2" for="release_description"> <span>Description</span><span class="_required">&nbsp;*</span></label>
+                  <div class="input_w">
+                    <input class="input_v3" id="release_description">
+                  </div>
+                </div>
+                <div class="form_cell">
+                  <label class="label_v2" for="release_content"> <span>Content</span><span class="_required">&nbsp;*</span></label>
                   <div class="input_w">
                     <textarea class="input_v3" id="release_content"></textarea>
                   </div>
                 </div>
+              </div>
+              <div class="new_release_form">
+                <div class="new_release_form_caption">2. Contacts</div>
                 <div class="form_group">
                   <div class="form_cell">
-                    <label class="label_v2" for="release_company_name">Company name</label>
+                    <label class="label_v2" for="release_company_name"><span>Organization Name</span><span class="_required">&nbsp;*</span></label>
                     <div class="input_w">
                       <input class="input_v3" id="release_company_name">
                     </div>
                   </div>
                   <div class="form_cell">
-                    <label class="label_v2" for="release_company_site">Company site</label>
+                    <label class="label_v2" for="release_company_email"> <span>Your Email</span><span class="_required">&nbsp;* (invisible on site)</span></label>
                     <div class="input_w">
-                      <input class="input_v3" id="release_company_site">
+                      <input class="input_v3" id="release_company_email">
                     </div>
-                  </div>
-                </div>
-                <div class="form_cell">
-                  <label class="label_v2" for="release_contacts">Company Contacts</label>
-                  <div class="input_w">
-                    <input class="input_v3" id="release_contacts" disabled="disabled">
-                  </div>
-                </div>
-                <div class="form_cell">
-                  <label class="label_v2" for="release_files"><span>File Upload Image/logo Upload</span><span class="clr_gray">&nbsp;— min 720x480, max 1mb</span></label>
-                  <div class="input_w">
-                    <label class="btn_v2 upload_btn gray_btn_2"><span>Select file
-                        <input class="hide" id="release_files" type="file"></span></label>
                   </div>
                 </div>
                 <div class="form_group">
                   <div class="form_cell">
-                    <label class="label_v2" for="release_time">Publication time</label>
+                    <label class="label_v2" for="release_company_site"><span>Website</span><span class="_required">&nbsp;*</span></label>
                     <div class="input_w">
-                      <input class="input_v3 success" id="release_time">
+                      <input class="input_v3" id="release_company_site">
                     </div>
                   </div>
                   <div class="form_cell">
-                    <label class="label_v2" for="release_email">Your Email</label>
+                    <label class="label_v2" for="release_company_user"> <span>Your Name</span><span class="_required">&nbsp;* (invisible on site)</span></label>
                     <div class="input_w">
-                      <input class="input_v3 error" id="release_email">
+                      <input class="input_v3" id="release_company_user">
                     </div>
                   </div>
                 </div>
-                <div class="release_summary">
-                  <div class="form_group">
-                    <div class="form_cell">
-                      <p><span class="clr_gray">The price per release is&nbsp;</span><span>0.8 BTC</span></p><span class="_hash">1ECGUKEosEhaZnywCVxw6e1VUcPRqGkhvd</span>
+              </div>
+              <div class="new_release_form">
+                <div class="new_release_form_caption">3. Premium option: additional contacts</div>
+                <div class="form_cell">
+                  <label class="label_v2" for="release_additional_contacts">Additional contacts</label>
+                  <div class="input_w">
+                    <textarea class="input_v3 _h_120" id="release_additional_contacts"></textarea>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="label_v2" for="release_contact_twitter">Twitter</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="release_contact_twitter">
                     </div>
-                    <div class="form_cell">
-                      <button class="btn_v2 btn_violette_2 create_release_btn"><span>Submit press release</span></button>
+                  </div>
+                  <div class="form_cell">
+                    <label class="label_v2" for="release_company_steemit">Steemit</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="release_company_steemit">
                     </div>
                   </div>
                 </div>
-              </form>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="label_v2" for="release_contact_facebook">Facebook</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="release_contact_facebook">
+                    </div>
+                  </div>
+                  <div class="form_cell">
+                    <label class="label_v2" for="release_company_google">Google+</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="release_company_google">
+                    </div>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="label_v2" for="release_contact_telegram">Telegram</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="release_contact_telegram">
+                    </div>
+                  </div>
+                  <div class="form_cell">
+                    <label class="label_v2" for="release_company_youtube">Youtube</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="release_company_youtube">
+                    </div>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="label_v2" for="release_contact_linkedin">LinkedIn</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="release_contact_linkedin">
+                    </div>
+                  </div>
+                  <div class="form_cell">
+                    <label class="label_v2" for="release_company_github">Github</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="release_company_github">
+                    </div>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="label_v2" for="release_contact_reddit">Reddit</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="release_contact_reddit">
+                    </div>
+                  </div>
+                  <div class="form_cell">
+                    <label class="label_v2" for="release_company_other">Other</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="release_company_other">
+                    </div>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="label_v2" for="release_contact_medium">Medium</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="release_contact_medium">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="new_release_form">
+                <div class="new_release_form_caption">4. Advantages of premium version</div>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="checkbox_v1">
+                      <input class="hide" type="checkbox"><span class="check_text">Post a press-release in our social media (facebook, twitter, telegram..)</span>
+                    </label>
+                  </div>
+                  <div class="form_cell">
+                    <label class="checkbox_v1">
+                      <input class="hide" type="checkbox"><span class="check_text">Post a press-release in our social media (facebook, twitter, telegram..)</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <div class="form_cell _fr">
+                    <label class="checkbox_v1">
+                      <input class="hide" type="checkbox"><span class="check_text">Special placement on a homepage and in top of the category</span>
+                    </label>
+                  </div>
+                  <div class="form_cell">
+                    <label class="checkbox_v1">
+                      <input class="hide" type="checkbox"><span class="check_text">Make unique picture</span>
+                    </label>
+                    <div class="form_upload_block">
+                      <p><b>Upload a picture or your logo</b></p>
+                      <div class="input_w">
+                        <label class="btn_v2 upload_btn btn_violette_2"><span>ATTACH FILE
+                            <input class="hide" id="release_files" type="file"></span></label>
+                      </div>
+                      <p class="clr_gray">Мы нарисуем отличную картинку  основываясь на вашем лого. Либо пришлите нам готовую</p>
+                    </div>
+                  </div>
+                  <div class="form_cell _fr">
+                    <label class="checkbox_v1">
+                      <input class="hide" type="checkbox"><span class="check_text">Schedule publication date and time</span>
+                    </label>
+                    <div class="form_upload_block">
+                      <div class="input_w">
+                        <input class="input_v3" id="release_publication_date">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="release_summary">
+                <div class="form_cell"><a class="btn_v2 gray_btn_2 create_release_btn" href="#"><span>SUBMIT FREE PRESS RELEASE</span></a></div>
+                <div class="form_cell">
+                  <button class="btn_v2 btn_violette_2 create_release_btn"><span>SUBMIT  PAID PRESS RELEASE $200</span></button>
+                </div>
+              </div>
+            </form>
+            <div class="article_text _mr_-50">
+              <p>Having sent your premium press release, proceed to the payment by opening a new tab. <br>The press release will be published only after receiving the transferred payment.</p>
+              <p>CryptoComes has a right to refuse to publish your press release at any stage offering you a refund if and when it was paid for. Feel free to ask anything: <a href="mailto: partners@cryptocomes.com">partners@cryptocomes.com</a> </p>
             </div>
           </div>
         </div>
@@ -481,16 +613,16 @@
     </div>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,400i,500,700" media="all"/>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" media="all"/>
-    <link rel="stylesheet" href="styles/header_global.css?t=1527663359890" media="all"/>
-    <link rel="stylesheet" href="styles/main_global.css?t=1527663359890" media="all"/>
-    <script src="js/jquery1.10.js?t=1527663359890"></script>
+    <link rel="stylesheet" href="styles/header_global.css?t=1527827410147" media="all"/>
+    <link rel="stylesheet" href="styles/main_global.css?t=1527827410147" media="all"/>
+    <script src="js/jquery1.10.js?t=1527827410147"></script>
     <script src="js/jquery-ui.js"></script>
-    <script src="js/jquery.popup.min.js?t=1527663359890"></script>
-    <script src="js/jquery.inputmask.bundle.js?t=1527663359890"></script>
-    <script src="js/auto-complete.js?t=1527663359890"></script>
-    <script src="js/jquery.validationEngine.js?t=1527663359890"></script>
-    <script src="js/jquery.validationEngine-ru.js?t=1527663359890"></script>
-    <script src="js/jquery.sticky-kit.min.js?t=1527663359890"></script>
-    <script src="js/script.js?t=1527663359890"></script>
+    <script src="js/jquery.popup.min.js?t=1527827410147"></script>
+    <script src="js/jquery.inputmask.bundle.js?t=1527827410147"></script>
+    <script src="js/auto-complete.js?t=1527827410147"></script>
+    <script src="js/jquery.validationEngine.js?t=1527827410147"></script>
+    <script src="js/jquery.validationEngine-ru.js?t=1527827410147"></script>
+    <script src="js/jquery.sticky-kit.min.js?t=1527827410147"></script>
+    <script src="js/script.js?t=1527827410147"></script>
   </body>
 </html>

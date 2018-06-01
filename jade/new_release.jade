@@ -9,69 +9,186 @@ html(lang='ru')
                 .section_inner
                     +tag_holder('_slider', true)
 
-                    a.attention_block._warn(href='#')
+                    //-a.attention_block._warn(href='#')
                         .attention_caption Breaking news
                         p
                             span Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
                             span.attention_link
 
                     .new_release_holder
-                        h2 Submit a Press Release
-                        p Share your press release with our readers. It will appear at the top of the Home Page in Press releases section. Readers are also able to access Press Releases in our catalog. We publish Press releases only after the payment has been cleared and an editor reviewed the text.
+                        ul.bread_crumbs
+                            li: a.crumb_link(href='#') Cryptocomes
+                            li: a.crumb_link(href='#') Press Releases
+                            
+                        h2 Share your press release with our readers
 
-                        p Press releases for inappropriate or fraudulent products and services will not be published. Cointelegraph has a right to refuse to publish your press release offering you a refund.
+                        .article_text
+                            p Мы предлагаем две опции для публикации вашего пресс-релиза
 
-                .release_form_holder
-                    .section_inner
-                        .new_release_form
-                            form(action='#')
+                            ul
+                                li Стандартное бесплатное размещение
+                                li Премиум размещение за $200, дающее максимальный охват и дополнительные опции для продвижения
+                        form(action='#')
+                            .new_release_form
+                                .new_release_form_caption 1. Press release content
                                 .form_cell
-                                    label.label_v2(for='release_title') Title
+                                    label.label_v2(for='release_title') 
+                                        span Title
+                                        span._required &nbsp;*
                                     .input_w
                                         input#release_title.input_v3
                                 .form_cell
-                                    label.label_v2(for='release_content') Content
+                                    label.label_v2(for='release_description') 
+                                        span Description
+                                        span._required &nbsp;*
+                                    .input_w
+                                        input#release_description.input_v3
+                                .form_cell
+                                    label.label_v2(for='release_content') 
+                                        span Content
+                                        span._required &nbsp;*
                                     .input_w
                                         textarea#release_content.input_v3
+                            
+                            .new_release_form
+                                .new_release_form_caption 2. Contacts
                                 .form_group
                                     .form_cell
-                                        label.label_v2(for='release_company_name') Company name
+                                        label.label_v2(for='release_company_name')
+                                            span Organization Name
+                                            span._required &nbsp;*
                                         .input_w
                                             input#release_company_name.input_v3
                                     .form_cell
-                                        label.label_v2(for='release_company_site') Company site
+                                        label.label_v2(for='release_company_email') 
+                                            span Your Email
+                                            span._required &nbsp;* (invisible on site)
                                         .input_w
-                                            input#release_company_site.input_v3
-                                .form_cell
-                                    label.label_v2(for='release_contacts') Company Contacts
-                                    .input_w
-                                        input#release_contacts.input_v3(disabled='disabled')
-                                .form_cell
-                                    label.label_v2(for='release_files')
-                                        span File Upload Image/logo Upload
-                                        span.clr_gray &nbsp;— min 720x480, max 1mb
-                                    .input_w
-                                        label.btn_v2.upload_btn.gray_btn_2: span Select file
-                                            input#release_files.hide(type='file')
+                                            input#release_company_email.input_v3
                                 .form_group
                                     .form_cell
-                                        label.label_v2(for='release_time') Publication time
+                                        label.label_v2(for='release_company_site')
+                                            span Website
+                                            span._required &nbsp;*
                                         .input_w
-                                            input#release_time.input_v3.success
+                                            input#release_company_site.input_v3
                                     .form_cell
-                                        label.label_v2(for='release_email') Your Email
+                                        label.label_v2(for='release_company_user') 
+                                            span Your Name
+                                            span._required &nbsp;* (invisible on site)
                                         .input_w
-                                            input#release_email.input_v3.error
-
-                                .release_summary
-                                    .form_group
-                                        .form_cell
+                                            input#release_company_user.input_v3
+                                            
+                            .new_release_form
+                                .new_release_form_caption 3. Premium option: additional contacts
+                                .form_cell
+                                    label.label_v2(for='release_additional_contacts') Additional contacts
+                                    .input_w
+                                        textarea#release_additional_contacts.input_v3._h_120
+                                        
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='release_contact_twitter') Twitter
+                                        .input_w
+                                            input#release_contact_twitter.input_v3
+                                    .form_cell
+                                        label.label_v2(for='release_company_steemit') Steemit
+                                        .input_w
+                                            input#release_company_steemit.input_v3
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='release_contact_facebook') Facebook
+                                        .input_w
+                                            input#release_contact_facebook.input_v3
+                                    .form_cell
+                                        label.label_v2(for='release_company_google') Google+
+                                        .input_w
+                                            input#release_company_google.input_v3
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='release_contact_telegram') Telegram
+                                        .input_w
+                                            input#release_contact_telegram.input_v3
+                                    .form_cell
+                                        label.label_v2(for='release_company_youtube') Youtube
+                                        .input_w
+                                            input#release_company_youtube.input_v3
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='release_contact_linkedin') LinkedIn
+                                        .input_w
+                                            input#release_contact_linkedin.input_v3
+                                    .form_cell
+                                        label.label_v2(for='release_company_github') Github
+                                        .input_w
+                                            input#release_company_github.input_v3
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='release_contact_reddit') Reddit
+                                        .input_w
+                                            input#release_contact_reddit.input_v3
+                                    .form_cell
+                                        label.label_v2(for='release_company_other') Other
+                                        .input_w
+                                            input#release_company_other.input_v3
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='release_contact_medium') Medium
+                                        .input_w
+                                            input#release_contact_medium.input_v3
+                                        
+                            .new_release_form
+                                .new_release_form_caption 4. Advantages of premium version
+                                    
+                                .form_group
+                                    .form_cell
+                                        label.checkbox_v1
+                                            input.hide(type='checkbox')
+                                            span.check_text Post a press-release in our social media (facebook, twitter, telegram..)
+                                    .form_cell
+                                        label.checkbox_v1
+                                            input.hide(type='checkbox')
+                                            span.check_text Post a press-release in our social media (facebook, twitter, telegram..)
+                                .form_group
+                                    .form_cell._fr
+                                        label.checkbox_v1
+                                            input.hide(type='checkbox')
+                                            span.check_text Special placement on a homepage and in top of the category
+                                            
+                                    .form_cell
+                                        label.checkbox_v1
+                                            input.hide(type='checkbox')
+                                            span.check_text Make unique picture
+                                
+                                        .form_upload_block
                                             p
-                                                span.clr_gray The price per release is&nbsp;
-                                                span 0.8 BTC
-                                            span._hash 1ECGUKEosEhaZnywCVxw6e1VUcPRqGkhvd
-                                        .form_cell
-                                            button.btn_v2.btn_violette_2.create_release_btn: span Submit press release
+                                                b Upload a picture or your logo
+                                            .input_w
+                                                label.btn_v2.upload_btn.btn_violette_2: span ATTACH FILE
+                                                    input#release_files.hide(type='file')
+
+                                            p.clr_gray Мы нарисуем отличную картинку  основываясь на вашем лого. Либо пришлите нам готовую
+                                                    
+                                    .form_cell._fr
+                                        label.checkbox_v1
+                                            input.hide(type='checkbox')
+                                            span.check_text Schedule publication date and time
+                                            
+                                        .form_upload_block
+                                            .input_w
+                                                input#release_publication_date.input_v3
+                                                
+                            .release_summary
+                                .form_cell
+                                    a.btn_v2.gray_btn_2.create_release_btn(href='#'): span SUBMIT FREE PRESS RELEASE
+                                .form_cell
+                                    button.btn_v2.btn_violette_2.create_release_btn: span SUBMIT  PAID PRESS RELEASE $200
+
+                        .article_text._mr_-50
+                            p Having sent your premium press release, proceed to the payment by opening a new tab. <br>The press release will be published only after receiving the transferred payment.
+                            
+                            p CryptoComes has a right to refuse to publish your press release at any stage offering you a refund if and when it was paid for. Feel free to ask anything: #[a(href='mailto: partners@cryptocomes.com') partners@cryptocomes.com] 
+
 
             .nav_holder
                 //-+main_menu()
