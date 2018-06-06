@@ -349,7 +349,6 @@ textarea.input_v3._h_120 {
     @extend %icon_pseudo;
     position: relative;
     display: block;
-    padding-left: 30px;
 
     &:before {
       content: unicode($icon-check_2);
