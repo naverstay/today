@@ -9,84 +9,207 @@ html(lang='ru')
                 .section_inner
                     +tag_holder('_slider', true)
 
-                    a.attention_block._warn(href='#')
+                    //-a.attention_block._warn(href='#')
                         .attention_caption Breaking news
                         p
                             span Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
                             span.attention_link
 
                     .new_release_holder
-                        h2 Submit new event
-                        p Know of a crypto event we should add? Tell us about an upcoming industry event you don't see listed. We publish events only after an editor reviewed the text.
+                        ul.bread_crumbs
+                            li: a.crumb_link(href='#') Cryptocomes
+                            li: a.crumb_link(href='#') Events
 
-                .release_form_holder
-                    .section_inner
-                        .new_release_form
-                            form(action='#')
+                        h2 Share your event with our readers
+
+                        .article_text
+                            p Мы предлагаем две опции для публикации вашего пресс-релиза
+
+                            ul
+                                li Стандартное бесплатное размещение
+                                li Премиум размещение за $200, дающее максимальный охват и дополнительные опции для продвижения
+                        form(action='#')
+                            .new_release_form
+                                .new_release_form_caption 1. Event content
                                 .form_cell
-                                    label.label_v2(for='event_title') Title
+                                    label.label_v2(for='event_title')
+                                        span Title
+                                        span._required &nbsp;*
                                     .input_w
                                         input#event_title.input_v3
                                 .form_cell
-                                    label.label_v2(for='event_description') Short description
+                                    label.label_v2(for='event_description')
+                                        span Short description 
+                                        span._required &nbsp;*
                                     .input_w
                                         input#event_description.input_v3
                                 .form_cell
-                                    label.label_v2(for='event_content') Details
+                                    label.label_v2(for='event_details')
+                                        span Detalis about event
+                                        span._required &nbsp;*
                                     .input_w
-                                        textarea#event_content.input_v3
-                                .form_group
-                                    .form_cell
-                                      .form_group
-                                        .form_cell
-                                          label.label_v2(for='event_date_start')
-                                            span Date&nbsp;
-                                            span.clr_gray — start
-                                          .input_w
-                                            input#event_date_start.input_v3(data-inputmask="'alias': 'mm.dd.yyyy', 'placeholder': 'MM.DD.YYYY', 'clearIncomplete': 'true'")
-                                        .form_cell
-                                          label.label_v2(for='event_date_end')
-                                            span Date&nbsp;
-                                            span.clr_gray — end
-                                          .input_w
-                                            input#event_date_end.input_v3(data-inputmask="'alias': 'mm.dd.yyyy', 'placeholder': 'MM.DD.YYYY', 'clearIncomplete': 'true'")
-                                    .form_cell
-                                        label.label_v2(for='event_site') Site
-                                        .input_w
-                                            input#event_site.input_v3
-                                .form_group
-                                    .form_cell
-                                        label.label_v2(for='event_country') Country
-                                        .input_w
-                                            input#event_country.input_v3.completeIt(data-url='./data/countries.json')
-                                    .form_cell
-                                        label.label_v2(for='event_city') City
-                                        .input_w
-                                            input#event_city.input_v3.completeIt(data-url='./data/cities.json')
+                                        textarea#event_details.input_v3
                                 .form_cell
-                                    label.label_v2(for='event_files')
-                                        span File Upload / Logo / Image
-                                        span.clr_gray &nbsp;— min 720x480, max 1mb
+                                    label.label_v2(for='event_speakers')
+                                        span Schedule and speakers
                                     .input_w
-                                        label.btn_v2.upload_btn.gray_btn_2: span Select file
-                                            input#event_files.hide(type='file')
+                                        textarea#event_speakers.input_v3
                                 .form_group
                                     .form_cell
-                                        label.label_v2(for='event_author_email') Your Email
+                                        label.label_v2(for='event_start')
+                                            span Date — start 
+                                            span._required &nbsp;*
                                         .input_w
-                                            input#event_author_email.input_v3
+                                            input#event_start.input_v3
                                     .form_cell
-                                        label.label_v2(for='event_author_name') Other contacts
+                                        label.label_v2(for='event_country')
+                                            span Country 
+                                            span._required &nbsp;*
                                         .input_w
-                                            input#event_author_name.input_v3
+                                            input#event_country.input_v3
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='event_end')
+                                            span Date — end
+                                            span._required &nbsp;*
+                                        .input_w
+                                            input#event_end.input_v3
+                                    .form_cell
+                                        label.label_v2(for='event_city')
+                                            span City 
+                                            span._required &nbsp;*
+                                        .input_w
+                                            input#event_city.input_v3
 
-                                .release_summary
-                                    .form_group
-                                        .form_cell
-                                            p &nbsp;
+                            .new_release_form
+                                .new_release_form_caption 2. Contacts
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='event_company_name')
+                                            span Organization Name
+                                            span._required &nbsp;*
+                                        .input_w
+                                            input#event_company_name.input_v3
+                                    .form_cell
+                                        label.label_v2(for='event_company_email')
+                                            span Your Email
+                                            span._required &nbsp;* (invisible on site)
+                                        .input_w
+                                            input#event_company_email.input_v3
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='event_company_site')
+                                            span Website
+                                            span._required &nbsp;*
+                                        .input_w
+                                            input#event_company_site.input_v3
+                                    .form_cell
+                                        label.label_v2(for='event_company_user')
+                                            span Your Name
+                                            span._required &nbsp;* (invisible on site)
+                                        .input_w
+                                            input#event_company_user.input_v3
 
-                                        .form_cell
-                                            button.btn_v2.btn_violette_2.create_release_btn: span Submit new event
+                            .new_release_form
+                                .new_release_form_caption 3. Additional contacts (premium option)
+                                .form_cell
+                                    label.label_v2(for='event_additional_contacts') Additional contacts
+                                    .input_w
+                                        textarea#event_additional_contacts.input_v3._h_120
+
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='event_contact_twitter') Twitter
+                                        .input_w
+                                            input#event_contact_twitter.input_v3
+                                    .form_cell
+                                        label.label_v2(for='event_company_steemit') Steemit
+                                        .input_w
+                                            input#event_company_steemit.input_v3
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='event_contact_facebook') Facebook
+                                        .input_w
+                                            input#event_contact_facebook.input_v3
+                                    .form_cell
+                                        label.label_v2(for='event_company_google') Google+
+                                        .input_w
+                                            input#event_company_google.input_v3
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='event_contact_telegram') Telegram
+                                        .input_w
+                                            input#event_contact_telegram.input_v3
+                                    .form_cell
+                                        label.label_v2(for='event_company_youtube') Youtube
+                                        .input_w
+                                            input#event_company_youtube.input_v3
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='event_contact_linkedin') LinkedIn
+                                        .input_w
+                                            input#event_contact_linkedin.input_v3
+                                    .form_cell
+                                        label.label_v2(for='event_company_github') Github
+                                        .input_w
+                                            input#event_company_github.input_v3
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='event_contact_reddit') Reddit
+                                        .input_w
+                                            input#event_contact_reddit.input_v3
+                                    .form_cell
+                                        label.label_v2(for='event_company_other') Other
+                                        .input_w
+                                            input#event_company_other.input_v3
+                                .form_group
+                                    .form_cell
+                                        label.label_v2(for='event_contact_medium') Medium
+                                        .input_w
+                                            input#event_contact_medium.input_v3
+
+                            .new_release_form
+                                .new_release_form_caption 4. Advantages of premium version
+
+                                .form_group
+                                    .form_cell
+                                        label.checkbox_v1
+                                            input.hide(type='checkbox')
+                                            span.check_text We promot the event in our social media (facebook, twitter, telegram..)
+                                    .form_cell
+                                        label.checkbox_v1
+                                            input.hide(type='checkbox')
+                                            span.check_text Permament link with “dofollow” to your site
+                                .form_group
+                                    .form_cell._fr
+                                        label.checkbox_v1
+                                            input.hide(type='checkbox')
+                                            span.check_text Place the event on a homepage and in top of the category
+
+                                    .form_cell
+                                        label.checkbox_v1
+                                            input.hide(type='checkbox')
+                                            span.check_text We make unique picture
+
+                                        .form_upload_block
+                                            p
+                                                b Upload a picture or your logo
+                                            .input_w
+                                                label.btn_v2.upload_btn.btn_violette_2: span ATTACH FILE
+                                                    input#event_files.hide(type='file')
+
+                                            p.clr_gray Мы нарисуем отличную картинку  основываясь на вашем лого. Либо пришлите нам готовую
+
+                            .release_summary
+                                .form_cell
+                                    a.btn_v2.gray_btn_2.create_release_btn(href='#'): span SUBMIT EVENT FREE 
+                                .form_cell
+                                    button.btn_v2.btn_violette_2.create_release_btn: span SUBMIT PAID EVENT $200
+
+                        .article_text._mr_-50
+                            p Having sent paid event, proceed to the payment by opening a new tab.<br>The event will be published only after receiving the transferred payment.
+
+                            p CryptoComes has a right to refuse to publish your event at any stage offering you a refund if and when it was paid for. Feel free to ask anything: #[a(href='mailto:partners@cryptocomes.com') partners@cryptocomes.com] 
 
             .nav_holder
                 //-+main_menu()

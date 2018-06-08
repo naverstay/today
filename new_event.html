@@ -83,106 +83,239 @@
                 </div><a class="menu_link" href="#"><span>Industry</span></a>
               </li>
             </ul>
-          </div><a class="attention_block _warn" href="#">
-            <div class="attention_caption">Breaking news</div>
-            <p><span>Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'</span><span class="attention_link"></span></p></a>
-          <div class="new_release_holder">
-            <h2>Submit new event</h2>
-            <p>Know of a crypto event we should add? Tell us about an upcoming industry event you don't see listed. We publish events only after an editor reviewed the text.</p>
           </div>
-        </div>
-        <div class="release_form_holder">
-          <div class="section_inner">
-            <div class="new_release_form">
-              <form action="#">
+          <div class="new_release_holder">
+            <ul class="bread_crumbs">
+              <li><a class="crumb_link" href="#">Cryptocomes</a></li>
+              <li><a class="crumb_link" href="#">Events</a></li>
+            </ul>
+            <h2>Share your event with our readers</h2>
+            <div class="article_text">
+              <p>Мы предлагаем две опции для публикации вашего пресс-релиза</p>
+              <ul>
+                <li>Стандартное бесплатное размещение</li>
+                <li>Премиум размещение за $200, дающее максимальный охват и дополнительные опции для продвижения</li>
+              </ul>
+            </div>
+            <form action="#">
+              <div class="new_release_form">
+                <div class="new_release_form_caption">1. Event content</div>
                 <div class="form_cell">
-                  <label class="label_v2" for="event_title">Title</label>
+                  <label class="label_v2" for="event_title"><span>Title</span><span class="_required">&nbsp;*</span></label>
                   <div class="input_w">
                     <input class="input_v3" id="event_title">
                   </div>
                 </div>
                 <div class="form_cell">
-                  <label class="label_v2" for="event_description">Short description</label>
+                  <label class="label_v2" for="event_description"><span>Short description </span><span class="_required">&nbsp;*</span></label>
                   <div class="input_w">
                     <input class="input_v3" id="event_description">
                   </div>
                 </div>
                 <div class="form_cell">
-                  <label class="label_v2" for="event_content">Details</label>
+                  <label class="label_v2" for="event_details"><span>Detalis about event</span><span class="_required">&nbsp;*</span></label>
                   <div class="input_w">
-                    <textarea class="input_v3" id="event_content"></textarea>
-                  </div>
-                </div>
-                <div class="form_group">
-                  <div class="form_cell">
-                    <div class="form_group">
-                      <div class="form_cell">
-                        <label class="label_v2" for="event_date_start"><span>Date&nbsp;</span><span class="clr_gray">— start</span></label>
-                        <div class="input_w">
-                          <input class="input_v3" id="event_date_start" data-inputmask="'alias': 'mm.dd.yyyy', 'placeholder': 'MM.DD.YYYY', 'clearIncomplete': 'true'">
-                        </div>
-                      </div>
-                      <div class="form_cell">
-                        <label class="label_v2" for="event_date_end"><span>Date&nbsp;</span><span class="clr_gray">— end</span></label>
-                        <div class="input_w">
-                          <input class="input_v3" id="event_date_end" data-inputmask="'alias': 'mm.dd.yyyy', 'placeholder': 'MM.DD.YYYY', 'clearIncomplete': 'true'">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form_cell">
-                    <label class="label_v2" for="event_site">Site</label>
-                    <div class="input_w">
-                      <input class="input_v3" id="event_site">
-                    </div>
-                  </div>
-                </div>
-                <div class="form_group">
-                  <div class="form_cell">
-                    <label class="label_v2" for="event_country">Country</label>
-                    <div class="input_w">
-                      <input class="input_v3 completeIt" id="event_country" data-url="./data/countries.json">
-                    </div>
-                  </div>
-                  <div class="form_cell">
-                    <label class="label_v2" for="event_city">City</label>
-                    <div class="input_w">
-                      <input class="input_v3 completeIt" id="event_city" data-url="./data/cities.json">
-                    </div>
+                    <textarea class="input_v3" id="event_details"></textarea>
                   </div>
                 </div>
                 <div class="form_cell">
-                  <label class="label_v2" for="event_files"><span>File Upload / Logo / Image</span><span class="clr_gray">&nbsp;— min 720x480, max 1mb</span></label>
+                  <label class="label_v2" for="event_speakers"><span>Schedule and speakers</span></label>
                   <div class="input_w">
-                    <label class="btn_v2 upload_btn gray_btn_2"><span>Select file
-                        <input class="hide" id="event_files" type="file"></span></label>
+                    <textarea class="input_v3" id="event_speakers"></textarea>
                   </div>
                 </div>
                 <div class="form_group">
                   <div class="form_cell">
-                    <label class="label_v2" for="event_author_email">Your Email</label>
+                    <label class="label_v2" for="event_start"><span>Date — start </span><span class="_required">&nbsp;*</span></label>
                     <div class="input_w">
-                      <input class="input_v3" id="event_author_email">
+                      <input class="input_v3" id="event_start">
                     </div>
                   </div>
                   <div class="form_cell">
-                    <label class="label_v2" for="event_author_name">Other contacts</label>
+                    <label class="label_v2" for="event_country"><span>Country </span><span class="_required">&nbsp;*</span></label>
                     <div class="input_w">
-                      <input class="input_v3" id="event_author_name">
+                      <input class="input_v3" id="event_country">
                     </div>
                   </div>
                 </div>
-                <div class="release_summary">
-                  <div class="form_group">
-                    <div class="form_cell">
-                      <p>&nbsp;</p>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_end"><span>Date — end</span><span class="_required">&nbsp;*</span></label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_end">
                     </div>
-                    <div class="form_cell">
-                      <button class="btn_v2 btn_violette_2 create_release_btn"><span>Submit new event</span></button>
+                  </div>
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_city"><span>City </span><span class="_required">&nbsp;*</span></label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_city">
                     </div>
                   </div>
                 </div>
-              </form>
+              </div>
+              <div class="new_release_form">
+                <div class="new_release_form_caption">2. Contacts</div>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_company_name"><span>Organization Name</span><span class="_required">&nbsp;*</span></label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_company_name">
+                    </div>
+                  </div>
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_company_email"><span>Your Email</span><span class="_required">&nbsp;* (invisible on site)</span></label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_company_email">
+                    </div>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_company_site"><span>Website</span><span class="_required">&nbsp;*</span></label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_company_site">
+                    </div>
+                  </div>
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_company_user"><span>Your Name</span><span class="_required">&nbsp;* (invisible on site)</span></label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_company_user">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="new_release_form">
+                <div class="new_release_form_caption">3. Additional contacts (premium option)</div>
+                <div class="form_cell">
+                  <label class="label_v2" for="event_additional_contacts">Additional contacts</label>
+                  <div class="input_w">
+                    <textarea class="input_v3 _h_120" id="event_additional_contacts"></textarea>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_contact_twitter">Twitter</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_contact_twitter">
+                    </div>
+                  </div>
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_company_steemit">Steemit</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_company_steemit">
+                    </div>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_contact_facebook">Facebook</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_contact_facebook">
+                    </div>
+                  </div>
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_company_google">Google+</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_company_google">
+                    </div>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_contact_telegram">Telegram</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_contact_telegram">
+                    </div>
+                  </div>
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_company_youtube">Youtube</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_company_youtube">
+                    </div>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_contact_linkedin">LinkedIn</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_contact_linkedin">
+                    </div>
+                  </div>
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_company_github">Github</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_company_github">
+                    </div>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_contact_reddit">Reddit</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_contact_reddit">
+                    </div>
+                  </div>
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_company_other">Other</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_company_other">
+                    </div>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="label_v2" for="event_contact_medium">Medium</label>
+                    <div class="input_w">
+                      <input class="input_v3" id="event_contact_medium">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="new_release_form">
+                <div class="new_release_form_caption">4. Advantages of premium version</div>
+                <div class="form_group">
+                  <div class="form_cell">
+                    <label class="checkbox_v1">
+                      <input class="hide" type="checkbox"><span class="check_text">We promot the event in our social media (facebook, twitter, telegram..)</span>
+                    </label>
+                  </div>
+                  <div class="form_cell">
+                    <label class="checkbox_v1">
+                      <input class="hide" type="checkbox"><span class="check_text">Permament link with “dofollow” to your site</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <div class="form_cell _fr">
+                    <label class="checkbox_v1">
+                      <input class="hide" type="checkbox"><span class="check_text">Place the event on a homepage and in top of the category</span>
+                    </label>
+                  </div>
+                  <div class="form_cell">
+                    <label class="checkbox_v1">
+                      <input class="hide" type="checkbox"><span class="check_text">We make unique picture</span>
+                    </label>
+                    <div class="form_upload_block">
+                      <p><b>Upload a picture or your logo</b></p>
+                      <div class="input_w">
+                        <label class="btn_v2 upload_btn btn_violette_2"><span>ATTACH FILE
+                            <input class="hide" id="event_files" type="file"></span></label>
+                      </div>
+                      <p class="clr_gray">Мы нарисуем отличную картинку  основываясь на вашем лого. Либо пришлите нам готовую</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="release_summary">
+                <div class="form_cell"><a class="btn_v2 gray_btn_2 create_release_btn" href="#"><span>SUBMIT EVENT FREE </span></a></div>
+                <div class="form_cell">
+                  <button class="btn_v2 btn_violette_2 create_release_btn"><span>SUBMIT PAID EVENT $200</span></button>
+                </div>
+              </div>
+            </form>
+            <div class="article_text _mr_-50">
+              <p>Having sent paid event, proceed to the payment by opening a new tab.<br>The event will be published only after receiving the transferred payment.</p>
+              <p>CryptoComes has a right to refuse to publish your event at any stage offering you a refund if and when it was paid for. Feel free to ask anything: <a href="mailto:partners@cryptocomes.com">partners@cryptocomes.com</a> </p>
             </div>
           </div>
         </div>
@@ -504,16 +637,16 @@
     </div>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,400i,500,700" media="all"/>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" media="all"/>
-    <link rel="stylesheet" href="styles/header_global.css?t=1528099766943" media="all"/>
-    <link rel="stylesheet" href="styles/main_global.css?t=1528099766943" media="all"/>
-    <script src="js/jquery1.10.js?t=1528099766943"></script>
+    <link rel="stylesheet" href="styles/header_global.css?t=1528472337018" media="all"/>
+    <link rel="stylesheet" href="styles/main_global.css?t=1528472337018" media="all"/>
+    <script src="js/jquery1.10.js?t=1528472337018"></script>
     <script src="js/jquery-ui.js"></script>
-    <script src="js/jquery.popup.min.js?t=1528099766943"></script>
-    <script src="js/jquery.inputmask.bundle.js?t=1528099766943"></script>
-    <script src="js/auto-complete.js?t=1528099766943"></script>
-    <script src="js/jquery.validationEngine.js?t=1528099766943"></script>
-    <script src="js/jquery.validationEngine-ru.js?t=1528099766943"></script>
-    <script src="js/jquery.sticky-kit.min.js?t=1528099766943"></script>
-    <script src="js/script.js?t=1528099766943"></script>
+    <script src="js/jquery.popup.min.js?t=1528472337018"></script>
+    <script src="js/jquery.inputmask.bundle.js?t=1528472337018"></script>
+    <script src="js/auto-complete.js?t=1528472337018"></script>
+    <script src="js/jquery.validationEngine.js?t=1528472337018"></script>
+    <script src="js/jquery.validationEngine-ru.js?t=1528472337018"></script>
+    <script src="js/jquery.sticky-kit.min.js?t=1528472337018"></script>
+    <script src="js/script.js?t=1528472337018"></script>
   </body>
 </html>
