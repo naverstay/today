@@ -944,6 +944,11 @@
       border-radius: 2px;
     }
   }
+
+  ._archived & {
+    -webkit-filter: saturate(.4);
+    filter: saturate(.4);
+  }
 }
 
 .article_img {
@@ -964,7 +969,7 @@
     &:after {
       content: '';
       display: block;
-      padding-bottom: 62.5%;
+      padding-bottom: 61.5%;
       background: #edf1fb;
       background: -moz-radial-gradient(center, ellipse cover, #fff 0%, #edf1fb 100%);
       background: -webkit-radial-gradient(center, ellipse cover, #fff 0%, #edf1fb 100%);
@@ -2332,4 +2337,6 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
+
+
 
