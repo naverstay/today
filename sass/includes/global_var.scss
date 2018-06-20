@@ -92,7 +92,8 @@ $firm-colors: (
         _top: $violette,
         _release: $pink,
         _analysis: $orange,
-        _sponsored: $green_2,
+        _sponsored: $color_sponsored,
+        //_sponsored: $green_2,
         _pricewise: $green,
         _pool: $blue,
         _features: $red,
@@ -104,8 +105,7 @@ $firm-colors: (
         _voice: $color_voice,
         _stairs: $color_stairs,
         _promoted: $pink,
-        _gags: $color_gags,
-        __sponsored: $color_sponsored
+        _gags: $color_gags
 );
 
 $firm-icons: (
@@ -114,7 +114,7 @@ $firm-icons: (
         _top: $icon-crown,
         _release: $icon-crown,
         _analysis: $icon-splash,
-        _sponsored: '',
+        _sponsored: $icon-sponsored,
         _pricewise: $icon-splash,
         _pool: $icon-shark,
         _features: $icon-star,
@@ -126,8 +126,7 @@ $firm-icons: (
         _voice: $icon-voice,
         _stairs: $icon-stairs,
         _promoted: $icon-btc_circle,
-        _gags: $icon-gags,
-        __sponsored: $icon-sponsored
+        _gags: $icon-gags
 );
 
 @mixin opacity($val : 1, $important : 0) {
