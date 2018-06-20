@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'crypto_icons';
-  src: url('#{$icomoon-font-path}/crypto_icons.eot?aa20s9');
-  src: url('#{$icomoon-font-path}/crypto_icons.eot?aa20s9#iefix') format('embedded-opentype'),
-  url('#{$icomoon-font-path}/crypto_icons.ttf?aa20s9') format('truetype'),
-  url('#{$icomoon-font-path}/crypto_icons.woff?aa20s9') format('woff'),
-  url('#{$icomoon-font-path}/crypto_icons.svg?aa20s9#crypto_icons') format('svg');
+  src: url('#{$icomoon-font-path}/crypto_icons.eot?ydwjhc');
+  src: url('#{$icomoon-font-path}/crypto_icons.eot?ydwjhc#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/crypto_icons.ttf?ydwjhc') format('truetype'),
+  url('#{$icomoon-font-path}/crypto_icons.woff?ydwjhc') format('woff'),
+  url('#{$icomoon-font-path}/crypto_icons.svg?ydwjhc#crypto_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -32,6 +32,18 @@
 .icon-btc {
   &:before {
     content: $icon-btc;
+  }
+}
+
+.icon-gags {
+  &:before {
+    content: $icon-gags;
+  }
+}
+
+.icon-sponsored {
+  &:before {
+    content: $icon-sponsored;
   }
 }
 

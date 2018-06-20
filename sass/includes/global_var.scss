@@ -83,6 +83,8 @@ $color_ai: #f89017;
 $color_event: #02c7c7;
 $color_voice: #169dd7;
 $color_stairs: #9b51e0;
+$color_gags: #ff720b;
+$color_sponsored: #ffc93e;
 
 $firm-colors: (
         _news: $violette,
@@ -101,7 +103,9 @@ $firm-colors: (
         _event: $color_event,
         _voice: $color_voice,
         _stairs: $color_stairs,
-        _promoted: $pink
+        _promoted: $pink,
+        _gags: $color_gags,
+        __sponsored: $color_sponsored
 );
 
 $firm-icons: (
@@ -121,7 +125,9 @@ $firm-icons: (
         _event: $icon-say,
         _voice: $icon-voice,
         _stairs: $icon-stairs,
-        _promoted: $icon-btc_circle
+        _promoted: $icon-btc_circle,
+        _gags: $icon-gags,
+        __sponsored: $icon-sponsored
 );
 
 @mixin opacity($val : 1, $important : 0) {
