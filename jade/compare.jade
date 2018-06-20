@@ -1,0 +1,271 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Crypto Compare Bitcoin (BTC) vs Ripple (XRP)')
+
+    body.no_transition
+        .wrapper
+            .main_content
+                .section_inner
+                    +tag_holder('_slider', true)
+
+                    //-a.attention_block._warn(href='#')
+                        .attention_caption Breaking news
+                        p
+                            span Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
+                            span.attention_link
+
+                    .compare_holder
+                        ul.bread_crumbs
+                            li: a.crumb_link(href='#') Cryptocomes
+                            li: a.crumb_link(href='#') Cryptocurrencies Comparison
+
+                        h2 Compare Bitcoin (BTC) vs Ripple (XRP)
+
+                        .article_text
+                            p Select two cryptocurrencies in the form below and get a comparison list by 20 parametres
+                            
+                        .compare_filter
+                            ul.compare_filter_list
+                                li
+                                    .compare_select_w
+                                        select.compare_select
+                                            option Bitcoin (BTC)
+                                            option Ripple (XRP)
+                                        .select_arrow
+                                li
+                                    .compare_select_w
+                                        select.compare_select
+                                            option Bitcoin (BTC)
+                                            option Ripple (XRP)
+                                        .select_arrow
+                                        
+                            .text_center
+                                a.btn_violette.btn_v2.compare_btn(href='#'): span COMPARE NOW
+                                
+                        .compare_row
+                            .compare_col
+                                .compare_caption BITCOIN (BTC)
+                                .compare_img
+                                    img(src='i/compare_btc.jpg')
+                                p Bitcoin is a consensus network that enables a new payment system and a completely digital money. It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen. 
+                            .compare_col
+                                .compare_caption RIPPLE (XRP)
+                                .compare_img
+                                    img(src='i/compare_xrp.jpg')
+                                p Ripple provides one frictionless experience to send money globally using the power of blockchain. 
+                                
+                        .compare_title Founded year
+                        .compare_row.text_center
+                            .compare_col
+                                .compare_feature 2009
+                            .compare_col
+                                .compare_feature 2009
+                                
+                        .compare_title Hash algorithm
+                        .compare_row.text_center
+                            .compare_col
+                                .compare_feature SHA 256 (SHA 2 based)
+                            .compare_col
+                                .compare_feature SHA 256 (SHA 2 based)
+                                
+                        .compare_title Mining avalability
+                        .compare_row.text_center
+                            .compare_col
+                                .compare_points._left Winner +1 point
+                                .compare_feature Yes
+                            .compare_col
+                                .compare_feature No
+
+                        .compare_title Advantages
+                        .compare_row
+                            .compare_col: .compare_feature
+                                .compare_option._pros First decentralized digital currency 
+                                .compare_option._pros Payment freedom 
+                                .compare_option._pros Choose your own fees 
+                                .compare_option._pros Fewer risks for merchant 
+                                .compare_option._pros Security and control 
+                                .compare_option._pros Transparent and neutral  
+                            .compare_col: .compare_feature
+                                .compare_option._pros Instant Payments
+                                .compare_option._pros B2B Friendly Focus
+                                .compare_option._pros Full End to End Payments Service
+
+                        .compare_title Disadvantages
+                        .compare_row
+                            .compare_col: .compare_feature
+                                .compare_option._cons Degree of acceptance 
+                                .compare_option._cons Volatility 
+                                .compare_option._cons Ongoing development
+                            .compare_col: .compare_feature
+                                .compare_points._right Winner +1 point
+                                                                        
+                        .compare_title Investment risks
+                        .compare_row.text_center
+                            .compare_col
+                                .compare_feature Middle
+                            .compare_col
+                                .compare_feature Low
+                                    
+                        .compare_title Technologies
+                        .compare_row.text_center
+                            .compare_col
+                                .compare_feature Blockchain, mining
+                            .compare_col
+                                .compare_feature Real-Time Payments Across 27 Countries
+                                    
+                        .compare_title Highest block time
+                        .compare_row.text_center
+                            .compare_col
+                                .compare_feature 10 min
+                            .compare_col
+                                .compare_feature n\a
+                                    
+                        .compare_title Supported on popular exchanges
+                        .compare_row
+                            .compare_col
+                                .compare_points._left Winner +1 point
+                                .compare_feature
+                                    .compare_option._exchange 
+                                        a.compare_link(href='#') https://binance.com 
+                                    .compare_option._exchange 
+                                        a.compare_link(href='#') https://gemini.com 
+                                    .compare_option._exchange 
+                                        a.compare_link(href='#') https://binance.com 
+                                    .compare_option._exchange 
+                                        a.compare_link(href='#') https://gemini.com 
+                                    .compare_option._exchange 
+                                        a.compare_link(href='#') https://binance.com 
+                                    .compare_option._exchange 
+                                        a.compare_link(href='#') https://gemini.com  
+                            .compare_col
+                                .compare_feature
+                                    .compare_option._exchange
+                                        a.compare_link(href='#') https://binance.com 
+                                    .compare_option._exchange
+                                        a.compare_link(href='#') https://gemini.com 
+                                    .compare_option._exchange
+                                        a.compare_link(href='#') https://binance.com 
+                                    
+                        .compare_title Links
+                        .compare_row
+                            .compare_col
+                                .compare_feature
+                                    .compare_option._url 
+                                        a.compare_link(href='#') https://bitcoin.org 
+                                    .compare_option._url 
+                                        a.compare_link(href='#') https://twitter.com/bitcoin 
+                                    .compare_option._url 
+                                        a.compare_link(href='#') https://facebook.com/bitcoin 
+                                    .compare_option._url 
+                                        a.compare_link(href='#') https://github.com/bitcoin 
+                            .compare_col
+                                .compare_feature
+                                    .compare_option._url
+                                        a.compare_link(href='#') https://bitcoin.org 
+                                    .compare_option._url
+                                        a.compare_link(href='#') https://twitter.com/bitcoin 
+                                    .compare_option._url
+                                        a.compare_link(href='#') https://facebook.com/bitcoin 
+                                    .compare_option._url
+                                        a.compare_link(href='#') https://github.com/bitcoin 
+
+                        .compare_title Community members and followers
+                        .compare_row
+                            .compare_col
+                                .compare_points._left Winner +1 point
+                                .compare_feature: .compare_counters
+                                    dt Twitter:
+                                    dd 849,000
+                                    dt Facebook:
+                                    dd 99,453
+                                    dt Github:
+                                    dd 32,142
+                            .compare_col
+                                .compare_feature: .compare_counters
+                                    dt Twitter:
+                                    dd 849,000
+                                    dt Facebook:
+                                    dd 99,453
+                                    dt Github:
+                                    dd 32,142
+
+                        .compare_title General market data
+                        .compare_row
+                            .compare_col
+                                .compare_feature: .compare_counters
+                                    dt Price:
+                                    dd $750
+                                    dt Capitalization:
+                                    dd $127,330,000
+                                    dt Circulating supply:
+                                    dd 21,000,000
+                            .compare_col
+                                .compare_feature: .compare_counters
+                                    dt Price:
+                                    dd $750
+                                    dt Capitalization:
+                                    dd $127,330,000
+                                    dt Circulating supply:
+                                    dd 21,000,000
+
+                        .compare_title Prices changes stats
+                        .compare_row
+                            .compare_col
+                                .compare_points._left Winner +1 point
+                                .compare_feature: .compare_counters
+                                    dt 24h trading volume:
+                                    dd $500,000,000
+                                    dt Last day:
+                                    dd
+                                        span.compare_lose -3.21%
+                                    dt Last week:
+                                    dd
+                                        span.compare_win +1.21%
+                                    dt Last 30 days:
+                                    dd
+                                        span.compare_win +3.23%
+                                    dt Last year:
+                                    dd
+                                        span.compare_win +120%
+                                    
+                            .compare_col
+                                .compare_points._right Winner +1 point
+                                .compare_feature: .compare_counters
+                                    dt 24h trading volume:
+                                    dd $500,000,000
+                                    dt Last day:
+                                    dd
+                                        span.compare_lose -3.21%
+                                    dt Last week:
+                                    dd
+                                        span.compare_win +1.21%
+                                    dt Last 30 days:
+                                    dd
+                                        span.compare_win +3.23%
+                                    dt Last year:
+                                    dd
+                                        span.compare_win +120%
+
+                        .compare_title Overall winner is Bitcoin (BTC)
+                        .compare_row.text_center
+                            .compare_col
+                                .compare_feature: .compare_win._fw_b Bitcoin (BTC) - 5 points
+                                    
+                            .compare_col
+                                .compare_feature: .compare_lose._fw_b Ripple (XRP) - 3 points
+                                    
+                        .compare_footer
+                            a.compare_link._unl(href='#') Back to top and compare another pair
+                            
+                        .compare_legal
+                            p Сryptocomes does not endorse and is not responsible for or liable for any content, accuracy, quality, advertising, products or other materials on this page. Readers should do their own research before taking any actions related to the company. Сryptocomes is not responsible, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any content, goods or services mentioned in the press release.  Write us if you want to correct any info about cryptocurrency to #[a.compare_link(href='mailto:info@cryptocomes.com') info@cryptocomes.com] 
+
+            .nav_holder
+                //-+main_menu()
+                +search()
+
+            +header()
+            +footer()
+
+        +scripts(false, true)

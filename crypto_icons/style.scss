@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'crypto_icons';
-  src: url('#{$icomoon-font-path}/crypto_icons.eot?zcx7dw');
-  src: url('#{$icomoon-font-path}/crypto_icons.eot?zcx7dw#iefix') format('embedded-opentype'),
-  url('#{$icomoon-font-path}/crypto_icons.ttf?zcx7dw') format('truetype'),
-  url('#{$icomoon-font-path}/crypto_icons.woff?zcx7dw') format('woff'),
-  url('#{$icomoon-font-path}/crypto_icons.svg?zcx7dw#crypto_icons') format('svg');
+  src: url('#{$icomoon-font-path}/crypto_icons.eot?aa20s9');
+  src: url('#{$icomoon-font-path}/crypto_icons.eot?aa20s9#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/crypto_icons.ttf?aa20s9') format('truetype'),
+  url('#{$icomoon-font-path}/crypto_icons.woff?aa20s9') format('woff'),
+  url('#{$icomoon-font-path}/crypto_icons.svg?aa20s9#crypto_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -29,457 +29,483 @@
   }
 }
 
-@function unicode($str) {
-  @return unquote("\"") + $str + unquote("\"");
-}
-
 .icon-btc {
   &:before {
-    content: unicode($icon-btc);
+    content: $icon-btc;
+  }
+}
+
+.icon-buck_circle {
+  &:before {
+    content: $icon-buck_circle;
+  }
+}
+
+.icon-close_circle {
+  &:before {
+    content: $icon-close_circle;
+  }
+}
+
+.icon-check_circle {
+  &:before {
+    content: $icon-check_circle;
+  }
+}
+
+.icon-globe {
+  &:before {
+    content: $icon-globe;
+  }
+}
+
+.icon-buck {
+  &:before {
+    content: $icon-buck;
   }
 }
 
 .icon-btc_circle {
   &:before {
-    content: unicode($icon-btc_circle);
+    content: $icon-btc_circle;
   }
 }
 
 .icon-medium {
   &:before {
-    content: unicode($icon-medium);
+    content: $icon-medium;
   }
 }
 
 .icon-github {
   &:before {
-    content: unicode($icon-github);
+    content: $icon-github;
   }
 }
 
 .icon-stairs {
   &:before {
-    content: unicode($icon-stairs);
+    content: $icon-stairs;
   }
 }
 
 .icon-voice {
   &:before {
-    content: unicode($icon-voice);
+    content: $icon-voice;
   }
 }
 
 .icon-person {
   &:before {
-    content: unicode($icon-person);
+    content: $icon-person;
   }
 }
 
 .icon-plus {
   &:before {
-    content: unicode($icon-plus);
+    content: $icon-plus;
   }
 }
 
 .icon-flag {
   &:before {
-    content: unicode($icon-flag);
+    content: $icon-flag;
   }
 }
 
 .icon-404 {
   &:before {
-    content: unicode($icon-404);
+    content: $icon-404;
   }
 }
 
 .icon-clock {
   &:before {
-    content: unicode($icon-clock);
+    content: $icon-clock;
   }
 }
 
 .icon-rocket {
   &:before {
-    content: unicode($icon-rocket);
+    content: $icon-rocket;
   }
 }
 
 .icon-filter {
   &:before {
-    content: unicode($icon-filter);
+    content: $icon-filter;
   }
 }
 
 .icon-calendar {
   &:before {
-    content: unicode($icon-calendar);
+    content: $icon-calendar;
   }
 }
 
 .icon-chevron-right {
   &:before {
-    content: unicode($icon-chevron-right);
+    content: $icon-chevron-right;
   }
 }
 
 .icon-chevron-left {
   &:before {
-    content: unicode($icon-chevron-left);
+    content: $icon-chevron-left;
   }
 }
 
 .icon-flash_circle {
   &:before {
-    content: unicode($icon-flash_circle);
+    content: $icon-flash_circle;
   }
 }
 
 .icon-share-alt {
   &:before {
-    content: unicode($icon-share-alt);
+    content: $icon-share-alt;
   }
 }
 
 .icon-envelope {
   &:before {
-    content: unicode($icon-envelope);
+    content: $icon-envelope;
   }
 }
 
 .icon-attach {
   &:before {
-    content: unicode($icon-attach);
+    content: $icon-attach;
   }
 }
 
 .icon-quote_r {
   &:before {
-    content: unicode($icon-quote_r);
+    content: $icon-quote_r;
   }
 }
 
 .icon-quote_l {
   &:before {
-    content: unicode($icon-quote_l);
+    content: $icon-quote_l;
   }
 }
 
 .icon-hash {
   &:before {
-    content: unicode($icon-hash);
+    content: $icon-hash;
   }
 }
 
 .icon-check_2 {
   &:before {
-    content: unicode($icon-check_2);
+    content: $icon-check_2;
   }
 }
 
 .icon-eye_dot {
   &:before {
-    content: unicode($icon-eye_dot);
+    content: $icon-eye_dot;
   }
 }
 
 .icon-triangle_r {
   &:before {
-    content: unicode($icon-triangle_r);
+    content: $icon-triangle_r;
   }
 }
 
 .icon-ai {
   &:before {
-    content: unicode($icon-ai);
+    content: $icon-ai;
   }
 }
 
 .icon-ufo_3 {
   &:before {
-    content: unicode($icon-ufo_3);
+    content: $icon-ufo_3;
   }
 }
 
 .icon-chevron_r_thin {
   &:before {
-    content: unicode($icon-chevron_r_thin);
+    content: $icon-chevron_r_thin;
   }
 }
 
 .icon-chevron_l_thin {
   &:before {
-    content: unicode($icon-chevron_l_thin);
+    content: $icon-chevron_l_thin;
   }
 }
 
 .icon-asc {
   &:before {
-    content: unicode($icon-asc);
+    content: $icon-asc;
   }
 }
 
 .icon-desc {
   &:before {
-    content: unicode($icon-desc);
+    content: $icon-desc;
   }
 }
 
 .icon-bonfire {
   &:before {
-    content: unicode($icon-bonfire);
+    content: $icon-bonfire;
   }
 }
 
 .icon-crown {
   &:before {
-    content: unicode($icon-crown);
+    content: $icon-crown;
   }
 }
 
 .icon-feather {
   &:before {
-    content: unicode($icon-feather);
+    content: $icon-feather;
   }
 }
 
 .icon-futurama {
   &:before {
-    content: unicode($icon-futurama);
+    content: $icon-futurama;
   }
 }
 
 .icon-gone {
   &:before {
-    content: unicode($icon-gone);
+    content: $icon-gone;
   }
 }
 
 .icon-heart {
   &:before {
-    content: unicode($icon-heart);
+    content: $icon-heart;
   }
 }
 
 .icon-ico {
   &:before {
-    content: unicode($icon-ico);
+    content: $icon-ico;
   }
 }
 
 .icon-lamp {
   &:before {
-    content: unicode($icon-lamp);
+    content: $icon-lamp;
   }
 }
 
 .icon-quote {
   &:before {
-    content: unicode($icon-quote);
+    content: $icon-quote;
   }
 }
 
 .icon-startwo {
   &:before {
-    content: unicode($icon-startwo);
+    content: $icon-startwo;
   }
 }
 
 .icon-vial {
   &:before {
-    content: unicode($icon-vial);
+    content: $icon-vial;
   }
 }
 
 .icon-dg {
   &:before {
-    content: unicode($icon-dg);
+    content: $icon-dg;
   }
 }
 
 .icon-en {
   &:before {
-    content: unicode($icon-en);
+    content: $icon-en;
   }
 }
 
 .icon-gp {
   &:before {
-    content: unicode($icon-gp);
+    content: $icon-gp;
   }
 }
 
 .icon-in {
   &:before {
-    content: unicode($icon-in);
+    content: $icon-in;
   }
 }
 
 .icon-inst {
   &:before {
-    content: unicode($icon-inst);
+    content: $icon-inst;
   }
 }
 
 .icon-pint {
   &:before {
-    content: unicode($icon-pint);
+    content: $icon-pint;
   }
 }
 
 .icon-rd {
   &:before {
-    content: unicode($icon-rd);
+    content: $icon-rd;
   }
 }
 
 .icon-sk {
   &:before {
-    content: unicode($icon-sk);
+    content: $icon-sk;
   }
 }
 
 .icon-sl {
   &:before {
-    content: unicode($icon-sl);
+    content: $icon-sl;
   }
 }
 
 .icon-stm {
   &:before {
-    content: unicode($icon-stm);
+    content: $icon-stm;
   }
 }
 
 .icon-tmblr {
   &:before {
-    content: unicode($icon-tmblr);
+    content: $icon-tmblr;
   }
 }
 
 .icon-flash {
   &:before {
-    content: unicode($icon-flash);
+    content: $icon-flash;
   }
 }
 
 .icon-crypto {
   &:before {
-    content: unicode($icon-crypto);
+    content: $icon-crypto;
   }
 }
 
 .icon-splash {
   &:before {
-    content: unicode($icon-splash);
+    content: $icon-splash;
   }
 }
 
 .icon-say {
   &:before {
-    content: unicode($icon-say);
+    content: $icon-say;
   }
 }
 
 .icon-shark {
   &:before {
-    content: unicode($icon-shark);
+    content: $icon-shark;
   }
 }
 
 .icon-rss {
   &:before {
-    content: unicode($icon-rss);
+    content: $icon-rss;
   }
 }
 
 .icon-star {
   &:before {
-    content: unicode($icon-star);
+    content: $icon-star;
   }
 }
 
 .icon-ufo {
   &:before {
-    content: unicode($icon-ufo);
+    content: $icon-ufo;
   }
 }
 
 .icon-eye {
   &:before {
-    content: unicode($icon-eye);
+    content: $icon-eye;
   }
 }
 
 .icon-search {
   &:before {
-    content: unicode($icon-search);
+    content: $icon-search;
   }
 }
 
 .icon-close {
   &:before {
-    content: unicode($icon-close);
+    content: $icon-close;
   }
 }
 
 .icon-fb {
   &:before {
-    content: unicode($icon-fb);
+    content: $icon-fb;
   }
 }
 
 .icon-tg {
   &:before {
-    content: unicode($icon-tg);
+    content: $icon-tg;
   }
 }
 
 .icon-triangle {
   &:before {
-    content: unicode($icon-triangle);
+    content: $icon-triangle;
   }
 }
 
 .icon-tw {
   &:before {
-    content: unicode($icon-tw);
+    content: $icon-tw;
   }
 }
 
 .icon-check {
   &:before {
-    content: unicode($icon-check);
+    content: $icon-check;
   }
 }
 
 .icon-arrow-up {
   &:before {
-    content: unicode($icon-arrow-up);
+    content: $icon-arrow-up;
   }
 }
 
 .icon-arrow-right {
   &:before {
-    content: unicode($icon-arrow-right);
+    content: $icon-arrow-right;
   }
 }
 
 .icon-arrow-down {
   &:before {
-    content: unicode($icon-arrow-down);
+    content: $icon-arrow-down;
   }
 }
 
 .icon-arrow-left {
   &:before {
-    content: unicode($icon-arrow-left);
+    content: $icon-arrow-left;
   }
 }
 
 .icon-youtube {
   &:before {
-    content: unicode($icon-youtube);
+    content: $icon-youtube;
   }
 }
 

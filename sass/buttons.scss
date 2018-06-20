@@ -171,6 +171,19 @@
     }
   }
 
+  &.compare_btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 9px 58px;
+    border-radius: 2px;
+    font: 16px/20px $RubikBold;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
   &.head_subscribe_btn {
     display: block;
     border-radius: 20px;

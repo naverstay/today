@@ -174,6 +174,8 @@ $(function ($) {
 
     initMask();
 
+    fixOLincrement();
+
     //initTagSlider();
 });
 
@@ -265,6 +267,13 @@ function checkHeader() {
 
         lastScrollTop = st;
     }
+}
+
+function fixOLincrement() {
+    $('ol[start]').each(function () {
+        var ol = $(this);
+        ol.css('counter-reset', 'ordered_list ' + ol.attr('start'));
+    });
 }
 
 function initSharePopup() {
