@@ -21,13 +21,13 @@ $prefix: '../'; // development
 $icomoon-font-path: $prefix + "fonts";
 $icomoon-font-name: 'crypto_icons';
 
-$RubikBlack: unquote("Roboto, sans-serif; font-weight:700");
-$RubikBold: unquote("Roboto, sans-serif; font-weight:700");
-$RubikBoldImportant: unquote("Roboto, sans-serif !important; font-weight:700 !important");
-$RubikMed: unquote("Roboto, sans-serif; font-weight:500");
-$RubikReg: unquote("Roboto, sans-serif; font-weight:400");
+$RubikBlack: unquote("Montserrat, sans-serif; font-weight:700");
+$RubikBold: unquote("Montserrat, sans-serif; font-weight:700");
+$RubikBoldImportant: unquote("Montserrat, sans-serif !important; font-weight:700 !important");
+$RubikMed: unquote("Montserrat, sans-serif; font-weight:500");
+$RubikReg: unquote("Montserrat, sans-serif; font-weight:400");
 
-$Roboto: 'Roboto', sans-serif;
+$Roboto: 'Montserrat', sans-serif;
 $CirceBold: 'CirceBold', sans-serif;
 $PTSerif: 'PT Serif', serif;
 $font_1: "Trebuchet MS", Helvetica, sans-serif;
@@ -68,7 +68,8 @@ $green_2: #7b9801;
 $color_ai: #f89017;
 
 $violette_dark: #3c2b8a;
-$violette: #433099;
+//$violette: #433099;
+$violette: #6340fe;
 $violette_2: #9e358c;
 $pink: #ff5151;
 $orange: #fa500e;

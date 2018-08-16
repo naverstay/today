@@ -7,6 +7,8 @@
   //text-align: center;
   position: relative;
   padding-top: 7px;
+  padding-bottom: 5px;
+  border-top: 1px solid #f2f2f2;
 
   p {
     color: #fff;
@@ -84,10 +86,10 @@
       z-index: -1;
       position: absolute;
       top: 0;
-      bottom: 0;
-      right: 16px;
-      left: 16px;
-      background: $violette;
+      //bottom: 0;
+      //right: 16px;
+      //left: 16px;
+      //background: $violette;
     }
 
     .footer_logo {
@@ -157,9 +159,9 @@
 }
 
 .copyright {
-  float: right;
-  padding: 11px;
-  color: #fff;
+  float: left;
+  padding: 11px 7px;
+  color: #333;
   font: 12px/16px $RubikReg;
 }
 
@@ -231,7 +233,7 @@
 }
 
 .footer_menu_holder {
-  padding: 24px 30px 22px;
+  padding: 4px 0 1px;
 
   @include respond-to-min($resp_step_2) {
 
@@ -275,58 +277,79 @@
   padding-right: .5%;
 
   p {
-    color: #fff;
-    font: 12px/18px $RubikReg;
-    margin-bottom: 10px;
+    color: #333;
+    font: 12px/16px $RubikBold;
+    margin-bottom: 5px;
   }
 
-  &.s_2,
-  &.s_3,
-  &.s_4,
-  &.s_5,
-  &.s_6,
+  .subscribe_btn {
+    width: 100%;
+    margin: 12px 0;
+    text-align: center;
+  }
+
+  &.s_2 {
+    width: 11.2%;
+  }
+
+  &.s_3 {
+    width: 13.8%;
+  }
+
+  &.s_4 {
+    width: 11.5%;
+  }
+
+  &.s_5 {
+    width: 14.1%;
+  }
+
+  &.s_6 {
+    width: 10.7%;
+  }
+
   &.s_7 {
-    width: (1/6) * 100%;
+    width: 18.3%;
   }
 
   &.s_8 {
     padding-right: 0;
-    width: 100%;
+    width: 20.3%;
 
     @include respond-to-max($resp_step_2) {
-      padding-top: 30px;
+      //padding-top: 30px;
 
       p {
-        line-height: 40px;
-        float: left;
-        padding-right: 20px;
+        //line-height: 40px;
+        //float: left;
+        //padding-right: 20px;
         //min-width: 30%;
       }
 
       .footer_follow_list {
-        padding-top: 10px;
-        float: left;
+        //padding-top: 10px;
+        //float: left;
       }
     }
   }
 
-  @include respond-to-min($resp_step_2) {
-    &.s_2,
-    &.s_3,
-    &.s_4,
-    &.s_5,
-    &.s_6,
-    &.s_7 {
-      width: 13.5%;
-    }
-
-    &.s_8 {
-      float: right;
-      padding-right: 0;
-      width: 18.8%;
-      margin-right: -.8%;
-    }
-  }
+  //@include respond-to-min($resp_step_2) {
+  //  &.s_2,
+  //  &.s_3,
+  //  &.s_4,
+  //  &.s_5,
+  //  &.s_6,
+  //  &.s_7 {
+  //    width: 13.5%;
+  //  }
+  //
+  //  &.s_8 {
+  //    float: right;
+  //    padding-right: 0;
+  //    width: 18.8%;
+  //    margin-right: -.8%;
+  //  }
+  //}
 
   @include respond-to-min($resp_step_3) {
     //&.s_2 {
@@ -364,19 +387,19 @@
 
   li {
     position: relative;
-    padding-left: 15px;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 4px;
-      height: 4px;
-      background: #7b6eb8;
-      margin-top: -2px;
-      border-radius: 100%;
-    }
+    //padding-left: 15px;
+    //
+    //&:before {
+    //  content: '';
+    //  position: absolute;
+    //  top: 50%;
+    //  left: 0;
+    //  width: 4px;
+    //  height: 4px;
+    //  background: #7b6eb8;
+    //  margin-top: -2px;
+    //  border-radius: 100%;
+    //}
   }
 }
 
@@ -392,21 +415,44 @@
     margin-bottom: 10px;
   }
 
+  .header & {
+    float: right;
+    margin-top: 5px;
+
+    li {
+      padding-right: 16px;
+    }
+
+    .action_sh {
+      color: $default_t_color;
+    }
+  }
+
+  .footer & {
+    li {
+      padding-right: 8px;
+
+      @include respond-to-max($resp_step_2) {
+        padding-right: 2px;
+      }
+    }
+  }
+
   .action_sh {
     @include transition_all(color .3s, border-color .3s);
-    color: #fff;
+    color: #333;
     border: 1px solid transparent;
 
     &:hover {
-      color: #fff !important;
-      border-color: #fff;
+      color: $violette !important;
+      border-color: $violette;
     }
   }
 }
 
 .footer_col_link {
   text-decoration: none;
-  color: #fff;
+  color: #333;
   font: 12px/25px $RubikReg;
 
   &:hover {
@@ -415,11 +461,11 @@
 }
 
 .footer_col_caption {
-  color: #fff;
-  font: 12px/25px $RubikBold;
+  color: #333;
+  font: 12px/20px $RubikBold;
 
   &._op {
-    opacity: .3;
+    color: #828282;
   }
 }
 
@@ -433,13 +479,13 @@ $footer_koef: 0px;
 
 .copyright_block {
   @extend %clearfix;
-  background: #2c1f63;
+  //background: #2c1f63;
   //padding: 6px (36px - $footer_koef) 4px (37px - $footer_koef);
   padding: 6px 20px 1px 7px;
 
   .copyright,
   .footer_link {
-    color: #f7f8f8;
+    color: #333;
     font-weight: 400;
   }
 
@@ -505,8 +551,8 @@ $footer_koef: 0px;
 
 .footer_menu {
   list-style: none;
-  float: right;
-  padding: 8px 12px 14px;
+  float: left;
+  padding: 11px 25px;
 
   li {
     display: inline-block;
@@ -526,10 +572,10 @@ $footer_koef: 0px;
 .footer_link {
   color: #c0c0c0;
   font: 12px/16px $RubikMed;
-  text-decoration: underline;
+  text-decoration: none;
 
   &:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 

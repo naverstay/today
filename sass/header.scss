@@ -5,19 +5,19 @@
   z-index: 7;
   position: relative;
   display: block;
-  border-radius: 100%;
+  //border-radius: 100%;
   width: 40px;
   height: 40px;
   line-height: 38px;
   text-align: center;
-  font-size: 14px;
-  color: $violette;
-  background: #f7f8f8;
-  border: 2px solid #f7f8f8;
+  font-size: 18px;
+  color: $default_t_color;
+  //background: #f7f8f8;
+  //border: 2px solid #f7f8f8;
 
   &:hover {
     border-color: $violette;
-    background: #fff;
+    //background: #fff;
   }
 }
 
@@ -50,7 +50,7 @@
   top: 0;
   right: 0;
   left: 0;
-  text-align: center;
+  //text-align: center;
   //line-height: 48px;
   padding-top: 18px;
   min-height: 80px;
@@ -70,6 +70,20 @@
     //-webkit-transform: none !important;
     //-ms-transform: none !important;
     //transform: none !important;
+  }
+
+  .section_inner {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      display: block;
+      right: 0;
+      left: 0;
+      bottom: -5px;
+      height: 1px;
+      background: #f2f2f2;
+    }
   }
 
   @include respond-to-min($resp_step_2) {
@@ -174,8 +188,8 @@
   position: relative;
   z-index: 6;
   float: left;
-  padding-top: 5px;
-  margin-left: 12px;
+  //padding-top: 5px;
+  //margin-left: 12px;
   opacity: 1;
 
   //.search_opened & {
@@ -190,7 +204,7 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
-  max-width: 168px;
+  //max-width: 168px;
 
   img {
     display: block;
@@ -199,24 +213,26 @@
   }
 
   @include respond-to-min($resp_step_3) {
-    max-width: 200px;
+    //max-width: 200px;
   }
 }
 
 .user_menu {
   list-style: none;
   float: right;
+  margin-right: -10px;
+  margin-top: -2px;
   //min-width: 270px;
-  padding-top: 8px;
-  margin-right: -4px;
+  //padding-top: 8px;
+  //margin-right: -4px;
 
   li {
     float: right;
-    padding-right: 16px;
+    //padding-right: 10px;
   }
 
   @include respond-to-min($resp_step_2) {
-    padding-left: 40px;
+    //padding-left: 40px;
   }
 
   @include respond-to-min($resp_step_4) {
@@ -238,5 +254,5 @@
 }
 
 .currency_val {
-  color: #000;
+  color: #828282;
 }

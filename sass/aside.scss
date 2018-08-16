@@ -1,10 +1,10 @@
 //*************************** aside
 
 .aside_info_box {
-  border-radius: 2px;
-  background: #f7f8f8;
   padding: 15px 20px 12px;
   margin-bottom: 15px;
+  background: #fff;
+  box-shadow: 0 0 1px rgba(44, 49, 52, 0.29);
 }
 
 .aside_box_caption {
@@ -124,18 +124,18 @@
 
   > li {
     position: relative;
-    padding-top: 30px;
-    margin-bottom: 10px;
+    padding-top: 20px;
+    margin-bottom: 5px;
 
-    &:before {
-      content: '';
-      position: absolute;
-      top: 9px;
-      right: 0;
-      left: 0;
-      height: 1px;
-      background: #eee;
-    }
+    //&:before {
+    //  content: '';
+    //  position: absolute;
+    //  top: 9px;
+    //  right: 0;
+    //  left: 0;
+    //  height: 1px;
+    //  background: #eee;
+    //}
 
     &:first-child {
       padding-top: 0;
@@ -153,7 +153,9 @@
 
 .recent_news {
   .article_link {
-    font: 14px/18px $RubikMed;
+    color: #333;
+    letter-spacing: -.01em;
+    font: 14px/19px $RubikBold;
 
     &:hover {
       color: $violette;
@@ -237,13 +239,12 @@
 }
 
 .aside_subscribe {
-  border-radius: 2px;
-  padding: 20px 24px 1px;
+  padding: 20px 20px 20px;
   margin-bottom: 20px;
   text-align: center;
   color: #fff;
   background: $violette;
-
+  
   p {
     margin-bottom: 10px;
     font: 16px/21px $RubikMed;

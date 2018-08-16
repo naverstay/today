@@ -225,7 +225,7 @@ a.speaker_link {
   font: 14px/20px $RubikMed;
   background: #f7f8f8;
   padding: 4px 8px;
-  border-radius: 2px;
+ //border-radius: 2px;
   display: block;
   //letter-spacing: -.017em;
 
@@ -591,6 +591,12 @@ a.speaker_link {
     }
   }
 
+  &._em {
+    &:before {
+      content: unicode($icon-envelope);
+    }
+  }
+
   &._rd {
     &:before {
       content: unicode($icon-rd);
@@ -734,14 +740,14 @@ a.speaker_link {
     background: #fff;
     width: auto;
     min-width: 34px;
-    border-radius: 2px;
+   //border-radius: 2px;
     padding: 0 10px 0 14px;
   }
 
   &._count {
     width: auto;
     margin-right: 5px;
-    border-radius: 2px;
+   //border-radius: 2px;
     padding: 0 10px;
 
     &:after,
@@ -793,7 +799,7 @@ a.speaker_link {
     background: #f6f7f7;
     padding: 32px 16px 36px 40px;
     margin: 48px 0;
-    border-radius: 2px;
+   //border-radius: 2px;
 
     p {
       font: 20px/28px $RubikBold;
@@ -1183,7 +1189,7 @@ a.speaker_link {
   }
 
   .article_tag {
-    border-radius: 2px;
+   //border-radius: 2px;
 
     span {
       padding-left: 0;
@@ -1211,12 +1217,12 @@ a.speaker_link {
   .article_text._mr_-50 {
     margin-right: -50px;
   }
-  
+
   h2 {
     font: 32px $RubikBold;
     margin-bottom: 40px;
   }
-  
+
   @include respond-to-min($resp_step_2) {
     max-width: 760px;
   }
@@ -1325,7 +1331,7 @@ a.speaker_link {
   font-size: 20px;
   line-height: 26px;
   padding: 35px 42px;
-  border-radius: 2px;
+ //border-radius: 2px;
   background: #f6f7f7;
   margin-top: 50px;
 
@@ -1382,13 +1388,29 @@ a.speaker_link {
   }
 }
 
+.offer_block_caption {
+  font: 24px/29px $RubikBold;
+  color: $default_t_color;
+  margin-bottom: 24px;
+  text-align: left;
+
+  .aside_subscribe & {
+    color: #fff;
+  }
+
+  span {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
 .offer_block {
-  background: #f6f7f7;
+  background: #fff;
   margin-bottom: 20px;
-  border-radius: 2px;
-  padding: 15px 20px 20px;
+  padding: 20px 20px 23px;
   text-align: center;
   font: 16px/19px $RubikMed;
+  box-shadow: 0 0 1px rgba(44, 49, 52, 0.29);
 
   p {
     + p {

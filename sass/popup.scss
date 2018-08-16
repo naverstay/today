@@ -221,7 +221,7 @@
 }
 
 .subscribe_img {
-  border-radius: 2px 2px 0 0;
+ //border-radius: 2px 2px 0 0;
   overflow: hidden;
   margin-bottom: 30px;
 
@@ -261,7 +261,7 @@
     margin-bottom: 20px;
 
     .input_v1 {
-      border-radius: 2px 0 0 2px;
+     //border-radius: 2px 0 0 2px;
     }
   }
 
@@ -321,7 +321,7 @@
 }
 
 .bonus_img {
-  border-radius: 2px 2px 0 0;
+ //border-radius: 2px 2px 0 0;
   overflow: hidden;
 
   img {
@@ -410,7 +410,7 @@
   &.dialog_v2 {
     padding: 0;
     border: 0;
-    border-radius: 2px;
+   //border-radius: 2px;
 
     .ui-dialog-content {
       padding: 0;
@@ -470,7 +470,7 @@
       background: none;
       z-index: 1;
       padding: 24px 0 0;
-      border-radius: 2px 2px 0 0;
+     //border-radius: 2px 2px 0 0;
     }
 
     .ui-dialog-titlebar-close {

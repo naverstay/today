@@ -166,6 +166,7 @@
 
 .search_form {
   padding-left: 225px;
+  margin-right: -20px;
 }
 
 .search_body {
@@ -198,6 +199,7 @@
   width: 100%;
   bottom: auto;
   height: 80px;
+  top: 90px;
   overflow-y: auto;
 
   .form_cell {
@@ -263,22 +265,22 @@
 .tag_holder {
   position: relative;
   margin-bottom: 14px;
-  padding: 10px 12px;
-  background: $violette;
+  padding: 25px 5px;
+  //background: $violette;
 
   .main_menu {
     @extend %clearfix;
     opacity: 1;
-    float: left;
-    margin: -10px 0;
+    float: right;
+    margin: -6px 0;
+    padding: 0 10px;
     //padding-top: 4px;
-    padding-left: 0;
     overflow: visible;
   }
 
   .menu_item {
     margin-bottom: 0;
-    padding: 0 14px;
+    padding: 0 15px;
 
     @include respond-to-min($resp_step_2) {
       //padding: 0 21px;
@@ -288,7 +290,7 @@
       padding-top: 14px;
       padding-bottom: 14px;
       height: 50px;
-      font-size: 18px;
+      //font-size: 18px;
       text-decoration: none;
       //font-weight: 400;
 
@@ -299,14 +301,13 @@
 
       &:before {
         @include transition_all(opacity .3s, transform .3s);
-        @include transform_translate(0, 0);
         content: '';
         position: absolute;
-        top: 0;
+        height: 2px;
         bottom: 0;
         right: -14px;
         left: -14px;
-        background: #2c1f63;
+        background: #6340fe;
         //background: rgba(0, 0, 0, 0.35);
         opacity: 0;
       }
@@ -451,6 +452,11 @@
   left: 0;
   //margin-top: 14px;
 
+  &._right {
+    left: auto;
+    right: 0;
+  }
+  
   + .menu_link {
     @extend %icon_pseudo;
     position: relative;
@@ -471,7 +477,8 @@
   @extend %clearfix;
   width: 450px;
   list-style: none;
-  background: #2c1f63;
+  background: #fff;
+  box-shadow: 0 0 2px rgba(40, 46, 49, 0.46);
   padding: 38px 20px 20px;
   text-align: left;
 
@@ -483,28 +490,7 @@
   }
 
   .menu_link {
-    @extend %icon_pseudo;
-    position: relative;
-    font: 16px/19px $RubikReg;
-    padding-left: 22px;
-    color: #fff;
-    text-decoration: none;
-
-    &:before {
-      @include transition_all(opacity .3s);
-      position: absolute;
-      top: 0;
-      left: 0;
-      font-size: 18px;
-      opacity: .33;
-      content: unicode($icon-chevron-right);
-    }
-
-    &:hover {
-      &:before {
-        opacity: 1;
-      }
-    }
+    text-transform: none;
   }
 }
 
@@ -512,9 +498,10 @@
   cursor: pointer;
   position: relative;
   display: block;
-  text-decoration: underline;
-  color: #fff;
-  font: 24px $RubikMed;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  font: 14px/17px $RubikBold;
   ////letter-spacing: -.031em;
   //letter-spacing: .02em;
 

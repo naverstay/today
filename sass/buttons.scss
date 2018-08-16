@@ -11,7 +11,7 @@
     text-align: center;
     font: 14px/18px $RubikMed;
     padding: 13px;
-    border-radius: 2px;
+   //border-radius: 2px;
 
     .news_col > & {
       margin-bottom: 20px;
@@ -72,7 +72,7 @@
     text-align: center;
     font: 14px/20px $RubikBold;
     padding: 8px 5px;
-    border-radius: 2px;
+   //border-radius: 2px;
     text-transform: uppercase;
     height: auto;
     min-height: 40px;
@@ -90,8 +90,8 @@
     vertical-align: top;
     padding: 10px 26px;
     font: 12px/18px $RubikBold;
-    color: #fff;
-    border-radius: 2px;
+    //color: #fff;
+   //border-radius: 2px;
     height: auto;
     min-height: 40px;
     letter-spacing: .035em;
@@ -110,7 +110,7 @@
     }
 
     &._no_icon {
-      padding: 10px 12px;
+      padding: 10px;
     }
 
     &._fb {
@@ -162,7 +162,7 @@
     float: right;
     display: block;
     padding: 9px 19px;
-    border-radius: 2px;
+   //border-radius: 2px;
     font: 16px/20px $RubikBold;
 
     span {
@@ -175,7 +175,7 @@
     display: inline-block;
     vertical-align: top;
     padding: 9px 58px;
-    border-radius: 2px;
+   //border-radius: 2px;
     font: 16px/20px $RubikBold;
 
     span {
@@ -235,7 +235,7 @@
     background: #c72626;
     color: #fff;
     text-align: center;
-    border-radius: 2px;
+   //border-radius: 2px;
     margin: 20px 0 0;
 
     span {
@@ -252,7 +252,7 @@
     margin: 7px 0;
     font: 14px/18px $RubikBold;
     text-align: center;
-    border-radius: 2px;
+   //border-radius: 2px;
     letter-spacing: .07em;
 
     span {
@@ -471,6 +471,18 @@
   }
 }
 
+.gray_btn_3 {
+  @include transition_all(background .3s, color .3s);
+  border: 1px solid #bdbdbd;
+  background: #fff;
+  color: #c5c5c5;
+
+  &:hover {
+    background: $violette;
+    color: #fff;
+  }
+}
+
 .btn_gray_3 {
   @include transition_all(border-color .3s, background .3s);
   color: $violette;
@@ -478,7 +490,7 @@
   border: 2px solid #f7f8f8;
 
   &:hover {
-    border-color: $violette;
+    background: #4634aa;
     background: #fff;
   }
 }
@@ -507,11 +519,12 @@
 
 .btn_violette_4 {
   @include transition_all(background .3s, color .3s);
-  background: #2c1f63;
+  background: #6340fe;
   color: #fff;
+  border: 1px solid #fff;
 
   &:hover {
-    background: darken(#2c1f63, 10%);
+    background: #4634aa;
   }
 }
 
@@ -523,4 +536,8 @@
 .white_btn {
   background: #fff;
   color: $violette;
+}
+
+.btn_wide {
+  width: 100%;
 }

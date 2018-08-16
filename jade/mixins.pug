@@ -91,7 +91,7 @@ mixin footer()
                         li: a.footer_col_link(href='#'): span Dash Price Index
 
                 .footer_col.s_6
-                    .footer_col_caption._op Guides
+                    p: span.footer_col_caption._op Guides
 
                     ul.footer_col_menu
                         li: a.footer_col_link(href='#'): span Coins Guide
@@ -123,10 +123,10 @@ mixin footer()
 
                 .footer_col.s_8
                     //-.footer_col_caption Follow us
-                    p Follow us and get all crypto news 24/7
+                    p Follow us! <br>Get all crypto news 24/7
 
                     p
-                        a.btn_violette_4.btn_v2.subscribe_btn.openSubscribe._no_icon(href='#'): span SUBSCRIBE TO NEWSLETTER
+                        a.btn_violette_4.btn_v2.subscribe_btn.openSubscribe._no_icon.btn_wide.text_center(href='#'): span SUBSCRIBE
 
                     //-.follow_form
                         form(action='#')
@@ -146,16 +146,17 @@ mixin footer()
                         li: a.action_sh._rss(href='#')
 
         .section_inner.clearfix._dark
-            .footer_logo
+            //-.footer_logo
                 a.logo(href='index.html')
                     img(src= 'i/footer_logo_w.svg')
 
             .copyright_block
+                .copyright ©2018 U°Today. All rights reserved
+
                 ul.footer_menu
                     li: a.footer_link(href='#') Terms and conditions
                     //-li: a.footer_link(href='#') Privacy Policy
 
-                .copyright ©2018 CryptoComes. All rights reserved
 
         //-.go_top_holder.goTopHolder
             .section_inner
@@ -438,7 +439,7 @@ mixin action_block(calendar)
 
 mixin aside_block(calendar, release)
     .aside_block
-        .offer_block.retweet_block
+        //-.offer_block.retweet_block
             .aside_box_caption
                 span.aside_caption_icon._retweet
                 .aside_caption_link CRYPTOTWEETS
@@ -464,13 +465,13 @@ mixin aside_block(calendar, release)
                         p Nice example of interoperability of quantum information. Is this a universal feature of quantum information, as it is 'classical'?
 
         .offer_block
-            p Have something interesting
+            .offer_block_caption Have Something Interesting
             p
                 a.btn_v2.btn_violette_2.offer_btn(href='#')
-                    span SubMit A PRESS RELEASE
-                    span.btn_icon.icon-rocket
+                    span SUBMIT PRESS RELEASE
+                    //-span.btn_icon.icon-rocket
 
-        .aside_info_box
+        //-.aside_info_box
             .aside_box_caption
                 span.aside_caption_icon._features
                 .aside_caption_link FEATURED
@@ -487,7 +488,7 @@ mixin aside_block(calendar, release)
                     p
                         a.promo_link(href='#') How to Make Your Native<br> Advertising Most Effective with CryptoComes
 
-        .aside_info_box
+        //-.aside_info_box
             .aside_box_caption
                 span.aside_caption_icon._calendar
                 .aside_caption_link Events
@@ -527,50 +528,42 @@ mixin aside_block(calendar, release)
                     a.recent_news_link(href='#') Show all
 
         .aside_subscribe
-            p Follow us and get all<br>crypto news 24/7
+            .offer_block_caption Follow Us!<br>#[span Get all crypto news 24/7]
 
             p
-                a.btn_violette_4.btn_v2.subscribe_btn.openSubscribe._no_icon(href='#'): span SUBSCRIBE TO NEWSLETTER
+                a.btn_violette_4.btn_v2.subscribe_btn.openSubscribe._no_icon.btn_wide.text_center(href='#'): span SUBSCRIBE TO NEWSLETTER
 
-            ul.footer_follow_list
+            //-ul.footer_follow_list
                 li: a.action_sh._t(href='#' data-network="twitter" class='st-custom-button')
                 li: a.action_sh._tg(href= link_tg)
                 li: a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
                 li: a.action_sh._y(href= link_youtube data-network="youtube" class='st-custom-button')
                 li: a.action_sh._rd(href='#' data-network="reddit" class='st-custom-button')
                 li: a.action_sh._rss(href='#')
-
+                
+                
         .aside_info_box
-            .aside_box_caption
-                span.aside_caption_icon._quote
-                .aside_caption_link HOT STORIES
+            .offer_block_caption Upcoming Events
 
             ul.recent_news_list
                 li
                     .recent_news
-                        a.article_link(href='article.html') South Korean Regulator Fines Crypto Exchanges over Privacy Failures
-                        ul.article_stat._action
-                            li
-                                a.article_stat_val(href='#') John Doe
-                            li
-                                span.article_stat_val._stat_time 2h
-                            li
-                                span.article_stat_val._stat_views 212
-                            +stat_action()
+                        .article_date.icon-calendar 
+                            span 21 MAR
+                            a.event_link(href='#') Zurich, Switzerland
 
+                        p: a.article_link(href='article.html') EOS Bounces Back Despite John Oliver Slam, Up 35 Percent Week
+                        
                 li
                     .recent_news
-                        a.article_link(href='article.html') Amazon User Orders Bitcoin Miner, Gets 'Boss Baby' DVD Instead
-                        ul.article_stat._action
-                            li
-                                a.article_stat_val(href='#') John Doe
-                            li
-                                span.article_stat_val._stat_time 2h
-                            li
-                                span.article_stat_val._stat_views 212
-                            +stat_action()
+                        .article_date.icon-calendar
+                            span 21 MAR
+                            a.event_link(href='#') Zurich, Switzerland
 
-                li
+                        p: a.article_link(href='article.html') EOS Bounces Back Despite John Oliver Slam, Up 35 Percent Week
+                        
+
+                //-li
                     .recent_news
                         a.article_link(href='article.html') Payment Processor Stripe to End Support for Bitcoin
                         ul.article_stat._action
@@ -582,7 +575,7 @@ mixin aside_block(calendar, release)
                                 span.article_stat_val._stat_views 212
                             +stat_action()
 
-                li
+                //-li
                     .recent_news
                         a.article_link(href='article.html') Just Because It's Bad for Your Coin Doesn't Mean It's FUD
                         ul.article_stat._action
@@ -595,7 +588,7 @@ mixin aside_block(calendar, release)
                             +stat_action()
 
                 li
-                    a.recent_news_link(href='#') Show all
+                    a.btn_v2.subscribe_btn.gray_btn_3.btn_wide.text_center(href='#') See All
 
 
     //- if (release)
@@ -900,8 +893,8 @@ mixin aside_block(calendar, release)
                                 li._first
                                     a.article_stat_val(href='#') Ariel Deschapell
 
-mixin submenu()
-    .submenu_list_holder: ul.submenu_list
+mixin submenu(cls)
+    .submenu_list_holder(class= cls): ul.submenu_list
         li: a.menu_link(href='#'): span Price prediction
         li: a.menu_link(href='#'): span Price prediction
         li: a.menu_link(href='#'): span Bitcoin Price Index
@@ -944,15 +937,26 @@ mixin tag_holder(cls, slider)
                             a.menu_link(href='#'): span Industry
 
     //- else
-
+        
     .tag_holder.clearfix
-        .lang_block
-            select.lang_select
-                option eng
-                option rus
-            .select_arrow
+        .logo_block
+            a.logo(href='index.html')
+                img(src='i/logo_today.png')
+                
+        ul.user_menu
+            //-li
+                a.menu_btn.menuBtn(href='#')
+                    span
+            li
+                a.search_btn.searchBtn(href='#')
+            //-li
+                a.head_subscribe_btn.btn_v2.btn_gray_3.openSubscribe(href='#')
+                    span Subscribe
+                    span.icon-envelope.btn_icon
+
         ul.main_menu
             li.menu_item
+                +submenu()
                 a.menu_link(href='#'): span News
             li.menu_item
                 +submenu()
@@ -965,41 +969,42 @@ mixin tag_holder(cls, slider)
                 +submenu()
                 a.menu_link(href='#'): span Market analysis
             li.menu_item
-                +submenu()
+                +submenu('_right')
                 a.menu_link(href='#'): span Guides
             li.menu_item
-                +submenu()
+                +submenu('_right')
                 a.menu_link(href='#'): span Industry
-
+                
 mixin top_info()
     .top_info
-        .currency_switcher
-            select.currency_select
-                option &#8364;
-                option &#36;
-                option &#8381;
-                option &#163;
-            .select_arrow
-
         .currency_info
             .currency_info_table
                 +loop_while(4)
                     .swiper-slide: a.currency_info_cell(href='#')
                         p
                             span.currency_link: b BTC
+                            span.trend._down -14%
                         p
-                            span.trend._down -8.82%
-                        p
-                            span.currency_val 2636.79
+                            span.currency_val 13 789.88
 
                     .swiper-slide: a.currency_info_cell(href='#')
                         p
                             span.currency_link: b BTC
+                            span.trend._up +14%
                         p
-                            span.trend._up +8.82%
-                        p
-                            span.currency_val 2636.79
+                            span.currency_val 13 789.88
 
+        .currency_switcher
+            select.currency_select
+                option USD
+                option EUR
+                option RUR
+                //option &#8364;
+                //option &#36;
+                //option &#8381;
+                //option &#163;
+            .select_arrow
+                
                 //-.hide
                     .currency_info_cell
                         p
@@ -1300,22 +1305,20 @@ mixin search()
 mixin header()
     .header
         .section_inner.clearfix
-            .logo_block
-                a.logo(href='index.html')
-                    img(src='i/logo_h.svg')
-
             +top_info()
 
-            ul.user_menu
-                //-li
-                    a.menu_btn.menuBtn(href='#')
-                        span
-                li
-                    a.search_btn.searchBtn(href='#')
-                li
-                    a.head_subscribe_btn.btn_v2.btn_gray_3.openSubscribe(href='#')
-                        span Subscribe
-                        span.icon-envelope.btn_icon
+            .lang_block
+                select.lang_select
+                    option eng
+                    option rus
+                .select_arrow
+
+            ul.footer_follow_list
+                li: a.action_sh._em(href='mailto:partners@cryptocomes.com')
+                li: a.action_sh._f(href='#' data-network="facebook" class='st-custom-button')
+                li: a.action_sh._tg(href= link_tw)
+                li: a.action_sh._i(href='#')
+                li: a.action_sh._tg(href= link_tg)
 
 mixin widget_history()
     | <script type="text/javascript">
@@ -1389,7 +1392,8 @@ mixin widget_converter()
     | </script>
 
 mixin scripts(share, mask)
-    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Roboto:400,400i,500,700', media='all')
+    //- link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Roboto:400,400i,500,700', media='all')
+    link(href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet")
     link(rel='stylesheet', href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css', media='all')
 
     -if (!prod)
@@ -1412,8 +1416,6 @@ mixin scripts(share, mask)
         //-script(src='js/swiper.min.js?t=' + time)
         script(src='js/jquery.sticky-kit.min.js?t=' + time)
         script(src='js/script.js?t=' + time)
-
-
 
 
         

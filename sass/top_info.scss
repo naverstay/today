@@ -1,12 +1,12 @@
 .top_info {
-  padding: 0 8px 4px 15px;
+  padding: 0 0 15px;
   display: inline-block;
   vertical-align: middle;
   text-align: left;
 
   @include respond-to-min($resp_step_2) {
     //padding: 18px 30px 4px 0;
-    padding-top: 3px;
+    //padding-top: 3px;
   }
 
   @include respond-to-min($resp_step_3) {
@@ -19,19 +19,18 @@
 .currency_switcher {
   position: relative;
   float: left;
-  width: 40px;
   margin-top: 9px;
 }
 
 .currency_info {
-  margin-left: 5px;
-  margin-right: -45px;
+  //margin-left: 5px;
+  //margin-right: -45px;
   float: left;
   font-family: $RubikReg;
 
   @include respond-to-min($resp_step_3) {
-    margin-left: 20px;
-    margin-right: -55px;
+    //margin-left: 20px;
+    //margin-right: -55px;
   }
 }
 
@@ -45,14 +44,14 @@
     vertical-align: top;
     //padding-left: 15px;
     //padding-top: 5px;
-    padding: 3px 16px 0 17px;
+    padding: 4px 7px 0 17px;
     width: auto;
     height: auto;
-    border-left: 1px solid #f6f7f7;
+    //border-left: 1px solid #f6f7f7;
 
     &:first-child {
       border-left: 0;
-      padding-left: 10px;
+      padding-left: 7px;
     }
 
     @include respond-to-max($resp_step_2) {
@@ -65,16 +64,16 @@
       //padding-left: 20px;
 
       &:first-child {
-        padding-left: 10px;
+        //padding-left: 7px;
       }
     }
 
     @include respond-to-min($resp_step_3) {
-      padding-left: 28px;
+      //padding-left: 28px;
       padding-right: 28px;
 
       &:first-child {
-        padding-left: 5px;
+        //padding-left: 5px;
       }
     }
 
@@ -83,7 +82,7 @@
       padding-right: 37px;
 
       &:first-child {
-        padding-left: 0;
+        //padding-left: 0;
       }
     }
   }
@@ -99,8 +98,9 @@
 }
 
 .currency_info_cell {
-  font-size: 12px;
-  color: $clr_black;
+  font-size: 14px;
+  color: $default_t_color;
+  display: block;
 
   &.swiper-slide {
     width: auto;
@@ -114,22 +114,22 @@
   .currency_link {
     position: relative;
     text-decoration: none;
-    color: $clr_black;
+    color: $default_t_color;
     font-weight: 700;
 
-    &:before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      height: 1px;
-      background: $clr_black;
-    }
+    //&:before {
+    //  content: '';
+    //  position: absolute;
+    //  bottom: 0;
+    //  right: 0;
+    //  left: 0;
+    //  height: 1px;
+    //  background: $clr_black;
+    //}
   }
 
   .trend {
-    @extend %icon_pseudo;
+    //@extend %icon_pseudo;
     position: relative;
     white-space: nowrap;
     //padding: 0 0 0 5px;
@@ -151,27 +151,27 @@
     }
 
     &._up {
-      color: rgba(46, 155, 14, 0.9);
+      color: #27ae60;
 
-      &:before {
-        background: rgba(46, 155, 14, 0.9);
-      }
-
-      &:after {
-        content: unicode(' ' + $icon-asc);
-      }
+      //&:before {
+      //  background: rgba(46, 155, 14, 0.9);
+      //}
+      //
+      //&:after {
+      //  content: unicode(' ' + $icon-asc);
+      //}
     }
 
     &._down {
-      color: #ff0a24;
+      color: #eb5757;
 
-      &:before {
-        background: #ff0a24;
-      }
-
-      &:after {
-        content: unicode(' ' + $icon-desc);
-      }
+      //&:before {
+      //  background: #ff0a24;
+      //}
+      //
+      //&:after {
+      //  content: unicode(' ' + $icon-desc);
+      //}
     }
   }
 
@@ -189,21 +189,19 @@
 .currency_select {
   @include transition_all(border .3s, color .3s);
   display: block;
-  width: 48px;
-  height: 48px;
-  padding-left: 10px;
-  border-radius: 2px;
-  margin: -6px 0 -8px 0;
-  font: 27px $RubikMed;
-  color: $violette;
+  padding: 2px 20px 2px 10px;
+ //border-radius: 2px;
+  margin: 7px 0 0;
+  font: 14px/17px $RubikReg;
+  color: $default_t_color;
   position: relative;
   background: #fff !important;
   border: 2px solid #fff;
 
   + .select_arrow {
-    color: $violette;
-    top: 14px;
-    right: 1px;
+    color: $default_t_color;
+    top: 16px;
+    right: 8px;
 
     @include respond-to-max($resp_step_2) {
       //right: 10px;
@@ -212,20 +210,21 @@
   }
 
   &:hover {
-    border-color: $violette;
-    color: $violette;
+    border-color: $default_t_color;
+    color: $default_t_color;
 
     + .select_arrow {
-      color: $violette;
+      color: $default_t_color;
     }
   }
 
   &:focus {
-    border-color: $violette;
-    color: $violette;
+    border-color: $default_t_color;
+    color: $default_t_color;
 
     + .select_arrow {
-      color: $violette;
+      top: 20px;
+      color: $default_t_color;
       -webkit-transform: rotate(180deg) translate(0, 4px);
       -ms-transform: rotate(180deg) translate(0, 4px);
       transform: rotate(180deg) translate(0, 4px);
@@ -241,6 +240,11 @@
   position: relative;
   float: right;
 
+  .header & {
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+
   @include respond-to-min($resp_step_4) {
     //float: left;
   }
@@ -251,10 +255,9 @@
   display: block;
   width: 66px;
   height: 30px;
-  padding-top: 2px;
-  padding-left: 26px;
-  font: 12px $RubikBlack;
-  color: #fff;
+  padding: 2px 20px 2px 10px;
+  font: 14px/17px $RubikBlack;
+  color: $default_t_color;
   position: relative;
   background: transparent;
   border: 2px solid #fff;
@@ -262,21 +265,18 @@
   text-transform: uppercase;
 
   + .select_arrow {
-    right: auto;
-    left: 12px;
-    color: #fff;
+    color: $default_t_color;
   }
 
   &:hover {
-    border-color: $violette_dark;
-    background: $violette_dark;
+    border-color: $default_t_color;
   }
 
   &:focus {
-    border-color: $violette_dark;
-    background: $violette_dark;
+    border-color: $default_t_color;
 
     + .select_arrow {
+      top: 14px;
       -webkit-transform: rotate(180deg) translate(0, 4px);
       -ms-transform: rotate(180deg) translate(0, 4px);
       transform: rotate(180deg) translate(0, 4px);
@@ -292,7 +292,7 @@
   @include transition_all(transform .3s, color .3s);
   @extend %icon_pseudo;
   position: absolute;
-  top: 12px;
+  top: 11px;
   right: 7px;
   font-size: 7px;
   line-height: 1.2;

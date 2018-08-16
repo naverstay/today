@@ -33,7 +33,7 @@
       line-height: 28px;
       background: #ff0a24;
       padding-left: 2px;
-      border-radius: 2px 0 0 2px;
+     //border-radius: 2px 0 0 2px;
       color: #fff;
     }
   }
@@ -559,13 +559,15 @@
   //margin-right: -16px;
   margin-bottom: 15px;
   min-height: 100%;
-  border-radius: 2px;
+  box-shadow: 0 0 1px rgba(44, 49, 52, 0.29);
+  //border-radius: 2px;
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
   align-items: stretch;
 
   .article_reviews & {
+    box-shadow: none;
     display: block;
   }
 
@@ -592,7 +594,7 @@
     min-height: calc(100% - 15px);
 
     .article_title {
-      border-radius: 2px;
+     //border-radius: 2px;
       //flex: 1 0 auto;
       //display: flex;
       //flex-flow: column;
@@ -934,14 +936,14 @@
   z-index: 1;
 
   img {
-    border-radius: 2px 2px 0 0;
+    //border-radius: 2px 2px 0 0;
 
     ._article & {
       border-radius: 0;
     }
 
     .article_reviews & {
-      border-radius: 2px;
+     //border-radius: 2px;
     }
   }
 
@@ -1069,12 +1071,11 @@
   @extend %icon_pseudo;
   position: relative;
   margin-bottom: 12px;
-  display: inline-block;
-  vertical-align: top;
-  color: #fff;
-  font: 10px/12px $RubikBold;
-  padding: 6px 8px;
-  border-radius: 2px;
+  color: #333;
+  overflow: hidden;
+  font: 10px/14px $RubikBold;
+  //padding: 6px 8px;
+  //border-radius: 2px;
 
   //&:before {
   //  content: unicode($icon-calendar);
@@ -1094,6 +1095,17 @@
   &._mt_5 {
     margin-top: 5px;
   }
+  
+  .event_link {
+    float: right;
+    font-size: 11px;
+    color: #6340fe;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
   @each $cls, $color in $firm-colors {
     &.#{$cls} {
@@ -1110,7 +1122,7 @@
   flex-flow: column;
   //padding: 17px 16px 20px 20px;
   padding: 15px 16px 25px 20px;
-  background: #f7f8f8;
+  background: #fff;
   border-bottom-left-radius: inherit;
   border-bottom-right-radius: inherit;
 
@@ -1375,7 +1387,7 @@
 
 .manual_currency {
   @include transition_all(background .3s);
-  border-radius: 2px;
+ //border-radius: 2px;
   background: #999;
   color: #fff;
   margin-left: 8px;
@@ -1782,7 +1794,7 @@ a.article_stat_val {
   ._top & {
     left: auto;
     right: 12px;
-    border-radius: 2px 0 2px 2px;
+   //border-radius: 2px 0 2px 2px;
 
     &:after {
       left: auto;
@@ -1909,7 +1921,7 @@ a.article_stat_val {
     bottom: auto;
 
     .article_tag {
-      border-radius: 2px 0 2px 0;
+     //border-radius: 2px 0 2px 0;
       padding-left: 10px;
     }
   }
@@ -1941,7 +1953,7 @@ a.article_stat_val {
   }
 
   .article_main_photo & {
-    border-radius: 2px;
+   //border-radius: 2px;
   }
 
   &._top {
@@ -2109,7 +2121,7 @@ a.article_stat_val {
 .article_group_title {
   position: relative;
   color: #000;
-  font: 18px/24px $RubikBold;
+  font: 24px/24px $RubikBold;
   //letter-spacing: .005em;
   padding: 9px 16px 9px 0;
   margin: 5px 0 12px;
@@ -2124,6 +2136,11 @@ a.article_stat_val {
     line-height: 32px;
     border-radius: 16px;
     color: #fff;
+    display: none !important;
+  }
+  
+  .article_group_link {
+    padding-left: 0 !important;
   }
 
   @each $cls, $color in $firm-colors {
@@ -2337,4 +2354,6 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
+
+
 
