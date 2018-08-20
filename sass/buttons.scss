@@ -9,7 +9,7 @@
     cursor: pointer;
     display: block;
     text-align: center;
-    font: 14px/18px $RubikMed;
+    font: 14px/18px $RubikBold;
     padding: 13px;
    //border-radius: 2px;
 
@@ -17,13 +17,13 @@
       margin-bottom: 20px;
     }
 
-    &:after {
-      content: unicode($icon-triangle_r);
-      margin-left: 10px;
-      margin-right: -18px;
-      font-size: 11px;
-      color: #ddd;
-    }
+    //&:after {
+    //  content: unicode($icon-triangle_r);
+    //  margin-left: 10px;
+    //  margin-right: -18px;
+    //  font-size: 11px;
+    //  color: #ddd;
+    //}
 
     &:hover {
       @extend %firm_border_color;
@@ -75,13 +75,12 @@
     display: inline-block;
     vertical-align: top;
     padding: 10px 26px;
-    font: 12px/24px $RubikBold;
+    font: 14px/24px $RubikBold;
     //color: #fff;
    //border-radius: 2px;
     height: auto;
     min-height: 40px;
     letter-spacing: .035em;
-    text-transform: uppercase;
 
     span {
       display: inline-block;
@@ -96,7 +95,7 @@
     }
 
     &._no_icon {
-      padding: 10px;
+      padding: 10px 0;
     }
 
     &._fb {

@@ -25,16 +25,14 @@ html(lang='ru')
                                             a.article_img_link(href='article.html'): img(src='i/vermont.jpg')
 
                                         .article_title
-                                            .article_action: .article_action_inner
+                                            //-//-.article_action: .article_action_inner
                                                 +action_block()
                                             p: a.article_link(href='article.html') Vermont City Pilots Land Registry Record With Blockchain
                                             ul.article_stat
                                                 li
-                                                    a.article_stat_val(href='#') John Doe
-                                                li
-                                                    span.article_stat_val._stat_time 2h
-                                                li
-                                                    span.article_stat_val._stat_views 212
+                                                    a.article_stat_val(href='#') by Alex Morris
+                                                li._fr
+                                                    span.article_stat_val 1 hour ago 
 
                                     .article_reviews_holder._stories
                                         .top_story_caption Latest News
@@ -47,35 +45,34 @@ html(lang='ru')
                                                             a.article_img_link(href='article.html'): img(src='i/bear.jpg')
 
                                                         .article_title
-                                                            p: a.article_link._fz_18(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
-                                                        ul.article_stat._action
+                                                            p: a.article_link._fz_14(href='#') British Virgin Islands Emerges as Second Largest Crypto Market, Trails US by Small Margin 
+                                                        ul.article_stat
                                                             li
-                                                                a.article_stat_val(href='#') John Doe
-                                                            li
-                                                                span.article_stat_val._stat_time 2h
-                                                            li
-                                                                span.article_stat_val._stat_views 212
-                                                            +stat_action()
-
+                                                                a.article_stat_val(href='#') by Alex Morris
+                                                            li._fr
+                                                                span.article_stat_val 1 hour ago 
+                                                                
                                 .news_col
-                                    .article_block.story_block._top
+                                    .article_block.story_block._main
                                         .article_img
+                                            //-ul.article_tags
+                                                li
+                                                    a.article_tag._wide._top(href='#')
+                                                        span Top Story
                                             a.article_img_link(href='article.html'): img(src='i/bitflyer2.jpg')
 
                                         .article_title
-                                            .article_action: .article_action_inner
+                                            //-//-.article_action: .article_action_inner
                                                 +action_block()
-                                            .top_story_caption Top Story
+                                            //-.top_story_caption Top Story
 
                                             p: a.article_link(href='article.html') Cryptocurrency Exchange BitFlyer Launches New EU Branch
 
                                             ul.article_stat
                                                 li
-                                                    a.article_stat_val(href='#') John Doe
-                                                li
-                                                    span.article_stat_val._stat_time 2h
-                                                li
-                                                    span.article_stat_val._stat_views 212
+                                                    a.article_stat_val(href='#') by Alex Morris
+                                                li._fr
+                                                    span.article_stat_val 1 hour ago
 
                                     //-#subscribeTrigger
 
@@ -86,7 +83,7 @@ html(lang='ru')
                                             li
                                                 .article_block._review._left
                                                     .article_img
-                                                        ul.article_tags
+                                                        //-ul.article_tags
                                                             li
                                                                 a.icon-say.article_tag._wide._features(href='#')
                                                                     span Features
@@ -94,19 +91,16 @@ html(lang='ru')
 
                                                     .article_title
                                                         p: a.article_link._fz_18(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
-                                                    ul.article_stat._action
+                                                    ul.article_stat
                                                         li
-                                                            a.article_stat_val(href='#') John Doe
-                                                        li
-                                                            span.article_stat_val._stat_time 2h
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        +stat_action()
+                                                            a.article_stat_val(href='#') by Alex Morris
+                                                        li._fr
+                                                            span.article_stat_val 1 hour ago 
 
                                             li
                                                 .article_block._review._left
                                                     .article_img
-                                                        ul.article_tags
+                                                        //-ul.article_tags
                                                             li
                                                                 a.icon-say.article_tag._wide._pricewise(href='#')
                                                                     span PRISEWISE
@@ -114,19 +108,16 @@ html(lang='ru')
 
                                                     .article_title
                                                         p: a.article_link._fz_18(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
-                                                    ul.article_stat._action
+                                                    ul.article_stat
                                                         li
-                                                            a.article_stat_val(href='#') John Doe
-                                                        li
-                                                            span.article_stat_val._stat_time 2h
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        +stat_action()
+                                                            a.article_stat_val(href='#') by Alex Morris
+                                                        li._fr
+                                                            span.article_stat_val 1 hour ago 
 
                                             li
                                                 .article_block._review._left
                                                     .article_img
-                                                        ul.article_tags
+                                                        //-ul.article_tags
                                                             li
                                                                 a.icon-say.article_tag._wide._wiki(href='#')
                                                                     span WIKICOIN
@@ -134,14 +125,11 @@ html(lang='ru')
 
                                                     .article_title
                                                         p: a.article_link._fz_18(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
-                                                    ul.article_stat._action
+                                                    ul.article_stat
                                                         li
-                                                            a.article_stat_val(href='#') John Doe
-                                                        li
-                                                            span.article_stat_val._stat_time 2h
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        +stat_action()
+                                                            a.article_stat_val(href='#') by Alex Morris
+                                                        li._fr
+                                                            span.article_stat_val 1 hour ago 
 
                                             li
                                                 .article_block._review._left
@@ -150,26 +138,23 @@ html(lang='ru')
 
                                                     .article_title
                                                         p: a.article_link._fz_18(href='#') Market Growth Fizzles Out, Bitcoin Price Stuck at $9,000
-                                                    ul.article_stat._action
+                                                    ul.article_stat
                                                         li
-                                                            a.article_stat_val(href='#') John Doe
-                                                        li
-                                                            span.article_stat_val._stat_time 2h
-                                                        li
-                                                            span.article_stat_val._stat_views 212
-                                                        +stat_action()
+                                                            a.article_stat_val(href='#') by Alex Morris
+                                                        li._fr
+                                                            span.article_stat_val 1 hour ago 
 
                                 .news_col
-                                    a.btn_v1.more_btn.gray_btn(href='#') More news
+                                    a.btn_v1.more_btn.gray_btn_3(href='#') Load more
 
                                 .news_col
-                                    a.btn_v1.more_btn.gray_btn(href='#') More stories
+                                    a.btn_v1.more_btn.gray_btn_3(href='#') Load more
 
                             .news_row
                                 .news_col._wide
-                                    .article_group_title._promoted.icon-star
+                                    .article_group_title._black_jack.icon-star
                                         a.article_group_link(href='#')
-                                            span.text_upper PRESS RELEASES
+                                            span Press Releases
                                         a.article_title_link(href='#'): span All Press Releases
                                         a.article_title_link._more(href='#'): span Submit Press Release
 
@@ -178,32 +163,29 @@ html(lang='ru')
                                             li
                                                 .article_block
                                                     .article_img
-                                                        ul.article_tags
+                                                        //-ul.article_tags
                                                             li
                                                                 a.article_tag._wide._promoted.icon-btc_circle(href='#')
                                                                     span PROMOTED
                                                         a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
 
                                                     .article_title
-                                                        .article_action: .article_action_inner
+                                                        //-.article_action: .article_action_inner
                                                             +action_block()
                                                         p: a.article_link(href='article.html') Reddit No Longer Accepting Bitcoin Payments
                                                         ul.article_stat
                                                             li
-                                                                a.article_stat_val(href='#') John Doe
-                                                            li
-                                                                span.article_stat_val._stat_time 2h
-                                                            li
-                                                                span.article_stat_val._stat_views 212
-
+                                                                a.article_stat_val(href='#') by Alex Morris
+                                                            li._fr
+                                                                span.article_stat_val 1 hour ago 
                             
                             .news_row
                                 .news_col._wide
                                     .article_group_title._voice.icon-voice
                                         a.article_group_link(href='#')
-                                            span.text_upper PRESS RELEASES
-                                        a.article_title_link(href='#'): span All Press Releases
-                                        a.article_title_link._more(href='#'): span Submit Press Release
+                                            span Press Releases
+                                        a.article_title_link._black_icon(href='#'): span All Press Releases
+                                        a.article_title_link._black_icon._more(href='#'): span Submit Press Release
 
                                     ul.news_aggregator
                                         +loop_while(3)
@@ -213,22 +195,20 @@ html(lang='ru')
                                                         a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
 
                                                     .article_title
-                                                        .article_action: .article_action_inner
+                                                        //-.article_action: .article_action_inner
                                                             +action_block()
                                                         p: a.article_link(href='article.html') Reddit No Longer Accepting Bitcoin Payments
                                                         ul.article_stat
                                                             li
-                                                                a.article_stat_val(href='#') John Doe
-                                                            li
-                                                                span.article_stat_val._stat_time 2h
-                                                            li
-                                                                span.article_stat_val._stat_views 212
+                                                                a.article_stat_val(href='#') by Alex Morris
+                                                            li._fr
+                                                                span.article_stat_val 1 hour ago 
 
                             .news_row
                                 .news_col._wide
                                     .article_group_title._stairs.icon-stairs
                                         a.article_group_link(href='#')
-                                            span.text_upper PRESS RELEASES
+                                            span Press Releases
                                         a.article_title_link(href='#'): span All Press Releases
                                         a.article_title_link._more(href='#'): span Submit Press Release
 
@@ -240,22 +220,20 @@ html(lang='ru')
                                                         a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
 
                                                     .article_title
-                                                        .article_action: .article_action_inner
+                                                        //-.article_action: .article_action_inner
                                                             +action_block()
                                                         p: a.article_link(href='article.html') Reddit No Longer Accepting Bitcoin Payments
                                                         ul.article_stat
                                                             li
-                                                                a.article_stat_val(href='#') John Doe
-                                                            li
-                                                                span.article_stat_val._stat_time 2h
-                                                            li
-                                                                span.article_stat_val._stat_views 212
+                                                                a.article_stat_val(href='#') by Alex Morris
+                                                            li._fr
+                                                                span.article_stat_val 1 hour ago 
 
                             .news_row._bordered._show_2
                                 .news_col._wide
                                     .article_group_title._pricewise.icon-splash
                                         a.article_group_link(href='#')
-                                            span.text_upper pricewise
+                                            span Pricewise
                                         a.article_title_link(href='#') All #Pricewise
 
                                 .news_col._third
@@ -264,16 +242,14 @@ html(lang='ru')
                                             a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
 
                                         .article_title
-                                            .article_action: .article_action_inner
+                                            //-.article_action: .article_action_inner
                                                 +action_block()
                                             p: a.article_link(href='article.html') Atomic Action: Will 2018 Be the Year of the Cros…
                                             ul.article_stat
                                                 li
-                                                    a.article_stat_val(href='#') John Doe
-                                                li
-                                                    span.article_stat_val._stat_time 2h
-                                                li
-                                                    span.article_stat_val._stat_views 212
+                                                    a.article_stat_val(href='#') by Alex Morris
+                                                li._fr
+                                                    span.article_stat_val 1 hour ago 
 
                                 .news_col._third
                                     .article_block._pool
@@ -281,16 +257,14 @@ html(lang='ru')
                                             a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
 
                                         .article_title
-                                            .article_action: .article_action_inner
+                                            //-.article_action: .article_action_inner
                                                 +action_block()
                                             p: a.article_link(href='article.html') Atomic Action: Will 2018 Be the Year of the Cros…
                                             ul.article_stat
                                                 li
-                                                    a.article_stat_val(href='#') John Doe
-                                                li
-                                                    span.article_stat_val._stat_time 2h
-                                                li
-                                                    span.article_stat_val._stat_views 212
+                                                    a.article_stat_val(href='#') by Alex Morris
+                                                li._fr
+                                                    span.article_stat_val 1 hour ago 
 
                                 .news_col._third
                                     .article_block._pool
@@ -298,22 +272,20 @@ html(lang='ru')
                                             a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
 
                                         .article_title
-                                            .article_action: .article_action_inner
+                                            //-.article_action: .article_action_inner
                                                 +action_block()
                                             p: a.article_link(href='article.html') Atomic Action: Will 2018 Be the Year of the Cros…
                                             ul.article_stat
                                                 li
-                                                    a.article_stat_val(href='#') John Doe
-                                                li
-                                                    span.article_stat_val._stat_time 2h
-                                                li
-                                                    span.article_stat_val._stat_views 212
+                                                    a.article_stat_val(href='#') by Alex Morris
+                                                li._fr
+                                                    span.article_stat_val 1 hour ago 
 
                             .news_row._bordered._show_2
                                 .news_col._wide
                                     .article_group_title._wiki.icon-star
                                         a.article_group_link(href='#')
-                                            span.text_upper WIKICOIN
+                                            span Wikicoin
                                         a.article_title_link(href='#') All #WikiCoin
 
                                 .news_col._third
@@ -322,16 +294,14 @@ html(lang='ru')
                                             a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
 
                                         .article_title
-                                            .article_action: .article_action_inner
+                                            //-.article_action: .article_action_inner
                                                 +action_block()
                                             p: a.article_link(href='article.html') Atomic Action: Will 2018 Be the Year of the Cros…
                                             ul.article_stat
                                                 li
-                                                    a.article_stat_val(href='#') John Doe
-                                                li
-                                                    span.article_stat_val._stat_time 2h
-                                                li
-                                                    span.article_stat_val._stat_views 212
+                                                    a.article_stat_val(href='#') by Alex Morris
+                                                li._fr
+                                                    span.article_stat_val 1 hour ago 
 
                                 .news_col._third
                                     .article_block._pool
@@ -339,16 +309,14 @@ html(lang='ru')
                                             a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
 
                                         .article_title
-                                            .article_action: .article_action_inner
+                                            //-.article_action: .article_action_inner
                                                 +action_block()
                                             p: a.article_link(href='article.html') Atomic Action: Will 2018 Be the Year of the Cros…
                                             ul.article_stat
                                                 li
-                                                    a.article_stat_val(href='#') John Doe
-                                                li
-                                                    span.article_stat_val._stat_time 2h
-                                                li
-                                                    span.article_stat_val._stat_views 212
+                                                    a.article_stat_val(href='#') by Alex Morris
+                                                li._fr
+                                                    span.article_stat_val 1 hour ago 
 
                                 .news_col._third
                                     .article_block._pool
@@ -356,16 +324,14 @@ html(lang='ru')
                                             a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
 
                                         .article_title
-                                            .article_action: .article_action_inner
+                                            //-.article_action: .article_action_inner
                                                 +action_block()
                                             p: a.article_link(href='article.html') Atomic Action: Will 2018 Be the Year of the Cros…
                                             ul.article_stat
                                                 li
-                                                    a.article_stat_val(href='#') John Doe
-                                                li
-                                                    span.article_stat_val._stat_time 2h
-                                                li
-                                                    span.article_stat_val._stat_views 212
+                                                    a.article_stat_val(href='#') by Alex Morris
+                                                li._fr
+                                                    span.article_stat_val 1 hour ago 
 
                         +aside_block()
 

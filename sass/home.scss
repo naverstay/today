@@ -92,14 +92,14 @@
       padding-top: 12px;
       position: relative;
 
-      &:before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        right: 0;
-        left: 0;
-        border-top: 1px solid #ededed;
-      }
+      //&:before {
+      //  content: '';
+      //  position: absolute;
+      //  top: -2px;
+      //  right: 0;
+      //  left: 0;
+      //  border-top: 1px solid #ededed;
+      //}
     }
   }
 }
@@ -109,10 +109,10 @@
 }
 
 .top_story_caption {
-  @extend %firm_color;
-  font: 14px $RubikBold;
-  text-transform: uppercase;
-  margin-top: 11px;
+  //@extend %firm_color;
+  font: 24px/34px $RubikBold;
+  //text-transform: uppercase;
+  margin-top: 58px;
   margin-bottom: 12px;
   //letter-spacing: .013em;
   position: relative;
@@ -234,6 +234,7 @@
 
   .article_link {
     font-size: 48px;
+    line-height: 1.15;
     font-weight: 700;
   }
 
@@ -758,11 +759,11 @@
 
     .article_title {
       background: none;
-      padding: 4px 0 0;
+      padding: 8px 0 0;
     }
 
     .article_link {
-      font: 18px/1.4 $RubikMed;
+      font: 18px/1.4 $RubikBold;
 
       &:hover {
         color: $violette;
@@ -803,7 +804,11 @@
 
           @include respond-to-min($resp_step_2) {
             //font-size: 18px;
-            line-height: 1.15;
+            line-height: 1.4;
+          }
+
+          &._fz_14 {
+            font-size: 14px;
           }
 
           &._fz_18 {
@@ -834,12 +839,17 @@
     &._left {
       .article_img {
         float: left;
-        width: 130px !important;
-        margin-right: 10px;
+        width: 115px !important;
+        margin-right: 14px;
+
+        ~ .article_stat {
+          margin-left: 129px;
+          padding-top: 5px;
+        }
 
         + .article_title {
           margin-right: 0 !important;
-          margin-left: 140px;
+          margin-left: 129px;
 
           //@include respond-to-min($resp_step_2) {
           //  margin-left: 140px;
@@ -940,7 +950,7 @@
     //border-radius: 2px 2px 0 0;
 
     ._article & {
-      border-radius: 0;
+      //border-radius: 0;
     }
 
     .article_reviews & {
@@ -1202,7 +1212,7 @@
   ._main & {
 
     @include respond-to-min($resp_step_2) {
-      padding: 19px 16px 25px 23px;
+      padding: 24px 16px 20px 23px;
     }
 
     @include respond-to-min($resp_step_3) {
@@ -1217,7 +1227,7 @@
 
 .article_link {
   @include transition_all(color .3s);
-  font: 22px $RubikMed;
+  font: 22px $RubikBold;
   text-decoration: none;
   color: #000;
   //@extend %firm_color;
@@ -1412,7 +1422,7 @@
 .article_stat {
   @extend %clearfix;
   list-style: none;
-  padding-top: 15px;
+  padding-top: 20px;
   color: #bdbdbd;
   font: 14px/16px $RubikReg;
 
@@ -1585,10 +1595,10 @@
 }
 
 a.article_stat_val {
-  text-decoration: underline;
+  text-decoration: none;
 
   &:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 
@@ -1968,8 +1978,13 @@ a.article_stat_val {
   }
 
   &._top {
+    height: 28px;
+
     span {
-      padding: 5px 15px;
+      padding: 5px 10px;
+      font-size: 14px;
+      line-height: 18px;
+      text-transform: none;
     }
   }
 
@@ -2049,6 +2064,7 @@ a.article_stat_val {
   @include transition_all(color .3s);
   @extend %icon_pseudo;
   float: right;
+  margin-top: 7px;
   padding-right: 22px;
   position: relative;
   z-index: 2;
@@ -2089,6 +2105,19 @@ a.article_stat_val {
       height: 14px;
       width: 2px;
       margin: -7px 0 0;
+    }
+
+    &._black_icon {
+      &:after,
+      &:before {
+        background-color: #000;
+      }
+    }
+  }
+
+  &._black_icon {
+    &:before {
+      color: #000;
     }
   }
 
@@ -2132,7 +2161,7 @@ a.article_stat_val {
 .article_group_title {
   position: relative;
   color: #000;
-  font: 24px/24px $RubikBold;
+  font: 36px/36px $RubikBold;
   //letter-spacing: .005em;
   padding: 9px 16px 9px 0;
   margin: 5px 0 12px;
@@ -2151,7 +2180,7 @@ a.article_stat_val {
   }
 
   .article_group_link {
-    padding-left: 0 !important;
+    //padding-left: 0 !important;
   }
 
   @each $cls, $color in $firm-colors {
@@ -2233,42 +2262,45 @@ a.article_stat_val {
   vertical-align: top;
   position: relative;
   z-index: 2;
-  padding-left: 44px;
+  //padding-left: 44px;
+  padding-right: 44px;
   color: #000;
 
-  //&:before {
-  //  position: absolute;
-  //  z-index: 2;
-  //  top: -4px;
-  //  left: 2px;
-  //  border-radius: 100%;
-  //  color: #fff;
-  //  height: 32px;
-  //  width: 32px;
-  //  font-size: 18px;
-  //  line-height: 32px;
-  //  text-align: center;
-  //}
+  &:before {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    margin-top: -16px;
+    //left: 2px;
+    right: 2px;
+    border-radius: 100%;
+    color: #fff;
+    height: 32px;
+    width: 32px;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+  }
 
   &:hover {
     @extend %firm_color;
   }
 
-  //@each $cls, $color in $firm-colors {
-  //  .#{$cls} & {
-  //    &:before {
-  //      background: $color;
-  //    }
-  //  }
-  //}
+  @each $cls, $color in $firm-colors {
+    .#{$cls} & {
+      &:before {
+        background: $color;
+      }
+    }
+  }
 
-  //@each $cls, $content in $firm-icons {
-  //  .#{$cls} & {
-  //    &:before {
-  //      content: $content;
-  //    }
-  //  }
-  //}
+  @each $cls, $content in $firm-icons {
+    .#{$cls} & {
+      &:before {
+        content: $content;
+      }
+    }
+  }
 }
 
 .news_list {
@@ -2365,10 +2397,6 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
-
-
-
-
 
 
 

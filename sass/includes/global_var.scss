@@ -106,7 +106,8 @@ $firm-colors: (
         _voice: $color_voice,
         _stairs: $color_stairs,
         _promoted: $pink,
-        _gags: $color_gags
+        _gags: $color_gags,
+        _black_jack: $default_t_color
 );
 
 $firm-icons: (
@@ -127,7 +128,8 @@ $firm-icons: (
         _voice: $icon-voice,
         _stairs: $icon-stairs,
         _promoted: $icon-btc_circle,
-        _gags: $icon-gags
+        _gags: $icon-gags,
+        _black_jack: $icon-gags
 );
 
 @mixin opacity($val : 1, $important : 0) {
