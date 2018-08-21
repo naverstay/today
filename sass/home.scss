@@ -110,6 +110,8 @@
 
 .top_story_caption {
   //@extend %firm_color;
+  display: inline-block;
+  vertical-align: top;
   font: 24px/34px $RubikBold;
   //text-transform: uppercase;
   margin-top: 58px;
@@ -117,6 +119,7 @@
   //letter-spacing: .013em;
   position: relative;
   z-index: 1;
+  color: $default_t_color;
 
   .article_title & {
     margin: 10px 0 8px;
@@ -1212,7 +1215,7 @@
   ._main & {
 
     @include respond-to-min($resp_step_2) {
-      padding: 24px 16px 20px 23px;
+      padding: 20px 16px 20px 23px;
     }
 
     @include respond-to-min($resp_step_3) {
@@ -1509,6 +1512,10 @@
 
   .news_item & {
     padding-top: 5px;
+  }
+  
+  .article_block._main & {
+    padding-top: 20px;
   }
 }
 
@@ -1950,6 +1957,10 @@ a.article_stat_val {
   li {
     float: left;
     padding-right: 10px;
+  }
+  
+  .article_block._main & {
+    left: 10px;
   }
 }
 
@@ -2417,4 +2428,6 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
+
+
 

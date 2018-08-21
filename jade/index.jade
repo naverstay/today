@@ -35,7 +35,7 @@ html(lang='ru')
                                                     span.article_stat_val 1 hour ago 
 
                                     .article_reviews_holder._stories
-                                        .top_story_caption Latest News
+                                        a.top_story_caption(href='#') Latest News
 
                                         ul.article_reviews._article
                                             +loop_while(4)
@@ -55,7 +55,7 @@ html(lang='ru')
                                 .news_col
                                     .article_block.story_block._main
                                         .article_img
-                                            //-ul.article_tags
+                                            ul.article_tags
                                                 li
                                                     a.article_tag._wide._top(href='#')
                                                         span Top Story
@@ -64,7 +64,7 @@ html(lang='ru')
                                         .article_title
                                             //-//-.article_action: .article_action_inner
                                                 +action_block()
-                                            //-.top_story_caption Top Story
+                                            //-a.top_story_caption(href='#) Top Story
 
                                             p: a.article_link(href='article.html') Cryptocurrency Exchange BitFlyer Launches New EU Branch
 
@@ -77,7 +77,7 @@ html(lang='ru')
                                     //-#subscribeTrigger
 
                                     .article_reviews_holder._stories
-                                        .top_story_caption Stories
+                                        a.top_story_caption(href='#') Stories
 
                                         ul.article_reviews._article
                                             li
