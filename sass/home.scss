@@ -1422,7 +1422,7 @@
 .article_stat {
   @extend %clearfix;
   list-style: none;
-  padding-top: 20px;
+  padding-top: 10px;
   color: #bdbdbd;
   font: 14px/16px $RubikReg;
 
@@ -2242,6 +2242,26 @@ a.article_stat_val {
     }
   }
 
+  ._cat & {
+    margin-bottom: 60px;
+    font-size: 72px;
+    line-height: 72px;
+    
+    .article_group_link {
+      padding-right: 88px;
+      
+      &:before {
+        top: 50%;
+        margin-top: -32px;
+        right: 2px;
+        height: 64px;
+        width: 64px;
+        font-size: 36px;
+        line-height: 64px;
+      }
+    }
+  }
+  
   //&._news {
   //  &:after {
   //    background-image: url(../i/stories_bg.svg);
@@ -2397,6 +2417,4 @@ a.article_stat_val {
   margin: 0 -16px;
   background: #f7f8f8;
 }
-
-
 

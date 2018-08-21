@@ -66,6 +66,10 @@ a {
 .content_holder {
   @extend %clearfix;
   margin-left: -32px;
+  
+  &._cat {
+    padding-top: 25px;
+  }
 }
 
 .content_block {

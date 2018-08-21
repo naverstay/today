@@ -15,8 +15,13 @@ html(lang='ru')
                             span Indonesia Central Bank: Cryptocurrency Payments 'Not Legitimate'
                             span.attention_link
 
-                    .content_holder
+                    .content_holder._cat
                         .content_block
+                            .article_group_title._pricewise.icon-star
+                                a.article_group_link(href='#')
+                                    span Interviews
+                                
+                                
                             //-.category_filter._pool
                                 ul.filter_list
                                     li: a.filter_link._active(href='#') All articles
@@ -25,30 +30,28 @@ html(lang='ru')
                                     li: a.filter_link(href='#') Other
 
                             .news_row._voice._bordered._tags_mode
-                                .news_col._third
+                                //-.news_col._third
                                     .article_block._tag
                                         .article_title.icon-voice
                                             .article_link Sharks Pool
 
                                             p Crypto space is all about ideas so find here thought-provoking opinions, experts blogs and interviews with the great and the good.
 
-                                +loop_while(7)
+                                +loop_while(3)
                                     .news_col._third
                                         .article_block._pool
                                             .article_img
                                                 a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
 
                                             .article_title
-                                                .article_action: .article_action_inner
+                                                //-.article_action: .article_action_inner
                                                     +action_block()
                                                 p: a.article_link(href='article.html') Reddit No Longer Accepting Bitcoin Payments
                                                 ul.article_stat
                                                     li
-                                                        a.article_stat_val(href='#') John Doe
-                                                    li
-                                                        span.article_stat_val._stat_time 2h
-                                                    li
-                                                        span.article_stat_val._stat_views 212
+                                                        a.article_stat_val(href='#') by Alex Morris
+                                                    li._fr
+                                                        span.article_stat_val 1 hour ago 
 
                                     .news_col._third
                                         .article_block._pool
@@ -56,16 +59,29 @@ html(lang='ru')
                                                 a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
 
                                             .article_title
-                                                .article_action: .article_action_inner
+                                                //-.article_action: .article_action_inner
                                                     +action_block()
                                                 p: a.article_link(href='article.html') Reddit No Longer Accepting Bitcoin Payments
                                                 ul.article_stat
                                                     li
-                                                        a.article_stat_val(href='#') John Doe
+                                                        a.article_stat_val(href='#') by Alex Morris
+                                                    li._fr
+                                                        span.article_stat_val 1 hour ago 
+
+                                    .news_col._third
+                                        .article_block._pool
+                                            .article_img
+                                                a.article_img_link(href='article.html'): img(src='i/bear_0.jpg')
+
+                                            .article_title
+                                                //-.article_action: .article_action_inner
+                                                    +action_block()
+                                                p: a.article_link(href='article.html') Reddit No Longer Accepting Bitcoin Payments
+                                                ul.article_stat
                                                     li
-                                                        span.article_stat_val._stat_time 2h
-                                                    li
-                                                        span.article_stat_val._stat_views 212
+                                                        a.article_stat_val(href='#') by Alex Morris
+                                                    li._fr
+                                                        span.article_stat_val 1 hour ago 
 
                         +aside_block()
 
