@@ -210,6 +210,11 @@
     display: block;
     width: 200px;
     max-width: 100%;
+
+    @include respond-to-max($resp_step_2) {
+      width: 107px;
+      margin-top: 5px;
+    }
   }
 
   @include respond-to-min($resp_step_3) {

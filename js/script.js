@@ -42,6 +42,10 @@ $(function ($) {
             parent.toggleClass('_opened').closest('.article_block').toggleClass('_active');
             return false;
         })
+        .delegate('.pollBtn', 'click', function () {
+            $(this).closest('.pollBlock').addClass('_show_vote');
+            return false;
+        })
         .delegate('.manualLink', 'click', function () {
             $(this).parent().toggleClass('_opened');
         })

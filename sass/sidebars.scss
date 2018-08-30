@@ -273,17 +273,21 @@
     opacity: 1;
     float: right;
     margin: -6px 0;
-    padding: 0 10px;
+    padding: 0;
     //padding-top: 4px;
     overflow: visible;
+
+    @include respond-to-min($resp_step_2) {
+      padding: 0 10px;
+    }
   }
 
   .menu_item {
     margin-bottom: 0;
-    padding: 0 15px;
+    padding: 0 10px 0 12px;
 
     @include respond-to-min($resp_step_2) {
-      //padding: 0 21px;
+      padding: 0 15px;
     }
 
     > .menu_link {

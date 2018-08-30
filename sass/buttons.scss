@@ -3,6 +3,17 @@
 .btn_v1 {
   height: 48px;
 
+  &.compare_btn {
+    display: block;
+    padding: 10px;
+    font: 14px/24px $RubikBold;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  
   &.more_btn {
     @extend %firm_color;
     @extend %icon_pseudo;
@@ -510,6 +521,18 @@
 
   &:hover {
     background: #4634aa;
+  }
+}
+
+.btn_violette_6 {
+  @include transition_all(background .3s, color .3s);
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  color: $violette;
+
+  &:hover {
+    background: $violette;
+    color: #fff;
   }
 }
 
