@@ -21,6 +21,8 @@ $(function ($) {
         }
     });
 
+    fitSameHeight();
+    
     $body
         .delegate('.subscribeForm', 'submit', function (e) {
             var form = $(this);
@@ -200,7 +202,7 @@ $(window)
         initHotEmailBtn();
 
         initContestFbPopup();
-
+        
     })
     .on('scroll', function () {
         var scrtop = getScrollTop(),
@@ -237,6 +239,40 @@ function docScrollTo(pos, speed, callback) {
             callback();
         }
     });
+}
+
+function fitSameHeight() {
+    $('.sameHeight').each(function (ind) {
+        var row = $(this).attr('data-row');
+
+        setSameHeight('.sameHeight[data-row=' + row + ']');
+    });
+}
+
+function setSameHeight(item, $item_count) {
+    var maxHeight = 0, blocks = $(item);
+    if ($item_count === void 0) {
+        $item_count = blocks.length;
+    }
+    
+    blocks.css('height', 'auto');
+    
+    for (var i = 0; i < blocks.length; i++) {
+        maxHeight = blocks.eq(i).height() > maxHeight ? blocks.eq(i).height() : maxHeight;
+
+        if ((i + 1) % $item_count === 0) {
+            for (var j = i - $item_count + 1; j < i + 1; j++) {
+                blocks.eq(j).height(maxHeight);
+            }
+            maxHeight = 0;
+        }
+    }
+    
+    //if (i % blocks.length) {
+    //    for (var jj = i - $item_count; jj < i; jj++) {
+    //        blocks.height(maxHeight);
+    //    }
+    //}
 }
 
 function checkHeader() {

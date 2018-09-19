@@ -20,14 +20,14 @@ html(lang='ru')
                             .news_row
                             .news_row
                                 .news_col
-                                    .article_block.story_block._main
+                                    .article_block.story_block._main.sameHeight(data-row='1')
                                         .article_img
                                             a.article_img_link(href='article.html'): img(src='i/vermont.jpg')
 
                                         .article_title
                                             //-//-.article_action: .article_action_inner
                                                 +action_block()
-                                            p: a.article_link(href='article.html') Vermont City Pilots Land Registry Record With Blockchain
+                                            p: a.article_link(href='article.html') Vermont City Pilots Land Registry Record With Blockchain Vermont City Pilots Land Registry Record With Blockchain
                                             ul.article_stat
                                                 li
                                                     a.article_stat_val(href='#') by Alex Morris
@@ -53,7 +53,7 @@ html(lang='ru')
                                                                 span.article_stat_val 1 hour ago 
                                                                 
                                 .news_col
-                                    .article_block.story_block._main
+                                    .article_block.story_block._main.sameHeight(data-row='1')
                                         .article_img
                                             ul.article_tags
                                                 li
@@ -343,4 +343,3 @@ html(lang='ru')
             +footer()
 
         +scripts()
-
